@@ -24,16 +24,24 @@ class MainActivity : AppCompatActivity(){
 
         btn_profiling.setOnClickListener {
             val intent = Intent(this, ProfilingActivity::class.java).apply {}
+            //to pass arguments to next activity
+            //Intent.putExtra("key", value); //Optional parameters
+            //on the other side---> intent =  getIntent();
+            //    String value = intent.getStringExtra("key")
+            startActivity(intent)
+        }
+        btn_user.setOnClickListener {
+            val intent = Intent(this, AccountMngActivity::class.java).apply {}
             startActivity(intent)
         }
     }
-    fun ShowPopup(v: View?) {
+    /*fun ShowPopup(v: View?) {  //ADD TO THE XML THE ONLCIK = showPopup
         popup?.setContentView(R.layout.user_popup)
         val txtclose = popup!!.findViewById<View>(R.id.txtclose) as TextView
         txtclose.setOnClickListener { popup!!.dismiss() }
         popup!!.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         popup!!.show()
-    }
+    }*/
 
 }
 
