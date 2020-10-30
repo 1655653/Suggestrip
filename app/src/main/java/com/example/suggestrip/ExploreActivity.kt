@@ -17,6 +17,7 @@ class ExploreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_explore)
 
         adapter = RecyclerViewExploreAdapter(months_array,img_months_array)
+        //
 
 /*
         val layoutManager = LinearLayoutManager(this)
