@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, AccountMngActivity::class.java).apply {}
             startActivity(intent)
         }
+        btn_explore.setOnClickListener {
+            val intent = Intent(this, ExploreActivity::class.java).apply {}
+            startActivity(intent)
+        }
     }
     /*fun ShowPopup(v: View?) {  //ADD TO THE XML THE ONLCIK = showPopup
         popup?.setContentView(R.layout.user_popup)
