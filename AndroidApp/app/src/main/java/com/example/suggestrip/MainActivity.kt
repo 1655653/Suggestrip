@@ -85,6 +85,10 @@ class MainActivity : AppCompatActivity(){
         sensorManager!!.unregisterListener(sensorListener)
         super.onPause()
     }
+
+    fun porcoddiopadre(){
+
+    }
     /*fun ShowPopup(v: View?) {  //ADD TO THE XML THE ONLCIK = showPopup
         popup?.setContentView(R.layout.user_popup)
         val txtclose = popup!!.findViewById<View>(R.id.txtclose) as TextView
