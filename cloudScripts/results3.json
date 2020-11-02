@@ -1,0 +1,2302 @@
+[
+    {
+        "brief_description": "As the “capital of capitals” negotiates the uncharted terrain of a post-Brexit world, for now it still reigns atop the planet’s best cities for the fifth year running.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 51.50722222,
+                "lon": -0.1275,
+                "primary": ""
+            }
+        ],
+        "description": "London is #1 again, for the sixth year in a row. It’s never not topped our World’s Best Cities rankings. But the city is in tough in 2021. There’s been speculation on the impact of Brexit on London’s prosperity ever since the referendum vote was counted in 2016: for 2021, our rankings show the city at #5 for number of Global Fortune 500 companies (identical to 2020), 29th for GDP Per Capita and 52nd for Unemployment. But our new ranking subcategory, the Gini coefficient (which we refer to as Income Equality), shows the city’s alarming disparity between rich and not: London ranks 149th of 263 cities. Could a Brexit deal be an opportunity to redress? Certainly, some of those who voted to leave are hoping, perhaps vainly, that it could be so. Vainly because in September, JPMorgan Chase & Co. was just the latest multinational to abandon the good ship Britain, moving $230 billion from the UK to Frankfurt amidst Brexit uncertainty. But London is still London and the pandemic has made us value other aspects of city life—critical things, like cool, breathable air, which is made possible by a city’s trees and its green, open landscapes. London ranks #16 for the quality of its outdoor experiences, many of which come in the form of spectacular parks that are the legacy of dozens of former country estates that served as hunting grounds for generations of kings and queens. Today, there’s no better urban experience anywhere, no matter the global forces swirling above the ancient streets. ",
+        "name": "London",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 3,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 2
+        },
+        "country": "GB"
+    },
+    {
+        "brief_description": "America’s urban heart was broken by the pandemic and has a long way back.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 40.71274,
+                "lon": -74.005974,
+                "primary": ""
+            }
+        ],
+        "description": "It’s a grim time to be (almost) on top. As cases spiked in March and April, New York became the U.S.’s nightmarish coronavirus epicenter. Statewide, more than 18,000 COVID-19 patients were in hospitals at one point in April. Daily deaths peaked at 799 in April, and have totaled over 24,000. A few short months ago, all the data made sense. While New York ranks just 64th for the size of its convention center, the Jacob. K. Javits Center was in the process of being renovated to twice its enormity. Most recently, its square footage had been transformed into a 1,200-bed field hospital, with room, if necessary, for 2,900. A year ago, we went on gaily about how New York was reinventing shopping, with the mall of the future at Hudson Yards and Nordstrom and Neiman Marcus vying for supremacy in the chic city. This year, in the #2 shopping city on the planet (behind only Tokyo), there is no breakfast at Tiffany’s. New York, to the surprise of no one, ranks Top 5 in the world for Global 500 companies (#4). And that is part of the enduring allure of the city—the magical thinking that if you hustle hard enough, anyone could be persuaded to meet with you. New York is, above all, a gathering place where brains and bodies in indecent proximity to one another create the sparks of genius, invention, progress. Today New Yorkers stand at the ready, together and alone, on their stoops and balconies ready to defend their city. From vague federal threats of defunding. From shadowy armies to keep calls for justice and reform loom over the city along with an invisible virus. However the world emerges, evolves or pivots out of our collective force majeure, it will happen here first. New York is, after all, #1—or thereabouts.  ",
+        "name": "New_York_City",
+        "tags": {
+            "costs": 2,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 5
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Just as terrorism subsided, the Notre-Dame inferno struck Parisian resolve anew. But the City of Light builds on resiliently.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 48.856613,
+                "lon": 2.352222,
+                "primary": ""
+            }
+        ],
+        "description": "On April 15, 2019, as the Notre-Dame cathedral went up in flames, people in Paris gathered in the streets to pray. Joining them was just about everyone else across the globe with access to a screen. This, of course, was not an isolated catastrophe for the French capital over the past few years. But despite multiple terrorist attacks and the destruction of its iconic cathedral—seemingly insurmountable disaster and hardship—Paris prevails and comes back brighter. Amazingly, despite the tragic fire and a year of the Yellow Vest protests that deterred tourists from visiting the city, Paris matched its 2018 in 2019, with 35.4 million visitors, according to Statista. The City of Light ranks #3 in our Product category, with the second-best Airport Connectivity in the world, a #5 ranking for Museums (the city has more than a hundred) and #7 for Attractions. Leading up to the 2024 Summer Olympics, infrastructure investment has sped up and the city continues to build hotels at a dizzying rate. Two dozen opened in 2019 and the same amount were scheduled to debut in 2020, including the first Bulgari Hotel at 30 Avenue George V. There have been plenty of pandemic-related delays. As the saying goes, Paris is always a good idea. And now that swimming in the waters of the Seine is a thing at Bassin de la Villette public pools, even the locals who notoriously leave town in summer are sticking around. City Hall is promising to build five new outdoor swimming pools in time for the Olympics. So even though Paris is now #26 globally for Parks & Outdoors in 2020, it’s a category ranking that should improve.",
+        "name": "Paris",
+        "tags": {
+            "costs": 1,
+            "culture": 4,
+            "food": 4,
+            "infrastructure": 1,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 5
+        },
+        "country": "FR"
+    },
+    {
+        "brief_description": "Russia’s beguiling capital is a cultural gold mine spanning the ages.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 55.75583333,
+                "lon": 37.61722222,
+                "primary": ""
+            }
+        ],
+        "description": "Any traveler to Russia will tell you that Russian influence—at least over visitors to the country’s capital—is a very real thing: you’ll fall under the spell of Moscow the minute you set foot in this endlessly fascinating and dynamic destination. Curiosity about Russia has increased as political intrigue has grown, which might explain why Moscow was the 14th-most trending city over the past year, according to our Google Search ranking. The global fascination has as much to do with the spectacular 2018 FIFA World Cup (Moscow’s Luzhniki Stadium in the city’s 360-acre Olympic complex hosted the pivotal final matches) as with the Kremlin’s global ambitions. Accessing all this excitement has never been easier as the curious and opportunistic can fly into Moscow with ease: the city ranks #4 for Airport Connectivity, up one spot over last year. Once you’re on the ground, the recently renovated Moscow subway is increasingly the envy of many Western capitals, as much for its improved efficiency and reach as for its regally art-stuffed stations. Whatever brings you to the city, you’re in for an experience at stark odds with the West’s continuously dismaying news about Russia. Moscow is what Travel + Leisure calls a “revolution of creativity,” giving it an atmosphere of young, free-thinking exuberance that has touched every aspect of city life, from its art and food scenes to quirky, only-in-Russia shared workspaces. The first so-called “post- Soviet generation” of Muscovites has traveled the world, returning with suitcases full of ideas that they’re unpacking to huge effect in their always-proud city, sanctions be damned.",
+        "name": "Moscow",
+        "tags": {
+            "costs": 1,
+            "culture": 4,
+            "food": 3,
+            "infrastructure": 3,
+            "nature": 5,
+            "night_life": 4,
+            "sports": 5
+        },
+        "country": "RU"
+    },
+    {
+        "brief_description": "The futuristic metropolis is tapping its ancient feudal roots by investing in street-level livability and resident wellbeing—Olympics or no Olympics.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 35.68972222,
+                "lon": 139.69222222,
+                "primary": ""
+            }
+        ],
+        "description": "Despite earthquakes, tsunamis and typhoons, Tokyo grabbed the #1 spot for Safety. Which is helpful in a place with so much to explore and discover at all hours of the night. Tokyo continues to mesmerize global visitors with its innovation, efficiency and round-the-clock kinetic mobility. It earned the #1 rank in Shopping for its world-class experiences, like Ginza’s luxury department stores, newly enhanced with the art-bedecked and sharply designed Ginza SIX shopping center. Tokyo boasts the second most restaurants of any city worldwide, and ranks #6 in our Culture subcategory (and #3 overall in our Programming category)—even with the postponement of the 2020 Olympics. The show will go on in 2021, pandemic permitting. Here, the famous pulsating Nightlife (#9) can be experienced any way you like, from the glaring lights of Shibuya to the, well, glaring red lights of Kabukicho. For a more low-key bar scene, Zoetrope in Shinjuku offers an awe-inspiring selection of Japan’s famous whisky. With a #2 global rank for Restaurants, Tokyo is moving far beyond its internationally beloved food traditions. The metropolis offers as many restaurants as the rest of our Top 5 cities combined—more than 100,000 in total, so visitors and residents alike could never hope to experience them all. Iconic spots like Den (among the top restaurants in Asia) abound, while busy depachiku (food halls) can be explored below ground all over the city for a much—much—more affordable price. The wave of Japan’s economic revival under Abenomics—the economic policies advocated by departing Prime Minister Shinzō Abe—may have crested thanks to the pandemic, but Tokyo retains the #3 spot for Prosperity globally. That’s driven mainly by a low unemployment rate (ranking #11) and the second-highest number of Global 500 headquarters. Some are household (or at least garage) names: Toyota, Acura, Subaru, Mitsubishi. But SoftBank, while it funds disruptive start-ups around the world, is also changing Japanese business, offering rarely seen perks and benefits to its workers. Japan’s record level of female participation in the workforce is also reflected at the company.",
+        "name": "Tokyo",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 3,
+            "infrastructure": 4,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "JP"
+    },
+    {
+        "brief_description": "An alluring blend of over-the-top experiences, Arab heritage and luxury shopping, Dubai rises from the golden sands like a mirage.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 25.26305556,
+                "lon": 55.29722222,
+                "primary": ""
+            }
+        ],
+        "description": "Dubai is a city of superlatives: you can ride the elevator to the top of the world’s tallest building for a bird’s-eye view (that is, until the Burj Khalifa is relegated by Santiago Calatrava’s Tower at Dubai Creek to #2 globally), bet on the ponies at the world’s richest horse race and pose for photos in front of the world’s tallest choreographed fountains. These experiences are not by accident: the city reinvented itself yet again throughout the 2010s, growing from a sterile playground for a handful of ultra-rich Emiratis to an international tourism and business destination. That has helped to attract the second-highest proportion of foreign-born citizens of any city worldwide, and they’re a sharp crowd, ranking #16 for Educational Attainment globally. Dubai’s next challenge will be weathering the storm of COVID-19. Even after a first wave that saw 6,021 cases per million residents, Dubai is hoping to bring back the tourists who have become critical to its economy. In 2019, the city welcomed 16.7 million tourists; it will be lucky to see a fraction of that in 2020, despite a worldwide campaign to reassure visitors of its COVID-19 safety. The most visited mall on the planet is here, and helps Dubai climb to #26 in our Shopping subcategory. It would be a mistake to focus on the “mall” part of the name, however; like the city itself, the Dubai Mall is more of an attempt to capture every human experience and repackage it for consumption. But it’s the outdoors that really clinched Dubai’s #6 overall ranking. The city offers outdoor experiences that rank fifth-most in quality, and it hit the Top 10 for both Safety and Weather, both at #8.",
+        "name": "Dubai",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 2,
+            "infrastructure": 2,
+            "nature": 3,
+            "night_life": 3,
+            "sports": 4
+        },
+        "country": "AE"
+    },
+    {
+        "brief_description": "Asia’s financial powerhouse turns its ambitions to elevated infrastructure and homegrown innovation.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 1.28333333,
+                "lon": 103.83333333,
+                "primary": ""
+            }
+        ],
+        "description": "Few cities have achieved as much, as quickly, as the city-state of Singapore has over the past five decades. The meteoric rise from politically unstable, resource-poor and unskilled ex-colony to talent- and capital-hungry shipping hub (the world’s busiest) and, subsequently, Asia’s wealth management capital is place-brand engineering at its most ambitious. The result is Singapore as a fast-emerging Asian financial superpower whose city leaders take a methodical (yes, many would say “heavy-handed”) approach to urban planning that considers needs that reach far beyond the next election. Singapore’s reinvestment into research, talent and corporate headquarters recruitment ensures it will be home to a sustainably wealthy citizenry for decades to come. It’s why the city-state continues its ascent among the planet’s most prosperous cities, with a growing cluster of Global 500 companies (ranking #30 overall). Today, manifestations of this wealth and confident swagger are everywhere. Only in Singapore does an airport become a must-see attraction, one that receives millions of passengers a year but also lures locals with a bounty of designer shops, gardens, gourmet food and one-of-a-kind sights. Opened in 2019 and designed by Safdie Architects, the new $1.7-billion Jewel Changi Airport features a canopy bridge and glass walkway shrouded in fog and suspended 75 feet in the air. But the real showstopper is the seven-story Rain Vortex, an indoor waterfall (the world’s tallest) that cascades down from a central oculus in the roof. Although Singapore lands at #57 for Airport Connectivity, it would medal for its gateway’s experience alone if we scored such things.",
+        "name": "Singapore",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 5,
+            "sports": 5
+        },
+        "country": "SG"
+    },
+    {
+        "brief_description": "The defiant Catalan capital’s intoxicating mix of beach, architecture and creativity has framed the city as the poster child of global overtourism—and its solutions.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 41.38333333,
+                "lon": 2.18333333,
+                "primary": ""
+            }
+        ],
+        "description": "Barcelona is an almost ideal European city, one with near-perfect weather year round, miles and miles of beaches, iconic parks, striking architecture and colorful neighborhoods that march to their own beat—artistic, sophisticated, bohemian. No wonder it ranks Top 10 in our Place category, which measures both the natural and built environments of a city. Steeped in history and wearing its cultural identity proudly on its sleeve, Barcelona is a tourism magnet, often to the dismay of the many locals who see the crowds as a threat to their city. Barcelona has led the world in responding with programs aimed at controlling the effects of runaway tourism—like real estate investors who snatch up apartments only to rent them on Airbnb, depleting an already limited supply. Ultimately the pandemic took care of “the tourist problem,” with devastating results. Infection flare ups meant that tourist sources like France have banned all citizen travel to the Barcelona region and local sources estimate that almost 40% of the shuttered bars and restaurants may never reopen. For a city with the #3 ranking for global Nightlife, this is catastrophic. It’s impossible to predict when it will be once again possible to fuel up on tapas on Las Ramblas to get the night started before exploring hidden speakeasies of Barri Gòtic, Europe’s largest Gothic quarter and the heart of Barcelona, then grabbing an Uber to the industrial-sized clubbing of Port Olímpic. When the world reemerges from the pandemic, Barcelona’s fifth-most TripAdvisor reviews among the world’s cities will surely need a somber rewrite.",
+        "name": "Barcelona",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 1,
+            "night_life": 4,
+            "sports": 5
+        },
+        "country": "ES"
+    },
+    {
+        "brief_description": "Los Angeles keeps breaking tourism records as it unveils one multi-billion-dollar infrastructure project after another.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 34.05,
+                "lon": -118.25,
+                "primary": ""
+            }
+        ],
+        "description": "Los Angeles has always had “star” power, but when Michelin announced in June 2019 that 24 Greater Los Angeles area restaurants had been awarded with its most prestigious accolade in its inaugural Michelin Guide California selection, it suddenly meant more than just A-listers and cinema cachet. Indeed, of the seven new two-star distinctions in the Guide, six are in L.A., further cementing its standing as “the Most Exciting Food City in America.” Of course all that means little when sheltering in place has shuttered hundreds of those exciting dining spots. The COVID-19 outbreak has launched L.A.—and Mayor Eric Garcetti—into the spotlight. The city was the first metropolis in the U.S. to demand almost full closure, “and the biggest city to go to full closure of all nonessential businesses,” the mayor pointed out recently. Combine that foresight with California’s fast action on lockdowns, and L.A. is positioned to come back brighter. At least when the sun isn’t blocked out by the smoke from nearby wildfires that have become synonymous with late-summer in recent years. L.A.’s cultural and culinary leaders—so willing to step up and declare the city open for business after a series of natural disasters, helping the city rank #7 in our Promotion category—will be called upon again soon. They’ll do their best to keep their city’s #9 ranking in the subcategory of Facebook Check-ins, #10 for Instagram Hashtags and impressive #5 for Google Search. Anything to get the City of Angels off the ground.  ",
+        "name": "Los_Angeles",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 3,
+            "night_life": 5,
+            "sports": 5
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Spain’s kinetic capital is currently enjoying a people-powered rebirth.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 40.41666667,
+                "lon": -3.71666667,
+                "primary": ""
+            }
+        ],
+        "description": "Madrid suffered greatly during the pandemic, with more COVID-19 cases than any other Top 20 city outside of the United States. It was the world’s first wake-up call outside of Asia that the new coronavirus was a real and imminent threat that could bring entire countries to their knees. But the city, a newcomer to the Top 10, is getting back on its feet after a prolonged lockdown. Its dazzling #22-ranked museums have reopened—at reduced capacity—and with recent expansions to the Prado, Reina Sofia and Thyssen-Bornemisza. With this much-needed investment in its bounteous (but long-dormant) infrastructure and public assets, the Spanish capital is finally reviving its city-building legacy. But museums are just the tip of the spear for the city. In Madrid, everything old is new again. It’s not just the well-known cultural richness; Madrid is more importantly, finally committed to the modern reinvention of the city focused on its citizenry. Madrid’s #18 ranking in our Sights & Landmarks subcategory is well earned, given long overdue big-budget projects like making the central Gran Vía boulevard far more pedestrian friendly. The ambitious and futuristic Nuevo Norte redevelopment project, with a focus on meeting UN Sustainable Development Goals, promises to be a roadmap for what a sustainable, livable inner-city development can be. That bodes well for its current middling score (coming in at #80) for Income Equality. The project is set to break ground in 2021. The pandemic put an instant and long-lasting halt to most of the city’s concerts, shows and events, which had earned it a respectable #11 rank for Culture. Those large events are expected to continue to wither as large crowds continue to present an intolerable risk. Thankfully, with investments to outdoor dining and walking infrastructure, the city with the #6 best Nightlife on the planet (just behind Berlin and ahead of Paris) is finally making it easier and more pleasant to stay out late. The near-perfect climate (ranking #32 in Weather) doesn’t hurt, either.",
+        "name": "Madrid",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 3,
+            "infrastructure": 5,
+            "nature": 4,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "ES"
+    },
+    {
+        "brief_description": "The Eternal City has always been coveted. These days, the bounty is an immersive step back in time.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 41.88333333,
+                "lon": 12.5,
+                "primary": ""
+            }
+        ],
+        "description": "Few cities serve up the ability to walk the history of the Western world like Roma. Heck, Palatine Hill alone invites you into two millennia of Western civilization, if you’ve got an hour. Mix a safe, accessible modern city and its thousands of portals back in time and it’s easy to see how Rome almost cracked the Best Cities Top 10 again this year. Declarations of love for the city have multiplied with the channels of self-expression, of course, and the city’s #7 ranking in our extensive Place category has directly fueled its #5 Promotion ranking, including the second-most number of TripAdvisor reviews on the planet and very frequent Google searches. The curiosity about the Eternal City will only increase as Rome reopens carefully to visitors, who, after gorging on six months of local ’Grams featuring empty summer streets and iconic sites with nary a tourist umbrella to clutter the shot, are keen to time their return before the crowds come back. As of late summer 2020, most sights were reopened, as were most bars and restaurants. It’s not exactly la dolce vita quite yet, but Roma has persevered once again.",
+        "name": "Rome",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 3,
+            "infrastructure": 4,
+            "nature": 1,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "IT"
+    },
+    {
+        "brief_description": "America’s great Midwest metropolis has an abundance of programming and culture, with the deep infrastructure and affordability that eludes many cities.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 41.88194444,
+                "lon": -87.62777778,
+                "primary": ""
+            }
+        ],
+        "description": "Few American cities fell harder in visitor numbers in recent months than Chicago. Whether for business or pleasure, the city had been attracting tourism at record-breaking levels year after year. Indeed, when Rahm Emanuel won the mayorship in 2011, an estimated 39 million people a year visited Chicago. By the time he wrapped up his final term in 2019, that number had ballooned to nearly 58 million annual visitors—an impressive tourism feat and perhaps the biggest success story of Emanuel’s mayoral tenure. In the last few years, the Windy City pursued and acquired some big-ticket draws, including the NFL Draft, the James Beard Foundation Awards and the Laver Cup. It also bolstered tourist-friendly attractions like the Riverwalk and events that showcase Chicago’s craft beer scene. Its #13 ranking in our Programming category—including #7 in Culture and #11 for global Nightlife—speaks to the plentiful buzz that Chicago was perfecting before everything ground to a halt. In the not-too-distant future, the Obama Presidential Center—to be set in Jackson Park—will become a marquee attraction on Chicago’s South Side. “I think President Obama’s library can do for tourism what McCormick Place has done for business travel in the city,” Emanuel noted during his time as mayor. The city’s #32 ranking for Museums among global cities will surely improve as a result.",
+        "name": "Chicago",
+        "tags": {
+            "costs": 1,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 3,
+            "nature": 1,
+            "night_life": 2,
+            "sports": 2
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Economic growth, fueled by immigration and global investment, have Canada’s largest city poised for big things.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 43.74166667,
+                "lon": -79.37333333,
+                "primary": ""
+            }
+        ],
+        "description": "With almost half of its population foreign-born, Toronto’s #13 spot among the world’s cities—it’s highest finish ever—is powered by diversity and education—the two components of our People category, for which the city ranks #3, just behind Dubai and Abu Dhabi. But Toronto’s diversity is less tied to migrant labor and more to the long-term opportunity in a city that earlier this summer was crowned as the fastest growing metropolitan area in all of North America. As in, the continent. Ryerson University’s Centre for Urban Research and Land Development revealed that Toronto overtook Dallas–Fort Worth–Arlington for the top spot. The city’s openness, combined with its economy (with the eighth-most Global 500 head offices in the world) has resulted in unprecedented density and a satisfaction with just staying put, sated by real estate wealth and the comfort that the world is already in town. Of course, winning an NBA title doesn’t hurt, either.",
+        "name": "Toronto",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 2,
+            "infrastructure": 5,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 2
+        },
+        "country": "CA"
+    },
+    {
+        "brief_description": "Job opportunities and infrastructure buildout pave the way as the world continues to rush in.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 37.7775,
+                "lon": -122.41638889,
+                "primary": ""
+            }
+        ],
+        "description": "San Francisco has embraced seekers since the Gold Rush days, when, seemingly overnight, people came from Asia and Europe, from across the continent and from the other side of the world for their shot at the California Dream. Along the way, these immigrants have sowed the seeds for the city’s open-minded attitude toward, well, everything. The result is a place that doesn’t just welcome differences, but actually encourages and celebrates them. No wonder it ranks #6 globally in our People category, including #7 for Educational Attainment and #23 for Foreign-Born Residents. The promise of high salaries means a torrent of global workers fuel the city’s ambition and ideas, ranking it #9 in our GDP Per Capita subcategory and #20 for Global 500 companies. The city is also pursuing inclusivity and taking care of its own—from COVID-19 patients to the swelling homeless population. “We’re the city of St. Francis, and if we don’t lead on this, then shame on us,” said Joe D’Alessandro, CEO of San Francisco Travel. “As a DMO we’re taking a leading role on this… looking for small fixes until we can figure it out federally.” With that kind of local support, the city is charging into the current crisis well equipped.",
+        "name": "San_Francisco",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "The UAE’s second city passes on the ostentatious and pursues the culturally significant.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 24.46666667,
+                "lon": 54.36666667,
+                "primary": ""
+            }
+        ],
+        "description": "Abu Dhabi has a knack for attracting international talent, hitting #1 in our Foreign-Born Residents subcategory, and leaping 90 places in the rankings for our Educational Attainment subcategory, all the way up to #16. The buzz could be because the city is positioning itself as a leading global arts and culture hub, with the world’s largest mosque, and museums designed by just about every starchitect you can think of. While the Nouvel-designed Louvre Abu Dhabi is already open, the city is hard at work on Saadiyat Island on the construction of a Norman Foster-designed Zayed National Museum, a Frank Gehry-designed Guggenheim Abu Dhabi, Tadao Ando’s Maritime Museum and a Performing Arts Centre by the late Zaha Hadid. The city’s #239 ranking for Museums is bound to improve in coming years. In the #3-ranked city for our Weather subcategory, you need not go far for a place in the sun.",
+        "name": "Abu_Dhabi",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 4,
+            "infrastructure": 2,
+            "nature": 4,
+            "night_life": 5,
+            "sports": 4
+        },
+        "country": "AE"
+    },
+    {
+        "brief_description": "There are many cities that vie for the title of Venice of the North. Only St. Petersburg is worthy.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 59.9375,
+                "lon": 30.30861111,
+                "primary": ""
+            }
+        ],
+        "description": "Imperial capital for two centuries, city of 40 islands and 342 bridges, St. Petersburg has been steadily climbing the rankings from #54 to #35 and now within sight of the Top 10. It owes much of that recognition to its overwhelming saturation in arts and education: its population claimed the #1 spot for Educational Attainment in a city boasting more than 45 colleges and universities—some dating back nearly three centuries. The word “museum” gets redefined at the State Hermitage, one of the largest museums in the world, with an exquisite, sea-green Winter Palace so beautiful it could melt a czar’s heart. Not surprisingly, the city ranks #2 for Museums and #4 for Attractions. The city places #3 in our Sights & Landmarks category, meaning you need to roam Palace Square, Nevsky Prospekt—the elegant geographical anchor of the city—and around Square of the Arts and the Summer Gardens.",
+        "name": "Saint_Petersburg",
+        "tags": {
+            "costs": 3,
+            "culture": 5,
+            "food": 2,
+            "infrastructure": 3,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 1
+        },
+        "country": "RU"
+    },
+    {
+        "brief_description": "Surprised to see a mid-sized European capital with a fading party rep ranked so high? You obviously haven’t visited in a while.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 52.36666667,
+                "lon": 4.9,
+                "primary": ""
+            }
+        ],
+        "description": "It may be better known for its raunchy nightlife—still going strong at #10—but Amsterdam is stepping away from its seedier elements, going so far as to ban guided tours of its red-light district while it considers corralling sex work and foreigner-friendly cannabis cafés in a special zone. The city has doubled down on its enviable culture, connectivity and quality of life. New museums open regularly, kicked off in 2016 by the Warhol and Banksy-stuffed Moco, followed by renovations to three of the city’s most important museums—the Rijksmuseum, the Van Gogh and the Stedelijk. Not surprisingly, Amsterdam ranks #12 globally in our Museums subcategory, climbing the ranks for two years in a row. The city is also embracing corporate Brexit refugees, who are setting up shop after leaving London, drawn by the global connectivity of the airport (ranked #5) and new, direct four-hour London Eurostar rail service (handy if they forgot something in their old offices).",
+        "name": "Amsterdam",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 2,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "NL"
+    },
+    {
+        "brief_description": "Germany has evolved into a symbol of tolerance. No other city in the country embodies these sentiments quite like its capital.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 52.52,
+                "lon": 13.405,
+                "primary": ""
+            }
+        ],
+        "description": "Expats, creatives, entrepreneurs, immigrants, punks and misfits all find their place in Berlin, a city where remnants of a fragile history mingle with an ever-changing present, and where being whatever you want to be is not just encouraged but embraced. Though it was spared the COVID-19 numbers other European capitals experienced during the first wave (possibly thanks to the country’s science-friendly attitude and chancellor) the city still had to cancel its celebration of diversity, Karneval der Kulturen, while the famed Berlin Pride Celebration went virtual. In a normal winter, bars are packed to the gills and techno clubs pulse into the wee hours—the city hits #5 globally for our Nightlife subcategory. As soon as the sun comes out, the entire city heads outdoors, to the parks, the beer gardens and one street party or parade after another. Berlin also ranks #8 for Museums, while its art galleries overflow. This year the crowds will be kept smaller for safety, and masks will be enforced, but no one expects that to dampen the city’s famous cool factor.",
+        "name": "Berlin",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 1,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 3,
+            "sports": 4
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "Still the fascinating gateway into Eastern Europe’s secrets, Praha radiates confidence and dares visitors to keep up.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 50.08333333,
+                "lon": 14.41666667,
+                "primary": ""
+            }
+        ],
+        "description": "“Egalitarian” is an odd word to apply to a city in which the most prominent feature is a huge walled castle, but Prague claims #4 worldwide for Income Equality and #7 in our Unemployment subcategory. That’s not to say it’s abandoned the indulgent splendor of the past: Prague’s fairy-tale spirit can still be found in its century-old cobbled streets and its (publicly accessible) castle perched on a hilltop, in its hidden alleys, grand squares, ancient bridges and dreamy spires. But take a closer look and you’ll see a city constantly reshaped by citizens eager to write their own history. Here you can find shopping that’s at once sophisticated and daring, adventurous chefs creating a new Czech cuisine and an anything-goes club scene. Its COVID-19 response was second only to Tokyo’s among the world’s Top 20 cities, allowing its tourism to rebound faster than elsewhere; to celebrate, Prague offered 50% off entry fees to its museums, ranked #7 globally.",
+        "name": "Prague",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "CZ"
+    },
+    {
+        "brief_description": "Power meets play in America’s intriguing capital city.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 38.90472222,
+                "lon": -77.01638889,
+                "primary": ""
+            }
+        ],
+        "description": "The ubiquity of the U.S. capital in dramas on screens small and large (to say nothing of the real-life stuff) has escalated its resonance in the zeitgeist and helped propel it into the Top 20 global cities. The winning of Amazon’s coveted HQ2 in nearby Arlington, Virginia, dominated local chatter over the past two years—the 25,000 jobs created will be located in what Amazon calls National Landing, a newly minted place brand for the neighborhood near Reagan National Airport known as Crystal City. The jobs will improve D.C.’s already impressive economic footing, powered by its #12 spot for GDP Per Capita globally and #14 for Global 500 companies. Before the COVID-19 outbreak, 2020 was going to be one of the busiest ever for D.C. development, with Capitol Hill’s the Roost, a 12,500-square-foot community-based food hall, kicking things off. West Half, near The Yards Park, was also slated to open in late 2020, featuring views of Major League Baseball’s Nationals Park and including a brewery, cafés and a local grocery store. And Ward 7, two blocks away from the Minnesota Avenue metro station, will be home to Market 7, powered by a variety of Black-owned businesses including a grocer and retail installations by local makers. The jewel in the city’s culinary crown is the $250-million River Point, two blocks from Audi Field, between Capitol Riverfront and the Wharf, with piers, waterfront activity and plans for new restaurants that include a veggie-friendly eatery by James Beard–winning chef Spike Gjerde.",
+        "name": "Washington,_D.C.",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 3,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 1,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Istanbul is the only major city that straddles two continents, and globetrotters have long praised it for its incomparable blend of East and West.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 41.01361111,
+                "lon": 28.955,
+                "primary": ""
+            }
+        ],
+        "description": "The meeting of East and West, old and new, and conservatism and liberalism that Istanbul’s history is built upon colors everything here. Minarets and church spires dot the bright skyline, while down at street level women in black abayas and those in tight-fitting Armani dresses walk side by side. A few more steps away, Arabic house music from sidewalk cafés and bars all but drowns out the call to prayer. Get your bearings with a walk down Istiklal Caddesi, a pedestrian avenue in the Beyoğlu district that fuses modern with tradition to great effect. Here, impressive 19th-century buildings house cultural centers, shops, restaurants and cafés: for an elevated yet eclectic mix of old and new, Râna Meyhane offers both traditional and modern tasting menus, pulled together with an impressive wine list. Out on the streets, however, the old ways are regaining power: a recent government crackdown on freedom of expression, including social media, threatens to derail the country’s impressive Promotion showing. ",
+        "name": "Istanbul",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 3,
+            "infrastructure": 2,
+            "nature": 4,
+            "night_life": 4,
+            "sports": 1
+        },
+        "country": "TR"
+    },
+    {
+        "brief_description": "This pulsing destination has never been quieter than in the COVID-19 reality. Its resilience and response will define it for decades.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 36.175,
+                "lon": -115.13638889,
+                "primary": ""
+            }
+        ],
+        "description": "The story of Las Vegas blossoming into a “real city” has usually been told of late with breathless praise for its economic success. Tourism—the number one economic driver for Southern Nevada—has long paid for Las Vegas’ roads, parks, school construction and teachers’ salaries. According to the Las Vegas Convention and Visitors Authority, more than 41% of Southern Nevadans are employed directly or indirectly because of tourism. But this single reliance on the visitor economy also means that the COVID-19 outbreak decimated Las Vegas like few other American cities. When Governor Steve Sisolak took the unprecedented step of ordering every casino and gaming operation—the lifeblood of the state’s economy—to shut down in March 2020, citizens were thrust into an unimaginable financial crisis. Overnight, hundreds of thousands were furloughed or lost their jobs outright. Perhaps the city’s pursuit of transforming into a hometown will accelerate its rebound as the lockdown begins to lift. If there is a silver lining for locals, it’s that they’ll have the world’s #18-ranked Programming, including #8 for Culture (concerts, shows and events) and #17 in Nightlife, to themselves for a few months, all while helping their fellow citizens put in the reps to once again host the world.",
+        "name": "Las_Vegas",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 2,
+            "infrastructure": 3,
+            "nature": 4,
+            "night_life": 2,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Qatar has its sights set on becoming the next tourism hot spot in the Middle East. And it has the means to do it.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 25.28666667,
+                "lon": 51.53333333,
+                "primary": ""
+            }
+        ],
+        "description": "In less than a century, Qatar went from poor UK colony with a dwindling fishing industry to independent nation with booming infrastructural development and radically improved lifestyle. Thanks to shrewd investment of oil wealth, the Qatar Investment Authority is estimated to be worth US$335 billion, a portion of which is channeled back into the country and into Doha. That’s led to #1 global rankings this year in our GDP Per Capita and Unemployment subcategories as the country reinvests to build more highways, a metro system, universities, the I.M. Pei–designed Museum of Islamic Art and the breathtaking new National Museum of Qatar. Doha hopes to use the 2022 FIFA World Cup to show off its dynamic mix of traditional souks, iconic landmarks, ritzy shopping malls and five-star hotels. But with a poor migrant labor force toiling for a small, oligarchic elite leading to a dismal ranking of #250 for Income Equality, the city has some work ahead to maintain its reputation.",
+        "name": "Doha",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 1,
+            "infrastructure": 1,
+            "nature": 4,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "QA"
+    },
+    {
+        "brief_description": "Multifaceted Seoul ranks as impressively high for culture and entertainment as it does for things like institutions, attractions and infrastructure. ",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 37.56,
+                "lon": 126.99,
+                "primary": ""
+            }
+        ],
+        "description": "Throughout the first six months of the coronavirus pandemic, Seoul emerged as the envy of the world. Its secret? A high-tech sector and experienced government collaborating to detect, contain and treat cases early. That response was a blessing to the city’s restaurant and dining scene, tops globally for the second year in a row for the sheer volume of places to eat in town. To feed the body and mind, start your visit at Zaha Hadid’s futuristic Dongdaemun Design Plaza. Then, for a deep dive into the soul of Koreans, visit the National Folk Museum of Korea, which includes a room devoted to the deep and pervasive roots of Confucianism. Still hungry? Explore Mukja Golmok, literally “Let’s Eat Alley,” the vegetable-centric Temple Cuisine at Dooreyoo, Michelin-starred chef Tony Yoo’s oasis, and Gwangjang Market, a century-old food hall where you can eat everything from a soup of rice cakes and kimchi-tofu dumplings to squirmy live octopus (really).",
+        "name": "Seoul",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 2,
+            "nature": 3,
+            "night_life": 2,
+            "sports": 2
+        },
+        "country": "KR"
+    },
+    {
+        "brief_description": "Friendly, warm, young and rich, Sydney is a beauty with a growing line of suitors.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -33.865,
+                "lon": 151.20944444,
+                "primary": ""
+            }
+        ],
+        "description": "If Sydney weren’t so (relatively) isolated, chances are it would be challenging Paris and London for visitor number supremacy. It’s the laid-back, safe and sunny manifestation of the good life. Let’s use new residents as a benchmark: according to local numbers, Sydney has been gaining more than 80,000 annually, ranking #16 in our People category. Many of those people are foreign-born, too, with a #6 ranking in the subcategory. The city’s staggering growth is indicative of the pull of the golden beaches, the big-city harbor and the mellow, generous, welcoming citizens who call this spectacular location home. Sydney’s big outdoor spaces likely helped the city weather the coronavirus pandemic—within the Top 20, it had the third-fewest cases per million residents—and some green spaces saw double the usual number of visitors. The city is gifted with perfect integration of the natural and built, and accessible by all manner of ferries and watercraft, from which new angles on icons like the Opera House and Sydney Harbour Bridge are revealed.",
+        "name": "Sydney",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 1,
+            "night_life": 2,
+            "sports": 4
+        },
+        "country": "AU"
+    },
+    {
+        "brief_description": "Come for the prosperity, stay for the profound sense of place.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 39.90666667,
+                "lon": 116.3975,
+                "primary": ""
+            }
+        ],
+        "description": "If the 21st century belongs to China, Beijing will be the place to watch its rise. The capital city earned the #1 rank for Prosperity, but also for two separate features within the category: it has both the highest number of Global 500 headquarters, and the highest Income Equality worldwide. The social cohesion that comes with such an egalitarian society likely aided its breathtakingly low number of COVID-19 cases (just 19 per million residents, if official statistics are to be believed). The sight of the grand Forbidden City deserted during the pandemic will not last long as travel restrictions ease, with Beijing’s frequent direct flights and a brand-new airport already picking back up. The spectacular, $12-billion Zaha Hadid-designed Daxing International Airport opened its doors in late 2019, just in time to slam them shut as the pandemic hit. Airport officials say it will eventually see high-speed rail, inter-city services and downtown-to-airport express trains all stopping right beneath the terminal, making for quick connections to Beijing’s roiling downtown.",
+        "name": "Beijing",
+        "tags": {
+            "costs": 2,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 5,
+            "nature": 1,
+            "night_life": 5,
+            "sports": 3
+        },
+        "country": "CN"
+    },
+    {
+        "brief_description": "Miami’s creativity is fueled by its arms-wide-open acceptance of new immigrants.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 25.77527778,
+                "lon": -80.20888889,
+                "primary": ""
+            }
+        ],
+        "description": "Miami’s natural attributes—the turquoise waters of Biscayne Bay lapping gleaming sand while sun-kissed bodies frolic everywhere—have always captured the world’s imagination and crystallized the city’s hedonistic brand. But it’s the city’s openness to immigrants (and, more recently, the LGBTQ+ community) that ranks it #17 in the world in our People category, including #11 for in Foreign-Born Residents. Indeed, the city boasts more than 100 languages spoken at home, according to the latest census. Miami’s historic embrace of a crossroads of the Americas has also meant a business advantage few other cities claim. It’s home to one of the largest concentrations of international banks in the U.S., as well as the largest hub—outside of Mexico City, New York and L.A.—of Spanish-language media. It’s also at the crossroads of Latin America, both in geography and in culture: Miami intends to promote its connectivity and globalism, and the region’s selection as a host city candidate for the 2026 World Cup will go a long way in showcasing these qualities. The city is also continuing its aggressive pursuit of events and conferences, and last year it approved the hotel design for the new Miami Beach Convention Center—a 185-foot-high, 17-story structure to be completed by 2022.",
+        "name": "Miami",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 3,
+            "infrastructure": 5,
+            "nature": 1,
+            "night_life": 3,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Bavaria’s party capital is also a business behemoth.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 48.13333333,
+                "lon": 11.56666667,
+                "primary": ""
+            }
+        ],
+        "description": "Yes, there’s Oktoberfest every autumn, but Munich works as hard as it plays, becoming one of Europe’s hottest destinations for new residents seeking this elusive balance. It boasts the world’s top ranking for its convention center—and its airport is ranked #10 (soon to improve after its $550-million reno is done in 2023), ensuring ease of access to all that business. It also just broke the Top 25 in our University Ranking subcategory—thanks to Technical University of Munich, which brands itself “the Entrepreneurial University.” All these attributes make up our Product category, for which the city ranks in the Top 5 for the first time ever, helping propel the city nine ranks higher overall this year. Small wonder, with all that infrastructure and entrepreneurship, that Munich is also ranked #20 for Global 500 headquarters (made up primarily of automakers, media and manufacturing, but being quickly joined by biotech and IT giants).",
+        "name": "Munich",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 1,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "A no-nonsense devotion to the finer things makes Italy’s northern power a cultural and fashion vanguard.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 45.46694444,
+                "lon": 9.19,
+                "primary": ""
+            }
+        ],
+        "description": "Formerly synonymous with fashion and culture, Milan grabbed the world’s attention in all the wrong ways with one of the first serious outbreaks of COVID-19 outside of Asia. Italy’s financial hub was hard hit, but its recovery will emanate from here as well. Let’s start with tourism: of any Italian city, Milan scores highest in the Product category, which measures the number of quality museums (it ranks #20 worldwide) as well as universities (#68), convention centers (#9) and direct flights (#30). The two latter subcategories may well suffer in our new, smaller world—fewer people are expected to travel internationally and large conferences are likely out for now—but many of its museums have reopened with new distancing rules. That’s great news for anyone hoping to see works by Italian masters in the gorgeous former monastery at Pinacoteca di Brera, or immerse themselves in the clean lines and surprising cultural variety of Armani designs at Armani Silos. Not sure where to go first? The city’s sights are mapped to an impressive resolution by the #9 highest number of TripAdvisor reviews.",
+        "name": "Milan",
+        "tags": {
+            "costs": 2,
+            "culture": 3,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 3,
+            "sports": 1
+        },
+        "country": "IT"
+    },
+    {
+        "brief_description": "Southern California’s urban ideal offers free sunshine and keeps a good thing going—across two borders.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 32.715,
+                "lon": -117.1625,
+                "primary": ""
+            }
+        ],
+        "description": "You could say that San Diego is where California began. It was here that Spanish settlers established the region’s very first mission in 1769—251 years ago, on a hillside overlooking what is now known as Old Town San Diego. Two and a half centuries later, this city of 1.4 million (with an MSA population approaching 3.5 million) is one of the fastest-growing in the U.S. It ranks #15 in our deep Place category—with an impressive finish for Parks & Outdoors, at #11. And, of course, there’s its weather. San Diego is as naturally endowed as any place has a right to be—its sublime 263 full and partly sunny days annually help place it at #14 globally, while the 23 beaches—70 miles of them—within the city limits make it synonymous with SoCal surf culture. After a festive 2019 celebrating its 250th, the city is now pausing somewhat to reap the fruits of a torrid few years of development. Of course, with the COVID-19 outbreak and California’s stringent shelter-in-place orders, San Diegans don’t really have a choice. When they do get back out of the house and into their beloved city, they’ll beeline for the famous eponymous zoo—which is one year closer to the opening of its $69-million children’s zoo, to be named after Denny Sanford, a San Diego philanthropist who donated $30 million to this endeavor, the largest single gift the San Diego Zoo has ever received.",
+        "name": "San_Diego",
+        "tags": {
+            "costs": 2,
+            "culture": 3,
+            "food": 4,
+            "infrastructure": 2,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Eat, shop and repeat in Thailand’s intoxicating capital city and, increasingly, stealth design center.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 13.7525,
+                "lon": 100.49416667,
+                "primary": ""
+            }
+        ],
+        "description": "Rumors of the demise of street food in Bangkok’s Yaowarat (Chinatown) appear to have been greatly exaggerated, and that’s something worth celebrating: the city ranks #21 on the planet in our Restaurants subcategory. Indeed, in the wake of COVID-19 lockdowns (which helped the city fare exceptionally well against the virus) the district’s vendors triumphantly relit their grills and started serving up heaping portions of curry and noodles, albeit across Plexiglas barriers. There are also plentiful markets with dedicated spots for food vendors, so don’t skip a visit to Chatuchak, the biggest one. Bangkok also ranks high (#4) in Shopping, so once you tire of haggling, head to the sixth floor of Central, an upscale department store, to stock up on traditional Thai merchandise like tableware and decorative items made by artisans in Chiang Mai. Many more vendors can be found through Facebook (where Bangkok’s check-ins rank #6 globally), having turned to the online marketplace when the real ones shut down. The change may be permanent for some.",
+        "name": "Bangkok",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 4,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 2,
+            "sports": 1
+        },
+        "country": "TH"
+    },
+    {
+        "brief_description": "Where modernism was born, the future is doing just fine.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 48.2,
+                "lon": 16.36666667,
+                "primary": ""
+            }
+        ],
+        "description": "Fresh ideas are blowing through the city where modernism was born—the 4th district seems to be just one hub of change on its own. Better tasting coffee is coming to the UNESCO-ranked coffeehouses, like the Landtmann and the Central—places where radical philosophical and aesthetic movements were hatched over mediocre joe. And along with Gustav Klimt at the Belvedere and Egon Schiele at the Leopold, there’s a dynamic contemporary art scene made up of places like TBA21 and the Museum of Applied Arts—which combines applied art, design, architecture and contemporary art in historic splendor. The annual Vienna Design Week is an anticipated takeover of the entire city. Not for nothing does Vienna rank #30 overall for its Programming. It’s also a green city leader, with safe streets, great weather and a history of methodical city planning that has given the world everything from the English garden–inspired City Park (opened in 1862) to an actual national park just outside of town (Nationalpark Donau Auen). Vienna is also the European benchmark for public transit, with almost half of the city’s population holding an annual transit pass—and using it religiously.",
+        "name": "Vienna",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 5,
+            "infrastructure": 3,
+            "nature": 4,
+            "night_life": 3,
+            "sports": 5
+        },
+        "country": "AT"
+    },
+    {
+        "brief_description": "The storied capital is made for flâneurs and entrepreneurs.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 53.35,
+                "lon": -6.26666667,
+                "primary": ""
+            }
+        ],
+        "description": "Dublin’s Docklands area, known as Silicon Docks, is home to major tech and digital players including Google, Facebook, Amazon, eBay, Apple and Airbnb, to name just a few. The major international firms are attracted by the city’s giveaway corporate tax rates—among the lowest in the world—but if taxes were the whole story the gleaming offices would be manned by skeleton crews. Among many other reasons to invest in earnest is Ireland’s Local Enterprise Office, which supports international companies by providing mentoring and training as well as a number of financial grants. And it’s not just household names setting up shop in the Irish capital. The site of several internationally ranked universities (Trinity College Dublin, University College Dublin and Dublin City University), the city continues to attract smaller start-ups that choose it over traditional head office cities like London and New York. It helps to be able to offer eager young employees something to do outside of work, which Dublin’s famous—though increasingly costly—pub-centric nightlife (ranked #15) handily takes care of along with an abundance of concerts, shows and events (#21).",
+        "name": "Dublin",
+        "tags": {
+            "costs": 2,
+            "culture": 2,
+            "food": 2,
+            "infrastructure": 4,
+            "nature": 3,
+            "night_life": 5,
+            "sports": 1
+        },
+        "country": "IE"
+    },
+    {
+        "brief_description": "The most Asian city outside of Asia is as smart as it is gorgeous. Too bad about the price of entry.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 49.25,
+                "lon": -123.1,
+                "primary": ""
+            }
+        ],
+        "description": "As the terminus of a cross-country railroad constructed by laborers from all over Asia, Vancouver was built with a foundation of Asian sensibility. It ranks #5 in our People category, a combination of Educational Attainment and Foreign-Born Residents. Increasingly, the term “visible minority” doesn’t mean anything here. Despite the success of this eden of coexistence, not all is calm. Always on the lookout for foreign investment, various incarnations of provincial and federal governments made citizenship available to foreigners with sufficient capital, with little oversight on taxing outside funds. As such, Vancouver’s housing prices are now mostly hitched to a global context, largely decoupled from local wages. Fortunately, Silicon Valley and Seattle tech giants are coming to town with plenty of jobs, coaxed by Canada’s openness to immigration from global tech talent largely spurned by four years of nationalist policies south of the border. Additionally, Canada’s—and Vancouver’s in particular—comparatively pro-active response to and containment of the pandemic has endeared the city to even more global nomads who can work from anywhere. The University of British Columbia, ranked #15, is also a draw for the next generation of Vancouver’s increasingly global citizenry.",
+        "name": "Vancouver",
+        "tags": {
+            "costs": 1,
+            "culture": 5,
+            "food": 4,
+            "infrastructure": 4,
+            "nature": 3,
+            "night_life": 2,
+            "sports": 2
+        },
+        "country": "CA"
+    },
+    {
+        "brief_description": "America’s oldest big city has never been more current.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 42.35805556,
+                "lon": -71.06361111,
+                "primary": ""
+            }
+        ],
+        "description": "A hub of higher education and home to the fourth-best-educated workforce in the nation, Beantown produces a steady stream of new talent to help attract start-ups and established companies alike. Future talent gravitates to Harvard, of course—the country’s top school (and a big reason why the city is #1 in our University subcategory and scored #35 in our overall Product category, which measures hard-to-build infrastructure in subcategories like Airport Connectivity and Convention Center)—as well as to Boston’s density of other world-class universities and colleges. The city is bursting with lecture halls, labs and classrooms of the more than 75 institutions of higher learning, and is energized by the estimated 200,000 post-secondary students creating stories, ideas, solutions and technologies that will help drive the economy and incubate innovation districts nationally and globally in the coming decades. New students flock here, to arguably the continent’s largest university town, by the tens of thousands every year and become smitten with the crooked narrow streets and storied pubs, blended with American optimism and East Coast connectivity. This is the birthplace of America, after all. And Facebook. No wonder Boston ranks an impressive #21 in our People category, including #9 for the percentage of the population with postsecondary education.",
+        "name": "Boston",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 5,
+            "sports": 4
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Often ranking among the world’s most livable cities, Zurich is exactly the kind of place you’d want to call home: efficient, clean and safe.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 47.36666667,
+                "lon": 8.55,
+                "primary": ""
+            }
+        ],
+        "description": "Switzerland’s financial center and largest metropolis is a magnet for foreigners who, along with multilingual Swiss nationals, enjoy one of the world’s highest standards of living—the city ranks #15 for GDP Per Capita and #9 for Unemployment. Zurich also lands at #15 in our People category, which includes the Educational Attainment (#13) and Foreign-Born Residents (#27) subcategories. It also breaks the Top 10 for Global 500 companies, with major European players like Migros, Credit Suisse and UBS AG based here. For the uninitiated, Zurich may seem like a bourgeois and reserved kind of place, but under the buttoned-down oxford you’ll find a thriving arts landscape, an adventurous restaurant scene and plenty of vintage finds that won’t break the (Swiss) bank account. A hub for European travel, Zurich suffered economically from its 126 COVID-19 cases per million residents. Its airport (ranked #24 for Connectivity) was hit by a substantial drop in revenue, which it expected to affect capital spending in the city over the coming years. ",
+        "name": "Zürich",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 3,
+            "sports": 2
+        },
+        "country": "CH"
+    },
+    {
+        "brief_description": "Cool, confident and never too eager to give up its secrets, Melbourne rewards citizens and curious, patient visitors.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -37.81361111,
+                "lon": 144.96305556,
+                "primary": ""
+            }
+        ],
+        "description": "While Sydney is known for its laid-back vibe and breezy style, Melbourne goes for edgy aesthetics and urban panache. For proof, explore a multitude of tiny alleys, where the city’s spray-can artists turn dreary walls into colorful canvases. You might stumble upon a laneway, those locally loved narrow passageways open only to pedestrian traffic, with a charming little bar or an award-winning restaurant. In the art capital of Australia, you can while away the morning at Gertrude Contemporary, a gallery that showcases the work of emerging homegrown artists, or you can lose yourself in the happening Fitzroy neighborhood, where the city’s street-art scene began in the aforementioned alleys. Melbourne ranks #23 for Sights & Landmarks and #27 for Culture. Its diversity is a major strength, ranking #10 for Foreign-Born Residents, and a better educated populace helped its People score rise four spots. ",
+        "name": "Melbourne",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 4,
+            "infrastructure": 5,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "AU"
+    },
+    {
+        "brief_description": "The Old World beguiles in the Hungarian capital.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 47.4925,
+                "lon": 19.05138889,
+                "primary": ""
+            }
+        ],
+        "description": "There’s much to see and do on either side of the Hungarian capital, which is split in half by the expansive bend of the Danube River. On the west bank is medieval Buda, hilly and full of history, and on the east is Pest, modern and bohemian. The two were first linked in 1849 by the iconic Széchenyi Chain Bridge and together they now offer an alluring whole that ranks high for Programming (#27) and for Prosperity (#46). Ornate baths, old-fashioned cafés, lively markets, Art Nouveau splendors and a fascinating history sweep visitors off their feet. Don’t miss a hike to Gellért Hill, which rises 770 feet above the city and offers sweeping views of the river below, the Buda hills, Pest and the mountain ranges in the distance. At night, Budapest’s Communist-era factories and parkades come alive as “ruin bars,” a distinctly Eastern European approach that keeps the city’s nightlife (ranked #16) fresh and surprising.",
+        "name": "Budapest",
+        "tags": {
+            "costs": 3,
+            "culture": 5,
+            "food": 1,
+            "infrastructure": 5,
+            "nature": 2,
+            "night_life": 3,
+            "sports": 2
+        },
+        "country": "HU"
+    },
+    {
+        "brief_description": "Smart, skilled and soulful, Houston is the American city of the future.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 29.76277778,
+                "lon": -95.38305556,
+                "primary": ""
+            }
+        ],
+        "description": "International immigration in the past decade has contributed to explosive population growth and has made Houston one of the most ethnically diverse big cities in America, with more than 145 different languages spoken at home, according to the latest census—about even with New York. No wonder its dining is ranked #35 in the world. The fourth-largest city in the U.S. is also home to the fourth-largest concentration of Fortune 500 companies in the country, and ranks an impressive Top 20 globally. The city is also #10 on the planet in our GDP Per Capita subcategory. Despite this, the city ranks a middling #76 overall in Prosperity, including #200 in our Unemployment ranking and #214 for Income Equality. But there is room for inclusion in the city’s ambitious plans. The recent development of the Houston Spaceport, a hub for innovation, education and commercial spaceflight, is the future of the region’s space industry—and brings us all a step closer to space tourism. For now, Houston’s 22.3 million annual visitors (2018)—of which 3.28 million were international travelers—arrive and depart by more conventional means—at least they did before the city was devastated by the pandemic. The city ranks #29 for Airport Connectivity.",
+        "name": "Houston",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 3,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 3,
+            "sports": 2
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "America’s boomtown is playing the long game to keep the (supervised) party going.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 47.60972222,
+                "lon": -122.33305556,
+                "primary": ""
+            }
+        ],
+        "description": "Seattle’s self-reliance and dedication to taking care of its own has fostered over 150 years of city-building on the far-flung northwest coast of the U.S., setting the stage for its current “it” status. In many ways, Sea Town reverse-engineered its success. With a focus on education and an optimized workforce, the very environment that launched and held on to Boeing (still the biggest local employer despite the relocation of its headquarters to Chicago) as well as Microsoft and Weyerhaeuser has also attracted more recent captains of industry, like Amazon, Costco and Starbucks. Keeping the talent pipeline stocked has always been Seattle’s secret—and it’s paid off. Today, it ranks in the Top 20 globally for educated citizenry and #11 in our vital GDP Per Capita subcategory, powered by its #30 ranking for Global 500 companies in town (and growing). The city’s boom has slowed significantly, with rising COVID-19 cases and its lowest-ever employment rate (ranked #229 nationally as of late July 2020). At the same time, residents, workers and businesses have been hobbled by the closure of the West Seattle Bridge, the city’s busiest.",
+        "name": "Seattle",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 2,
+            "infrastructure": 4,
+            "nature": 2,
+            "night_life": 1,
+            "sports": 2
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Canada’s exotic French heart was hit hard with COVID-19. But a return to brighter days is never far here, mes amis.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 45.50888889,
+                "lon": -73.56166667,
+                "primary": ""
+            }
+        ],
+        "description": "Outgoing, two-cheek-embracing, convivial-above-all-Montreal took a hard, early hit as the pandemic struck. Deaths in residences for the elderly exposed the ugly underbelly of an underfunded industry and brought about a reckoning for both governments and families in terms of the meaning of care. Montreal’s global ranking of 184 out of 263 in the number of coronavirus cases per million residents put the city at the head of Canada’s outbreak and on a par with cities like Seattle. Despite the cancellation of iconic programming like the Grand Prix, the city acted swiftly to turn major streets into creatively-styled outdoor hangouts with art and music, and vastly increased bike lanes. The summer of 2020, as ever in the city, was deliriously enjoyable and tragically short—not for nothing does Montreal rank 25th in the world for the number of quality activities, shows and events. Montreal also ranks 31st for its number of foreign-born citizens, and 30th for the percentage of residents with higher education. Universities are highly rated—highly respected McGill climbed in the rankings—and Université de Montréal has become a hot spot of the Artificial Intelligence kind. Montreal’s growing tech expertise hasn’t put the city out of reach: it hit #22 in our Gini coefficient ranking for inequality. But it’s becoming increasingly clear: the city’s future may be more dependent on its growing brains than on its considerable heart. ",
+        "name": "Montreal",
+        "tags": {
+            "costs": 1,
+            "culture": 2,
+            "food": 2,
+            "infrastructure": 3,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 4
+        },
+        "country": "CA"
+    },
+    {
+        "brief_description": "Not quite China but no longer a Western colony, Hong Kong is fighting for its autonomy.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 22.3,
+                "lon": 114.2,
+                "primary": ""
+            }
+        ],
+        "description": "The East-meets-West spirit of the place; the forest of skyscrapers as seen on a hike to Pok Fu Lam Reservoir; the sounds, smells and tastes from the dai pai dong (open-air food stalls) of Temple Street Night Market and the city’s electric pulse all captivate visitors and locals alike. The sublime embrace of the city was shattered in April 2019 when Hong Kong citizens opposing a law to extradite criminal cases to China first took to the streets. The demands quickly spread to broader human rights reforms targeting China’s encroachment on the region—and now, the draconian new security law imposed by Beijing has cast a pall on Hong Kong’s Safety (#8), currently a high point of its score for Place (#28). It’s hard to imagine as many foreigners still wishing to visit a city where they could very easily be detained for wearing the wrong shirt. Hong Kong was well prepared for COVID-19, with acute memories of the last generation’s SARS epidemic, and so snuffed out the newer virus more quickly than most cities outside the region. ",
+        "name": "Hong_Kong",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 3,
+            "infrastructure": 3,
+            "nature": 2,
+            "night_life": 2,
+            "sports": 2
+        },
+        "country": "HK"
+    },
+    {
+        "brief_description": "Frankfurt smartly defines conventions.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 50.11666667,
+                "lon": 8.68333333,
+                "primary": ""
+            }
+        ],
+        "description": "Frankfurt has perfected the art of air access. Germany is in the middle of Europe, Frankfurt is in the middle of Germany, and its airport—the largest in the country—is one of the world’s aviation hubs (#3 in our Airport Connectivity subcategory). The city rises above most others with its #2-ranked convention center, which draws more than 4.5 million visitors annually (pandemic years excepted). In 15 minutes, conventioneers who fly into FRA can find themselves at the massive Messe Frankfurt, the world’s largest trade fair and event organizer, featuring its own exhibition grounds. A short stroll in any direction takes visitors to shopping, restaurants, museums and other pleasures to mix with the business of the day. The convention center is scrambling to salvage its business during the COVID-19 pandemic, and has managed to quickly bounce back with the “hygiene concept,” a typically German comprehensive system for safely organizing an event, from the catering services to teleconferencing technology to contactless access.",
+        "name": "Frankfurt",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 1,
+            "infrastructure": 1,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 1
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "The world is already in Brazil’s largest city. They all just happen to speak Portuguese.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -23.55,
+                "lon": -46.63333333,
+                "primary": ""
+            }
+        ],
+        "description": "Brazil’s biggest metropolis greets you not with beaches but with high-rises, traffic, smog and more than the occasional downpour. But as Paulistanos will tell you in person or via Facebook check-ins (#5), they live in the best city on the planet. With the largest population of Italian descendants outside of Italy, the largest community of people of Japanese descent and a large Arab community fueled mostly by Lebanese and Syrian immigrants, culinary delights are a given. The city lands at #3 for Restaurants. Brazil’s late and half-hearted response to COVID-19 meant São Paulo suffered more cases of the virus than almost any non-U.S. city, and worse even than many parts of the particularly hard-hit U.S. That’s likely to put a damper on the city’s Top 5 ranking for concerts, shows and events until big crowds are safe again. The city canceled the spring edition of its famous fashion week—the biggest in Latin America—and its Pride Parade, the world’s biggest.",
+        "name": "São_Paulo",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 2,
+            "infrastructure": 1,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 1
+        },
+        "country": "BR"
+    },
+    {
+        "brief_description": "A beach town with serious cultural chops, Tel Aviv is drawing on its past to forge an exciting future.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 32.06666667,
+                "lon": 34.78333333,
+                "primary": ""
+            }
+        ],
+        "description": "With its year-round perfect weather, laidback lifestyle and burgeoning tech industry, it’s no surprise that Tel Aviv has become a popular place to live for foreign-born Millennials and Gen-Xers (the city ranks #16 in terms of diversity). Tel Aviv also reaches #8 in our People category, and ranks an impressive #39 for Museums. Located in the city center and opened in 1932, the Tel Aviv Museum of Art houses a comprehensive collection of works by local and international artists. The new building of twisting geometric surfaces, designed by Preston Scott Cohen, is one of the city’s landmarks. Opened in 2018, across the Yarkon River from the art museum, is the Steinhardt Museum of Natural History, a grand monument to the natural world that also makes allowances for the country’s Abrahamic faith: Torah literalists can avoid the section on evolution. The two museums boast gorgeous architecture, but you don’t have to go to a museum to be immersed in art and design. In a city with the planet’s largest concentration of Bauhaus-style buildings, fascinating architecture is everywhere you look.",
+        "name": "Tel_Aviv",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 3,
+            "infrastructure": 5,
+            "nature": 5,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "IL"
+    },
+    {
+        "brief_description": "One of Europe’s new culinary capitals lets you eat it up and work it off.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 55.67611111,
+                "lon": 12.56833333,
+                "primary": ""
+            }
+        ],
+        "description": "René Redzepi put Nordic cuisine on the map when his restaurant Noma was named the world’s best in 2010—and, since then, it’s only dropped a single place, with a new location in the countryside outside of town. It’s not something everyone can afford, but with a strong showing in Income Equality (#17) the standard of living is high enough for many of the other luxuries the city offers. And the Danish capital continues to be a hotbed for innovative cuisine, as well as for contemporary art and design. Surprisingly, Copenhagen only ranks at #121 in our Restaurants subcategory, but trust us when we say you should go here hungry. Compact enough so you can walk or bike everywhere, Copenhagen offers not just plenty of culinary delights, but also a rich cultural heritage and lots of green spaces and pretty canals to explore—alongside an impressively educated populace (#19). The city ranks #75 for Parks & Outdoors but only #226 for Weather, so dress accordingly.",
+        "name": "Copenhagen",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 1,
+            "nature": 1,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "DK"
+    },
+    {
+        "brief_description": "Canada’s energy capital is building for its future, despite a struggling oil industry.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 51.05,
+                "lon": -114.06666667,
+                "primary": ""
+            }
+        ],
+        "description": "Although Toronto is Canada’s business heart, it’s Calgary—with Canada’s youngest population and home to its oil industry—that’s always been second. People here walk with the velocity of New Yorkers and cut to the chase like Texans. Ranking #23 globally in GDP Per Capita, by far the highest in Canada, the city is now in the midst of an economic hardship not seen in decades due to the struggling oil and gas industry (the fortunes of Calgary rise and fall with the price of crude). The pandemic added to the misery, which has manifested into the highest unemployment rate in Canada, at 15.5% over the summer of 2020. The challenge in this city of risk-takers has always been to even things out by diversifying away from fossil fuels, building an economically resilient home town for a place that ranks #9 globally in our People category, including #11 for Educational Attainment and #24 for Foreign-Born Residents. New projects, like the recently opened Central Library in the burgeoning cultural hub of East Village, reinforce the city’s long-lauded quality of life, despite current struggles.",
+        "name": "Calgary",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 2,
+            "infrastructure": 2,
+            "nature": 1,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "CA"
+    },
+    {
+        "brief_description": "Yes, there are theme parks. But Orlando is also a thriving food destination with plenty to enjoy without kids in tow.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 28.54,
+                "lon": -81.38,
+                "primary": ""
+            }
+        ],
+        "description": "Being the largest city in a region that generates more than $60 billion in tourism-related revenue every year (2020 being the notable exception) gets you plenty of lift from a rising tide. That’s a lot of visitors with a story to tell if you give them the means to tell it. Orlando knows how to get people talking. Its #32 ranking in our Promotion category drove its Top 50 overall global ranking, including the eighth-most TripAdvisor reviews of any global metropolis. Orlando plans buzzy product releases with military precision—and suffered deeply when confronted with an invisible enemy it couldn’t defeat quickly, its many high-budget tourism-reliant initiatives cut short, from SeaWorld’s new Sesame Street, rolled out for the show’s 50th anniversary, to LEGOLAND Resort’s debuted Lego Movie World. The city has also expanded its attention beyond family fun. The new Exploria Stadium houses the local MLS men’s and women’s teams, with seats for 25,500 fans. Orlando’s middling Restaurants ranking (#102) looks to be on the long-term upswing as the world’s chefs focus on the post-pandemic opportunity in a place with so many diners on vacation. The NBA making its pandemic season hub in the city will help a little, but Orlando faces massive challenges in a state where infection rates set daily records.",
+        "name": "Orlando,_Florida",
+        "tags": {
+            "costs": 1,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 4
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Affluent, charming and dripping with history, this giant of the American South is creating the future on its own terms.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 33.755,
+                "lon": -84.39,
+                "primary": ""
+            }
+        ],
+        "description": "Long a progressive beacon of diversity in conservative Georgia, Atlanta has a rich legacy of American civil rights, along with laying claim as the birthplace of Martin Luther King Jr. The city embraces and shares its rich, living history—from the must-see Center for Civil and Human Rights to the King Center for Nonviolent Social Change. These days, it’s also front and center in the U.S.’s escalating pursuit of social justice and equality, with Mayor Keisha Lance Bottoms even being rumored to be among the competition for Kamala Harris when Biden was choosing a running mate. Atlanta has always been a crossroads—open to new ideas, and to the new arrivals who came to this lush, hot, rolling land when the city rose as a railroad terminus. Today, it’s still a transportation hub, with Hartsfield–Jackson Atlanta International Airport one of the busiest airports in the world (80% of the U.S. population resides within a two-hour flight). It’s why the city ranks #14 for Airport Connectivity globally, as well as #34 in our Convention Center subcategory, resulting in an overall #24 ranking for Product. Atlanta, like most optimized hubs, also boasts efficient, inexpensive, direct public transit links to the city from its airport. It’s also a long-time business titan, ranking Top 20 worldwide for most Global 500 companies based in town.",
+        "name": "Atlanta",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 2,
+            "infrastructure": 4,
+            "nature": 1,
+            "night_life": 3,
+            "sports": 2
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Dallas-boosters like to say that “Big Things Happen Here,” and as the city climbs up our ranking, we’d have to agree.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 32.77916667,
+                "lon": -96.80888889,
+                "primary": ""
+            }
+        ],
+        "description": "It’s not only city branding that’s big in Dallas, which is home to more than 10,000 corporate headquarters—the largest corporate head office concentration in the U.S. and #19 in the world for Global 500 companies. Of course, a city with lots of corporate headquarters is a city that’s easy to get to: Dallas ranks #8 in the world for Airport Connectivity, a measure of direct flight access into a city’s principal airport. But the city isn’t just big on money; it’s big on fun and culture, too. Dallas is also home to America’s sixth-largest LGBTQ+ community, with bars and restaurants concentrated in Oak Lawn, and to the Dallas Arts District, the largest contiguous urban arts district in the nation. On 20 square blocks of mixed-use space, museums like the Dallas Museum of Art, the Crow Museum of Asian Art and the renowned Nasher Sculpture Center—as well as theaters, symphony and opera venues and restaurants and bars—all contribute to a #59 ranking in our Culture subcategory (concerts, shows and events).",
+        "name": "Dallas",
+        "tags": {
+            "costs": 2,
+            "culture": 3,
+            "food": 4,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Germany’s second city is a creative wild child with global impact.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 53.56527778,
+                "lon": 10.00138889,
+                "primary": ""
+            }
+        ],
+        "description": "Hamburg is both Europe’s second-largest shipping port and a serious contender for Venice of the North, with a lake and a latticework of canals that elevate the city into visually stunning territory. The landmark that tells the story is the $933-million Elbphilharmonie, a spectacular concert hall that combines 19th-century warehouses with the crystalline architecture and acoustics of the future. But don’t let the opulence fool you: Hamburg boasts the 13th-best Income Equality worldwide. Lower-income people are not being left behind, even in its signature redevelopment project, HafenCity. In Europe’s biggest inner-city urban development project—which, over more than a decade, is transforming almost a square mile of tumble-down docks along the city’s port into a buzzing shopping and residential area—a third of housing must be subsidized while another third is set aside for rentals. The project is due to be completed within the next five years, and includes new additions to Hamburg’s bustling nightlife (#22), such as a new offshoot of the popular rum-soaked Boilerman Bar.",
+        "name": "Hamburg",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 2,
+            "infrastructure": 4,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "Osaka does today what it’s done well for centuries: entrepreneurialism, food distribution and living high off the spoils of both.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 34.69388889,
+                "lon": 135.50222222,
+                "primary": ""
+            }
+        ],
+        "description": "This city has swagger, perhaps because it was the capital of what is today modern Japan a millennium before Tokyo. Osaka served as “the nation’s kitchen”—the distribution point for rice, the most important measure of wealth. Since industry begets industry, it’s now ranked #10 on the planet for most Global 500 companies. Amazingly, the city’s economy dwarfs Hong Kong’s. But it’s the impressive #22 ranking in our Programming category—led by a #7 spot for its shopping scene—that is making Osaka the fastest-rising Japanese tourist city. That ranking leapfrogged its already stellar showing for Restaurants (#13). Best known for its okonomiyaki—cabbage pancakes stuffed with an ever-changing lineup of fillings—Osaka is home to several restaurants specializing in this fabulous dish as well as its distant octopus-containing cousin, takoyaki. Annual foreign visitors to Osaka could reach 26 million by 2030, according to Takeshi Yamaguchi of estate consulting firm CBRE.",
+        "name": "Osaka",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 4,
+            "infrastructure": 1,
+            "nature": 5,
+            "night_life": 1,
+            "sports": 1
+        },
+        "country": "JP"
+    },
+    {
+        "brief_description": "The once sleepy capital on the edge of Western Europe is today one of Europe’s hottest destinations.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 38.7252668,
+                "lon": -9.1500193,
+                "primary": ""
+            }
+        ],
+        "description": "The Portuguese capital is a tactile, multisensory experience best explored on foot with no particular agenda, allowing a few of the 2,799 hours of sunshine a year—the most of any European capital—to warm your sense of discovery. Its seven hills play with the senses, reverberating sounds, light and scents, to say nothing of providing perches from which to watch the sun setting ablaze the yellow and white architecture—and the Atlantic beyond. To save you some time, the best spot to do so is the Castelo de São Jorge, a view you have to earn through winding ancient alleys in one of Europe’s oldest neighborhoods. The city’s #21 Safety ranking—which draws from UN, European and FBI statistics—shot up 92 places this year. Indeed, safety was the country’s focus in trying to win back the tourists Lisbon depends on: from temperature checks to high testing rates, Lisbon is eager to show the world that its neighborhoods (ranking #15 for Sights & Landmarks) and open spaces (at #19 for Parks & Outdoors) are ready to welcome them back.",
+        "name": "Lisbon",
+        "tags": {
+            "costs": 1,
+            "culture": 2,
+            "food": 2,
+            "infrastructure": 3,
+            "nature": 1,
+            "night_life": 5,
+            "sports": 1
+        },
+        "country": "PT"
+    },
+    {
+        "brief_description": "The home of SXSW and the purported best live music scene on the planet fights hard to keep it weird.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 30.26722222,
+                "lon": -97.74305556,
+                "primary": ""
+            }
+        ],
+        "description": "The rebellious Texas city—forged with the Longhorn State’s can-do persistence cut with a university town’s political activism and social diversity—has long attracted the misfits who don’t quite fit into the American south’s expectations. The city ranks #33 in our People category, including #24 for Educational Attainment. A lot of the brainpower arrives for the 18th-ranked university on the planet, The University of Texas at Austin, and many never leave. That foundation of thinking differently drew dreamers for decades, manifesting in one of the nation’s top music scenes. The local marketing organization, Visit Austin, trademarked the city as the “Live Music Capital of the World.” On any given night—the past six months notwithstanding—the city’s various entertainment districts serve up performance experiences like nowhere else on earth. SXSW (South by Southwest), the annual summit of film, interactive media and music festivals and conferences (plus a fair share of historic product launches like Airbnb), has seeded the area’s magnetism for new ventures. As such, monikers like “Silicon Hills” have followed campus openings by Apple, Facebook, Google, Oracle, Dell, Cisco and Hewlett-Packard. A skills shortage—tempered by the pandemic—is being mitigated somewhat by a steady flow of graduates pouring out from UT Austin and new residents streaming in from both coasts.",
+        "name": "Austin,_Texas",
+        "tags": {
+            "costs": 1,
+            "culture": 5,
+            "food": 2,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 2
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Latin soul, daring architecture and a reverence for the outdoors blends a heady mix in the heart of the American Southwest.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 33.45,
+                "lon": -112.06666667,
+                "primary": ""
+            }
+        ],
+        "description": "A thriving desert metropolis, Phoenix offers some of the best Mexican food this side of the border, a number of fine museums, a vibrant artist community and 300 days of sunshine—with the #12-ranked Weather globally. Start your visit with a stroll through Roosevelt Row Arts District, or RoRo, as locals have taken to calling it. Art galleries, studios, restaurants and bars sit side by side in this walkable creative district in the downtown core—helping the city to a #15 ranking globally in our Attractions subcategory. Don’t miss the Desert Botanical Garden, which, with more than 50,000 plants, has one of the world’s largest collections of desert flora. Want to see some cacti and succulents in their natural element? Take a close-up look at Camelback Mountain. Summit trails are not for the faint of heart, especially in 100° Fahrenheit heat, but the base of the mountain offers easier and equally beautiful trails for beginners. Phoenix ranks #53 in the nation for its Parks & Outdoors. If you’re looking for a respite from the heat, visit the Phoenix Art Museum, where Carlos Amorales’ Black Cloud, a site-specific installation consisting of 25,000 individual, life-sized black paper moths and butterflies, weaves its way in a swarm up the walls and ceilings of a gallery space.",
+        "name": "Phoenix,_Arizona",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 3,
+            "infrastructure": 1,
+            "nature": 4,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Italy’s third-largest city is a 3,000-year-old treasure trove of urbanity, with the experiences to match.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 40.845,
+                "lon": 14.25833333,
+                "primary": ""
+            }
+        ],
+        "description": "Even by European secondary-city status, Naples is often overlooked and underestimated—both by international visitors and by Italy’s power centers. The city’s three millennia of existence make it one of the oldest urban centers on the continent—with the accompanying layers of beauty, conflict and lore (ciao, Elena Ferrante). Naples ranks an impressive #4 overall in our deep Place category, including #5 for Sights & Landmarks—like its centuries-old Naples Cathedral, which rivals any other in the sensual feast that is Italy. Like in Rome and Istanbul, a mere stroll here (or a ride up the funicular to the surrounding hillside neighborhoods) reveals forgotten history every few minutes. The city’s waterfront, nearby beaches and parks result in #7 ranking for Parks & Outdoors on the planet. Naples has long been associated with crime and mafia, but tourism has doubled over the past decade, and crime dropped by almost 50% between 2018 and 2019, according to local sources—resulting in a #87 Safety ranking for the city globally. Of course, both positive indicators are at risk given the country’s struggles with the economic devastation of the pandemic. A region with an unemployment rate of 20% in normal times is far worse off today.",
+        "name": "Naples",
+        "tags": {
+            "costs": 2,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 5,
+            "nature": 4,
+            "night_life": 2,
+            "sports": 3
+        },
+        "country": "IT"
+    },
+    {
+        "brief_description": "Smart, practical and increasingly keen to share its idiosyncrasies with the world, Oslo is an economic powerhouse with swagger (as much as Norwegians swagger).",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 59.91388889,
+                "lon": 10.75222222,
+                "primary": ""
+            }
+        ],
+        "description": "No longer playing second fiddle to Scandinavian cities like Stockholm and Copenhagen, Oslo is proving itself a worthy destination all its own, with stunning natural beauty, as well as a thriving nightlife scene, Michelin-worthy restaurants and a storied past. The holder of our #20 spot in the People category, Oslo has some of the most educated residents in the world (#10 for Educational Attainment) as well as a high percentage of international citizens (#35 for Foreign-Born Residents). The economy is performing well, offering its residents admirable levels of social wellbeing and employment, which is a good thing, since Oslo is not a cheap place to live in or visit. But a high Income Equality ranking (#10) and access to education means that status symbols like the Teslas quietly prowling its streets are not just playthings for a rich few. In fact, thanks in part to generous subsidies and breaks on Oslo’s downtown congestion pricing, the luxury electric vehicle brand owns a quarter of Norway’s car market.",
+        "name": "Oslo",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 4,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 2,
+            "sports": 4
+        },
+        "country": "NO"
+    },
+    {
+        "brief_description": "Light rail, legal pot and buzzing ’hoods put Denver on the fast track.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 39.73916667,
+                "lon": -104.99027778,
+                "primary": ""
+            }
+        ],
+        "description": "Since its Wild West beginnings, Denver has attracted people from a variety of cultures who’ve created a rich tapestry and a diverse cultural heritage. These days, an increasing number of companies are locating in Downtown Denver, which points to its reputation as one of the best places in the country to start and grow a business. The city ranks an impressive #24 globally in our GDP Per Capita subcategory, as well as #23 for Educational Attainment. But it’s not just an abundance of jobs and a lower cost of living that’s attracting a highly educated and in-demand workforce to the city. Blessed with 300 days of sunshine a year and surrounded by mountains, hiking paths and numerous indoor/outdoor spaces, the city is in the vanguard of the growing trend toward office wellness. Lest we forget, cannabis is legal in the Mile High City and the entire state of Colorado.",
+        "name": "Denver",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 1,
+            "nature": 1,
+            "night_life": 2,
+            "sports": 5
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "An ambitious tech scene with daring cuisine to fuel the Scandinavian fire.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 59.32944444,
+                "lon": 18.06861111,
+                "primary": ""
+            }
+        ],
+        "description": "Very few Scandinavian cities are as dynamic as Stockholm, with its mix of rustic, traditional and New Nordic cuisine, its idyllic parks and outdoor swimming areas, quaint cobblestone streets lined with buildings erected in the 1700s, cutting-edge design and mid-century modern aesthetics. Throw in a varied, multicultural population that speaks near flawless English (Stockholm ranks #34 in our People category with a #14 ranking for Educational Attainment) and epic summer season with near-constant daylight, and you’ve got yourself one very attractive destination with plenty of experiences for any mood. This truly international city underwent an IT boom in the late 1990s, which was followed a decade later by a second wave with the launch of global hits like Skype, Spotify and Minecraft—earning Stockholm the moniker “The Unicorn Factory” for its record of launching more billion-dollar start-ups than anywhere outside of Silicon Valley. A wander through the swanky, recently gentrified Södermalm neighborhood, the birthplace of many of these tech giants, will reveal why the city ranks #48 in the GDP Per Capita subcategory. But be sure to mask up: the country’s push for “herd immunity” during COVID-19 caused a spike in infections and deaths, and the worst COVID-19 numbers in Scandinavia.",
+        "name": "Stockholm",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 2,
+            "infrastructure": 2,
+            "nature": 1,
+            "night_life": 2,
+            "sports": 5
+        },
+        "country": "SE"
+    },
+    {
+        "brief_description": "The City of Brotherly Love gives locals and visitors plenty of Americana.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 39.95277778,
+                "lon": -75.16361111,
+                "primary": ""
+            }
+        ],
+        "description": "Given its deep foundation in the creation of the Union almost 250 years ago, Philadelphia is a dense, cataloged embodiment of American values and traditions, easily accessible and eagerly shared. Small wonder, then, that it ranks an impressive #38 in our Sights & Landmarks subcategory, and #32 in our Culture (comprised of concerts, shows and events). It’s home to places like the Liberty Bell Center, of course. And various must-see cultural centers with the term “Independence” in their names. It might be America’s birthplace, but the City of Brotherly Love only keeps one foot firmly rooted in its rich history. The other is stepping into the future, with the 30th-most Global 500 companies located here, a growing population and a glittering skyline heading ever upward. Philadelphia is also a city rich in hometown pride, with locals reliably turning out to celebrate everything from Super Bowl victories to National Cheesesteak Day. Strong employment prior to the pandemic, driven by a diverse economy, meant population growth, a resilient real estate market and a boom in new construction. But with a poor ranking in its number of COVID-19 cases and in our Income Equality subcategory (#210), the city will need to battle hard to win back the good times.",
+        "name": "Philadelphia",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 2,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 2
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "The Kingdom of Saudi Arabia’s capital begins to pave the way for tourism.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 24.63333333,
+                "lon": 46.71666667,
+                "primary": ""
+            }
+        ],
+        "description": "Seeing the continued success of the tourism industry in neighboring Dubai, Abu Dhabi and Oman and keen on moving the economy away from a dependency on oil, the Kingdom of Saudi Arabia started issuing tourist visas in April 2018 for the first time in eight years. Even before that, the city saw plenty of tourism—18 million people visited the country in 2016—but now, Prince Mohammed Bin Salman has launched an ambitious plan to attract 30 million visitors by 2030, including phase one of the astonishing Red Sea development, to be completed by the end of 2022. Already the capital city ranks #29 for Facebook Check-ins, as well as #6 for both Weather and GDP Per Capita. Saudi Arabia’s ultraconservative leanings—public displays of affection between heterosexual couples are discouraged while LGBTQ+ couples could find themselves in serious danger—present a threat to the country’s plans for tourism growth, as does its reputation for murdering journalists and other outspoken critics. ",
+        "name": "Riyadh",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 2,
+            "infrastructure": 4,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 4
+        },
+        "country": "SA"
+    },
+    {
+        "brief_description": "29,617,000",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 28.61,
+                "lon": 77.23,
+                "primary": ""
+            }
+        ],
+        "description": "Honk, beep, moo! Vans, scooters, rickshaws, street food sellers, beggars, cows and even monkeys come together in the Indian capital. There are few places on earth with the hectic, pulsating pace of Delhi, which explains its #18 spot for Place, including a #29 ranking for Sights & Landmarks. Indeed, Delhi is a city built upon or near the ruins of a previous city, and today visitors can trace through the eras, exploring centuries-old forts, tombs, shrines and mosques. Old Delhi is where to soak it all in while weaving in and out of the chaos, shopping for trinkets and handicrafts in the frenetic street bazaars and gaping in wonder at the Red Fort. Unsurprisingly, Delhi also ranks highly (#17) for Restaurants, and sampling everything you can is a must. Now, add a “click” to Delhi’s cacophony: despite its ancient roots the city is bursting into the new millennium with a #23 ranking for Promotion. Its rankings in Facebook Check-ins (#14), Google Trends (#13) and Google Search (#9) all reveal a city eager to show itself off to the world.",
+        "name": "Delhi",
+        "tags": {
+            "costs": 1,
+            "culture": 2,
+            "food": 3,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 3,
+            "sports": 2
+        },
+        "country": "IN"
+    },
+    {
+        "brief_description": "Buenos Aires is a mesmerizing cocktail that blends a dash of European flair with a heavy dose of Latin passion.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -34.60333333,
+                "lon": -58.38166667,
+                "primary": ""
+            }
+        ],
+        "description": "Elegant mansions line cobblestone streets, drivers maneuver broad boulevards according to rules only they comprehend and the wild nightlife goes on until dawn. Porteños, as the local populace is called, have mastered the art of whiling away the hours at cafés, drinking espresso and arguing over politics or yesterday’s fútbol match. A chaotic, beautiful mess, it’s hard not to fall in love with Buenos Aires. Making the Top 100 list for the second year in a row, “Baires” scores an impressive #16 for Sights & Landmarks, boosted by the distinction of neighborhoods like La Boca, a vibrant quarter where everything from walls, lampposts, fire hydrants and even tree trunks are painted in vibrant shades of green, red, yellow, purple and blue. Buenos Aires is also an emerging force in our Programming category (#21), ranking #10 for Culture thanks to its pre-pandemic torrent of events and concerts—from tango in the park in Belgrano to the increasingly buzzy arteBA art fair. After dark, the city boasts the #23-ranked Nightlife on the planet. No wonder it’s the third-most googled city, one that just saw its largest visitor numbers in 2019.",
+        "name": "Buenos_Aires",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 4,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 1,
+            "sports": 2
+        },
+        "country": "AR"
+    },
+    {
+        "brief_description": "Talent, smarts and money are a potent mix that’s given this city the highest household income in the USA.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 37.33333333,
+                "lon": -121.9,
+                "primary": ""
+            }
+        ],
+        "description": "It’s fascinating what a well-educated, well-paid and diverse population can do for a city’s rankings. In the case of San Jose, the economic, cultural and political capital of Silicon Valley, it’s everything, and it’s given the city its highest-ever finish in our ranking. The city boasts the #4 GDP Per Capita on the planet. All that capital lures the best talent on earth, meaning San Jose also excels in our People category, with the fourth-best educated residents on the planet and the 14th-most diverse. The bounty of universities in the area is a performance driver all its own, creating symbiotic integrations with the tech companies in the city that have access to funding and innovation like few others. Given the optimal conditions of a lauded, coveted school and the on-ramp it provides to jobs in the same city, San Jose will continue to stock its talent pipeline for years to come. The region, home to Google, Facebook, Cisco Systems, eBay and PayPal, is #30 for Global 500 HQs eager for graduates. There are a massive number of corporate offices in the city—with plans for a new Google campus over the next few years that could house up to 25,000 employees—but given the plentiful prosperity, San Jose is an incredibly livable and worthwhile destination. As California’s oldest civilian Spanish settlement, the city has many museums spanning its fascinating history.",
+        "name": "San_Jose,_California",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 1,
+            "infrastructure": 2,
+            "nature": 3,
+            "night_life": 3,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Belgium’s capital and the de facto home of the European Union is a city with plenty of surprises up its stuffy sleeve.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 50.85,
+                "lon": 4.35,
+                "primary": ""
+            }
+        ],
+        "description": "Here you’ll find breathtaking architecture—surely the Grand Place is one of the most beautiful squares in the world—along with some of the ugliest buildings in Europe (there are entire blogs dedicated to the city’s “distinct” architecture). Brussels is the EU’s administrative center, yet one of its most famous landmarks is the Manneken Pis, a statue of a naked boy peeing into a fountain—a symbol not just of the city’s contempt for authority but also of the locals’ enduring deadpan humor. Brussels has a vibrant, multi-ethnic population (ranking #34 for Foreign-Born Residents), and boasts under-the-radar neighborhoods such as the hip Congolese Matonge quarter—worthy of exploration for the flea markets and street art alone. Its Museums (#30) are ostensibly led by the grand Belgian Royal Museums of Fine Arts, but they’re truly brought to the next level by the Museum of the City’s collection of over 600 outfits worn over the years by the aforementioned peeing boy. ",
+        "name": "Brussels",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 4,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 2,
+            "sports": 4
+        },
+        "country": "BE"
+    },
+    {
+        "brief_description": "America’s Left Coast runs deep in this ambitious city on the edge of wilderness.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 45.52,
+                "lon": -122.68194444,
+                "primary": ""
+            }
+        ],
+        "description": "Portland’s Left Coast isolation, ambivalence toward established norms and legacy of cooperation and neighborliness—to hew trees and carve out one’s place among the encroaching wilderness—makes this one of the most earnest cities in America. It’s also one of most beautiful, ranking #61 for Sights & Landmarks and #70 for Parks & Outdoors. One of the zingers in the popular TV show Portlandia identified its lampooned target as “a place young people go to retire.” But it’s more like reinventing themselves, taking what was there all along, finding its best parts and doubling down on what works. The proof of its people is in Portland’s performance: its citizenry ranks #28 for Educational Attainment and #14 for global GDP Per Capita. Portlanders work hard to play hard. The city ranks Top 50 globally for its lively concerts, shows and events (#43 in our Culture subcategory) and its diverse nightlife (#46). But Stumptown (referring to Portland’s logging past) isn’t a hippie pacifist. As the eyes of the world focus on the city’s battle against shadowy federal military deployed there to quell Black Lives Matter and social justice protest, Portlanders are once again forging their reputation as an uncompromising citizenry.",
+        "name": "Portland,_Oregon",
+        "tags": {
+            "costs": 2,
+            "culture": 3,
+            "food": 4,
+            "infrastructure": 3,
+            "nature": 1,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "The cosmopolitan capital of Canada has a reputation for brainpower that’s attracting the world.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 45.42472222,
+                "lon": -75.695,
+                "primary": ""
+            }
+        ],
+        "description": "Canada’s capital—“the city that fun forgot” to Canadians—has forever lived in the shadow of its exciting big-city sisters, Toronto and Montreal. But a national 150th birthday in 2017 brought attention the citizens (ranking #19 in People) of a city where one in four is an immigrant (Ottawa ranks #40 in the world for Foreign-Born Residents). Ottawans are uncommonly intelligent: the city ranks #6 in Educational Attainment and the highest-ranking of its four universities, Carleton, places #82 globally. All that brainpower has poured into some 1,750 knowledge-based businesses—everything from clean technology to life sciences to digital media, aerospace and software. About 68,000 jobs are the result—along with an 80th-place ranking in global GDP Per Capita. In a city with a relatively low cost of living, that means there’s money to spend on its plentiful things to do (with a #60 ranking in Attractions) and underrated good times. ",
+        "name": "Ottawa",
+        "tags": {
+            "costs": 2,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 3,
+            "nature": 1,
+            "night_life": 2,
+            "sports": 5
+        },
+        "country": "CA"
+    },
+    {
+        "brief_description": "Irreverence and saunas are the thing in Scandinavia’s emerging hot spot.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 60.17083333,
+                "lon": 24.9375,
+                "primary": ""
+            }
+        ],
+        "description": "Though Helsinki has been named the World’s Happiest City by the United Nations three years running, it’s only in the past few years that the Finnish capital has become popular with young vagabonds, perhaps due to the country’s impressive tourism campaigns. A few of them are centered around Helsinki’s airport (ranked #63), which in 2019 Airports Council International named “Best in the World” for customer experience. If you do fly into Helsinki, start with a visit to Teurastamo, a former slaughterhouse that’s now home to restaurants, cafés and bars. And don’t leave town without experiencing the sauna culture: one of the coolest is Löyly, its impressive cascading architecture set at the edge of the Baltic Sea. The city also ranks highly (#14) for both Educational Attainment and Income Equality.",
+        "name": "Helsinki",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 3,
+            "sports": 5
+        },
+        "country": "FI"
+    },
+    {
+        "brief_description": "Enigmatic customs and historically paramount places make this city an undiscovered gem.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 39.47,
+                "lon": -0.37638889,
+                "primary": ""
+            }
+        ],
+        "description": "The Spanish city ranks #35 globally for Place, which includes its weather—the 16th best in the world—along with neighborhoods, landmarks and monuments, and parks and outdoor activities. For instance, here’s a landmark: the UNESCO World Heritage site called La Lonja, a 15th-century silk exchange and one of the best examples of Gothic civil architecture in Europe. The Mercado Central, one of Europe’s largest and oldest food markets, is across the street. The futuristic City of Arts and Sciences, designed by Santiago Calatrava and Félix Candela, is a marvel of a more modern sort. Valencia’s parks include several beaches, some within Albufera Park, a wetlands reserve with a lake and walking trails. It’s all very Instagrammable and helps the city rank #51 for Instagram Hashtags.",
+        "name": "Valencia",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 4,
+            "infrastructure": 5,
+            "nature": 1,
+            "night_life": 3,
+            "sports": 4
+        },
+        "country": "ES"
+    },
+    {
+        "brief_description": "Rugged and cultured, Australia’s capital of Queensland does it in balance.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -27.46777778,
+                "lon": 153.02805556,
+                "primary": ""
+            }
+        ],
+        "description": "You go to Sydney for beaches and to Melbourne for culture. So what does Brisbane offer that you can’t find elsewhere in Australia? Quite a bit, actually. Brisbane, which scores high for Foreign-Born Residents (#18), is sunny, sophisticated and offers plenty of outdoor adventures right within the city limits. Named after the river that runs through it, Brisbane is best explored from the water. At night. And on a kayak, too: we recommend you take in the shimmering lights of the cityscape during a leisurely paddle down the river. Culture vultures can soak up the art at the Queensland Art Gallery and at the Gallery of Modern Art, Australia’s largest gallery of modern and contemporary art. Brisbane ranks #35 for Attractions and #66 for Parks & Outdoors. It has also fared exceptionally well so far in controlling COVID-19 cases—its 66 cases per million residents as of late July 2020 are an impressive testament to the country’s trust in its experts as much as to its island geography. ",
+        "name": "Brisbane",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 5,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 1,
+            "sports": 2
+        },
+        "country": "AU"
+    },
+    {
+        "brief_description": "Poland’s capital city is an economic and entrepreneurial hotbed with plenty of reasons to leave work early.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 52.23333333,
+                "lon": 21.01666667,
+                "primary": ""
+            }
+        ],
+        "description": "It’s been decades since Warsaw shook off its dreary Cold War cloak, and while other members of the EU have suffered economic woes in recent years, Poland has flourished, slowly but surely becoming an economic powerhouse in the region formerly known as “behind the Iron Curtain.” With the addition of high-profile architectural projects, new museums and a couple of Michelin-starred restaurants under its belt, the Polish capital is finally coming into its own as a tourist destination. And a safe, affordable one at that. (Warsaw ranks #21 globally in our Safety category.) It ranks an impressive #42 for Product, which includes a #24 spot for Attractions and #45 for Museums, of which the city has dozens if you look hard enough. Same goes for its understated nightlife (#58), which will roar back post pandemic with a ferocity not seen since Communism was abolished.",
+        "name": "Warsaw",
+        "tags": {
+            "costs": 3,
+            "culture": 5,
+            "food": 5,
+            "infrastructure": 1,
+            "nature": 5,
+            "night_life": 5,
+            "sports": 3
+        },
+        "country": "PL"
+    },
+    {
+        "brief_description": "A low unemployment rate prior to the pandemic, culture and affordability make Minneapolis a talent magnet.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 44.98194444,
+                "lon": -93.26916667,
+                "primary": ""
+            }
+        ],
+        "description": "As the site of the George Floyd murder at the hands of local police officers that inspired a global movement against systemic racism and police violence, Minneapolis has become a household name. In addition to their vital role in a fight for justice, residents have long advocated for their city, the results of which can be seen in numerous parks, bike trails and placemaking along a prime location on the mighty Mississippi. With 18 Fortune 500 companies—the most per capita of any American metro area—Minneapolis scores an impressive #14 for in our Global 500 subcategory. The city’s residents rank #26 for GDP Per Capita globally. The highly educated workforce (ranked #18 globally for Educational Attainment) earns a comfortable living and enjoys easy access to the rest of the world via Minneapolis–Saint Paul International Airport (which itself ranks #55 for Airport Connectivity). Locals are eager to show off the Walker Art Center—featuring contemporary works like the giant spoon sculpture, which has become a city trademark—and the Minneapolis Institute of Art, known affectionately as “Mia.” With a #59 ranking for Culture (determined by concerts, shows and events), the city’s heart still belongs to beloved hometown recording artist Prince, whose suburban home and studio, Paisley Park, opened as a museum in 2016.",
+        "name": "Minneapolis",
+        "tags": {
+            "costs": 2,
+            "culture": 2,
+            "food": 3,
+            "infrastructure": 4,
+            "nature": 1,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "One of the world’s largest cities (proper) is surprisingly navigable, inviting and ready to blow your mind.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 31.22861111,
+                "lon": 121.47472222,
+                "primary": ""
+            }
+        ],
+        "description": "This powerhouse of finance, international trade, culture, science and technology ranks #10 for the number of Global 500 companies headquartered here. Yet Shanghai is made of more than money, and the city is lauded for its exhilarating blend of past and present, industry and leisure. It ranks #35 for Shopping, #7 for Restaurants and #35 for Sights & Landmarks. This eminently walkable city and its personality are split by the Huangpu River: Pudong (east bank) is the financial district, fringed with towers that include the landmark spike of the retro-futuristic Oriental Pearl Television Tower. Puxi (west bank) is home to the Bund, lined with the neo-Renaissance edifices that were home to Western businesses in the 1930s, and to the wonderfully layered French Concession. A tight lockdown early in the COVID-19 pandemic—when it was still only an epidemic—led to Shanghai reporting just 11 cases per million residents, if official numbers are accurate. ",
+        "name": "Shanghai",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 1,
+            "infrastructure": 2,
+            "nature": 5,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "CN"
+    },
+    {
+        "brief_description": "Delicious and daring, Lyon is an ancient river city with big plans.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 45.76,
+                "lon": 4.84,
+                "primary": ""
+            }
+        ],
+        "description": "Lyon is a city to be savored nose to tail, past to future, literally and figuratively. If the city’s middling Attractions (#87) and Museums (#124) rankings rise with the plentiful planned investment, that’s just icing on the gâteau. Besides being a UNESCO World Heritage site, the home of chef Paul Bocuse is also renowned for its cuisine, and its #108 Restaurant ranking will ascend in the future as visitors catch fragrant wind of it. Don’t miss La Confluence, a 370-acre urban redevelopment that not only brings together Lyon’s two fabled rivers—the Rhône and the Saône—but also gives new life to an industrial urban wasteland. Most notable in the new development’s crown is the Musée des Confluences, an architectural enigma glittering at the very point where the rivers meet, with an outstretched park disappearing into the flows. Lyon also takes care of its people, scoring an impressive #17 globally for Income Equality. But it’s also a business city, finishing #37 for the Convention Center subcategory.",
+        "name": "Lyon",
+        "tags": {
+            "costs": 1,
+            "culture": 5,
+            "food": 3,
+            "infrastructure": 3,
+            "nature": 5,
+            "night_life": 5,
+            "sports": 3
+        },
+        "country": "FR"
+    },
+    {
+        "brief_description": "Alive with the energy of a diverse population and a dynamic music scene, Adelaide (literally) sings.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -34.92888889,
+                "lon": 138.60111111,
+                "primary": ""
+            }
+        ],
+        "description": "The southern coastal city earns a respectable Parks & Outdoors ranking of #100. But where Adelaide shines is in the People category: it’s an astounding #8 in the world for Foreign-Born Residents and ranks #42 in Educational Attainment. That’s generally a recipe for an emerging cultural scene—indeed, Adelaide is where to find the country’s best Aboriginal art, and it’s the only designated UNESCO City of Music in Australia. Some 300 live gigs a week can be savored in this city—or could, before COVID-19 hit, largely sparing the city in terms of case numbers, but inflicting economic and cultural hardship as the region stamped out its cases. Did we mention the pandas? Wang Wang and Funi, which have been at the city’s zoo for a decade, will continue to attract visitors, and hopefully to breed, until at least 2024, thanks to a new deal reached with China in late 2019.  ",
+        "name": "Adelaide",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 2,
+            "night_life": 5,
+            "sports": 3
+        },
+        "country": "AU"
+    },
+    {
+        "brief_description": "Northern exposure, at long last.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 53.53444444,
+                "lon": -113.49027778,
+                "primary": ""
+            }
+        ],
+        "description": "The environment for a molecular evolution from chilly productive resource town into curated hotbed isolated sufficiently to do its own thing has been here for years. The University of Alberta (ranked #59 globally), healthy immigration and the government dollars that come with being a provincial capital have already created a place known around the world as “The City of Festivals.” From Fringe theater to street performers to an increasingly important international film festival, there are more than 50 large, city-sanctioned events every year. A recent downtown revival has now catapulted the city into the “urban renewal” conversation that has been happening in other North American industrial regions. The catalyst has been the new Rogers Place arena downtown, occupied by the National Hockey League’s Edmonton Oilers. But it’s not all good news. The fossil fuel–based economy was already in a tough position before the pandemic and has only descended since, making Alberta among Canada’s economically hardest hit provinces in 2020.",
+        "name": "Edmonton",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 2,
+            "infrastructure": 1,
+            "nature": 2,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "CA"
+    },
+    {
+        "brief_description": "The oldest city in France sparkles with an average 300 days of sunshine and plenty of delights.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 43.2964,
+                "lon": 5.37,
+                "primary": ""
+            }
+        ],
+        "description": "Leading up to its designation as Europe’s Capital of Culture, the city spent billions cleaning up and modernizing as it attempted to shed its seedy reputation. With a #161 ranking for Safety, it’s not certain that it has truly moved on, but a swath of new buildings on the waterfront are trying regardless. Don’t miss Vieux Port, designed by Norman Foster, who turned a site that’s been here for 26 centuries into a mesmerizing pedestrian-only zone with a buzzing sense of place. The showstopper is at Quai des Belges, where a dramatic blade of reflective stainless steel creates a dreamy canopy and shelter from the sun, which shines almost year-round (Marseille ranks #79 for Weather). Nearby is the Museum of European and Mediterranean Civilizations, with a bridge designed like a fishnet made of glass that links to the 17th-century Fort Saint-Jean—a perfect example of the ancient and new coming together. The city’s residents are looked after as well: Marseille ranks #29 for Income Equality globally.",
+        "name": "Marseille",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 2,
+            "infrastructure": 2,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 4
+        },
+        "country": "FR"
+    },
+    {
+        "brief_description": "Oman’s ancient and oil-rich urban heart shares the wealth.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 23.58888889,
+                "lon": 58.40833333,
+                "primary": ""
+            }
+        ],
+        "description": "Muscat is a newcomer to the Top 100, but with the #3 ranked Weather, a diverse population (ranking #7 for Foreign-Born Residents) and a high GDP Per Capita (#7) it’s sure to rise over time. The city on the Gulf of Oman shines with the white of its buildings—so painted to reflect the hot midday sun, with summer temperatures frequently rising above 40°C—and is referred to in writings by Ptolemy and Pliny the Elder, dating it back millennia. The oil-rich city saw the writing on the wall in the late 1990s and began diversifying its economy, and the Arab Spring convinced leaders that a broader distribution of wealth would be prudent. Today, Muscat ranks #8 for Income Equality. In Old Muscat (just south of the modern city center) take a drive down to the waterfront at Palace Beach in the cool evenings for a view of the 15th-century Al Jalali Fort, lit up on a rocky outcrop, protecting the colorful Al Alam Palace. ",
+        "name": "Muscat",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 2,
+            "infrastructure": 2,
+            "nature": 1,
+            "night_life": 1,
+            "sports": 4
+        },
+        "country": "OM"
+    },
+    {
+        "brief_description": "As the 2,500-year-old cradle of Western civilization, Athens understands resilience.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 37.98397222,
+                "lon": 23.72780556,
+                "primary": ""
+            }
+        ],
+        "description": "The ancient capital has had a difficult decade, but it has come back stronger, just like it always does. Despite the cutbacks and the sacrifice, the city’s heritage itself was rarely compromised. As such, the sustained investment is now blooming as jobs trickle back and tourist numbers snap back to levels not seen since the good old days. What those tourists find is the Grand Promenade, a 2.5-mile-long, car-free and tree-lined walkway running along the foot of the Acropolis and connecting the city’s major archaeological sites. The relative affordability of a European capital ($500 downtown studios!), as well as the ingrained openness of Athenians, means new ideas and art are flourishing. Athens ranks #32 in our Programming category, including Top 25 for global Nightlife and #29 in our Shopping subcategory. Its museums—as iconic a part of the city as its archaeology—rank #34.",
+        "name": "Athens",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 2,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "GR"
+    },
+    {
+        "brief_description": "German efficiency and hospitality combine in a company town with a fun side.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 48.782,
+                "lon": 9.184,
+                "primary": ""
+            }
+        ],
+        "description": "Stuttgart is a hardworking economic engine that performs across multiple metrics with aplomb: it ranks #46 both for Foreign-Born Residents and for its Convention Center, an unusual site in that more than half its area is green space, and the solar panels on the hall roofs and parking lot generate surplus electricity for 1,350 households. But the area around the convention center is also buzzing with pleasure and activity, as businesspeople and convention- goers have fueled the nearby area along Stuttgart’s party mile for the  past few decades—a hub of bars, cafés, clubs and intimate drinking dens. Of course the pandemic has crushed both the convention business and general revelry, but this is one place in Germany where the bounceback will be swiftest. Fortunately, Stuttgart ranks #3 on the planet for Safety. The city is also an economic hub, boasting Global 500 European headquarters of companies like Daimler AG, Porsche, Bosch, IBM and Sika. Not surprisingly, the city also boasts some can’t-miss automotive museums.",
+        "name": "Stuttgart",
+        "tags": {
+            "costs": 2,
+            "culture": 1,
+            "food": 2,
+            "infrastructure": 1,
+            "nature": 1,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "Cidade Maravilhosa oozes with sensory delights.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -22.911366,
+                "lon": -43.205916,
+                "primary": ""
+            }
+        ],
+        "description": "Tropical and sexy, with dazzling beaches, samba-fueled nightlife and lush mountains that rise to the heavens, Rio is stunning. It ranks #9 for Parks & Outdoors and #33 for Sights & Landmarks, and you could certainly spend your entire visit exploring al fresco. Lapa is the edgy red-light district teeming with live-music clubs, and on weekends the party spills into the street. In Copacabana there’s the Museum of Image and Sound by the New York-based architects behind the High Line park. Once you’ve done the beach, swap your Havaianas for hikers and visit Tijuca Forest, a national park with waterfalls, wildlife and Christ the Redeemer, which stands in all its glory atop the 2,329-foot Corcovado Mountain. For a less crowded but still spectacular view of the city, Sugarloaf Mountain offers a cable car at the mouth of Guanabara Bay. Safety (#236) is Rio de Janeiro’s biggest liability, further reinforced by the country’s poor response to the COVID-19 pandemic. The city had 204 cases per million residents. ",
+        "name": "Rio_de_Janeiro",
+        "tags": {
+            "costs": 1,
+            "culture": 2,
+            "food": 3,
+            "infrastructure": 5,
+            "nature": 2,
+            "night_life": 1,
+            "sports": 3
+        },
+        "country": "BR"
+    },
+    {
+        "brief_description": "Baltimore is far more than what you know about it from television. And that’s a very good thing.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 39.28333333,
+                "lon": -76.61666667,
+                "primary": ""
+            }
+        ],
+        "description": "Less than an hour’s commute from Washington, D.C., Baltimore offers a slower pace of life and significantly cheaper housing than its hyper-charged neighbor to the south. But the time to buy into one of Baltimore’s diverse, historic communities may just be right now—home prices in the city reached a 10-year record in July 2020. Baltimore is also home to world-class institutions like Johns Hopkins University (ranked #6 globally) and the National Aquarium, as well as a quirky culture that makes Charm City a place like no other. Johns Hopkins is Baltimore’s largest employer, and while this may be the biggest city without a single Fortune 500 company (and ranking #98 in our Global 500 subcategory), Maryland boasts a $35-billion aerospace industry, and the defense contractor Northrop Grumman is a Top 5 employer of Baltimore residents. The city ranks an impressive #28 in the world in our GDP Per Capita subcategory, and #37 for Educational Attainment. It also earns a #72 ranking for Museums, and many—from historic ships to the highly acclaimed Port Discovery Children’s Museum—are clustered around the Inner Harbor, which for 50 years has served as a nationwide model for the reuse of post-industrial waterfront. With impressive airport connectivity (#39) and established urban infrastructure, Baltimore is Top 50 in our vital Product category. ",
+        "name": "Baltimore",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 5,
+            "infrastructure": 1,
+            "nature": 2,
+            "night_life": 4,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "On the north island of New Zealand is a spectacular checklist of a city.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -36.84055556,
+                "lon": 174.74,
+                "primary": ""
+            }
+        ],
+        "description": "Natural bounty rules in Auckland, as far as visitor and resident perception is concerned. The city ranks #13 globally for Parks & Outdoors, with almost too many green spaces to count despite its diminutive size. Roam the paths leading to one of the 48 dormant volcanic cones, many of which offer spectacular views, or cross the island on foot (just a five-hour hike)—just to be able to brag that you swam on one coast and surfed on the other, all on the same day. But Auckland is also its neighborhoods. Parnell is for food lovers, markets and “made in NZ” design. Downtown’s Ponsonby has a New York West Village vibe and good restaurants. Not surprisingly, the city is becoming more cosmopolitan—the coveted hometown for risk- averse, isolationist tech billionaires and young talent craving proximity to outdoor adventure alike. The city today ranks Top 20 globally for Foreign-Born Residents. Given the state of the world, Auckland’s ascent in this category is likely. Fortunately, the city’s original inhabitants are not going anywhere, and Auckland remains home to the largest Polynesian population of any city on earth.",
+        "name": "Auckland",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 4,
+            "infrastructure": 4,
+            "nature": 4,
+            "night_life": 5,
+            "sports": 2
+        },
+        "country": "NZ"
+    },
+    {
+        "brief_description": "Cologne is open for business and pleasure.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 50.93638889,
+                "lon": 6.95277778,
+                "primary": ""
+            }
+        ],
+        "description": "Despite aesthetic riches like the twin-spired Cologne Cathedral, which rises above the old town’s High Gothic spires, and the cultural bounty of places like the Museum Ludwig with its 20th-century art, the perception of the city lags behind its virtues. Cologne ranks cruelly low in our Culture, Attractions and Museums subcategories. But given that this is Cologne’s third year in the Top 100 cities, it’s bound to ascend future rankings. It already ranks #32 in our Product category, an amalgam of University Ranking, Airport Connectivity, Convention Center, Attractions and Museums. The reason for its high score? Its convention center—ranked #14 for its size globally. The city is also rising in the ranks for Safety, hitting #8 globally. Cologne is home to Lufthansa, the second-largest airline in Europe (COVID-19-fallout willing), helping to earn it a #20 spot for Global 500 corporate headquarters.",
+        "name": "Cologne",
+        "tags": {
+            "costs": 1,
+            "culture": 5,
+            "food": 4,
+            "infrastructure": 1,
+            "nature": 1,
+            "night_life": 5,
+            "sports": 2
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "Few cities of its size radiate the lore that New Orleans does.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 29.95,
+                "lon": -90.08,
+                "primary": ""
+            }
+        ],
+        "description": "In the face of poverty and injustice—and environmental catastrophes compounded by both—NoLa has created a culture of presence, music and festivals that may pale in size to others in the world, but never in their intensity. It’s why the city ranks #26 globally for Programming, our category spanning shopping, dining, after-hours life and cultural events. Given the need to celebrate, to seize the day, to revel in all that fusion of humanity and culture and sweaty new people and ideas, the city ranks #20 in our Nightlife category. After all, the party only begins in the French Quarter. It grows more refined and local as it weaves into Marigny, Bywater or the timeless jazz seduction of Frenchmen Street. NoLa also shines in our Shopping category, scoring a #15 ranking internationally, helped by the intoxicating treasures of Magazine Street convincing visitors that their finds are only available here and now. And they often are. In the last few years, the city has been renovating and expediting projects languishing since the Hurricane Katrina rebuild. Today, with one of the highest rates of COVID-19 infections among cities in the U.S., New Orleans is getting ready to rebuild again.",
+        "name": "New_Orleans",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 1,
+            "infrastructure": 5,
+            "nature": 4,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "The Gulf’s next emerging city gleams with startling contradictions.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 29.36972222,
+                "lon": 47.97833333,
+                "primary": ""
+            }
+        ],
+        "description": "In one of the hottest cities on the planet, it’s fitting that Kuwait’s most prominent landmarks include its water towers. If you’re picturing the bucket-on-stilts aesthetic of a Midwestern U.S. construction, though, you’re mistaken: this glittering cluster of towers projects a modernity and efficiency that the city has become known for, especially on Instagram (#7). But with the Silk City megaproject currently under construction, the city will soon have an impressive new series of landmarks to hashtag, including what could be a record-breaking Mubarak al-Kabir tower. Kuwait has attracted the fourth-largest foreign-born population, which is nearly canceled out by the low level of education among the citizenry (#215). But overall, the city’s #26 result for People reflects its global attraction. Extreme inequality (#263) similarly undoes its impressive GDP Per Capita (#3) and Unemployment (#5) rankings. Like much of its surrounding region, Kuwait suffered greatly from the COVID-19 pandemic.",
+        "name": "Kuwait_City",
+        "tags": {
+            "costs": 1,
+            "culture": 5,
+            "food": 2,
+            "infrastructure": 5,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 5
+        },
+        "country": "KW"
+    },
+    {
+        "brief_description": "Architecturally endowed, friendly and creative, Kiev is a subdued European capital on the rise.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 50.45,
+                "lon": 30.52333333,
+                "primary": ""
+            }
+        ],
+        "description": "Kiev, Ukraine’s capital, may not be the first European capital that pops to mind, but it’s one of the most distinct. The city—a 1,500-year-old living encyclopedia of Slavic history—is as colorful and vibrant as its nation’s flag, with buildings painted like Ukrainian Easter eggs and the skyline topped with gold domes gleaming up the hills from the Dnieper River. It all somehow makes the winters tolerable as much as does the self-deprecation and bonhomie of Kiev’s spirited locals. The city appears in our Top 100 for the first time in 2021, powered by its #28 ranking in our Sights & Landmarks category, led by All. Those. Churches. The Pechersk Lavra complex, an UNESCO World Heritage site, stretches back a millennium and has been key to the Orthodox Christian faith for almost that long. Another UNESCO site, Saint Sophia Cathedral, rewards a climb up its bell tower with one of the best views of the city. Then there’s the storybook beauty of St. Michael’s Golden-Domed Monastery and St. Volodymyr’s Cathedral. Kiev’s museums rank #27 globally and range from obvious (the National Museum of Arts) to the “only-in-Kiev” (National Museum of the History of Ukraine in the Second World War).",
+        "name": "Kyiv",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 4,
+            "infrastructure": 4,
+            "nature": 5,
+            "night_life": 4,
+            "sports": 4
+        },
+        "country": "UA"
+    },
+    {
+        "brief_description": "Hello Hanover, it’s time for your close-up.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 52.36666667,
+                "lon": 9.71666667,
+                "primary": ""
+            }
+        ],
+        "description": "Hanover has all of the ingredients for upward mobility, rankings-wise: the 69th safest place in the world is #70 for GDP Per Capita and #30 for Global 500 companies. Business congregates, it would seem, at the 4th-ranked city in our Convention Center subcategory. All work and no play, you say? It’s been dubbed the most boring city in Germany, but you’d think otherwise if you spent an afternoon at Herrenhausen Gardens, one of the most important baroque gardens in Europe, wandered the bright, playful Niki de Saint Phalle grotto and sculpture and strolled the Old Town. Most of Hanover, including its glorious half-timbered Medieval buildings, were obliterated in the Second World War; the remaining facades were cobbled back together to create what has become the new-old heart of the city, a strollable place of cafés and culture, and a welcome break from the grind. However, Hanover will decidedly have to make an effort to tell the world its story; it’s a challenging #245 in TripAdvisor Reviews and falling. For resilient Hanoverians, that’s all in a day’s work.     ",
+        "name": "Hanover",
+        "tags": {
+            "costs": 1,
+            "culture": 3,
+            "food": 3,
+            "infrastructure": 5,
+            "nature": 3,
+            "night_life": 5,
+            "sports": 5
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "A beautiful, isolated and wealthy city of nearly two million people awaits in Perth.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": -31.95222222,
+                "lon": 115.85888889,
+                "primary": ""
+            }
+        ],
+        "description": "Perth has always been home for the first Australians. At places like Six Seasons Gallery you can see some 3,000 Indigenous works of art from across Australia, each offering insights into the Aboriginal experience. The Noongar experience is woven throughout the 60,000-person Perth stadium, in art installations, trails, interpretative storyboards and digital storytelling—an enriching foil for the cricket and football played there. Perth ranks #27 for People, including #9 for Foreign-Born Residents. Perthites of every provenance are avid outdoors people, and the city’s #88 ranking for Parks & Outdoors will improve as more people discover the city’s investment in accessing all of that natural bounty, including the 50 miles of beachfront on Perth’s coastline. Perth’s poor result for Income Equality (#205) and Unemployment (#105) dragged its ranking down in 2020.",
+        "name": "Perth",
+        "tags": {
+            "costs": 3,
+            "culture": 1,
+            "food": 3,
+            "infrastructure": 2,
+            "nature": 5,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "AU"
+    },
+    {
+        "brief_description": "A communist-era city fights another tyrant today in its quest for freedom.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 53.9,
+                "lon": 27.56666667,
+                "primary": ""
+            }
+        ],
+        "description": "Minsk—and Belarus—are fighting for their lives. While the rest of the world was preoccupied with the pandemic, Russian-backed dictator Alexander Lukashenko “won” another election with apparent overwhelming support. Allegations of rigging (again) sent hundreds of thousands of protestors marching all over the country—but mostly in Minsk. The suppression of dissent by secret masked and unmarked police combined with the jailing of opposition leader Maria Kalesnikava all point to ongoing volatility in this fascinating city. With Top 25 most-educated citizens globally, it’s not surprising that the hunger for change is ravenous in a place where you can’t drink the tap water or speak your mind freely. The city itself is a snapshot in history: almost entirely rebuilt after its destruction by the Nazis in WWII to post-war Soviet urban planning, and little changed since. But with a #62 ranking in our Attractions subcategory, there are untouched relics, like the Medieval castle at Mir, scattered nearby.",
+        "name": "Minsk",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 3,
+            "infrastructure": 3,
+            "nature": 4,
+            "night_life": 4,
+            "sports": 3
+        },
+        "country": "BY"
+    },
+    {
+        "brief_description": "Affordable, entrepreneurial and likes to party. Romania’s capital swipes right.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 44.4325,
+                "lon": 26.10388889,
+                "primary": ""
+            }
+        ],
+        "description": "Bucharest flies into a first-time showing in the Top 100 in 2020, thanks in no small part to the city’s astounding #3 rank for Income Equality. The city has been a bright spot in Eastern Europe’s burgeoning technology industry, attracting offices for heavy-hitters like Amazon, Adobe, Microsoft, IBM and Oracle but also spawning its own successful tech companies, like Bitdefender. With cheap rents and an extremely high standard of living, it’s easy to see why young people are attracted here, and they bring the nightlife (ranked #51) with them. The Lipscani district—an ancient commercial zone with streets named for the historic trades plied on them—contains the city’s best collection of bars and restaurants as well as a growing list of shopping opportunities, ranked #91 globally.",
+        "name": "Bucharest",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 4,
+            "infrastructure": 4,
+            "nature": 1,
+            "night_life": 5,
+            "sports": 5
+        },
+        "country": "RO"
+    },
+    {
+        "brief_description": "Music City lets you worship your idols, and toast them frequently.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 36.16666667,
+                "lon": -86.78333333,
+                "primary": ""
+            }
+        ],
+        "description": "The city and its citizens have always taken care to invest their money wisely, including for the preservation of historic buildings and to revitalize neighborhoods like Germantown, which was established in the 1850s by European immigrants. Such focus on placemaking and tactical urbanism will put Nashville on the map globally in future years. Until then, we have the city’s music scene thriving, particularly as a younger generation of musicians—Jack White and the Black Keys come to mind—have chosen to live and set up recording studios in town. You can start your visit at the Country Music Hall of Fame, which traces the history of the genre. If you want to delve deeper into the personal stories of Willie Nelson, Johnny Cash and George Jones, well, they’ve got their own museums, too—at least they will when they fully reopen after the pandemic. With a #41 ranking for Culture, the city is finally getting the recognition it deserves for its long but subtle influence on the American fabric. Should you need a respite from culture and the #56-ranked Nightlife, Nashville offers a sprawling park system with more than 12,000 acres to explore by bike (B-Cycle bike-rental stations are located at greenway trailheads), or by kayak and canoe on the Harpeth River. Good thing about all that open space, too, given the high infection rates in the city after some citizens ignored early warnings about the spread of COVID-19.",
+        "name": "Nashville,_Tennessee",
+        "tags": {
+            "costs": 3,
+            "culture": 3,
+            "food": 1,
+            "infrastructure": 5,
+            "nature": 1,
+            "night_life": 3,
+            "sports": 5
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Is Düsseldorf Germany’s city of the future? Global investment dollars definitely seem to think so.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 51.23333333,
+                "lon": 6.78333333,
+                "primary": ""
+            }
+        ],
+        "description": "Sharply dressed and modern, Düsseldorf is leading Germany’s charge into the 21st century. While the city tests and builds the 5G infrastructure of the future, it’s acting as the country’s telecommunications hub, and among its #30 ranking in Global 500 companies are the headquarters for Vodafone and E-Plus. But deliberate investments from the city in growing its tech appeal are paying off outside telecommunications: it’s the third-largest location for foreign direct investment in Europe and the largest in Germany, leading to impressively low Unemployment (#31) and enviable Income Inequality (#37). Centrally located for European travel with a #35 rank for Airport Connectivity and #11 for Convention Center, Düsseldorf is an easy choice for anyone seeking a convenient location for a major meeting. That is, if the future indeed includes such luxuries as flights and conferences. If it doesn’t, well, the city is extremely well positioned to handle the teleconferencing boom as well. ",
+        "name": "Düsseldorf",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 2,
+            "night_life": 1,
+            "sports": 1
+        },
+        "country": "DE"
+    },
+    {
+        "brief_description": "",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 53.47944444,
+                "lon": -2.24527778,
+                "primary": ""
+            }
+        ],
+        "description": "Manchester’s reputation as the bucking engine of English industry is serving it well on the international stage, as it revisits that history through the lens of the 2020s. Castlefield, an “urban heritage park,” is one portal into that storied past: the canal running through it formerly transported coal into the city’s industrial hub, but today it transports tourists through its historic waters. The University of Manchester scores the city one of its highest rankings globally (#32) in the Product category, which also measures Airport Connectivity (#26) through direct flights, as well as Attractions (#67). The university is home to a dazzling legacy of 25 Nobel laureates, among whom four currently remain on staff. Manchester’s conversion from producing goods to ideas is well underway, and the history of the workers who made that possible is on grand display at the People’s History Museum. That’s something to brag about, maybe contributing to its #18 rank for Google Trends or its #52 ranking for TripAdvisor Reviews. ",
+        "name": "Manchester",
+        "tags": {
+            "costs": 1,
+            "culture": 1,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 4,
+            "night_life": 3,
+            "sports": 3
+        },
+        "country": "GB"
+    },
+    {
+        "brief_description": "Green, bountiful and affluent, California’s capital is big on local stewardship and keeping a good thing going.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 38.58166667,
+                "lon": -121.49444444,
+                "primary": ""
+            }
+        ],
+        "description": "California’s state capital is peaceful and wealthy, ranking well in our GDP Per Capita subcategory (#51) and even better for its natural attributes including epic weather (#36) courtesy of its Mediterranean temperatures. The City of Trees—residents claim more trees per capita than anywhere besides Paris—isn’t a stranger to cataclysmic fires: the Great Conflagration of 1852 burned 40 square blocks of the fledgling city, leaving what is today called Old Sacramento, with its cobbled streets, historic buildings, steam-hauled trains, horse-drawn carriages and the western terminus of the Pony Express. Hokey? Maybe, but it undoubtedly contributes to the city’s rising visitor numbers—at least before COVID-19 hit. Some help from Mother Nature has stewarded the city toward declaring itself America’s “Farm to Fork Capital,” surrounded by fertile farms that feed a robust fresh-and-local ethos. Sacramento’s restaurants are only happy to tap the localism. Taste it for yourself at La Cosecha in Cesar Chavez Plaza, in the heart of the city. The place serves up another local attribute: the city ranks #41 for Foreign-Born Residents, with Time magazine even declaring it “America’s most diverse city.” With its highly educated citizenry, California’s capital ranks an impressive #43 in our key People category. ",
+        "name": "Sacramento,_California",
+        "tags": {
+            "costs": 1,
+            "culture": 5,
+            "food": 3,
+            "infrastructure": 1,
+            "nature": 5,
+            "night_life": 3,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Music and a pursuit of equality keep Glasgow real, even as its reputation soars.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 55.860916,
+                "lon": -4.251433,
+                "primary": ""
+            }
+        ],
+        "description": "Known as a working-class city with working-class values, Glasgow has made the Top 100 on the strength of those characteristics. Its high Income Equality (ranking #47) and low Unemployment  (ranking #52) highlight its success in bringing everyone along for the ride as its reputation grows. In our Nightlife subcategory (#41), the city roars to prominence at gritty venues like the Sub Club, where live shows dominate. Glasgow was designated the UK’s first UNESCO City of Music in 2008, but the COVID-19 pandemic has presented an existential threat to many of its most popular venues. The government is allowing drive-in outdoor concerts, but that’s small comfort to the club owners who won’t be allowed to welcome their patrons back for a long time to come. ",
+        "name": "Glasgow",
+        "tags": {
+            "costs": 2,
+            "culture": 5,
+            "food": 4,
+            "infrastructure": 2,
+            "nature": 3,
+            "night_life": 1,
+            "sports": 4
+        },
+        "country": "GB"
+    },
+    {
+        "brief_description": "Latin America’s megalopolis has multitudes that take a lifetime to unravel.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 19.43333333,
+                "lon": -99.13333333,
+                "primary": ""
+            }
+        ],
+        "description": "The largest city in North America is also one of its longest continually occupied urban centers. Founded as Tenochtitlan by the Aztecs in 1325 before the Spanish invasion 260 years later, Mexico City’s layers of struggle, beauty and triumph have been immortalized by its citizens like few other places have on the continent. In recent years, CDMX has been cleaning up its act, with safer streets and revamped public spaces, new designer hotels and exciting cultural offerings. And, of course, there’s the culinary scene, arguably one of the most intriguing and deeply complex on the planet. Is it any wonder that Mexico City—known locally as D.F., or distrito federal—is holding on to its spot on our Top 100 list? In this cosmopolitan jungle of more than 20 million inhabitants, there’s plenty to see and do, from the Casa Luis Barragan, a UNESCO World Heritage site and Insta eye candy (the city is #16 for Facebook Check-ins) to strolling the stylish neighborhoods of Roma and Condesa, which drip with greenery and an explosion of color in their century-old mansions. The city lands at #47 for Sights & Landmarks, #16 for Museums and #47 for Restaurants.",
+        "name": "Mexico_City",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 5,
+            "infrastructure": 3,
+            "nature": 1,
+            "night_life": 2,
+            "sports": 2
+        },
+        "country": "MX"
+    },
+    {
+        "brief_description": "The Great Outdoors are calling, and Salt Lake is doing its best to keep you in town.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 40.76083333,
+                "lon": -111.89111111,
+                "primary": ""
+            }
+        ],
+        "description": "Combining spectacular natural and built environments, Salt Lake is no longer just a gateway to the great outdoors but also a welcoming destination with a high cool quotient. The transformation began with the arrival of the XIX Olympic Winter Games in 2002, as the city thawed its reputation as an über-conservative cowboy town with Mormon family values and instead presented a slew of quaint cafés and stylish restaurants. SLC continues to pour millions into development projects and the beautification of its downtown, and the city has matured into an urban experience as much as an outdoor one. Of course, the proximity of the Wasatch Range’s stunning canyons and 11,000-foot peaks is the reason many adrenaline junkies travel and move here. And they work as hard as they play: Salt Lake City ranks #18 globally for GDP Per Capita. It’s citizenry brings the smarts as much as the snowboards, ranking #54 globally for Educational Attainment. The University of Utah ensures the brainpower keeps flowing, with its #59 ranking globally in our University subcategory. ",
+        "name": "Salt_Lake_City",
+        "tags": {
+            "costs": 3,
+            "culture": 2,
+            "food": 4,
+            "infrastructure": 3,
+            "nature": 1,
+            "night_life": 4,
+            "sports": 1
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "A booming economy and global intellect poise the Carolina powerhouse for the future.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 35.76666667,
+                "lon": -78.63333333,
+                "primary": ""
+            }
+        ],
+        "description": "The City of Oaks checks all the boxes for a bright, ambitious city of the new American South: Raleigh is part of North Carolina’s Research Triangle, one of the country’s largest and most successful research parks—think high-tech and biotech research and advanced textile development. Ranked #62 for GDP Per Capita globally, Raleigh is also a magnet for immigrants. It ranks #31 in our People category, comprising the subcategories of Educational Attainment and Foreign-Born Residents. But it’s in education where Raleighites truly shine bright—ranking #8 on the planet for educated big-city citizenry. So what do all these smart people do for fun? They’re indoors and out: the North Carolina Museum of Natural Sciences attracts more than a million people annually; there’s a Contemporary Art Museum, bluegrass festivals and craft brews. While our rankings don’t tell the food story yet (the city comes in at #199 for Restaurants), the culinary scene is vividly imaginative: Bon Appétit granted one of its coveted Top 10 America’s Best New Restaurants for 2017 to a quirky and beautiful combination brewery, bookstore, flower shop and dim sum restaurant called Brewery Bhavana.",
+        "name": "Raleigh,_North_Carolina",
+        "tags": {
+            "costs": 2,
+            "culture": 4,
+            "food": 1,
+            "infrastructure": 1,
+            "nature": 1,
+            "night_life": 5,
+            "sports": 3
+        },
+        "country": "US"
+    },
+    {
+        "brief_description": "Affordable and walkable, Eastern Europe’s ancient gem is shining bright.",
+        "coordinates": [
+            {
+                "globe": "earth",
+                "lat": 50.06138889,
+                "lon": 19.93722222,
+                "primary": ""
+            }
+        ],
+        "description": "The historic heart of Eastern Europe is increasingly beating loudest in Krakow, Poland’s former capital city and the country’s oldest university town. To sample the ancient city’s #27 globally ranked attractions, all you need to do is walk, starting in Krakow’s historic center, its Rynek Glówny marketplace. The Gothic spires and ornate facades set the table for what’s to come: namely, Wawel Hill and its eponymous castle, a Renaissance palace built as a gift from Italy to the 16th-century Polish king Zygmunt the Old. Famous local Pope John Paul II wasn’t exaggerating when he called Wawel “a sanctuary of Poland’s history which cannot be entered without awe and inner trembling.” The museums, ranked #41 globally, are equally stunning. The Czartoryski, for one, is the country’s oldest museum and boasts a large collection of Polish art and memorabilia, with some immersive Italian works, too. But a city so ancient is very much looking to improve livability in the future. It ranks Top 50 in our Safety subcategory and an impressive #17 for Income Equality. The beneficiary of all that security and disposable income? The city’s kinetic #35-ranked Nightlife, of course, powered by university students and—before the pandemic—growing international visitors.",
+        "name": "Kraków",
+        "tags": {
+            "costs": 3,
+            "culture": 4,
+            "food": 3,
+            "infrastructure": 1,
+            "nature": 3,
+            "night_life": 4,
+            "sports": 1
+        },
+        "country": "PL"
+    }
+]
