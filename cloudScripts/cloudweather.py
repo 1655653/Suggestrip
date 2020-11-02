@@ -7,7 +7,7 @@ with open("pwds.json",encoding="utf-8") as fp:
     pwds = json.load(fp)
 
 def get_weather(lat, lon):
-    return requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid='+pwds['open_wheater']).json()
+    return requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid='+pwds['open_weather']).json()
 
 
 def get_country():  
