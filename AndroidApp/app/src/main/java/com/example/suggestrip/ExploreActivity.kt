@@ -1,11 +1,15 @@
 package com.example.suggestrip
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import kotlinx.android.synthetic.main.activity_explore.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.btn_explore
+import kotlinx.android.synthetic.main.row_layout.*
 
 class ExploreActivity : AppCompatActivity() {
     var months_array = arrayOf("MIAMI","NEW YORK", "PARIS","ROME","TOKYO")
@@ -32,5 +36,7 @@ class ExploreActivity : AppCompatActivity() {
 
         //Attaches adapter with RecyclerView.
         rv.adapter = adapter
+
     }
+
 }

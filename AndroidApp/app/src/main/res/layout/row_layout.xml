@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageButton
-            android:id="@+id/imageButton"
+        <ImageView
+            android:id="@+id/ib_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
@@ -30,7 +30,7 @@
             app:srcCompat="@drawable/photo" />
 
         <TextView
-            android:id="@+id/tv"
+            android:id="@+id/tv_city_name_rv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -40,10 +40,10 @@
             android:textColor="@color/white"
             android:textSize="25dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-            app:layout_constraintLeft_toLeftOf="@+id/imageButton"
-            app:layout_constraintRight_toRightOf="@+id/imageButton"
-            app:layout_constraintTop_toTopOf="@+id/imageButton" />
+            app:layout_constraintBottom_toBottomOf="@+id/ib_city"
+            app:layout_constraintLeft_toLeftOf="@+id/ib_city"
+            app:layout_constraintRight_toRightOf="@+id/ib_city"
+            app:layout_constraintTop_toTopOf="@+id/ib_city" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
