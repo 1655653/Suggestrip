@@ -2,7 +2,7 @@ import json
 from botocore.vendored import requests
 import os
 from math import sin, cos, sqrt, atan2, radians
-
+import boto3
 
 
 def get_distance(lat1,lon1,lat2,lon2):
@@ -31,6 +31,7 @@ def lambda_handler(event, context):
     
     
     request_body = json.loads(event['body'])
+    #FOR TESTING IN LAMBDA CONSOLE USE THIS
     '''request_body = {
 "msg_id":"01, codice del messaggio, esempio 01 per messaggio caso uso 1",
 "gps_coords":[
@@ -65,7 +66,7 @@ def lambda_handler(event, context):
     response_body['ranking_list'] = []
     
     
-    # TODO implement
+    # TODO implement algo
     ranking_object = {
         "brief_description": "The Eternal City has always been coveted. These days, the bounty is an immersive step back in time.",
         "coordinates": [
@@ -89,6 +90,15 @@ def lambda_handler(event, context):
         },
         "country": "IT"
     }
+    
+    #GET from DB
+    # Get the service resource.
+    dynamodb = boto3.resource('dynamodb')
+    table = dynamodb.Table('test_suggestrip')
+
+    response = table.get_item(Key={'ID': '23'})
+    item = response['Item']
+    print(item)
     
     #RETRIEVE COVID INFO
     covid_info = requests.get('http://corona-api.com/countries/'+ranking_object['country']).json()

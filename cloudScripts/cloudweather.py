@@ -7,7 +7,17 @@ with open("pwds.json",encoding="utf-8") as fp:
     pwds = json.load(fp)
 
 def get_weather(lat, lon):
-    return requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid='+pwds['open_weather']).json()
+    r =  requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid='+pwds['open_weather']).json()
+    payload = {}
+    payload['weather'] = r['weather']
+    payload['temperature'] = int(float(r['main']['temp']) - 273.15)
+    return payload
+
+'''
+How to get icon URL
+For code 500 - light rain icon = "10d". See below a full list of codes
+URL is http://openweathermap.org/img/wn/10d@2x.png
+'''
 
 
 def get_country():  
@@ -39,3 +49,6 @@ def get_covid_info():
 
         with open('covid.json', 'w', encoding="utf-8") as fp:
             json.dump(our_covid_info, fp, indent=4, ensure_ascii=False)
+
+
+print(get_weather(48.856613,2.352222))
