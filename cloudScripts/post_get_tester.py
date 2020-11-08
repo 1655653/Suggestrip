@@ -46,9 +46,12 @@ def get_tester():
     url_get = "https://darpioxoei.execute-api.us-east-1.amazonaws.com/default/dynamo_getter"
     url_get_all="https://krjkmpvu2c.execute-api.us-east-1.amazonaws.com/default/dynamo_getter_all"
     #CHANGE KEY con quello che ti serve
-    headers = {'Content-type': 'application/json', "x-api-key" : pwds['get_all_city_api_key']}    
+    '''
+    "x-api-key" : pwds['get_all_api_key'] se ti serve la get_all
+    "x-api-key" : pwds['get_city_api_key'] se ti serve la get_city
+    '''
+    headers = {'Content-type': 'application/json', "x-api-key" : pwds['get_all_api_key']}    
     
     y = requests.get(url, headers = headers)
     pprint(y.json())
 
-get_tester()
