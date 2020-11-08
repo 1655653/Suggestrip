@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "744430045107",
+    "firebase_url": "https://suggestripapp.firebaseio.com",
+    "project_id": "suggestripapp",
+    "storage_bucket": "suggestripapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744430045107:android:cc714070454ec8df2cedc6",
+        "android_client_info": {
+          "package_name": "com.example.suggestripapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744430045107-j2qi6tdkermne0tru9e7smahltbj0842.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmWJxWdyTLCJcY-qnbO1vMluEO_1wRRIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744430045107-j2qi6tdkermne0tru9e7smahltbj0842.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
