@@ -59,8 +59,8 @@ def get_city_tester(city_id):
 
 t = time.time()
 
-case_1_tester()
+#case_1_tester()
 #get_city_tester(1)
-#get_all_tester()
+get_all_tester()
 
 print(time.time()-t)

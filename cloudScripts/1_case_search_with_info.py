@@ -101,16 +101,17 @@ def rank(request, db):
     OldMin = 100
     for city in db:
         record = {}
-        record['name'] = city['name']
+        #record['name'] = city['name']
         record['id'] = city['ID']
-        record['tags'] = city['tags']
-        record['user_tags'] = request['tags']
+        #record['tags'] = city['tags']
+        #record['user_tags'] = request['tags']
         record['tag_score'] = evaluate_tags(request,city)
-        record['weather'] = get_weather(city['coordinates'][0]['lat'],city['coordinates'][0]['lon']) 
-        record['weather_score'] = evaluate_weather(request, city)
+        if request['flag_lastminute'] == "True":
+            record['weather'] = get_weather(city['coordinates'][0]['lat'],city['coordinates'][0]['lon']) 
+            record['weather_score'] = evaluate_weather(request, city)
         record['distance'] = get_distance(request['gps_coords'][0]['lat'],request['gps_coords'][0]['lon'],city['coordinates'][0]['lat'],city['coordinates'][0]['lon'])
         record['distance_score'] = evaluate_distance(request, city)
-        record['cost'] = request['cost']
+        #record['cost'] = request['cost']
         record['cost_score'] = evaluate_costs(request, city)
         record['score'] = get_user_city_score(request, city)
         OldMin = OldMin if OldMin < record['score'] else record['score']
@@ -144,3 +145,4 @@ def lambda_handler(event, context):
         'body': json.dumps(response_body),
         'headers': {'Content-Type': 'application/json'}
     }
+
