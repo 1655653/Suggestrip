@@ -21,7 +21,7 @@ URL is http://openweathermap.org/img/wn/10d@2x.png
 
 
 def get_country():  
-    with open("results2.json",encoding="utf-8") as fp:
+    with open("results/results2.json",encoding="utf-8") as fp:
         cities = json.load(fp)
     for c in cities:
         lat = c['coordinates'][0]['lat']
@@ -35,7 +35,7 @@ def get_country():
 #pprint.pprint(json.loads(r.content.decode()))
 
 def get_covid_info():
-    with open("results3.json",encoding="utf-8") as fp:
+    with open("results/results3.json",encoding="utf-8") as fp:
         cities = json.load(fp)
         our_covid_info = []
         for c in cities:

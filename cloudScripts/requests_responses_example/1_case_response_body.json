@@ -1,0 +1,119 @@
+[
+    {
+        "cost": 1,
+        "cost_score": 50.0,
+        "distance": 1.058574322845152,
+        "distance_score": 20,
+        "id": "2",
+        "name": "Paris",
+        "score": 100.0,
+        "tag_score": 140.0,
+        "tags": {
+            "costs": 1.0,
+            "culture": 4.0,
+            "food": 4.0,
+            "infrastructure": 1.0,
+            "nature": 5.0,
+            "night_life": 3.0,
+            "sports": 5.0
+        },
+        "user_tags": {
+            "culture": 5,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 5,
+            "night_life": 5,
+            "sports": 5
+        },
+        "weather": {
+            "temperature": 10,
+            "weather": [
+                {
+                    "description": "overcast clouds",
+                    "icon": "04d",
+                    "id": 804,
+                    "main": "Clouds"
+                }
+            ]
+        },
+        "weather_score": 46.2
+    },
+    {
+        "cost": 1,
+        "cost_score": 50.0,
+        "distance": 393.0929586969326,
+        "distance_score": 10,
+        "id": "73",
+        "name": "Lyon",
+        "score": 100.0,
+        "tag_score": 150.0,
+        "tags": {
+            "costs": 1.0,
+            "culture": 5.0,
+            "food": 3.0,
+            "infrastructure": 3.0,
+            "nature": 5.0,
+            "night_life": 5.0,
+            "sports": 3.0
+        },
+        "user_tags": {
+            "culture": 5,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 5,
+            "night_life": 5,
+            "sports": 5
+        },
+        "weather": {
+            "temperature": 11,
+            "weather": [
+                {
+                    "description": "overcast clouds",
+                    "icon": "04d",
+                    "id": 804,
+                    "main": "Clouds"
+                }
+            ]
+        },
+        "weather_score": 46.2
+    },
+    {
+        "cost": 1,
+        "cost_score": 50.0,
+        "distance": 648.8991652339834,
+        "distance_score": 8,
+        "id": "87",
+        "name": "Hanover",
+        "score": 96.51462994836491,
+        "tag_score": 150.0,
+        "tags": {
+            "costs": 1.0,
+            "culture": 3.0,
+            "food": 3.0,
+            "infrastructure": 5.0,
+            "nature": 3.0,
+            "night_life": 5.0,
+            "sports": 5.0
+        },
+        "user_tags": {
+            "culture": 5,
+            "food": 5,
+            "infrastructure": 5,
+            "nature": 5,
+            "night_life": 5,
+            "sports": 5
+        },
+        "weather": {
+            "temperature": 9,
+            "weather": [
+                {
+                    "description": "broken clouds",
+                    "icon": "04d",
+                    "id": 803,
+                    "main": "Clouds"
+                }
+            ]
+        },
+        "weather_score": 44.15
+    }
+]

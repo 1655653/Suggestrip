@@ -1,0 +1,6 @@
+{
+    "open_weather": "076a963bc4d3e4197673ac29196a03ad",
+    "1_case_post_url"  : "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info",
+    "get_city_api_url": "https://7ny13nqj6e.execute-api.us-east-1.amazonaws.com/default/dynamo_getter?ID=",
+    "get_all_api_url":"https://tx1hnkw84a.execute-api.us-east-1.amazonaws.com/default/dynamo_getter_all"
+}

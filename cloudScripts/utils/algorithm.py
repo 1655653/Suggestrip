@@ -124,7 +124,7 @@ def rank(request, db):
 with open("request.json",encoding="utf-8") as fp:
     request = json.load(fp)
 
-with open("db.json",encoding="utf-8") as fp:
+with open("results/db.json",encoding="utf-8") as fp:
     db = json.load(fp)
 
 with open("pwds.json",encoding="utf-8") as fp:

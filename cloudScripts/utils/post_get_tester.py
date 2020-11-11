@@ -8,7 +8,7 @@ with open("pwds.json", encoding="utf-8") as fp:
     pwds = json.load(fp)
 
 
-def post_tester():
+def case_1_tester():
     url = pwds['1_case_post_url']
 
     body_example = {
@@ -42,23 +42,25 @@ def post_tester():
     x = requests.post(url, headers=headers, json=body_example)
     pprint(x.json())
 
-
-def get_tester():
-    body_get_city = {"city_id": "1"}
-
-    url_get = "https://darpioxoei.execute-api.us-east-1.amazonaws.com/default/dynamo_getter"
-    url_get_all = "https://krjkmpvu2c.execute-api.us-east-1.amazonaws.com/default/dynamo_getter_all"
-    #CHANGE KEY con quello che ti serve
-    '''
-    "x-api-key" : pwds['get_all_api_key'] se ti serve la get_all
-    "x-api-key" : pwds['get_city_api_key'] se ti serve la get_city
-    '''
-    headers = {'Content-type': 'application/json',
-               "x-api-key": pwds['get_all_api_key']}
-
+def get_all_tester():
+    headers = {'Content-type': 'application/json'}
+    url = pwds['get_all_api_url']
     y = requests.get(url, headers=headers)
     pprint(y.json())
 
+def get_city_tester(city_id):
+    headers = {'Content-type': 'application/json'}
+    url = pwds['get_city_api_url'] + str(city_id)
+    y = requests.get(url, headers=headers)
+    pprint(y.json())
+
+
+
+
 t = time.time()
-post_tester()
-print(t-time.time())
+
+case_1_tester()
+#get_city_tester(1)
+#get_all_tester()
+
+print(time.time()-t)
