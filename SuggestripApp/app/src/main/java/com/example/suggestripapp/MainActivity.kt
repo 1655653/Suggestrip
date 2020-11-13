@@ -21,6 +21,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -45,6 +46,7 @@ class MainActivity : AppCompatActivity(){
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
     var popup: Dialog? = null
+    var propic_uri: Uri? = null
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
 
@@ -118,7 +120,7 @@ class MainActivity : AppCompatActivity(){
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
             .setIsSmartLockEnabled(false)
-            //.setTheme(R.style.MyTheme)
+            .setTheme(R.style.AppTheme)
             .setLogo(R.drawable.logo)
             .build(), 666)
     }
@@ -134,6 +136,7 @@ class MainActivity : AppCompatActivity(){
                 val user = FirebaseAuth.getInstance().currentUser
                 if (user != null) {
                     Toast.makeText(this, "Welcome, "+user.displayName, Toast.LENGTH_LONG ).show()
+                    //TODO CHANGE IMAGE IN ACTIITY MAIN WHEN LOGGED AND HAS PROPIC
                 }
                 // ...
             } else {

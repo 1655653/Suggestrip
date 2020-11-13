@@ -147,7 +147,7 @@ class AccountMngActivity : AppCompatActivity() {
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
             .setIsSmartLockEnabled(false)
-            //.setTheme(R.style.MyTheme)
+            .setTheme(R.style.AppTheme)
             .setLogo(R.drawable.logo)
             .build(), 666)
     }
