@@ -1,6 +1,11 @@
 package com.example.suggestripapp
 
+import android.app.Dialog
+import android.graphics.Color
+import android.graphics.Region
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.os.Environment
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -9,7 +14,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_explore.*
 import okhttp3.*
-import java.io.IOException
+import java.io.*
 
 class ExploreActivity : AppCompatActivity() {
     /*var city_name_array = arrayOf("MIAMI","NEW YORK", "PARIS","ROME","TOKYO")
@@ -17,18 +22,45 @@ class ExploreActivity : AppCompatActivity() {
     var city_list = mutableListOf<City>()
     var city_name_array = mutableListOf<String>()
     var img_cities_array = mutableListOf<String>()
-
+    var popup: Dialog? = null
     lateinit var adapter :RecyclerViewExploreAdapter
 
     private val client = OkHttpClient()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_explore)
-        //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
+        popup = Dialog(this)
+        ShowPopup()
+//            //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
         run()
 
+        //TODO cache save
+        //open file local data
+//        val f = File(Environment.getExternalStorageState()+"citylist.dat")
+//
+//        if (f.length().toInt() == 0){
+//            val inStream = FileInputStream(f)
+//            val objectInStream = ObjectInputStream(inStream)
+//            val count: Int = objectInStream.readInt() // Get the number of cities
+//
+//            val rl = ArrayList<City>()
+//            for (c in 0 until count) rl.add(objectInStream.readObject() as City)
+//            objectInStream.close()
+//
+//
+//            ShowPopup()
+//            //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
+//            run()
+//        }
+//        else{
+//            populateRV(city_list)
+//        }
     }
-
+    fun ShowPopup() {
+        popup?.setContentView(R.layout.user_popup)
+        popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popup?.show()
+    }
     private fun run() {
         Log.d("porcamadonna", "START")
         var url = "https://tx1hnkw84a.execute-api.us-east-1.amazonaws.com/default/dynamo_getter_all"
@@ -58,6 +90,7 @@ class ExploreActivity : AppCompatActivity() {
                     }
                     ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
                     runOnUiThread {
+                        popup?.dismiss()
                         populateRV(city_list)
                     }
 
@@ -68,10 +101,17 @@ class ExploreActivity : AppCompatActivity() {
 
     private fun populateRV(cityList: MutableList<City>) {
 
+        //save data locally
+//        val outStream = FileOutputStream("citylist.dat")
+//        val objectOutStream = ObjectOutputStream(outStream)
+//        objectOutStream.writeInt(cityList.size) // Save size first
+
         for(city in cityList){
             city_name_array.add(city.name)
             img_cities_array.add(city.img_url)
+            //objectOutStream.writeObject(city)
         }
+        //objectOutStream.close() //close file
         //RENDERING IMAGES
         adapter = RecyclerViewExploreAdapter(
             city_name_array.toTypedArray(),

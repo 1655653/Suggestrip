@@ -24,16 +24,21 @@ import android.hardware.SensorManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import jp.wasabeef.glide.transformations.BlurTransformation
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.row_layout.view.*
 import java.util.*
 import kotlin.math.sqrt
 
@@ -46,27 +51,38 @@ class MainActivity : AppCompatActivity(){
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
     var popup: Dialog? = null
-    var propic_uri: Uri? = null
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
+    var options = RequestOptions()
+        .placeholder(R.drawable.user_small)
+        .centerCrop()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        popup = Dialog(this)
-        //setto i provider
-        providers = Arrays.asList<AuthUI.IdpConfig>(
-            AuthUI.IdpConfig.EmailBuilder().build(),
-            AuthUI.IdpConfig.GoogleBuilder().build(),
-            AuthUI.IdpConfig.PhoneBuilder().build()
-        )
-        //custom fun that triggers startActivityForResult
-        showSignInOPtions()
+
+        val user = FirebaseAuth.getInstance().currentUser
+        if(user != null && intent.getBooleanExtra("is_user_modified",false)){
+            if(intent.getBooleanExtra("is_uri_propic_modified",false))
+                Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
+        }
+        else {
+            popup = Dialog(this)
+            //setto i provider
+            providers = Arrays.asList<AuthUI.IdpConfig>(
+                AuthUI.IdpConfig.EmailBuilder().build(),
+                AuthUI.IdpConfig.GoogleBuilder().build(),
+                AuthUI.IdpConfig.PhoneBuilder().build()
+            )
+            //custom fun that triggers startActivityForResult
+            showSignInOPtions()
+            Log.d("porcamadonna","sto qua")
+        }
 
         btn_profiling.setOnClickListener {
             val intent = Intent(this, ProfilingActivity::class.java).apply {}
             //to pass arguments to next activity
-            //Intent.putExtra("key", value); //Optional parameters
+            //intent.putExtra("key", value); //Optional parameters
             //on the other side---> intent =  getIntent();
             //    String value = intent.getStringExtra("key")
             startActivity(intent)
@@ -136,7 +152,12 @@ class MainActivity : AppCompatActivity(){
                 val user = FirebaseAuth.getInstance().currentUser
                 if (user != null) {
                     Toast.makeText(this, "Welcome, "+user.displayName, Toast.LENGTH_LONG ).show()
-                    //TODO CHANGE IMAGE IN ACTIITY MAIN WHEN LOGGED AND HAS PROPIC
+                    Log.d("porcamadonna",user.photoUrl.toString())
+
+
+                    Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
+
+
                 }
                 // ...
             } else {

@@ -12,12 +12,16 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.net.toUri
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_account_mng2.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.row_layout.view.*
 import java.util.*
 
 class AccountMngActivity : AppCompatActivity() {
@@ -36,8 +40,13 @@ class AccountMngActivity : AppCompatActivity() {
         //settaggi base
         et_nick.setText(user?.displayName, TextView.BufferType.EDITABLE);
         et_email.setText(user?.email, TextView.BufferType.EDITABLE);
-        iv_user.setImageURI(user?.photoUrl)
-        Picasso.get().load(user?.photoUrl).fit().centerCrop().into(iv_user)
+
+        //Picasso.get().load(user?.photoUrl).fit().centerCrop().into(iv_user)
+        var options = RequestOptions()
+            .placeholder(R.drawable.logo)
+            .fitCenter()
+        Glide.with(this).load(user?.photoUrl).apply(options).into(iv_user)
+
 
         //accesso a galleria quando tap on image
         iv_user.setOnClickListener {
@@ -95,8 +104,16 @@ class AccountMngActivity : AppCompatActivity() {
                         ).show()
                             et_nick.setText(user?.displayName, TextView.BufferType.EDITABLE);
                             et_email.setText(user?.email, TextView.BufferType.EDITABLE);
-                            Picasso.get().load(user?.photoUrl).fit().centerCrop().into(iv_user)
+                            //Picasso.get().load(user?.photoUrl).fit().centerCrop().into(iv_user)
+                            Glide.with(this).load(user?.photoUrl).apply(options).into(iv_user)
+                            val intent = Intent(this, MainActivity::class.java).apply {}
+                            intent.putExtra("is_uri_propic_modified",uri_propic_modified)
+                            intent.putExtra("is_user_modified",true)
                             uri_propic_modified = false
+                            startActivity(intent)
+
+
+
                             Log.d("aoporcodio", user.photoUrl.toString())
                         }
                     }
@@ -153,7 +170,7 @@ class AccountMngActivity : AppCompatActivity() {
     }
 
     private fun pickImageFromGallery() {
-        val intent = Intent(Intent.ACTION_PICK)
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT )
         intent.type = "image/*"
         startActivityForResult(intent, IMAGE_PICK_CODE)
     }
