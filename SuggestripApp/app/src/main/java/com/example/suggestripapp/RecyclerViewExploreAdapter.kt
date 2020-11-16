@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.row_layout.view.*
 
 
 //qui creo l'adapter ma sopratutto la classe ViewHolder che mi serve per sistemare tutti gli item della cardview
-class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months_array: Array<String>) : RecyclerView.Adapter<RecyclerViewExploreAdapter.ViewHolder>()
+class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months_array: Array<String>, var city_list : List<City>) : RecyclerView.Adapter<RecyclerViewExploreAdapter.ViewHolder>()
  {
      inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
      {
@@ -24,7 +24,7 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
                      .placeholder(R.drawable.logo)
                      .centerCrop()
 
-             Glide.with(itemView.context).load("https://" + img_months_array[position]!!).apply(RequestOptions.bitmapTransform(BlurTransformation(50))).apply(options).into(itemView.ib_city)
+             Glide.with(itemView.context).load(img_months_array[position]!!).apply(RequestOptions.bitmapTransform(BlurTransformation(50))).apply(options).into(itemView.ib_city)
              Log.d("pocamadonna", img_months_array[position])
              //Picasso.get().load(img_months_array[position]).into(itemView.ib_city);
          }
@@ -34,8 +34,10 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
              itemView.setOnClickListener { v ->
                  val context: Context = v.context
                  val intent = Intent(context, CityDetailsActivity::class.java)
-                 intent.putExtra("city_name", itemView.tv_city_name_rv.text)
-                 intent.putExtra("city_photo_url", img_months_array[adapterPosition])
+                 Log.d("porcoddio",city_list[adapterPosition].toString())
+                 intent.putExtra("city",city_list[adapterPosition])
+//                 intent.putExtra("city_name", itemView.tv_city_name_rv.text)
+//                 intent.putExtra("city_photo_url", "https://" + img_months_array[adapterPosition])
                  intent.putExtra("from_shake", "false")
                  context.startActivity(intent)
              }

@@ -85,6 +85,7 @@ class ExploreActivity : AppCompatActivity() {
                     for (c in lc) {
                         var x = Gson().toJson(c)
                         var response_city = Gson().fromJson<City>(x, City::class.java)
+                        response_city.img_url = "https://" + response_city.img_url
                         city_list.add(response_city)
                         Log.d("porcamadonna", city_list.size.toString())
                     }
@@ -115,7 +116,8 @@ class ExploreActivity : AppCompatActivity() {
         //RENDERING IMAGES
         adapter = RecyclerViewExploreAdapter(
             city_name_array.toTypedArray(),
-            img_cities_array.toTypedArray()
+            img_cities_array.toTypedArray(),
+                city_list
         )
 
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)

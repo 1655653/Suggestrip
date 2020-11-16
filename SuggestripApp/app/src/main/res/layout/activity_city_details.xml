@@ -27,7 +27,7 @@ android:background="#6A615D5D">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01"
-        app:srcCompat="@drawable/photo" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/tv_city_name"
@@ -47,18 +47,147 @@ android:background="#6A615D5D">
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/lorem_ipsum"
-        android:textSize="25dp"
+        android:textSize="@dimen/description_tv_city"
         app:layout_constraintTop_toBottomOf="@+id/tv_city_name" />
 
-    <Button
-        android:id="@+id/btn_preferred"
+    <TextView
+        android:id="@+id/tv_TAGS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add to the preferred"
+        android:text="TAGS"
+        android:textSize="@dimen/description_tv_city"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_city_description" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_city_description"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.1"
+        />
+<!--PRIMO GRID LAYOUT-->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_TAGS">
+
+
+        <!--    PRIMO TAG COLUMS -->
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:id="@+id/tag_grid_1">
+
+            <TextView
+                android:id="@+id/tv_costs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/description_tv_city"
+                android:text="Costs" />
+
+            <TextView
+                android:id="@+id/tv_costsR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/description_tv_city"
+                android:text="1"/>
+
+            <TextView
+                android:id="@+id/tv_culture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/description_tv_city"
+                android:text="Culture"/>
+
+            <TextView
+                android:id="@+id/tv_cultureR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/description_tv_city"
+                android:text="1"/>
+
+            <TextView
+                android:id="@+id/tv_infrastructure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24dp"
+                android:text="Infrastructure"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_infrastructureR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/description_tv_city"
+                android:text="1"/>
+        </GridLayout>
+<!--    SECONDO TAG COLUMS -->
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginLeft="15dp"
+            android:rowCount="2">
+
+            <TextView
+                android:id="@+id/tv_sports"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:textSize="@dimen/description_tv_city" />
+
+            <TextView
+                android:id="@+id/tv_sportsR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="1"
+                android:textSize="@dimen/description_tv_city" />
+
+            <TextView
+                android:id="@+id/tv_night_life"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Night Life"
+                android:textSize="@dimen/description_tv_city" />
+
+            <TextView
+                android:id="@+id/tv_night_lifeR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="1"
+                android:textSize="@dimen/description_tv_city" />
+
+            <TextView
+                android:id="@+id/tv_nature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nature"
+                android:textSize="@dimen/description_tv_city" />
+
+            <TextView
+                android:id="@+id/tv_natureR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="1"
+                android:textSize="@dimen/description_tv_city" />
+
+        </GridLayout>
+
+    </GridLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

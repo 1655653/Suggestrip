@@ -1,5 +1,6 @@
 package com.example.suggestripapp
 
+import java.io.Serializable
 
 data class City(
     var brief_description: String,
@@ -10,7 +11,7 @@ data class City(
     var name: String,  //nome citta
     var coordinates: ArrayList<Coordinates>,
     var tags: Tags
-){
+):Serializable{
     override fun toString(): String {
         return "City(brief_description='$brief_description', img_url='$img_url', description='$description', ID=$ID, country='$country', name='$name', coordinates=$coordinates, tags=$tags)"
     }
@@ -20,7 +21,7 @@ data class Coordinates(
     var globe: String,
     var lat: Float,
     var primary: String
-){
+):Serializable{
     override fun toString(): String {
         return "Coordinates(lon=$lon, globe='$globe', lat=$lat, primary='$primary')"
     }
@@ -32,7 +33,7 @@ data class Tags(
     var nature: Double,
     var culture: Double,
     var infrastructure: Double
-){
+):Serializable{
     override fun toString(): String {
         return "Tags(costs=$costs, night_life=$night_life, sports=$sports, nature=$nature, culture=$culture, infrastructure=$infrastructure)"
     }

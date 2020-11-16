@@ -115,6 +115,7 @@ class MainActivity : AppCompatActivity(){
             acceleration = acceleration * 0.9f + delta
             if (acceleration > 12) { //poi devi passargli i valori o le reference per fare uno shake randomico. E ricorda che devi fare la stessa cpsa anche dentro city activity
                 val intent = Intent(this@MainActivity, CityDetailsActivity::class.java).apply {}
+                intent.putExtra("from_shake",true)
                 startActivity(intent)
             }
         }
