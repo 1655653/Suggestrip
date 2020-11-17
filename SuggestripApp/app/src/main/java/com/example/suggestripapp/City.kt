@@ -9,8 +9,8 @@ data class City(
     var ID: Int,
     var country: String, //NAZIONE ES,US..
     var name: String,  //nome citta
-    var coordinates: ArrayList<Coordinates>,
-    var tags: Tags,
+    var coordinates: ArrayList<Coordinates>?,
+    var tags: Tags?,
     var covid:String
 ):Serializable{
     override fun toString(): String {

@@ -27,18 +27,19 @@ class CityDetailsActivity : AppCompatActivity() {
     private val client = OkHttpClient()
     var from_shake = false
     var popup: Dialog? = null
-
+///TODO WEATHER AND COVID VISUALIZATION
     //shake
     private var sensorManager: SensorManager? = null
     private var acceleration = 0f
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
 
+    var url = "https://7ny13nqj6e.execute-api.us-east-1.amazonaws.com/default/dynamo_getter?ID="
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city_details)
 
-        intent =  getIntent();
+        intent = getIntent();
         popup = Dialog(this)
         ///shake feature
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
@@ -47,49 +48,48 @@ class CityDetailsActivity : AppCompatActivity() {
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
         from_shake = intent.getBooleanExtra("from_shake", false)
-        if(!from_shake){
-            //val city came from explore activity
-            Log.d("diocane", from_shake.toString())
+
+        //choose id, random if shake, selected if explored
+        var ID = ""
+        if (!from_shake) {     //call with a specifi ìc id
             city = intent.extras?.get("city") as City
-            populateLayout(city!!)
+            ID = city.ID.toString()
+        } else {//call with a random ìc id
+            ID = (0..101).random().toString()
         }
-        else{
-            //val city came from aws call
-            ShowPopup()
-            var ID = (0..101).random()
-            var url = "https://7ny13nqj6e.execute-api.us-east-1.amazonaws.com/default/dynamo_getter?ID="+ID.toString()
-            Log.d("porcaddio", url)
-            val request = Request.Builder()
-                    .url(url)
-                    .build()
-            client.newCall(request).enqueue(object : Callback {
-                override fun onFailure(call: Call, e: IOException) {
-                    e.printStackTrace()
-                    Log.d("porcamadonna", "ERORE")
-                }
 
-                override fun onResponse(call: Call, response: Response) {
-                    response.use {
-                        if (!response.isSuccessful) throw IOException("Unexpected code $response")
-                        city = Gson().fromJson<City>(
-                                response.body!!.string(),
-                                City::class.java) as City
-                        city.img_url = "https://" + city.img_url
-                        Log.d("porcaddio", city.toString())
+        //aws call
+        url += ID
+        ShowPopup()
+        val request = Request.Builder()
+                .url(url)
+                .build()
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+                Log.d("porcamadonna", "ERORE")
+            }
 
-                        ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
-                        runOnUiThread {
+            override fun onResponse(call: Call, response: Response) {
+                response.use {
+                    if (!response.isSuccessful) throw IOException("Unexpected code $response")
+                    city = Gson().fromJson<City>(
+                            response.body!!.string(),
+                            City::class.java) as City
+                    city.img_url = "https://" + city.img_url
+                    Log.d("porcaddio", city.toString())
 
-                            popup?.dismiss()
-                            populateLayout(city!!)
-                        }
-
+                    ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
+                    runOnUiThread {
+                        popup?.dismiss()
+                        populateLayout(city!!)
                     }
-                }
-            })
 
-        }
+                }
+            }
+        })
     }
+
     override fun onDestroy() {
         popup?.dismiss()
         super.onDestroy()
@@ -127,12 +127,12 @@ class CityDetailsActivity : AppCompatActivity() {
         //FILL THE ACTIVITY
         tv_city_name.text = city.name
         tv_city_description.text = city.description
-        tv_costsR.text = city.tags.costs.toString()
-        tv_cultureR.text = city.tags.culture.toString()
-        tv_infrastructureR.text = city.tags.infrastructure.toString()
-        tv_natureR.text = city.tags.nature.toString()
-        tv_sportsR.text = city.tags.sports.toString()
-        tv_night_lifeR.text = city.tags.night_life.toString()
+        tv_costsR.text = city.tags?.costs.toString()
+        tv_cultureR.text = city.tags?.culture.toString()
+        tv_infrastructureR.text = city.tags?.infrastructure.toString()
+        tv_natureR.text = city.tags?.nature.toString()
+        tv_sportsR.text = city.tags?.sports.toString()
+        tv_night_lifeR.text = city.tags?.night_life.toString()
         var options = RequestOptions()
                 .placeholder(R.drawable.logo)
                 .centerCrop()
