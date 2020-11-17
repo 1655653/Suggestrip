@@ -1,77 +1,17 @@
 [
     {
-        "brief_description": "Affordable and walkable, Eastern Europe\u2019s ancient gem is shining bright.",
-        "img_url": "upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Krakow_Rynek_Glowny_panorama_2.jpg/800px-Krakow_Rynek_Glowny_panorama_2.jpg",
-        "description": "The historic heart of Eastern Europe is increasingly beating loudest in Krakow, Poland\u2019s former capital city and the country\u2019s oldest university town. To sample the ancient city\u2019s #27 globally ranked attractions, all you need to do is walk, starting in Krakow\u2019s historic center, its Rynek Gl\u00f3wny marketplace. The Gothic spires and ornate facades set the table for what\u2019s to come: namely, Wawel Hill and its eponymous castle, a Renaissance palace built as a gift from Italy to the 16th-century Polish king Zygmunt the Old. Famous local Pope John Paul II wasn\u2019t exaggerating when he called Wawel \u201ca sanctuary of Poland\u2019s history which cannot be entered without awe and inner trembling.\u201d The museums, ranked #41 globally, are equally stunning. The Czartoryski, for one, is the country\u2019s oldest museum and boasts a large collection of Polish art and memorabilia, with some immersive Italian works, too. But a city so ancient is very much looking to improve livability in the future. It ranks Top 50 in our Safety subcategory and an impressive #17 for Income Equality. The beneficiary of all that security and disposable income? The city\u2019s kinetic #35-ranked Nightlife, of course, powered by university students and\u2014before the pandemic\u2014growing international visitors.",
-        "ID": "99",
-        "country": "PL",
-        "name": "Krak\u00f3w",
-        "coordinates": [
-            {
-                "lon": 19.93722222,
-                "globe": "earth",
-                "lat": 50.06138889,
-                "primary": ""
-            }
-        ],
-        "tags": {
-            "costs": 3.0,
-            "night_life": 4.0,
-            "sports": 1.0,
-            "nature": 3.0,
-            "culture": 4.0,
-            "infrastructure": 1.0,
-            "food": 3.0
-        }
+       "ID":"14",
+       "img_url":"upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Abu_dhabi_skylines_2014.jpg/800px-Abu_dhabi_skylines_2014.jpg",
+       "name":"Abu_Dhabi"
     },
     {
-        "brief_description": "Talent, smarts and money are a potent mix that\u2019s given this city the highest household income in the USA.",
-        "img_url": "upload.wikimedia.org/wikipedia/commons/thumb/8/85/SJ_skyline_at_night_horizontal.jpg/799px-SJ_skyline_at_night_horizontal.jpg",
-        "description": "It\u2019s fascinating what a well-educated, well-paid and diverse population can do for a city\u2019s rankings. In the case of San Jose, the economic, cultural and political capital of Silicon Valley, it\u2019s everything, and it\u2019s given the city its highest-ever finish in our ranking. The city boasts the #4 GDP Per Capita on the planet. All that capital lures the best talent on earth, meaning San Jose also excels in our People category, with the fourth-best educated residents on the planet and the 14th-most diverse. The bounty of universities in the area is a performance driver all its own, creating symbiotic integrations with the tech companies in the city that have access to funding and innovation like few others. Given the optimal conditions of a lauded, coveted school and the on-ramp it provides to jobs in the same city, San Jose will continue to stock its talent pipeline for years to come. The region, home to Google, Facebook, Cisco Systems, eBay and PayPal, is #30 for Global 500 HQs eager for graduates. There are a massive number of corporate offices in the city\u2014with plans for a new Google campus over the next few years that could house up to 25,000 employees\u2014but given the plentiful prosperity, San Jose is an incredibly livable and worthwhile destination. As California\u2019s oldest civilian Spanish settlement, the city has many museums spanning its fascinating history.",
-        "ID": "63",
-        "country": "US",
-        "name": "San_Jose,_California",
-        "coordinates": [
-            {
-                "lon": -121.9,
-                "globe": "earth",
-                "lat": 37.33333333,
-                "primary": ""
-            }
-        ],
-        "tags": {
-            "costs": 1.0,
-            "night_life": 3.0,
-            "sports": 1.0,
-            "nature": 3.0,
-            "culture": 1.0,
-            "infrastructure": 2.0,
-            "food": 1.0
-        }
+       "ID":"72",
+       "img_url":"upload.wikimedia.org/wikipedia/commons/thumb/d/df/Pudong_Shanghai_November_2017_panorama.jpg/800px-Pudong_Shanghai_November_2017_panorama.jpg",
+       "name":"Shanghai"
     },
     {
-        "brief_description": "Is D\u00fcsseldorf Germany\u2019s city of the future? Global investment dollars definitely seem to think so.",
-        "img_url": "upload.wikimedia.org/wikipedia/commons/e/ea/D%C3%BCsseldorf_Ansichten2.jpg",
-        "description": "Sharply dressed and modern, D\u00fcsseldorf is leading Germany\u2019s charge into the 21st century. While the city tests and builds the 5G infrastructure of the future, it\u2019s acting as the country\u2019s telecommunications hub, and among its #30 ranking in Global 500 companies are the headquarters for Vodafone and E-Plus. But deliberate investments from the city in growing its tech appeal are paying off outside telecommunications: it\u2019s the third-largest location for foreign direct investment in Europe and the largest in Germany, leading to impressively low Unemployment (#31) and enviable Income Inequality (#37). Centrally located for European travel with a #35 rank for Airport Connectivity and #11 for Convention Center, D\u00fcsseldorf is an easy choice for anyone seeking a convenient location for a major meeting. That is, if the future indeed includes such luxuries as flights and conferences. If it doesn\u2019t, well, the city is extremely well positioned to handle the teleconferencing boom as well. ",
-        "ID": "92",
-        "country": "DE",
-        "name": "D\u00fcsseldorf",
-        "coordinates": [
-            {
-                "lon": 6.78333333,
-                "globe": "earth",
-                "lat": 51.23333333,
-                "primary": ""
-            }
-        ],
-        "tags": {
-            "costs": 2.0,
-            "night_life": 1.0,
-            "sports": 1.0,
-            "nature": 2.0,
-            "culture": 5.0,
-            "infrastructure": 5.0,
-            "food": 5.0
-        }
+       "ID":"73",
+       "img_url":"upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lyon-Paysages.jpg/489px-Lyon-Paysages.jpg",
+       "name":"Lyon"
     }
-]
+ ]

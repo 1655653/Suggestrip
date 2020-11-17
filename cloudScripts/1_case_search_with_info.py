@@ -13,7 +13,17 @@ class DecimalEncoder(json.JSONEncoder):
             return float(obj)
         return super(CustomJsonEncoder, self).default(obj)
         
-        
+
+def get_covid_info(c):
+    covid_info = requests.get('http://corona-api.com/countries/'+c['country']).json()
+    our_covid_info_city = {}
+    our_covid_info_city['city'] = c['name']
+    our_covid_info_city['date'] = covid_info['data']['updated_at']
+    our_covid_info_city['today'] = covid_info['data']['today']
+    our_covid_info_city['latest_data'] = covid_info['data']['latest_data']
+    
+    return our_covid_info_city
+    
 def get_distance(lat1,lon1,lat2,lon2):
     # approximate radius of earth in km
     R = 6373.0
@@ -101,11 +111,14 @@ def rank(request, db):
     OldMin = 100
     for city in db:
         record = {}
-        #record['name'] = city['name']
+        record['name'] = city['name']
         record['id'] = city['ID']
+        record['country'] = city['country']
+        record['img_url'] = city['img_url']
         #record['tags'] = city['tags']
         #record['user_tags'] = request['tags']
         record['tag_score'] = evaluate_tags(request,city)
+        #record['covid_info'] = get_covid_info(city)
         if request['flag_lastminute'] == "True":
             record['weather'] = get_weather(city['coordinates'][0]['lat'],city['coordinates'][0]['lon']) 
             record['weather_score'] = evaluate_weather(request, city)
@@ -126,7 +139,12 @@ def rank(request, db):
     from operator import itemgetter
     ranked_list = sorted(lst, key=itemgetter('score'), reverse=True) 
     #pprint(ranked_list[:10])
-    return ranked_list[:10]
+    _covid = []
+    for c in ranked_list[:10]:
+        c['covid_info'] = get_covid_info(c)
+        _covid.append(c)
+    _covid.reverse()
+    return _covid
     
     
 def lambda_handler(event, context):
@@ -136,7 +154,7 @@ def lambda_handler(event, context):
     response = table.scan()
     response = json.loads(json.dumps(response['Items'], cls=DecimalEncoder))
     #pprint(response)
-    request_body = json.loads(event['body'])
+    request_body =json.loads(event['body'])
     
 
     response_body = rank(request_body, response)
@@ -145,4 +163,5 @@ def lambda_handler(event, context):
         'body': json.dumps(response_body),
         'headers': {'Content-Type': 'application/json'}
     }
+
 

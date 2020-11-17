@@ -1,119 +1,88 @@
 [
-    {
-        "cost": 1,
-        "cost_score": 50.0,
-        "distance": 1.058574322845152,
-        "distance_score": 20,
-        "id": "2",
-        "name": "Paris",
-        "score": 100.0,
-        "tag_score": 140.0,
-        "tags": {
-            "costs": 1.0,
-            "culture": 4.0,
-            "food": 4.0,
-            "infrastructure": 1.0,
-            "nature": 5.0,
-            "night_life": 3.0,
-            "sports": 5.0
-        },
-        "user_tags": {
-            "culture": 5,
-            "food": 5,
-            "infrastructure": 5,
-            "nature": 5,
-            "night_life": 5,
-            "sports": 5
-        },
-        "weather": {
-            "temperature": 10,
-            "weather": [
-                {
-                    "description": "overcast clouds",
-                    "icon": "04d",
-                    "id": 804,
-                    "main": "Clouds"
-                }
-            ]
-        },
-        "weather_score": 46.2
-    },
-    {
-        "cost": 1,
-        "cost_score": 50.0,
-        "distance": 393.0929586969326,
-        "distance_score": 10,
-        "id": "73",
-        "name": "Lyon",
-        "score": 100.0,
-        "tag_score": 150.0,
-        "tags": {
-            "costs": 1.0,
-            "culture": 5.0,
-            "food": 3.0,
-            "infrastructure": 3.0,
-            "nature": 5.0,
-            "night_life": 5.0,
-            "sports": 3.0
-        },
-        "user_tags": {
-            "culture": 5,
-            "food": 5,
-            "infrastructure": 5,
-            "nature": 5,
-            "night_life": 5,
-            "sports": 5
-        },
-        "weather": {
-            "temperature": 11,
-            "weather": [
-                {
-                    "description": "overcast clouds",
-                    "icon": "04d",
-                    "id": 804,
-                    "main": "Clouds"
-                }
-            ]
-        },
-        "weather_score": 46.2
-    },
-    {
-        "cost": 1,
-        "cost_score": 50.0,
-        "distance": 648.8991652339834,
-        "distance_score": 8,
-        "id": "87",
-        "name": "Hanover",
-        "score": 96.51462994836491,
-        "tag_score": 150.0,
-        "tags": {
-            "costs": 1.0,
-            "culture": 3.0,
-            "food": 3.0,
-            "infrastructure": 5.0,
-            "nature": 3.0,
-            "night_life": 5.0,
-            "sports": 5.0
-        },
-        "user_tags": {
-            "culture": 5,
-            "food": 5,
-            "infrastructure": 5,
-            "nature": 5,
-            "night_life": 5,
-            "sports": 5
-        },
-        "weather": {
-            "temperature": 9,
-            "weather": [
-                {
-                    "description": "broken clouds",
-                    "icon": "04d",
-                    "id": 803,
-                    "main": "Clouds"
-                }
-            ]
-        },
-        "weather_score": 44.15
-    }
+   {
+      "cost_score":25.0,
+      "country":"US",
+      "covid_info":{
+         "city":"Los_Angeles",
+         "date":"2020-11-17T16:08:39.395Z",
+         "latest_data":{
+            "calculated":{
+               "cases_per_million_population":21202,
+               "death_rate":2.1892757373125438,
+               "recovered_vs_death_ratio":"None",
+               "recovery_rate":60.81891094750442
+            },
+            "confirmed":11548020,
+            "critical":4271822,
+            "deaths":252818,
+            "recovered":7023380
+         },
+         "today":{
+            "confirmed":9740,
+            "deaths":166
+         }
+      },
+      "distance":9088.16019369436,
+      "distance_score":2,
+      "id":"8",
+      "img_url":"upload.wikimedia.org/wikipedia/commons/thumb/6/69/Los_Angeles_with_Mount_Baldy.jpg/800px-Los_Angeles_with_Mount_Baldy.jpg",
+      "name":"Los_Angeles",
+      "score":84.54810495626823,
+      "tag_score":160.0,
+      "weather":{
+         "temperature":17,
+         "weather":[
+            {
+               "description":"clear sky",
+               "icon":"01d",
+               "id":800,
+               "main":"Clear"
+            }
+         ]
+      },
+      "weather_score":48.0
+   },
+   {
+      "cost_score":50.0,
+      "country":"SA",
+      "covid_info":{
+         "city":"Riyadh",
+         "date":"2020-11-17T16:04:32.267Z",
+         "latest_data":{
+            "calculated":{
+               "cases_per_million_population":816,
+               "death_rate":1.6082821444515398,
+               "recovered_vs_death_ratio":"None",
+               "recovery_rate":96.3793873157059
+            },
+            "confirmed":353918,
+            "critical":7122,
+            "deaths":5692,
+            "recovered":341104
+         },
+         "today":{
+            "confirmed":362,
+            "deaths":16
+         }
+      },
+      "distance":4688.129282112144,
+      "distance_score":4,
+      "id":"60",
+      "img_url":"upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Riyadh%2C_Saudi_Arabia_%282048x1367%29_%2836864830374%29.jpg/800px-Riyadh%2C_Saudi_Arabia_%282048x1367%29_%2836864830374%29.jpg",
+      "name":"Riyadh",
+      "score":86.0058309037901,
+      "tag_score":135.0,
+      "weather":{
+         "temperature":26,
+         "weather":[
+            {
+               "description":"clear sky",
+               "icon":"01n",
+               "id":800,
+               "main":"Clear"
+            }
+         ]
+      },
+      "weather_score":48.0
+   }
 ]

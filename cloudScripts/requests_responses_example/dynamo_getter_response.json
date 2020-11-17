@@ -21,5 +21,36 @@
         "culture": 4.0,
         "infrastructure": 1.0,
         "food": 4.0
+    },
+    "covid_info": {
+        "city": "Paris",
+        "date": "2020-11-17T15:45:16.722Z",
+        "today": {
+            "deaths": 0,
+            "confirmed": 0
+        },
+        "latest_data": {
+            "deaths": 45054,
+            "confirmed": 1991233,
+            "recovered": 140880,
+            "critical": 1805299,
+            "calculated": {
+                "death_rate": 2.2626181868219337,
+                "recovery_rate": 7.07501332089213,
+                "recovered_vs_death_ratio": null,
+                "cases_per_million_population": 4919
+            }
+        }
+    },
+    "weather": {
+        "weather": [
+            {
+                "id": 804,
+                "main": "Clouds",
+                "description": "overcast clouds",
+                "icon": "04d"
+            }
+        ],
+        "temperature": 13
     }
 }
