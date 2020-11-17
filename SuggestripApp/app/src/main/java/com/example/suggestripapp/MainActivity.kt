@@ -1,15 +1,5 @@
 package com.example.suggestripapp
 
-/*
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}*/
 
 import android.app.Activity
 import android.app.Dialog
@@ -50,7 +40,6 @@ class MainActivity : AppCompatActivity(){
     private var acceleration = 0f
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
-    var popup: Dialog? = null
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
     var options = RequestOptions()
@@ -67,16 +56,17 @@ class MainActivity : AppCompatActivity(){
                 Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
         }
         else {
-            popup = Dialog(this)
-            //setto i provider
-            providers = Arrays.asList<AuthUI.IdpConfig>(
-                AuthUI.IdpConfig.EmailBuilder().build(),
-                AuthUI.IdpConfig.GoogleBuilder().build(),
-                AuthUI.IdpConfig.PhoneBuilder().build()
-            )
-            //custom fun that triggers startActivityForResult
-            showSignInOPtions()
-            Log.d("porcamadonna","sto qua")
+            if(! getIntent().getBooleanExtra("back_from_shake",false)) { //se torno dallo shake non devo fare il sign in
+                //setto i provider
+                providers = Arrays.asList<AuthUI.IdpConfig>(
+                        AuthUI.IdpConfig.EmailBuilder().build(),
+                        AuthUI.IdpConfig.GoogleBuilder().build(),
+                        AuthUI.IdpConfig.PhoneBuilder().build()
+                )
+                //custom fun that triggers startActivityForResult
+                showSignInOPtions()
+                Log.d("porcamadonna", "sto qua")
+            }
         }
 
         btn_profiling.setOnClickListener {
@@ -136,10 +126,11 @@ class MainActivity : AppCompatActivity(){
         startActivityForResult(AuthUI.getInstance()
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
-            .setIsSmartLockEnabled(false)
+            .setIsSmartLockEnabled(true)
             .setTheme(R.style.AppTheme)
             .setLogo(R.drawable.logo)
             .build(), 666)
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -47,9 +47,9 @@ class CityDetailsActivity : AppCompatActivity() {
         lastAcceleration = SensorManager.GRAVITY_EARTH
         val from_shake = intent.getBooleanExtra("from_shake", false)
         if(!from_shake){
-            city = intent.extras?.get("city") as City //city came from explore
+            //val city came from explore activity
+            city = intent.extras?.get("city") as City
             populateLayout(city!!)
-
         }
         else{
             //val city came from aws call
@@ -77,6 +77,7 @@ class CityDetailsActivity : AppCompatActivity() {
 
                         ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
                         runOnUiThread {
+
                             popup?.dismiss()
                             populateLayout(city!!)
                         }
@@ -87,6 +88,10 @@ class CityDetailsActivity : AppCompatActivity() {
 
         }
     }
+    override fun onDestroy() {
+        popup?.dismiss()
+        super.onDestroy()
+    }
     private val sensorListener: SensorEventListener = object : SensorEventListener {
         override fun onSensorChanged(event: SensorEvent) {
             val x = event.values[0]
@@ -96,7 +101,7 @@ class CityDetailsActivity : AppCompatActivity() {
             currentAcceleration = sqrt((x * x + y * y + z * z).toDouble()).toFloat()
             val delta: Float = currentAcceleration - lastAcceleration
             acceleration = acceleration * 0.9f + delta
-            if (acceleration > 12) { //poi devi passargli i valori o le reference per fare uno shake randomico. E ricorda che devi fare la stessa cpsa anche dentro city activity
+            if (acceleration > 12) {
                 val intent = getIntent()
                 intent.putExtra("from_shake", true)
                 finish()
@@ -130,9 +135,14 @@ class CityDetailsActivity : AppCompatActivity() {
                 .placeholder(R.drawable.logo)
                 .centerCrop()
 
-        Glide.with(this).load(city.img_url).apply(options).into(iv_city_image)
+        Glide.with(applicationContext).load(city.img_url).apply(options).into(iv_city_image)
     }
-
+    override fun onBackPressed() {
+        Log.d("CDA", "onBackPressed Called")
+        val intent = Intent(this, MainActivity::class.java).apply {}
+        intent.putExtra("back_from_shake",true)
+        startActivity(intent)
+    }
     fun ShowPopup() {
         popup?.setContentView(R.layout.user_popup)
         popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
