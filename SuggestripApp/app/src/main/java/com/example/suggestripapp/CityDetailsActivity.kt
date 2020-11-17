@@ -25,6 +25,7 @@ import kotlin.math.sqrt
 class CityDetailsActivity : AppCompatActivity() {
     lateinit var city:City
     private val client = OkHttpClient()
+    var from_shake = false
     var popup: Dialog? = null
 
     //shake
@@ -45,9 +46,10 @@ class CityDetailsActivity : AppCompatActivity() {
         acceleration = 10f
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
-        val from_shake = intent.getBooleanExtra("from_shake", false)
+        from_shake = intent.getBooleanExtra("from_shake", false)
         if(!from_shake){
             //val city came from explore activity
+            Log.d("diocane", from_shake.toString())
             city = intent.extras?.get("city") as City
             populateLayout(city!!)
         }
@@ -138,10 +140,16 @@ class CityDetailsActivity : AppCompatActivity() {
         Glide.with(applicationContext).load(city.img_url).apply(options).into(iv_city_image)
     }
     override fun onBackPressed() {
-        Log.d("CDA", "onBackPressed Called")
-        val intent = Intent(this, MainActivity::class.java).apply {}
-        intent.putExtra("back_from_shake",true)
-        startActivity(intent)
+        if(from_shake){
+            Log.d("CDA", "onBackPressed Called")
+            val intent = Intent(this, MainActivity::class.java).apply {}
+            intent.putExtra("back_from_shake",true)
+            startActivity(intent)
+        }
+        else{
+            super.onBackPressed()
+        }
+
     }
     fun ShowPopup() {
         popup?.setContentView(R.layout.user_popup)

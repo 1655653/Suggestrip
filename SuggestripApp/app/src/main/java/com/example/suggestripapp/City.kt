@@ -10,7 +10,8 @@ data class City(
     var country: String, //NAZIONE ES,US..
     var name: String,  //nome citta
     var coordinates: ArrayList<Coordinates>,
-    var tags: Tags
+    var tags: Tags,
+    var covid:String
 ):Serializable{
     override fun toString(): String {
         return "City(brief_description='$brief_description', img_url='$img_url', description='$description', ID=$ID, country='$country', name='$name', coordinates=$coordinates, tags=$tags)"

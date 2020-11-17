@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity(){
         startActivityForResult(AuthUI.getInstance()
             .createSignInIntentBuilder()
             .setAvailableProviders(providers)
-            .setIsSmartLockEnabled(true)
+            .setIsSmartLockEnabled(false)
             .setTheme(R.style.AppTheme)
             .setLogo(R.drawable.logo)
             .build(), 666)
