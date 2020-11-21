@@ -154,38 +154,40 @@
 
 
     <ImageButton
-        android:id="@+id/btn_1$"
+        android:id="@+id/btn_1dollar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2"
+        android:backgroundTint="#00ABC8B2"
+        android:src="@drawable/empty_cost"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
 
     <ImageButton
-        android:id="@+id/btn_2$"
+        android:id="@+id/btn_2dollar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/empty_cost"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/btn_3$"
+        android:id="@+id/btn_3dollar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/green_bg"
-        android:src="@drawable/filled_cost"
+        android:backgroundTint="#00ABC8B2"
+        android:src="@drawable/empty_cost"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

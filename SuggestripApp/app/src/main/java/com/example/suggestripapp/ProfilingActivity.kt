@@ -3,7 +3,10 @@ package com.example.suggestripapp
 import android.graphics.Point
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.Animation
@@ -19,6 +22,8 @@ class ProfilingActivity : AppCompatActivity() {
     private var mViewPager: SCViewPager? = null
     private var mPageAdapter: SCViewPagerAdapter? = null
     private var mDotsView: DotsView? = null
+    var lock_dollar = false
+    var dollar_array = BooleanArray(3)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.requestFeature(Window.FEATURE_ACTION_BAR);
@@ -45,13 +50,30 @@ class ProfilingActivity : AppCompatActivity() {
                     positionOffset: Float,
                     positionOffsetPixels: Int
             ) {
+
             }
 
             override fun onPageSelected(position: Int) {
+                lock_dollar = true
                 when (position){
                     0 -> tv_question.text = "How many people travel?"
-                    1 -> tv_question.text = "How much money do you want to spend?"
-                    2 -> tv_question.text = "How much do you like nature?"
+                    1 -> {
+                        tv_question.text = "How much money do you want to spend?"
+                        lock_dollar = false
+                        btn_2dollar.visibility = VISIBLE
+                        btn_3dollar.visibility = VISIBLE
+                    }
+                    2 -> {
+                        tv_question.text = "How much do you like nature?"
+                        if(!dollar_array[1]) {
+                            btn_2dollar.animation?.fillAfter = false
+                            btn_2dollar.visibility = GONE
+                            }
+                        if(!dollar_array[2]) {
+                            btn_3dollar.animation?.fillAfter = false
+                            btn_3dollar.visibility = GONE
+                        }
+                    }
                 }
                 val animFadeIn: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
                 tv_question.animation = animFadeIn
@@ -59,7 +81,9 @@ class ProfilingActivity : AppCompatActivity() {
                 mDotsView!!.selectDot(position)
             }
 
-            override fun onPageScrollStateChanged(state: Int) {}
+            override fun onPageScrollStateChanged(state: Int) {
+                Log.d("porcamadonna", btn_1dollar.getLocationOnScreen().toString())
+             }
         })
 
         val animFadeIn: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
@@ -144,6 +168,64 @@ class ProfilingActivity : AppCompatActivity() {
         val btn_more_3_anim = SCViewAnimation(btn_more3_ppl)
         btn_more_3_anim.addPageAnimation(animation_first_question)
         mViewPager!!.addAnimation(btn_more_3_anim)
+
+        //ANIM DOLLAR1
+        val dollar1_animation = SCViewAnimation(btn_1dollar)
+        val store_dollar_y = (size.y / 2.5).toInt()
+        dollar1_animation.startToPosition(null, -size.y)
+        dollar1_animation.addPageAnimation(SCPositionAnimation(this, 0, 0, size.y))
+        dollar1_animation.addPageAnimation(SCPositionAnimation(this, 1, -size.x/7,store_dollar_y ))
+        mViewPager!!.addAnimation(dollar1_animation)
+
+
+        btn_1dollar.setOnClickListener {
+            if(!lock_dollar ){
+                btn_1dollar.setImageResource(R.drawable.filled_cost)
+                btn_2dollar.setImageResource(R.drawable.empty_cost)
+                btn_3dollar.setImageResource(R.drawable.empty_cost)
+                dollar_array[0] = true
+                dollar_array[1] = false
+                dollar_array[2] = false
+            }
+        }
+
+
+        //ANIM DOLLAR2
+        val dollar2_animation = SCViewAnimation(btn_2dollar)
+        dollar2_animation.startToPosition(null, -size.y)
+        dollar2_animation.addPageAnimation(SCPositionAnimation(this, 0, 0, size.y))
+        dollar2_animation.addPageAnimation(SCPositionAnimation(this, 1, -size.x/3, store_dollar_y))
+        mViewPager!!.addAnimation(dollar2_animation)
+        btn_2dollar.setOnClickListener {
+            if(!lock_dollar ){
+                btn_1dollar.setImageResource(R.drawable.filled_cost)
+                btn_2dollar.setImageResource(R.drawable.filled_cost)
+                btn_3dollar.setImageResource(R.drawable.empty_cost)
+                dollar_array[0] = true
+                dollar_array[1] = true
+                dollar_array[2] = false
+            }
+        }
+
+        //ANIM DOLLAR3
+        val dollar3_animation = SCViewAnimation(btn_3dollar)
+        dollar3_animation.startToPosition(null, -size.y)
+        dollar3_animation.addPageAnimation(SCPositionAnimation(this, 0, 0, size.y))
+        dollar3_animation.addPageAnimation(SCPositionAnimation(this, 1, (-size.x/1.9).toInt(), store_dollar_y))
+        mViewPager!!.addAnimation(dollar3_animation)
+        btn_3dollar.setOnClickListener {
+            if(!lock_dollar ) {
+                btn_1dollar.setImageResource(R.drawable.filled_cost)
+                btn_2dollar.setImageResource(R.drawable.filled_cost)
+                btn_3dollar.setImageResource(R.drawable.filled_cost)
+                dollar_array[0] = true
+                dollar_array[1] = true
+                dollar_array[2] = true
+            }
+        }
+
+
+
     }
     private fun drop(one: View, size: Point) {
         one.visibility = View.VISIBLE
