@@ -6,6 +6,7 @@
         <item name="colorPrimaryDark">@color/green_bg</item>
         <item name="colorAccent">#00238C</item>
         <item name="backgroundColor">@color/white</item>
+<!--        <item name = "android:windowBackground">@drawable/background_color</item>-->
         <item name = "android:windowBackground">@color/green_bg</item>
 
     </style>
