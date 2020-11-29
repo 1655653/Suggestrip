@@ -1,19 +1,16 @@
 package com.example.suggestripapp
 
 import android.graphics.Point
-import android.graphics.drawable.TransitionDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.view.View.GONE
-import android.view.View.VISIBLE
+import android.view.View.*
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.TranslateAnimation
 import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.dev.sacot41.scviewpager.*
@@ -29,6 +26,7 @@ class ProfilingActivity : AppCompatActivity() {
     private var mDotsView: DotsView? = null
     var lock_dollar = false
     var lock_greek = false
+    var lock_tree = false
     var dollar_array = BooleanArray(3)
 
     val size: Point? = null
@@ -52,8 +50,12 @@ class ProfilingActivity : AppCompatActivity() {
         mViewPager!!.adapter = mPageAdapter;
 
         val size: Point = SCViewAnimationUtil.getDisplaySize(this)
+
         val greek_array = listOf(btn_greek1,btn_greek2,btn_greek3,btn_greek4,btn_greek5)
         var greek_array_boolean = BooleanArray(greek_array.size)
+
+        val tree_array = listOf(btn_tree1,btn_tree2,btn_tree3,btn_tree4,btn_tree5)
+        var tree_array_boolean = BooleanArray(tree_array.size)
         //cambia dot
         mViewPager!!.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
@@ -67,6 +69,13 @@ class ProfilingActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 lock_dollar = true
                 lock_greek = true
+                lock_tree = true
+                if(position < 3){
+                    tv_culture_numb.visibility= INVISIBLE
+                }
+                if(position<4){
+                    tv_nature_numb.visibility = INVISIBLE
+                }
                 when (position) {
                     0 -> tv_question.text = "How many people travel?"
                     1 -> {
@@ -133,14 +142,27 @@ class ProfilingActivity : AppCompatActivity() {
                         }
                     }
                     3 ->{
+                        tv_question.text = "How much do you care about nature?"
                         tv_culture_numb.visibility = VISIBLE
                         tv_culture_numb.text = greek_array_boolean.count{it}.toString()
+                        lock_tree = false
                         for(g in  greek_array){
                             if(g != greek_array[0]) {
                                 g.animation?.fillAfter = false
                                 g.visibility = GONE
                             }
                         }
+                    }
+                    4 ->{
+                        tv_nature_numb.visibility = VISIBLE
+                        tv_nature_numb.text = tree_array_boolean.count{it}.toString()
+//                        for(g in  tree_array){
+//                            if(g != tree_array[0]) {
+//                                g.animation?.fillAfter = false
+//                                g.visibility = GONE
+//                            }
+//                        }
+
                     }
                 }
                 val animFadeIn: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
@@ -342,7 +364,7 @@ class ProfilingActivity : AppCompatActivity() {
 
         //GREEK PORCAMADONNA QUESTA è MAGIA
         greek_array.forEachIndexed{i, guys ->
-                fall(guys)
+                fall(guys, 1, 2)
                 guys.setOnClickListener {
                     if(!lock_greek){
                         if (!greek_array_boolean[i]){
@@ -362,24 +384,52 @@ class ProfilingActivity : AppCompatActivity() {
                     }
                 }
         }
-        //FIRST GREEK ANIM GO DOWN
+
+//        //FIRST GREEK ANIM GO DOWN
         val greek_animation = SCViewAnimation(btn_greek1)
         greek_animation.startToPosition(null, -size.y)
         greek_animation.addPageAnimation(SCPositionAnimation(this, 2, (size.x/1.4).toInt(), store_dollar_y))
         mViewPager!!.addAnimation(greek_animation)
+
+        ///*******************************************FOURTH QUESTION-TREE
+       tree_array.forEachIndexed{i, guys ->
+            fall(guys,2,3)
+            guys.setOnClickListener {
+                if(!lock_tree){
+                    if (!tree_array_boolean[i]){
+                        tree_array_boolean[i] = true
+                        for (sub_tree in 0..i){
+                            tree_array[sub_tree].setImageResource(R.drawable.filled_tree)
+                            tree_array_boolean[sub_tree] = true
+                        }
+                    }
+                    else{
+                        for (over_tree in i+1 until tree_array.size){
+                            tree_array[over_tree].setImageResource(R.drawable.empty_tree)
+                            tree_array_boolean[over_tree] = false
+                        }
+                    }
+                    Log.d("dioputtana", Arrays.toString(tree_array_boolean))
+                }
+            }
+        }
+        val tree_animation = SCViewAnimation(btn_tree1)
+        tree_animation.startToPosition(null, -size.y)
+        tree_animation.addPageAnimation(SCPositionAnimation(this, 3, (size.x/1.4).toInt(), -store_dollar_y))
+        mViewPager!!.addAnimation(tree_animation)
 
 
 
 
     }
 
-    private fun fall(btnGreek: ImageButton?) {
+    private fun fall(btnGreek: ImageButton?, p1: Int, p2: Int) {
         btnGreek!!.visibility = VISIBLE
         val size = SCViewAnimationUtil.getDisplaySize(this)
         val greek_animation = SCViewAnimation(btnGreek)
         greek_animation.startToPosition(null, -size.y)
-        greek_animation.addPageAnimation(SCPositionAnimation(this, 1, 0, size.y))
-        greek_animation.addPageAnimation(SCPositionAnimation(this, 2, size.x, 0))
+        greek_animation.addPageAnimation(SCPositionAnimation(this, p1, 0, size.y))
+        greek_animation.addPageAnimation(SCPositionAnimation(this, p2, size.x, 0))
         mViewPager!!.addAnimation(greek_animation)
 
     }
