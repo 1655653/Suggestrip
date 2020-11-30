@@ -1,7 +1,9 @@
 package com.example.suggestripapp
 
+import android.content.Intent
 import android.graphics.Point
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
 import android.view.View.*
@@ -19,14 +21,18 @@ import java.util.*
 
 
 class ProfilingActivity : AppCompatActivity() {
-    private var NUM_PAGES = 5
+    private var NUM_PAGES = 9
 
     private var mViewPager: SCViewPager? = null
     private var mPageAdapter: SCViewPagerAdapter? = null
     private var mDotsView: DotsView? = null
+    //lock per non far cambiare immagine quando stai in un altra pagina
     var lock_dollar = false
     var lock_greek = false
     var lock_tree = false
+    var lock_glass = false
+    var lock_car = false
+    var lock_ball = false
     var dollar_array = BooleanArray(3)
 
     val size: Point? = null
@@ -51,11 +57,21 @@ class ProfilingActivity : AppCompatActivity() {
 
         val size: Point = SCViewAnimationUtil.getDisplaySize(this)
 
-        val greek_array = listOf(btn_greek1,btn_greek2,btn_greek3,btn_greek4,btn_greek5)
+        val greek_array = listOf(btn_greek1, btn_greek2, btn_greek3, btn_greek4, btn_greek5)
         var greek_array_boolean = BooleanArray(greek_array.size)
 
-        val tree_array = listOf(btn_tree1,btn_tree2,btn_tree3,btn_tree4,btn_tree5)
+        val tree_array = listOf(btn_tree1, btn_tree2, btn_tree3, btn_tree4, btn_tree5)
         var tree_array_boolean = BooleanArray(tree_array.size)
+
+        val glass_array = listOf(btn_glass1, btn_glass2, btn_glass3, btn_glass4, btn_glass5)
+        var glass_array_boolean = BooleanArray(glass_array.size)
+
+        val car_array = listOf(btn_car1, btn_car2, btn_car3, btn_car4, btn_car5)
+        var car_array_boolean = BooleanArray(car_array.size)
+
+        val ball_array = listOf(btn_ball1, btn_ball2, btn_ball3, btn_ball4, btn_ball5)
+        var ball_array_boolean = BooleanArray(ball_array.size)
+
         //cambia dot
         mViewPager!!.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
@@ -70,10 +86,24 @@ class ProfilingActivity : AppCompatActivity() {
                 lock_dollar = true
                 lock_greek = true
                 lock_tree = true
-                if(position < 3){
-                    tv_culture_numb.visibility= INVISIBLE
+                lock_glass = true
+                lock_car = true
+                lock_ball = true
+                if (position < 3) {
+                    tv_culture_numb.visibility = INVISIBLE
                 }
-                if(position<4){
+                if (position < 4) {
+                    tv_sport_numb.visibility = INVISIBLE
+                }
+
+                if (position < 5) {
+                    tv_infrastructure_numb.visibility = INVISIBLE
+                }
+                if (position < 6) {
+                    tv_nightlife_numb.visibility = INVISIBLE
+                }
+
+                if (position < 7) {
                     tv_nature_numb.visibility = INVISIBLE
                 }
                 when (position) {
@@ -103,9 +133,7 @@ class ProfilingActivity : AppCompatActivity() {
                             btn_3dollar3.animation?.fillAfter = false
                             btn_3dollar3.visibility = GONE
 
-                        }
-
-                        else if (dollar_array[1]) {
+                        } else if (dollar_array[1]) {
                             btn_1dollar.animation?.fillAfter = false
                             btn_1dollar.visibility = GONE
                             btn_3dollar.animation?.fillAfter = false
@@ -114,16 +142,14 @@ class ProfilingActivity : AppCompatActivity() {
                             btn_3dollar2.visibility = GONE
                             btn_3dollar3.animation?.fillAfter = false
                             btn_3dollar3.visibility = GONE
-                        }
-                        else if (dollar_array[2]) {
+                        } else if (dollar_array[2]) {
                             btn_1dollar.animation?.fillAfter = false
                             btn_1dollar.visibility = GONE
                             btn_2dollar.animation?.fillAfter = false
                             btn_2dollar.visibility = GONE
                             btn_2dollar2.animation?.fillAfter = false
                             btn_2dollar2.visibility = GONE
-                        }
-                        else{
+                        } else {
                             btn_1dollar.animation?.fillAfter = false
                             btn_1dollar.visibility = GONE
                             btn_2dollar.animation?.fillAfter = false
@@ -137,32 +163,46 @@ class ProfilingActivity : AppCompatActivity() {
                             btn_3dollar3.animation?.fillAfter = false
                             btn_3dollar3.visibility = GONE
                         }
-                        for(g in  greek_array){
+                        for (g in greek_array) {
                             g.visibility = VISIBLE
                         }
                     }
-                    3 ->{
-                        tv_question.text = "How much do you care about nature?"
+                    3 -> {
+                        tv_question.text = "How much are you into sports?"
+                        lock_ball = false
                         tv_culture_numb.visibility = VISIBLE
-                        tv_culture_numb.text = greek_array_boolean.count{it}.toString()
-                        lock_tree = false
-                        for(g in  greek_array){
-                            if(g != greek_array[0]) {
+                        tv_culture_numb.text = greek_array_boolean.count { it }.toString()
+                        for (g in greek_array) {
+                            if (g != greek_array[0]) {
                                 g.animation?.fillAfter = false
                                 g.visibility = GONE
                             }
                         }
                     }
-                    4 ->{
-                        tv_nature_numb.visibility = VISIBLE
-                        tv_nature_numb.text = tree_array_boolean.count{it}.toString()
-//                        for(g in  tree_array){
-//                            if(g != tree_array[0]) {
-//                                g.animation?.fillAfter = false
-//                                g.visibility = GONE
-//                            }
-//                        }
+                    4 -> {
+                        lock_car = false
+                        tv_question.text = "How much do you want to use public transportations and more general infrastructures?"
+                        tv_sport_numb.visibility = VISIBLE
+                        tv_sport_numb.text = ball_array_boolean.count { it }.toString()
 
+                    }
+                    5 -> {
+                        lock_glass = false
+                        tv_question.text = "How much do you enjoy night life?"
+                        tv_infrastructure_numb.visibility = VISIBLE
+                        tv_infrastructure_numb.text = car_array_boolean.count { it }.toString()
+
+                    }
+                    6 -> {
+                        lock_tree = false
+                        tv_question.text = "How much do you care about nature?"
+                        tv_nightlife_numb.visibility = VISIBLE
+                        tv_nightlife_numb.text = glass_array_boolean.count { it }.toString()
+
+                    }
+                    7 -> {
+                        tv_nature_numb.visibility = VISIBLE
+                        tv_nature_numb.text = tree_array_boolean.count { it }.toString()
                     }
                 }
                 val animFadeIn: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
@@ -189,15 +229,11 @@ class ProfilingActivity : AppCompatActivity() {
         btn_1_ppl.setOnClickListener {
             two.animation?.fillAfter = false
             two.visibility = View.GONE
-            three.animation?.fillAfter = false
-            three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
             drop(one, size)
         }
         btn_2_ppl.setOnClickListener {
-            three.animation?.fillAfter = false
-            three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
             drop(one, size)
@@ -220,7 +256,7 @@ class ProfilingActivity : AppCompatActivity() {
         }
 
         val animation_first_question = SCPositionAnimation(this, 0, -size.x, 0)
-        val animation_first_question_omino = SCPositionAnimation(this, 0, 0, (size.y / 1.8).toInt())
+        val animation_first_question_omino = SCPositionAnimation(this, 0, 0, (size.y / 1.85).toInt())
         //ANIM OMINO 1
         val one_gone_anim = SCViewAnimation(one)
         one_gone_anim.addPageAnimation(animation_first_question_omino)
@@ -244,7 +280,7 @@ class ProfilingActivity : AppCompatActivity() {
         //ANIM OMINO 3+
         val threeplus_gone_anim = SCViewAnimation(iv_plus_3)
 
-        val go_plus_little_left= SCPositionAnimation(this, 0, -300, (size.y / 1.65).toInt())
+        val go_plus_little_left= SCPositionAnimation(this, 0, -300, (size.y / 1.70).toInt())
         threeplus_gone_anim.addPageAnimation(go_plus_little_left)
         mViewPager!!.addAnimation(threeplus_gone_anim)
 
@@ -355,15 +391,9 @@ class ProfilingActivity : AppCompatActivity() {
         }
 
         ///*******************************************THIRD QUESTION-GREEK
-        //transition, poi l'ho tolta'
-//        val mImages = intArrayOf(R.drawable.empty_greek, R.drawable.filled_greek)
-//        val td = TransitionDrawable(arrayOf(
-//                resources.getDrawable(mImages[0]),
-//                resources.getDrawable(mImages[1])
-//        ))
 
         //GREEK PORCAMADONNA QUESTA è MAGIA
-        greek_array.forEachIndexed{i, guys ->
+        greek_array.forEachIndexed{ i, guys ->
                 fall(guys, 1, 2)
                 guys.setOnClickListener {
                     if(!lock_greek){
@@ -388,12 +418,96 @@ class ProfilingActivity : AppCompatActivity() {
 //        //FIRST GREEK ANIM GO DOWN
         val greek_animation = SCViewAnimation(btn_greek1)
         greek_animation.startToPosition(null, -size.y)
-        greek_animation.addPageAnimation(SCPositionAnimation(this, 2, (size.x/1.4).toInt(), store_dollar_y))
+        greek_animation.addPageAnimation(SCPositionAnimation(this, 2, (size.x / 1.4).toInt(), store_dollar_y))
         mViewPager!!.addAnimation(greek_animation)
 
-        ///*******************************************FOURTH QUESTION-TREE
-       tree_array.forEachIndexed{i, guys ->
-            fall(guys,2,3)
+
+        ///*******************************************fourth  QUESTION-ball
+        ball_array.forEachIndexed{ i, guys ->
+            fall(guys, 2, 3)
+            guys.setOnClickListener {
+                if(!lock_ball){
+                    if (!ball_array_boolean[i]){
+                        ball_array_boolean[i] = true
+                        for (sub_ball in 0..i){
+                            ball_array[sub_ball].setImageResource(R.drawable.filled_ball)
+                            ball_array_boolean[sub_ball] = true
+                        }
+                    }
+                    else{
+                        for (over_ball in i+1 until ball_array.size){
+                            ball_array[over_ball].setImageResource(R.drawable.empty_ball)
+                            ball_array_boolean[over_ball] = false
+                        }
+                    }
+                }
+            }
+        }
+        val pad = 30
+        val ball_animation = SCViewAnimation(btn_ball1)
+        ball_animation.startToPosition(null, -size.y)
+        ball_animation.addPageAnimation(SCPositionAnimation(this, 3, 0, -store_dollar_y + pad)) //6
+        mViewPager!!.addAnimation(ball_animation)
+
+
+        ///*******************************************fifth QUESTION-CAR
+        car_array.forEachIndexed{ i, guys ->
+            fall(guys, 3, 4) //4,5
+            guys.setOnClickListener {
+                if(!lock_car){
+                    if (!car_array_boolean[i]){
+                        car_array_boolean[i] = true
+                        for (sub_car in 0..i){
+                            car_array[sub_car].setImageResource(R.drawable.filled_car)
+                            car_array_boolean[sub_car] = true
+                        }
+                    }
+                    else{
+                        for (over_car in i+1 until car_array.size){
+                            car_array[over_car].setImageResource(R.drawable.empty_car)
+                            car_array_boolean[over_car] = false
+                        }
+                    }
+                    Log.d("dioputtana", Arrays.toString(car_array_boolean))
+                }
+            }
+        }
+        val car_animation = SCViewAnimation(btn_car1)
+        car_animation.startToPosition(null, -size.y)
+        car_animation.addPageAnimation(SCPositionAnimation(this, 4, (size.x / 3.5).toInt(), -store_dollar_y + pad)) //5
+        mViewPager!!.addAnimation(car_animation)
+
+        ///*******************************************SIXTH QUESTION-GLASS
+        glass_array.forEachIndexed{ i, guys ->
+            fall(guys, 4, 5)
+            guys.setOnClickListener {
+                if(!lock_glass){
+                    if (!glass_array_boolean[i]){
+                        glass_array_boolean[i] = true
+                        for (sub_glass in 0..i){
+                            glass_array[sub_glass].setImageResource(R.drawable.filled_glass)
+                            glass_array_boolean[sub_glass] = true
+                        }
+                    }
+                    else{
+                        for (over_glass in i+1 until glass_array.size){
+                            glass_array[over_glass].setImageResource(R.drawable.empty_glass)
+                            glass_array_boolean[over_glass] = false
+                        }
+                    }
+                    Log.d("dioputtana", Arrays.toString(glass_array_boolean))
+                }
+            }
+        }
+
+        val glass_animation = SCViewAnimation(btn_glass1)
+        glass_animation.startToPosition(null, -size.y)
+        glass_animation.addPageAnimation(SCPositionAnimation(this, 5, (size.x / 2).toInt(), -store_dollar_y + pad))
+        mViewPager!!.addAnimation(glass_animation)
+
+        ///*******************************************LAST QUESTION-TREE
+        tree_array.forEachIndexed{ i, guys ->
+            fall(guys, 5, 6) //2,3
             guys.setOnClickListener {
                 if(!lock_tree){
                     if (!tree_array_boolean[i]){
@@ -415,9 +529,8 @@ class ProfilingActivity : AppCompatActivity() {
         }
         val tree_animation = SCViewAnimation(btn_tree1)
         tree_animation.startToPosition(null, -size.y)
-        tree_animation.addPageAnimation(SCPositionAnimation(this, 3, (size.x/1.4).toInt(), -store_dollar_y))
+        tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y))
         mViewPager!!.addAnimation(tree_animation)
-
 
 
 
@@ -436,7 +549,7 @@ class ProfilingActivity : AppCompatActivity() {
 
     private fun drop(one: View, size: Point) {
         one.visibility = View.VISIBLE
-        val anim = TranslateAnimation(0F, 0F, -(size.y / 2).toFloat(), (size.y / 10).toFloat())
+        val anim = TranslateAnimation(0F, 0F, -(size.y / 2).toFloat(), (size.y / 9).toFloat())
         anim.duration = 1000
         anim.fillAfter = true
         one.startAnimation(anim)
@@ -446,6 +559,16 @@ class ProfilingActivity : AppCompatActivity() {
         val location = IntArray(2)
         this.getLocationOnScreen(location)
         return Point(location[0], location[1])
+    }
+
+    override fun onBackPressed() {
+        val ci = mViewPager?.currentItem
+        if (ci != null && ci>0) {
+            mViewPager?.setCurrentItem(ci-1,true)
+        }
+        else{
+            super.onBackPressed()
+        }
     }
 
 }
