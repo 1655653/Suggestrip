@@ -394,16 +394,16 @@ class ProfilingActivity : AppCompatActivity() {
 
         //GREEK PORCAMADONNA QUESTA è MAGIA
         greek_array.forEachIndexed{ i, guys ->
-                fall(guys, 1, 2)
-                guys.setOnClickListener {
-                    if(!lock_greek){
-                        if (!greek_array_boolean[i]){
-                            greek_array_boolean[i] = true
-                            for (sub_greek in 0..i){
-                                greek_array[sub_greek].setImageResource(R.drawable.filled_greek)
-                                greek_array_boolean[sub_greek] = true
-                            }
+            fall(guys, 1, 2)
+            guys.setOnClickListener {
+                if(!lock_greek){
+                    if (!greek_array_boolean[i]){
+                        greek_array_boolean[i] = true
+                        for (sub_greek in 0..i){
+                            greek_array[sub_greek].setImageResource(R.drawable.filled_greek)
+                            greek_array_boolean[sub_greek] = true
                         }
+                    }
                     else{
                         for (over_greek in i+1 until greek_array.size){
                             greek_array[over_greek].setImageResource(R.drawable.empty_greek)
@@ -411,8 +411,8 @@ class ProfilingActivity : AppCompatActivity() {
                         }
                     }
                     Log.d("dioputtana", Arrays.toString(greek_array_boolean))
-                    }
                 }
+            }
         }
 
 //        //FIRST GREEK ANIM GO DOWN
