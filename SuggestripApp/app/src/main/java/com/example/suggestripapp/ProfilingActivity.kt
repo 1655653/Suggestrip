@@ -1,6 +1,5 @@
 package com.example.suggestripapp
 
-import android.content.Intent
 import android.graphics.Point
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -9,9 +8,7 @@ import android.view.View
 import android.view.View.*
 import android.view.Window
 import android.view.WindowManager
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
-import android.view.animation.TranslateAnimation
+import android.view.animation.*
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
@@ -38,7 +35,8 @@ class ProfilingActivity : AppCompatActivity() {
     var lock_car = false
     var lock_ball = false
     var lock_pizza = false
-    var dollar_array = BooleanArray(3)
+    var dollar_array_boolean = BooleanArray(3)
+    var dollar_cost = 0
 
     val size: Point? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -61,6 +59,12 @@ class ProfilingActivity : AppCompatActivity() {
         mViewPager!!.adapter = mPageAdapter;
 
         val size: Point = SCViewAnimationUtil.getDisplaySize(this)
+
+        var dollar_group1 = listOf(btn_1dollar)
+        var dollar_group2 = listOf(btn_2dollar,btn_2dollar2)
+        var dollar_group3 = listOf(btn_3dollar,btn_3dollar2,btn_3dollar3)
+        val dollar_array = listOf(dollar_group1,dollar_group2,dollar_group3)
+
 
         val greek_array = listOf(btn_greek1, btn_greek2, btn_greek3, btn_greek4, btn_greek5)
         var greek_array_boolean = BooleanArray(greek_array.size)
@@ -135,7 +139,7 @@ class ProfilingActivity : AppCompatActivity() {
                     2 -> {
                         tv_question.text = "How much do you enjoy visiting historic places, museum ecc.."
                         lock_greek = false
-                        if (dollar_array[0]) {
+                        if (dollar_array_boolean[0]) {
                             btn_2dollar.animation?.fillAfter = false
                             btn_2dollar.visibility = GONE
                             btn_2dollar2.animation?.fillAfter = false
@@ -147,7 +151,7 @@ class ProfilingActivity : AppCompatActivity() {
                             btn_3dollar3.animation?.fillAfter = false
                             btn_3dollar3.visibility = GONE
 
-                        } else if (dollar_array[1]) {
+                        } else if (dollar_array_boolean[1]) {
                             btn_1dollar.animation?.fillAfter = false
                             btn_1dollar.visibility = GONE
                             btn_3dollar.animation?.fillAfter = false
@@ -156,7 +160,7 @@ class ProfilingActivity : AppCompatActivity() {
                             btn_3dollar2.visibility = GONE
                             btn_3dollar3.animation?.fillAfter = false
                             btn_3dollar3.visibility = GONE
-                        } else if (dollar_array[2]) {
+                        } else if (dollar_array_boolean[2]) {
                             btn_1dollar.animation?.fillAfter = false
                             btn_1dollar.visibility = GONE
                             btn_2dollar.animation?.fillAfter = false
@@ -212,18 +216,21 @@ class ProfilingActivity : AppCompatActivity() {
                         tv_question.text = "How much do you care about nature?"
                         tv_nightlife_numb.visibility = VISIBLE
                         tv_nightlife_numb.text = glass_array_boolean.count { it }.toString()
+                        Log.d("porcamadonna", btn_pizza1.x.toString())
 
                     }
                     7 -> {
                         tv_question.text = "How much are you interested in finding new flavors?"
                         tv_nature_numb.visibility = VISIBLE
                         tv_nature_numb.text = tree_array_boolean.count { it }.toString()
+                        Log.d("porcamadonna", btn_pizza1.x.toString())
                     }
                     8 -> {
                         tv_question.text = "Ok! Are you ready? "
                         tv_food_numb.visibility = VISIBLE
                         tv_food_numb.text = pizza_array_boolean.count { it }.toString()
                         btn_go.visibility = VISIBLE
+                        Log.d("porcamadonna", btn_pizza1.x.toString())
                     }
                 }
                 val animFadeIn: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
@@ -233,7 +240,7 @@ class ProfilingActivity : AppCompatActivity() {
             }
 
             override fun onPageScrollStateChanged(state: Int) {
-                Log.d("porcamadonna", btn_1dollar.getLocationOnScreen().toString())
+                Log.d("porcamadonna", btn_pizza1.getLocationOnScreen().toString())
             }
         })
 
@@ -344,9 +351,10 @@ class ProfilingActivity : AppCompatActivity() {
                 btn_3dollar.setImageResource(R.drawable.empty_cost)
                 btn_3dollar2.setImageResource(R.drawable.empty_cost)
                 btn_3dollar3.setImageResource(R.drawable.empty_cost)
-                dollar_array[0] = true
-                dollar_array[1] = false
-                dollar_array[2] = false
+                dollar_array_boolean[0] = true
+                dollar_array_boolean[1] = false
+                dollar_array_boolean[2] = false
+                dollar_cost = 1
             }
         }
 
@@ -372,9 +380,10 @@ class ProfilingActivity : AppCompatActivity() {
                 btn_3dollar.setImageResource(R.drawable.empty_cost)
                 btn_3dollar2.setImageResource(R.drawable.empty_cost)
                 btn_3dollar3.setImageResource(R.drawable.empty_cost)
-                dollar_array[0] = false
-                dollar_array[1] = true
-                dollar_array[2] = false
+                dollar_array_boolean[0] = false
+                dollar_array_boolean[1] = true
+                dollar_array_boolean[2] = false
+                dollar_cost = 2
             }
         }
 
@@ -405,9 +414,10 @@ class ProfilingActivity : AppCompatActivity() {
                 btn_3dollar.setImageResource(R.drawable.filled_cost)
                 btn_3dollar2.setImageResource(R.drawable.filled_cost)
                 btn_3dollar3.setImageResource(R.drawable.filled_cost)
-                dollar_array[0] = false
-                dollar_array[1] = false
-                dollar_array[2] = true
+                dollar_array_boolean[0] = false
+                dollar_array_boolean[1] = false
+                dollar_array_boolean[2] = true
+                dollar_cost = 3
             }
         }
 
@@ -555,7 +565,7 @@ class ProfilingActivity : AppCompatActivity() {
 
         ///*******************************************LAST QUESTION-pizza
         pizza_array.forEachIndexed{ i, guys ->
-            fall(guys, 6,7) //2,3
+            fall(guys, 6, 7) //2,3
             guys.setOnClickListener {
                 if(!lock_pizza){
                     if (!pizza_array_boolean[i]){
@@ -581,55 +591,97 @@ class ProfilingActivity : AppCompatActivity() {
 
         ////////////////////////////////////////////////////////////////PAYLOAD CALL
         btn_go.setOnClickListener {
-            var url = "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info"
-            val payload = "{\n" +
-                    "    \"msg_id\": \"01\",\n" +
-                    "    \"gps_coords\": [\n" +
-                    "        {\n" +
-                    "            \"lat\": 48.86613,\n" +
-                    "            \"lon\": 2.352222,\n" +
-                    "            \"primary\": \"\",\n" +
-                    "            \"globe\": \"earth\"\n" +
-                    "        }\n" +
-                    "    ],\n" +
-                    "    \"flag_lastminute\": \"False\",\n" +
-                    "    \"tags\":\n" +
-                    "        {\n" +
-                    "            \"night_life\": ${tv_nightlife_numb.text.toString()} ,\n" +
-                    "            \"nature\": ${tv_nightlife_numb.text.toString()},\n" +
-                    "            \"sports\": ${tv_nightlife_numb.text.toString()},\n" +
-                    "            \"food\": ${tv_nightlife_numb.text.toString()},\n" +
-                    "            \"culture\": ${tv_nightlife_numb.text.toString()},\n" +
-                    "            \"infrastructure\": ${tv_nightlife_numb.text.toString()}\n" +
-                    "        },\n" +
-                    "    \"cost\": 1,\n" +
-                    "    \"target\": {\n" +
-                    "        \"travel_type\": \"identifier of family, couple, friends\",\n" +
-                    "        \"age_type\": \"ages\"\n" +
-                    "    }\n" +
-                    "}"
-            val okHttpClient = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
-            val requestBody = payload.toRequestBody()
-            val request = Request.Builder()
-                    .method("POST", requestBody)
-                    .url(url)
-                    .build()
-            okHttpClient.newCall(request).enqueue(object : Callback {
-                override fun onFailure(call: Call, e: IOException) {
-                    e.printStackTrace()
+            ///COLLAPSE ANIMATION
+            val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
+
+            btn_pizza1.startAnimation(collapse)
+            btn_ball1.startAnimation(collapse)
+            btn_car1.startAnimation(collapse)
+            btn_glass1.startAnimation(collapse)
+            btn_tree1.startAnimation(collapse)
+            btn_greek1.startAnimation(collapse)
+            dollar_array.forEachIndexed { i, g ->
+                if(dollar_array_boolean[i]) {
+                    for(dollar in g){
+                        dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar))
+                    }
                 }
 
-                override fun onResponse(call: Call, response: Response) {
-                    if (!response.isSuccessful) throw IOException("Unexpected code $response")
-                    Log.d("DIOMAYALEE", "body: " + response.body!!.string())
-                }
-            })
+            }
+
+
+
+
+            AwsCall()
+
         }
 
 
 
 
 
+    }
+    private fun moveViewToScreenCenter(view: View) {
+        val dm = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(dm)
+        val originalPos = IntArray(2)
+        Log.d("porcamadonna", view.getLocationOnScreen().toString())
+        val xDelta = (dm.widthPixels - view.measuredWidth - originalPos[0]) / 2
+        val yDelta = (dm.heightPixels - view.measuredHeight - originalPos[1]) / 2
+        val animSet = AnimationSet(true)
+        animSet.fillAfter = true
+        animSet.duration = 1000
+        animSet.interpolator = BounceInterpolator()
+        val translate = TranslateAnimation(0F, xDelta.toFloat(), 0F, yDelta.toFloat())
+        animSet.addAnimation(translate)
+        val scale = ScaleAnimation(1f, 2f, 1f, 2f, ScaleAnimation.RELATIVE_TO_PARENT, .5f, ScaleAnimation.RELATIVE_TO_PARENT, .5f)
+        animSet.addAnimation(scale)
+        view.startAnimation(animSet)
+    }
+    private fun AwsCall() {
+        var url = "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info"
+        val payload = "{\n" +
+                "    \"msg_id\": \"01\",\n" +
+                "    \"gps_coords\": [\n" +
+                "        {\n" +
+                "            \"lat\": 48.86613,\n" +
+                "            \"lon\": 2.352222,\n" +
+                "            \"primary\": \"\",\n" +
+                "            \"globe\": \"earth\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"flag_lastminute\": \"False\",\n" +
+                "    \"tags\":\n" +
+                "        {\n" +
+                "            \"night_life\": ${tv_nightlife_numb.text.toString()} ,\n" +
+                "            \"nature\": ${tv_nature_numb.text.toString()},\n" +
+                "            \"sports\": ${tv_sport_numb.text.toString()},\n" +
+                "            \"food\": ${tv_food_numb.text.toString()},\n" +
+                "            \"culture\": ${tv_culture_numb.text.toString()},\n" +
+                "            \"infrastructure\": ${tv_infrastructure_numb.text.toString()}\n" +
+                "        },\n" +
+                "    \"cost\": ${dollar_cost.toString()},\n" +
+                "    \"target\": {\n" +
+                "        \"travel_type\": \"identifier of family, couple, friends\",\n" +
+                "        \"age_type\": \"ages\"\n" +
+                "    }\n" +
+                "}"
+        val okHttpClient = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+        val requestBody = payload.toRequestBody()
+        val request = Request.Builder()
+                .method("POST", requestBody)
+                .url(url)
+                .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful) throw IOException("Unexpected code $response")
+                Log.d("DIOMAYALEE", "body: " + response.body!!.string())
+            }
+        })
     }
 
     private fun fall(btnGreek: ImageButton?, p1: Int, p2: Int) {
@@ -660,7 +712,7 @@ class ProfilingActivity : AppCompatActivity() {
     override fun onBackPressed() {
         val ci = mViewPager?.currentItem
         if (ci != null && ci>0) {
-            mViewPager?.setCurrentItem(ci-1,true)
+            mViewPager?.setCurrentItem(ci - 1, true)
         }
         else{
             super.onBackPressed()

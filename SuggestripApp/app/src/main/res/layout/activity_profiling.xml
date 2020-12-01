@@ -726,10 +726,10 @@
 
     <Button
         android:id="@+id/btn_go"
-        android:layout_width="129dp"
-        android:layout_height="73dp"
+        android:layout_width="152dp"
+        android:layout_height="104dp"
         android:text="GO!"
-        android:textSize="30dp"
+        android:textSize="50dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -4,4 +4,6 @@
     <dimen name ="user_image_dim_w">126dp</dimen>
     <dimen name ="user_image_dim_h">73dp</dimen>
     <dimen name ="description_tv_city">25dp</dimen>
+    <dimen name="corner_radius">8dp</dimen>
+
 </resources>
