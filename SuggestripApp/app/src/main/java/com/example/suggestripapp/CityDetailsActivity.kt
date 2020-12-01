@@ -17,6 +17,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_city_details.*
 import okhttp3.*
+import org.json.JSONObject
 import java.io.IOException
 import java.util.*
 import kotlin.math.sqrt
@@ -73,8 +74,9 @@ class CityDetailsActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 response.use {
                     if (!response.isSuccessful) throw IOException("Unexpected code $response")
+                    val obj = JSONObject(response.body!!.string())
                     city = Gson().fromJson<City>(
-                            response.body!!.string(),
+                            obj.toString(),
                             City::class.java) as City
                     city.img_url = "https://" + city.img_url
                     Log.d("porcaddio", city.toString())
@@ -143,7 +145,7 @@ class CityDetailsActivity : AppCompatActivity() {
         if(from_shake){
             Log.d("CDA", "onBackPressed Called")
             val intent = Intent(this, MainActivity::class.java).apply {}
-            intent.putExtra("back_from_shake",true)
+            intent.putExtra("back_from_shake", true)
             startActivity(intent)
         }
         else{

@@ -1,6 +1,5 @@
 package com.example.suggestripapp
 
-import com.google.common.primitives.Doubles
 import java.io.Serializable
 
 data class City(
@@ -35,9 +34,9 @@ data class Tags(
     var nature: Double,
     var culture: Double,
     var infrastructure: Double,
-    var food:Doubles
+    var food: Double
 ):Serializable{
     override fun toString(): String {
-        return "Tags(costs=$costs, night_life=$night_life, sports=$sports, nature=$nature, culture=$culture, infrastructure=$infrastructure)"
+        return "costs=$costs, night_life=$night_life, sports=$sports, nature=$nature, culture=$culture, infrastructure=$infrastructure, food = $food"
     }
 }

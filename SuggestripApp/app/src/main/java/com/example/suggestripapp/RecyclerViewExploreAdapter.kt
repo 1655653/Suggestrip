@@ -24,7 +24,7 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
                      .placeholder(R.drawable.logo)
                      .centerCrop()
 
-             Glide.with(itemView.context).load(img_months_array[position]!!).apply(RequestOptions.bitmapTransform(BlurTransformation(50))).apply(options).into(itemView.ib_city)
+             Glide.with(itemView.context).load(img_months_array[position]!!).apply(options).into(itemView.ib_city)
              Log.d("pocamadonna", img_months_array[position])
              //Picasso.get().load(img_months_array[position]).into(itemView.ib_city);
          }
