@@ -17,7 +17,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.dev.sacot41.scviewpager.*
 import kotlinx.android.synthetic.main.activity_profiling.*
+import okhttp3.*
+import okhttp3.RequestBody.Companion.toRequestBody
+import java.io.IOException
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 
 class ProfilingActivity : AppCompatActivity() {
@@ -33,6 +37,7 @@ class ProfilingActivity : AppCompatActivity() {
     var lock_glass = false
     var lock_car = false
     var lock_ball = false
+    var lock_pizza = false
     var dollar_array = BooleanArray(3)
 
     val size: Point? = null
@@ -72,6 +77,9 @@ class ProfilingActivity : AppCompatActivity() {
         val ball_array = listOf(btn_ball1, btn_ball2, btn_ball3, btn_ball4, btn_ball5)
         var ball_array_boolean = BooleanArray(ball_array.size)
 
+        val pizza_array = listOf(btn_pizza1, btn_pizza2, btn_pizza3, btn_pizza4, btn_pizza5)
+        var pizza_array_boolean = BooleanArray(pizza_array.size)
+
         //cambia dot
         mViewPager!!.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
@@ -105,6 +113,12 @@ class ProfilingActivity : AppCompatActivity() {
 
                 if (position < 7) {
                     tv_nature_numb.visibility = INVISIBLE
+                }
+                if (position < 8) {
+                    tv_food_numb.visibility = INVISIBLE
+                }
+                if (position < 9) {
+                    btn_go.visibility = INVISIBLE
                 }
                 when (position) {
                     0 -> tv_question.text = "How many people travel?"
@@ -201,8 +215,15 @@ class ProfilingActivity : AppCompatActivity() {
 
                     }
                     7 -> {
+                        tv_question.text = "How much are you interested in finding new flavors?"
                         tv_nature_numb.visibility = VISIBLE
                         tv_nature_numb.text = tree_array_boolean.count { it }.toString()
+                    }
+                    8 -> {
+                        tv_question.text = "Ok! Are you ready? "
+                        tv_food_numb.visibility = VISIBLE
+                        tv_food_numb.text = pizza_array_boolean.count { it }.toString()
+                        btn_go.visibility = VISIBLE
                     }
                 }
                 val animFadeIn: Animation = AnimationUtils.loadAnimation(applicationContext, R.anim.fade_in)
@@ -505,7 +526,7 @@ class ProfilingActivity : AppCompatActivity() {
         glass_animation.addPageAnimation(SCPositionAnimation(this, 5, (size.x / 2).toInt(), -store_dollar_y + pad))
         mViewPager!!.addAnimation(glass_animation)
 
-        ///*******************************************LAST QUESTION-TREE
+        ///*******************************************PENULTIMA QUESTION-TREE
         tree_array.forEachIndexed{ i, guys ->
             fall(guys, 5, 6) //2,3
             guys.setOnClickListener {
@@ -531,6 +552,81 @@ class ProfilingActivity : AppCompatActivity() {
         tree_animation.startToPosition(null, -size.y)
         tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y))
         mViewPager!!.addAnimation(tree_animation)
+
+        ///*******************************************LAST QUESTION-pizza
+        pizza_array.forEachIndexed{ i, guys ->
+            fall(guys, 6,7) //2,3
+            guys.setOnClickListener {
+                if(!lock_pizza){
+                    if (!pizza_array_boolean[i]){
+                        pizza_array_boolean[i] = true
+                        for (sub_pizza in 0..i){
+                            pizza_array[sub_pizza].setImageResource(R.drawable.filled_pizza)
+                            pizza_array_boolean[sub_pizza] = true
+                        }
+                    }
+                    else{
+                        for (over_pizza in i+1 until pizza_array.size){
+                            pizza_array[over_pizza].setImageResource(R.drawable.empty_pizza)
+                            pizza_array_boolean[over_pizza] = false
+                        }
+                    }
+                }
+            }
+        }
+        val pizza_animation = SCViewAnimation(btn_pizza1)
+        pizza_animation.startToPosition(null, -size.y)
+        pizza_animation.addPageAnimation(SCPositionAnimation(this, 7, (size.x / 1.35).toInt(), 0))
+        mViewPager!!.addAnimation(pizza_animation)
+
+        ////////////////////////////////////////////////////////////////PAYLOAD CALL
+        btn_go.setOnClickListener {
+            var url = "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info"
+            val payload = "{\n" +
+                    "    \"msg_id\": \"01\",\n" +
+                    "    \"gps_coords\": [\n" +
+                    "        {\n" +
+                    "            \"lat\": 48.86613,\n" +
+                    "            \"lon\": 2.352222,\n" +
+                    "            \"primary\": \"\",\n" +
+                    "            \"globe\": \"earth\"\n" +
+                    "        }\n" +
+                    "    ],\n" +
+                    "    \"flag_lastminute\": \"False\",\n" +
+                    "    \"tags\":\n" +
+                    "        {\n" +
+                    "            \"night_life\": ${tv_nightlife_numb.text.toString()} ,\n" +
+                    "            \"nature\": ${tv_nightlife_numb.text.toString()},\n" +
+                    "            \"sports\": ${tv_nightlife_numb.text.toString()},\n" +
+                    "            \"food\": ${tv_nightlife_numb.text.toString()},\n" +
+                    "            \"culture\": ${tv_nightlife_numb.text.toString()},\n" +
+                    "            \"infrastructure\": ${tv_nightlife_numb.text.toString()}\n" +
+                    "        },\n" +
+                    "    \"cost\": 1,\n" +
+                    "    \"target\": {\n" +
+                    "        \"travel_type\": \"identifier of family, couple, friends\",\n" +
+                    "        \"age_type\": \"ages\"\n" +
+                    "    }\n" +
+                    "}"
+            val okHttpClient = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+            val requestBody = payload.toRequestBody()
+            val request = Request.Builder()
+                    .method("POST", requestBody)
+                    .url(url)
+                    .build()
+            okHttpClient.newCall(request).enqueue(object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+                    e.printStackTrace()
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+                    if (!response.isSuccessful) throw IOException("Unexpected code $response")
+                    Log.d("DIOMAYALEE", "body: " + response.body!!.string())
+                }
+            })
+        }
+
+
 
 
 
