@@ -28,7 +28,7 @@
 
         <TextView
             android:id="@+id/tv_city_name"
-            android:layout_width="164dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Paris"
@@ -51,8 +51,9 @@
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="410dp"
-                    android:layout_height="53dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
                     android:background="@drawable/rounded"
                     android:text="Description"
                     android:textSize="@dimen/description_tv_city"
@@ -63,6 +64,7 @@
                 <TextView
                     android:id="@+id/tv_city_description"
                     android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
                     android:background="@drawable/rounded"
                     android:gravity="left|center"
                     android:text="@string/lorem_ipsum"
@@ -76,7 +78,7 @@
                 <!--PRIMO GRID LAYOUT-->
 
                 <GridLayout
-                    android:layout_width="411dp"
+                    android:layout_width="match_parent"
                     android:layout_height="144dp"
                     android:background="@drawable/rounded"
                     android:columnCount="2"
