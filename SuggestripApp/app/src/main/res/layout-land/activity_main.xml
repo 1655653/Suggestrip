@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/btn_profiling"
-        android:layout_width="345dp"
-        android:layout_height="117dp"
+        android:layout_width="398dp"
+        android:layout_height="112dp"
         android:background="@drawable/profiling_button"
         android:text="START"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -20,9 +20,11 @@
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_user"
+        app:layout_constraintHorizontal_bias="0.638"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <TextView
         android:id="@+id/tv_shake"
@@ -41,9 +43,9 @@
         android:layout_height="123dp"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_profiling" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageButton
         android:id="@+id/btn_user"
@@ -80,17 +82,21 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/btn_explore"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
         app:layout_constraintStart_toEndOf="@+id/btn_explore"
-        app:layout_constraintTop_toTopOf="@+id/btn_explore" />
+        app:layout_constraintTop_toTopOf="@+id/btn_explore"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="332dp"
-        android:layout_height="237dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_profiling"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="234dp"
+        android:layout_height="172dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_heart"
+        app:layout_constraintHorizontal_bias="0.539"
+        app:layout_constraintStart_toEndOf="@+id/btn_explore"
+        app:layout_constraintTop_toTopOf="@+id/tv_shake"
+        app:layout_constraintVertical_bias="0.552"
         app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
