@@ -61,6 +61,8 @@ class ProfilingActivity : AppCompatActivity() {
 
         val size: Point = SCViewAnimationUtil.getDisplaySize(this)
 
+        var omini_array_boolean = BooleanArray(4)
+
         var dollar_group1 = listOf(btn_1dollar)
         var dollar_group2 = listOf(btn_2dollar, btn_2dollar2)
         var dollar_group3 = listOf(btn_3dollar, btn_3dollar2, btn_3dollar3)
@@ -260,29 +262,58 @@ class ProfilingActivity : AppCompatActivity() {
         btn_1_ppl.setOnClickListener {
             two.animation?.fillAfter = false
             two.visibility = View.GONE
+            three.animation?.fillAfter = false
+            three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size,orientation)
+            drop(one, size)
+            for( i in 0 until omini_array_boolean.size){
+                if (i == 0 ) {
+                    omini_array_boolean[i] = true
+                }
+                else  omini_array_boolean[i] = false
+            }
+
         }
         btn_2_ppl.setOnClickListener {
+            three.animation?.fillAfter = false
+            three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size, orientation)
-            drop(two, size, orientation)
+            drop(one, size)
+            drop(two, size)
+            for( i in 0 until omini_array_boolean.size){
+                if (i == 1 ) {
+                    omini_array_boolean[i] = true
+                }
+                else  omini_array_boolean[i] = false
+            }
         }
 
         btn_3_ppl.setOnClickListener {
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size, orientation)
-            drop(two, size, orientation)
-            drop(three, size, orientation)
+            drop(one, size)
+            drop(two, size)
+            drop(three, size)
+            for( i in 0 until omini_array_boolean.size){
+                if (i == 2 ) {
+                    omini_array_boolean[i] = true
+                }
+                else  omini_array_boolean[i] = false
+            }
         }
         btn_more3_ppl.setOnClickListener {
-            drop(one, size, orientation)
-            drop(two, size, orientation)
-            drop(three, size, orientation)
-            drop(iv_plus_3, size, orientation)
+            drop(one, size)
+            drop(two, size)
+            drop(three, size)
+            drop(iv_plus_3, size)
+            for( i in 0 until omini_array_boolean.size){
+                if (i == 3 ) {
+                    omini_array_boolean[i] = true
+                }
+                else  omini_array_boolean[i] = false
+            }
 
         }
         var displacement = (size.y / 1.85).toInt()
@@ -337,6 +368,8 @@ class ProfilingActivity : AppCompatActivity() {
         threeplus_gone_anim.addPageAnimation(go_plus_little_left)
         mViewPager!!.addAnimation(threeplus_gone_anim)
 
+
+        val animation_first_question = SCPositionAnimation(this, 0, -size.x, 0)
         //ANIM BTN1
         val btn1_anim = SCViewAnimation(btn_1_ppl)
         btn1_anim.addPageAnimation(animation_first_question)
@@ -476,6 +509,8 @@ class ProfilingActivity : AppCompatActivity() {
         greek_animation.startToPosition(null, -size.y)
         greek_animation.addPageAnimation(SCPositionAnimation(this, 2, (size.x / 1.4).toInt(), store_dollar_y))
         mViewPager!!.addAnimation(greek_animation)
+
+
 
 
         ///*******************************************fourth  QUESTION-ball
@@ -622,26 +657,48 @@ class ProfilingActivity : AppCompatActivity() {
 
         ////////////////////////////////////////////////////////////////PAYLOAD CALL
         btn_go.setOnClickListener {
+            val collapse_list = listOf(btn_pizza1,btn_ball1,btn_car1,btn_glass1,btn_tree1,btn_greek1,tv_infrastructure_numb)
+            val zavorra_list = listOf(btn_1dollar,btn_2dollar,btn_2dollar2,btn_3dollar,btn_3dollar2,btn_3dollar3,one,two,three,iv_plus_3)
             ///COLLAPSE ANIMATION
             val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
+            for(view in collapse_list){
+                view?.startAnimation(collapse)
+                view.visibility = INVISIBLE
+            }
 
-            btn_pizza1.startAnimation(collapse)
-            btn_ball1.startAnimation(collapse)
-            btn_car1.startAnimation(collapse)
-            btn_glass1.startAnimation(collapse)
-            btn_tree1.startAnimation(collapse)
-            btn_greek1.startAnimation(collapse)
-            dollar_array.forEachIndexed { i, g ->
-                if(dollar_array_boolean[i]) {
-                    for(dollar in g){
-                        dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar))
+
+            dollar_array_boolean.forEachIndexed { i, g ->
+                if(g){
+                    when(i){
+                        0 -> btn_1dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar1))
+                        1 -> {
+                            btn_2dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
+                            btn_2dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
+                        }
+                        2 -> {
+                            btn_3dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                            btn_3dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                            btn_3dollar3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                        }
                     }
                 }
 
             }
+            one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
+            for(i in 1..3){
+                if(omini_array_boolean[i]){
+                    two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
+                    if(i>2) {
+                        three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
+                        if(i==3)
+                            iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
+                    }
 
-
-
+                }
+            }
+            for(zavorre in zavorra_list){
+                zavorre.visibility = INVISIBLE
+            }
 
             AwsCall()
 
@@ -652,6 +709,8 @@ class ProfilingActivity : AppCompatActivity() {
 
 
     }
+
+
     private fun moveViewToScreenCenter(view: View) {
         val dm = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(dm)
