@@ -81,6 +81,7 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, AccountMngActivity::class.java).apply {}
             startActivity(intent)
         }
+
         btn_explore.setOnClickListener {
             val intent = Intent(this, ExploreActivity::class.java).apply {}
             startActivity(intent)
