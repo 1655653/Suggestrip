@@ -266,7 +266,7 @@ class ProfilingActivity : AppCompatActivity() {
             three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size)
+            drop(one, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 0 ) {
                     omini_array_boolean[i] = true
@@ -280,8 +280,8 @@ class ProfilingActivity : AppCompatActivity() {
             three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size, position)
-            drop(two, size, position)
+            drop(one, size, orientation)
+            drop(two, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 1 ) {
                     omini_array_boolean[i] = true
@@ -293,9 +293,9 @@ class ProfilingActivity : AppCompatActivity() {
         btn_3_ppl.setOnClickListener {
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size, position)
-            drop(two, size, position)
-            drop(three, size, position)
+            drop(one, size, orientation)
+            drop(two, size, orientation)
+            drop(three, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 2 ) {
                     omini_array_boolean[i] = true
@@ -304,10 +304,10 @@ class ProfilingActivity : AppCompatActivity() {
             }
         }
         btn_more3_ppl.setOnClickListener {
-            drop(one, size, position)
-            drop(two, size, position)
-            drop(three, size, position)
-            drop(iv_plus_3, size, position)
+            drop(one, size, orientation)
+            drop(two, size, orientation)
+            drop(three, size, orientation)
+            drop(iv_plus_3, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 3 ) {
                     omini_array_boolean[i] = true
@@ -369,7 +369,7 @@ class ProfilingActivity : AppCompatActivity() {
         mViewPager!!.addAnimation(threeplus_gone_anim)
 
 
-        val animation_first_question = SCPositionAnimation(this, 0, -size.x, 0)
+
         //ANIM BTN1
         val btn1_anim = SCViewAnimation(btn_1_ppl)
         btn1_anim.addPageAnimation(animation_first_question)
