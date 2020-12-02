@@ -1,6 +1,7 @@
 package com.example.suggestripapp
 
 import android.app.AlertDialog
+import android.content.res.Configuration
 import android.graphics.Point
 import android.os.Bundle
 import android.util.Log
