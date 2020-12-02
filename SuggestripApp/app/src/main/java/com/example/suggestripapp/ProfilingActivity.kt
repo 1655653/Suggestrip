@@ -1,8 +1,8 @@
 package com.example.suggestripapp
 
+import android.app.AlertDialog
 import android.graphics.Point
 import android.os.Bundle
-import android.util.DisplayMetrics
 import android.util.Log
 import android.view.View
 import android.view.View.*
@@ -37,6 +37,8 @@ class ProfilingActivity : AppCompatActivity() {
     var lock_pizza = false
     var dollar_array_boolean = BooleanArray(3)
     var dollar_cost = 0
+    var filled_array_boolean = BooleanArray(8)
+
 
     val size: Point? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -63,13 +65,14 @@ class ProfilingActivity : AppCompatActivity() {
         var omini_array_boolean = BooleanArray(4)
 
         var dollar_group1 = listOf(btn_1dollar)
-        var dollar_group2 = listOf(btn_2dollar,btn_2dollar2)
-        var dollar_group3 = listOf(btn_3dollar,btn_3dollar2,btn_3dollar3)
-        val dollar_array = listOf(dollar_group1,dollar_group2,dollar_group3)
+        var dollar_group2 = listOf(btn_2dollar, btn_2dollar2)
+        var dollar_group3 = listOf(btn_3dollar, btn_3dollar2, btn_3dollar3)
+        val dollar_array = listOf(dollar_group1, dollar_group2, dollar_group3)
 
 
         val greek_array = listOf(btn_greek1, btn_greek2, btn_greek3, btn_greek4, btn_greek5)
         var greek_array_boolean = BooleanArray(greek_array.size)
+
 
         val tree_array = listOf(btn_tree1, btn_tree2, btn_tree3, btn_tree4, btn_tree5)
         var tree_array_boolean = BooleanArray(tree_array.size)
@@ -86,12 +89,14 @@ class ProfilingActivity : AppCompatActivity() {
         val pizza_array = listOf(btn_pizza1, btn_pizza2, btn_pizza3, btn_pizza4, btn_pizza5)
         var pizza_array_boolean = BooleanArray(pizza_array.size)
 
+
         //cambia dot
         mViewPager!!.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                     position: Int,
                     positionOffset: Float,
                     positionOffsetPixels: Int
+
             ) {
 
             }
@@ -125,6 +130,14 @@ class ProfilingActivity : AppCompatActivity() {
                 }
                 if (position < 9) {
                     btn_go.visibility = INVISIBLE
+                }
+
+                Log.d("dioporcoeterno", Arrays.toString(filled_array_boolean))
+                for(i in 0..position){
+                    if(!filled_array_boolean[i]){
+                        ShowAlert(i)
+                    }
+
                 }
                 when (position) {
                     0 -> tv_question.text = "How many people travel?"
@@ -188,6 +201,7 @@ class ProfilingActivity : AppCompatActivity() {
                         }
                     }
                     3 -> {
+
                         tv_question.text = "How much are you into sports?"
                         lock_ball = false
                         tv_culture_numb.visibility = VISIBLE
@@ -270,6 +284,7 @@ class ProfilingActivity : AppCompatActivity() {
                 }
                 else  omini_array_boolean[i] = false
             }
+            filled_array_boolean[0] = true
 
         }
         btn_2_ppl.setOnClickListener {
@@ -285,6 +300,7 @@ class ProfilingActivity : AppCompatActivity() {
                 }
                 else  omini_array_boolean[i] = false
             }
+            filled_array_boolean[0] = true
         }
 
         btn_3_ppl.setOnClickListener {
@@ -299,6 +315,7 @@ class ProfilingActivity : AppCompatActivity() {
                 }
                 else  omini_array_boolean[i] = false
             }
+            filled_array_boolean[0] = true
         }
         btn_more3_ppl.setOnClickListener {
             drop(one, size)
@@ -311,6 +328,7 @@ class ProfilingActivity : AppCompatActivity() {
                 }
                 else  omini_array_boolean[i] = false
             }
+            filled_array_boolean[0] = true
 
         }
 
@@ -388,6 +406,7 @@ class ProfilingActivity : AppCompatActivity() {
                 dollar_array_boolean[2] = false
                 dollar_cost = 1
             }
+            filled_array_boolean[1] = true
         }
 
 
@@ -417,6 +436,7 @@ class ProfilingActivity : AppCompatActivity() {
                 dollar_array_boolean[2] = false
                 dollar_cost = 2
             }
+            filled_array_boolean[1] = true
         }
 
         //ANIM DOLLAR3
@@ -451,6 +471,7 @@ class ProfilingActivity : AppCompatActivity() {
                 dollar_array_boolean[2] = true
                 dollar_cost = 3
             }
+            filled_array_boolean[1] = true
         }
 
         ///*******************************************THIRD QUESTION-GREEK
@@ -465,6 +486,7 @@ class ProfilingActivity : AppCompatActivity() {
                         for (sub_greek in 0..i){
                             greek_array[sub_greek].setImageResource(R.drawable.filled_greek)
                             greek_array_boolean[sub_greek] = true
+                            filled_array_boolean[2] = true
                         }
                     }
                     else{
@@ -497,6 +519,7 @@ class ProfilingActivity : AppCompatActivity() {
                         for (sub_ball in 0..i){
                             ball_array[sub_ball].setImageResource(R.drawable.filled_ball)
                             ball_array_boolean[sub_ball] = true
+                            filled_array_boolean[3] = true
                         }
                     }
                     else{
@@ -525,6 +548,7 @@ class ProfilingActivity : AppCompatActivity() {
                         for (sub_car in 0..i){
                             car_array[sub_car].setImageResource(R.drawable.filled_car)
                             car_array_boolean[sub_car] = true
+                            filled_array_boolean[4] = true
                         }
                     }
                     else{
@@ -552,6 +576,7 @@ class ProfilingActivity : AppCompatActivity() {
                         for (sub_glass in 0..i){
                             glass_array[sub_glass].setImageResource(R.drawable.filled_glass)
                             glass_array_boolean[sub_glass] = true
+                            filled_array_boolean[5] = true
                         }
                     }
                     else{
@@ -580,6 +605,7 @@ class ProfilingActivity : AppCompatActivity() {
                         for (sub_tree in 0..i){
                             tree_array[sub_tree].setImageResource(R.drawable.filled_tree)
                             tree_array_boolean[sub_tree] = true
+                            filled_array_boolean[6] = true
                         }
                     }
                     else{
@@ -607,6 +633,7 @@ class ProfilingActivity : AppCompatActivity() {
                         for (sub_pizza in 0..i){
                             pizza_array[sub_pizza].setImageResource(R.drawable.filled_pizza)
                             pizza_array_boolean[sub_pizza] = true
+                            filled_array_boolean[7] = true
                         }
                     }
                     else{
@@ -623,52 +650,78 @@ class ProfilingActivity : AppCompatActivity() {
         pizza_animation.addPageAnimation(SCPositionAnimation(this, 7, (size.x / 1.35).toInt(), 0))
         mViewPager!!.addAnimation(pizza_animation)
 
-        ////////////////////////////////////////////////////////////////PAYLOAD CALL
+        ////////////////////////////////////////////////////////////////GO BUTTON
         btn_go.setOnClickListener {
-            val collapse_list = listOf(btn_pizza1,btn_ball1,btn_car1,btn_glass1,btn_tree1,btn_greek1,tv_infrastructure_numb)
-            val zavorra_list = listOf(btn_1dollar,btn_2dollar,btn_2dollar2,btn_3dollar,btn_3dollar2,btn_3dollar3,one,two,three,iv_plus_3)
-            ///COLLAPSE ANIMATION
-            val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
-            for(view in collapse_list){
-                view?.startAnimation(collapse)
-                view.visibility = INVISIBLE
-            }
+            val tv_list = listOf(tv_culture_numb, tv_sport_numb, tv_infrastructure_numb, tv_nightlife_numb, tv_nature_numb, tv_food_numb)
+            val collapse_list = listOf(btn_greek1, btn_ball1, btn_car1, btn_glass1, btn_tree1, btn_pizza1)
+            val zavorra_list = listOf(btn_1dollar, btn_2dollar, btn_2dollar2, btn_3dollar, btn_3dollar2, btn_3dollar3, one, two, three, iv_plus_3)
 
+//            //CHECK IF USER HAS CLICKED ITEMS
+            var empty_field = true
+//            tv_list.forEachIndexed { i, tv ->
+//                if(tv.text.toString() == "0"){
+//                    empty_field = true
+//                    var icon = collapse_list[i].drawable
+//                    var name = "ao"
+//                    when(i){
+//                        0 -> name = "Culture"
+//                        1 -> name = "Sport"
+//                        2 -> name = "Infrastructure"
+//                        3 -> name = "Nightlife"
+//                        4 -> name = "Nature"
+//                        5 -> name = "Food"
+//                    }
+//
+//
+//                }
+//            }
+            //CHECK DONE, NOW I PROCEED TO DO THE COLLAPSING AND CALL
+            if(!empty_field) {
 
-            dollar_array_boolean.forEachIndexed { i, g ->
-                if(g){
-                    when(i){
-                        0 -> btn_1dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar1))
-                        1 -> {
-                            btn_2dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
-                            btn_2dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
-                        }
-                        2 -> {
-                            btn_3dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
-                            btn_3dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
-                            btn_3dollar3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                ///COLLAPSE ANIMATION
+                val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
+                for (view in collapse_list) {
+                    view?.startAnimation(collapse)
+                    view.visibility = INVISIBLE
+                }
+                for (tv in tv_list) {
+                    tv.visibility = INVISIBLE
+                }
+                dollar_array_boolean.forEachIndexed { i, g ->
+                    if (g) {
+                        when (i) {
+                            0 -> btn_1dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar1))
+                            1 -> {
+                                btn_2dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
+                                btn_2dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
+                            }
+                            2 -> {
+                                btn_3dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                                btn_3dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                                btn_3dollar3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                            }
                         }
                     }
-                }
 
-            }
-            one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
-            for(i in 1..3){
-                if(omini_array_boolean[i]){
-                    two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
-                    if(i>2) {
-                        three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
-                        if(i==3)
-                            iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
+                }
+                one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
+                for (i in 1..3) {
+                    if (omini_array_boolean[i]) {
+                        two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
+                        if (i > 2) {
+                            three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
+                            if (i == 3)
+                                iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
+                        }
+
                     }
-
                 }
-            }
-            for(zavorre in zavorra_list){
-                zavorre.visibility = INVISIBLE
-            }
+                for (zavorre in zavorra_list) {
+                    zavorre.visibility = INVISIBLE
+                }
 
-            AwsCall()
+                AwsCall()
+            }
 
         }
 
@@ -678,24 +731,18 @@ class ProfilingActivity : AppCompatActivity() {
 
     }
 
+    private fun ShowAlert(i:Int) {
+        AlertDialog.Builder(this)
+            .setTitle("Missing Value")
+            .setMessage("the minimum value should be 1") // Specifying a listener allows you to take an action before dismissing the dialog.
+            .setPositiveButton("Ok") { dialog, which ->
 
-    private fun moveViewToScreenCenter(view: View) {
-        val dm = DisplayMetrics()
-        windowManager.defaultDisplay.getMetrics(dm)
-        val originalPos = IntArray(2)
-        Log.d("porcamadonna", view.getLocationOnScreen().toString())
-        val xDelta = (dm.widthPixels - view.measuredWidth - originalPos[0]) / 2
-        val yDelta = (dm.heightPixels - view.measuredHeight - originalPos[1]) / 2
-        val animSet = AnimationSet(true)
-        animSet.fillAfter = true
-        animSet.duration = 1000
-        animSet.interpolator = BounceInterpolator()
-        val translate = TranslateAnimation(0F, xDelta.toFloat(), 0F, yDelta.toFloat())
-        animSet.addAnimation(translate)
-        val scale = ScaleAnimation(1f, 2f, 1f, 2f, ScaleAnimation.RELATIVE_TO_PARENT, .5f, ScaleAnimation.RELATIVE_TO_PARENT, .5f)
-        animSet.addAnimation(scale)
-        view.startAnimation(animSet)
+                mViewPager?.setCurrentItem(i , true)
+
+            }
+            .show()
     }
+
     private fun AwsCall() {
         var url = "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info"
         val payload = "{\n" +
