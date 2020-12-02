@@ -750,16 +750,21 @@
 
     <Button
         android:id="@+id/btn_go"
-        android:layout_width="152dp"
-        android:layout_height="104dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
         android:text="GO!"
-        android:textSize="50dp"
-        android:visibility="invisible"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="30dp"
+        android:background="@drawable/profiling_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        />
 
 
 
