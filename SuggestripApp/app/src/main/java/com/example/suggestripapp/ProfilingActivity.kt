@@ -140,7 +140,7 @@ class ProfilingActivity : AppCompatActivity() {
 
                 }
                 when (position) {
-                    0 -> tv_question.text = "How many people travel?"
+                    0 -> tv_question.text = "How many of you are?"
                     1 -> {
                         tv_question.text = "How much money do you want to spend?"
                         lock_dollar = false
@@ -152,7 +152,7 @@ class ProfilingActivity : AppCompatActivity() {
                         btn_3dollar3.visibility = VISIBLE
                     }
                     2 -> {
-                        tv_question.text = "How much do you enjoy visiting historic places, museum ecc.."
+                        tv_question.text = "How much do you enjoy visiting historic places or museums?"
                         lock_greek = false
                         if (dollar_array_boolean[0]) {
                             btn_2dollar.animation?.fillAfter = false
@@ -215,7 +215,7 @@ class ProfilingActivity : AppCompatActivity() {
                     }
                     4 -> {
                         lock_car = false
-                        tv_question.text = "How much do you want to use public transportations and more general infrastructures?"
+                        tv_question.text = "How much you will use public transportations?"
                         tv_sport_numb.visibility = VISIBLE
                         tv_sport_numb.text = ball_array_boolean.count { it }.toString()
 
@@ -236,7 +236,7 @@ class ProfilingActivity : AppCompatActivity() {
 
                     }
                     7 -> {
-                        tv_question.text = "How much are you interested in finding new flavors?"
+                        tv_question.text = "How much are you interested in food?"
                         tv_nature_numb.visibility = VISIBLE
                         tv_nature_numb.text = tree_array_boolean.count { it }.toString()
                         Log.d("porcamadonna", btn_pizza1.x.toString())
@@ -264,12 +264,14 @@ class ProfilingActivity : AppCompatActivity() {
         tv_question.animation = animFadeIn
         tv_question.startAnimation(animFadeIn)
 
+        val orientation = this.resources.configuration.orientation
 
 
         ///*******************************************FIRST QUESTION-OMINI
         val one: View = findViewById(R.id.iv_one)
         val two: View = findViewById(R.id.iv_two)
         val three: View = findViewById(R.id.iv_three)
+
         btn_1_ppl.setOnClickListener {
             two.animation?.fillAfter = false
             two.visibility = View.GONE
@@ -277,7 +279,7 @@ class ProfilingActivity : AppCompatActivity() {
             three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size)
+            drop(one, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 0 ) {
                     omini_array_boolean[i] = true
@@ -292,8 +294,8 @@ class ProfilingActivity : AppCompatActivity() {
             three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size)
-            drop(two, size)
+            drop(one, size, orientation)
+            drop(two, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 1 ) {
                     omini_array_boolean[i] = true
@@ -306,9 +308,9 @@ class ProfilingActivity : AppCompatActivity() {
         btn_3_ppl.setOnClickListener {
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size)
-            drop(two, size)
-            drop(three, size)
+            drop(one, size, orientation)
+            drop(two, size, orientation)
+            drop(three, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 2 ) {
                     omini_array_boolean[i] = true
@@ -318,10 +320,10 @@ class ProfilingActivity : AppCompatActivity() {
             filled_array_boolean[0] = true
         }
         btn_more3_ppl.setOnClickListener {
-            drop(one, size)
-            drop(two, size)
-            drop(three, size)
-            drop(iv_plus_3, size)
+            drop(one, size, orientation)
+            drop(two, size, orientation)
+            drop(three, size, orientation)
+            drop(iv_plus_3, size, orientation)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 3 ) {
                     omini_array_boolean[i] = true
@@ -331,12 +333,35 @@ class ProfilingActivity : AppCompatActivity() {
             filled_array_boolean[0] = true
 
         }
+        var displacement = (size.y / 1.85).toInt()
+        var displ_go_little_right = (size.y / 1.8).toInt()
+        var displ_go_little_left = (size.y / 1.8).toInt()
+        var displ_go_plus_little_left = (size.y / 1.70).toInt()
+        var displ_go_plus_little_left_x = -300
+        //
+        var store_dollar_y = (size.y / 2.5).toInt()
+        //
+        var pad = 30
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            // code for portrait mode
+            displacement = (size.y / 2.4).toInt()
+            displ_go_little_right = (size.y / 2.4).toInt()
+            displ_go_little_left = (size.y / 2.4).toInt()
+            displ_go_plus_little_left = (size.y / 2.4).toInt()
+            displ_go_plus_little_left_x = -120
+            store_dollar_y = (size.y / 3).toInt()
+            pad = 50
+        }
 
-        val animation_first_question_omino = SCPositionAnimation(this, 0, 0, (size.y / 1.85).toInt())
+
+        val animation_first_question = SCPositionAnimation(this, 0, -size.x, 0)
+        val animation_first_question_omino = SCPositionAnimation(this, 0, 0, displacement)
         //ANIM OMINO 1
         val one_gone_anim = SCViewAnimation(one)
         one_gone_anim.addPageAnimation(animation_first_question_omino)
-        val go_little_right= SCPositionAnimation(this, 0, 80, (size.y / 1.8).toInt())
+
+        var go_little_right= SCPositionAnimation(this, 0, 80, displ_go_little_right )
+
         one_gone_anim.addPageAnimation(go_little_right)
         mViewPager!!.addAnimation(one_gone_anim)
 
@@ -349,19 +374,19 @@ class ProfilingActivity : AppCompatActivity() {
         //ANIM OMINO 3
         val three_gone_anim = SCViewAnimation(three)
         three_gone_anim.addPageAnimation(animation_first_question_omino)
-        val go_little_left= SCPositionAnimation(this, 0, -80, (size.y / 1.8).toInt())
+        val go_little_left= SCPositionAnimation(this, 0, -80, displ_go_little_left)
         three_gone_anim.addPageAnimation(go_little_left)
 
         mViewPager!!.addAnimation(three_gone_anim)
         //ANIM OMINO 3+
         val threeplus_gone_anim = SCViewAnimation(iv_plus_3)
 
-        val go_plus_little_left= SCPositionAnimation(this, 0, -300, (size.y / 1.70).toInt())
+        val go_plus_little_left= SCPositionAnimation(this, 0, displ_go_plus_little_left_x, displ_go_plus_little_left)
         threeplus_gone_anim.addPageAnimation(go_plus_little_left)
         mViewPager!!.addAnimation(threeplus_gone_anim)
 
 
-        val animation_first_question = SCPositionAnimation(this, 0, -size.x, 0)
+
         //ANIM BTN1
         val btn1_anim = SCViewAnimation(btn_1_ppl)
         btn1_anim.addPageAnimation(animation_first_question)
@@ -386,10 +411,10 @@ class ProfilingActivity : AppCompatActivity() {
 
         //ANIM DOLLAR1
         val dollar1_animation = SCViewAnimation(btn_1dollar)
-        val store_dollar_y = (size.y / 2.5).toInt()
+        //settato prima val store_dollar_y = (size.y / 2.5).toInt()
         dollar1_animation.startToPosition(null, -size.y)
         dollar1_animation.addPageAnimation(SCPositionAnimation(this, 0, 0, size.y))
-        dollar1_animation.addPageAnimation(SCPositionAnimation(this, 1, -size.x / 7, store_dollar_y))
+        dollar1_animation.addPageAnimation(SCPositionAnimation(this, 1, -size.x / 10, store_dollar_y))
         mViewPager!!.addAnimation(dollar1_animation)
 
 
@@ -495,7 +520,7 @@ class ProfilingActivity : AppCompatActivity() {
                             greek_array_boolean[over_greek] = false
                         }
                     }
-                    Log.d("dioputtana", Arrays.toString(greek_array_boolean))
+
                 }
             }
         }
@@ -531,7 +556,7 @@ class ProfilingActivity : AppCompatActivity() {
                 }
             }
         }
-        val pad = 30
+
         val ball_animation = SCViewAnimation(btn_ball1)
         ball_animation.startToPosition(null, -size.y)
         ball_animation.addPageAnimation(SCPositionAnimation(this, 3, 0, -store_dollar_y + pad)) //6
@@ -614,13 +639,16 @@ class ProfilingActivity : AppCompatActivity() {
                             tree_array_boolean[over_tree] = false
                         }
                     }
-                    Log.d("dioputtana", Arrays.toString(tree_array_boolean))
+
                 }
             }
         }
         val tree_animation = SCViewAnimation(btn_tree1)
         tree_animation.startToPosition(null, -size.y)
-        tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y))
+        if (orientation ==  Configuration.ORIENTATION_LANDSCAPE)
+            tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y+pad))
+        else
+            tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y))
         mViewPager!!.addAnimation(tree_animation)
 
         ///*******************************************LAST QUESTION-pizza
@@ -647,7 +675,10 @@ class ProfilingActivity : AppCompatActivity() {
         }
         val pizza_animation = SCViewAnimation(btn_pizza1)
         pizza_animation.startToPosition(null, -size.y)
-        pizza_animation.addPageAnimation(SCPositionAnimation(this, 7, (size.x / 1.35).toInt(), 0))
+        if (orientation ==  Configuration.ORIENTATION_LANDSCAPE)
+            pizza_animation.addPageAnimation(SCPositionAnimation(this, 7, (size.x / 1.4).toInt(), 0))
+        else
+            pizza_animation.addPageAnimation(SCPositionAnimation(this, 7, (size.x / 1.35).toInt(), 0))
         mViewPager!!.addAnimation(pizza_animation)
 
         ////////////////////////////////////////////////////////////////GO BUTTON
@@ -800,9 +831,13 @@ class ProfilingActivity : AppCompatActivity() {
 
     }
 
-    private fun drop(one: View, size: Point) {
+    private fun drop(one: View, size: Point, orientation : Int) {
+        var anim_y = (size.y / 9).toFloat()
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            anim_y = (size.y / 5).toFloat()
+        }
         one.visibility = View.VISIBLE
-        val anim = TranslateAnimation(0F, 0F, -(size.y / 2).toFloat(), (size.y / 9).toFloat())
+        val anim = TranslateAnimation(0F, 0F, -(size.y / 2).toFloat(), anim_y)
         anim.duration = 1000
         anim.fillAfter = true
         one.startAnimation(anim)
