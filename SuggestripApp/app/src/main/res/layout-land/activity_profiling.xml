@@ -743,8 +743,8 @@
 
     <Button
         android:id="@+id/btn_go"
-        android:layout_width="110dp"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="98dp"
         android:background="@drawable/profiling_button"
         android:text="GO!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -755,9 +755,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_3_ppl" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_3_ppl"
+        app:layout_constraintVertical_bias="0.1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
