@@ -264,7 +264,7 @@ class ProfilingActivity : AppCompatActivity() {
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
             drop(one, size)
-            for( i in 0..omini_array_boolean.size){
+            for( i in 0 until omini_array_boolean.size){
                 if (i == 0 ) {
                     omini_array_boolean[i] = true
                 }
@@ -279,7 +279,7 @@ class ProfilingActivity : AppCompatActivity() {
             iv_plus_3.visibility = View.GONE
             drop(one, size)
             drop(two, size)
-            for( i in 0..omini_array_boolean.size){
+            for( i in 0 until omini_array_boolean.size){
                 if (i == 1 ) {
                     omini_array_boolean[i] = true
                 }
@@ -293,7 +293,7 @@ class ProfilingActivity : AppCompatActivity() {
             drop(one, size)
             drop(two, size)
             drop(three, size)
-            for( i in 0..omini_array_boolean.size){
+            for( i in 0 until omini_array_boolean.size){
                 if (i == 2 ) {
                     omini_array_boolean[i] = true
                 }
@@ -305,7 +305,7 @@ class ProfilingActivity : AppCompatActivity() {
             drop(two, size)
             drop(three, size)
             drop(iv_plus_3, size)
-            for( i in 0..omini_array_boolean.size){
+            for( i in 0 until omini_array_boolean.size){
                 if (i == 3 ) {
                     omini_array_boolean[i] = true
                 }
@@ -625,15 +625,15 @@ class ProfilingActivity : AppCompatActivity() {
 
         ////////////////////////////////////////////////////////////////PAYLOAD CALL
         btn_go.setOnClickListener {
+            val collapse_list = listOf(btn_pizza1,btn_ball1,btn_car1,btn_glass1,btn_tree1,btn_greek1,tv_infrastructure_numb)
+            val zavorra_list = listOf(btn_1dollar,btn_2dollar,btn_2dollar2,btn_3dollar,btn_3dollar2,btn_3dollar3,one,two,three,iv_plus_3)
             ///COLLAPSE ANIMATION
             val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
+            for(view in collapse_list){
+                view?.startAnimation(collapse)
+                view.visibility = INVISIBLE
+            }
 
-            btn_pizza1.startAnimation(collapse)
-            btn_ball1.startAnimation(collapse)
-            btn_car1.startAnimation(collapse)
-            btn_glass1.startAnimation(collapse)
-            btn_tree1.startAnimation(collapse)
-            btn_greek1.startAnimation(collapse)
 
             dollar_array_boolean.forEachIndexed { i, g ->
                 if(g){
@@ -652,28 +652,21 @@ class ProfilingActivity : AppCompatActivity() {
                 }
 
             }
-            val omini_array = listOf(one,two,three,iv_plus_3)
-            omini_array_boolean.forEachIndexed { i, omino ->
-                if(omino){
-                    when(i){
-                        0 -> {
-                            one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
-                        }
-                        1 -> {
-
-
-                        }
+            one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
+            for(i in 1..3){
+                if(omini_array_boolean[i]){
+                    two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
+                    if(i>2) {
+                        three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
+                        if(i==3)
+                            iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
                     }
+
                 }
             }
-
-
-            two.startAnimation(collapse)
-            three.startAnimation(collapse)
-            iv_plus_3.startAnimation(collapse)
-
-
-
+            for(zavorre in zavorra_list){
+                zavorre.visibility = INVISIBLE
+            }
 
             AwsCall()
 
