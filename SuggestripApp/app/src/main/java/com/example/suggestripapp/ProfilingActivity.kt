@@ -1,14 +1,14 @@
 package com.example.suggestripapp
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.res.Configuration
+import android.graphics.PixelFormat
 import android.graphics.Point
 import android.os.Bundle
 import android.util.Log
-import android.view.View
+import android.view.*
 import android.view.View.*
-import android.view.Window
-import android.view.WindowManager
 import android.view.animation.*
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
@@ -134,12 +134,15 @@ class ProfilingActivity : AppCompatActivity() {
                 }
 
                 Log.d("dioporcoeterno", Arrays.toString(filled_array_boolean))
-                for(i in 0..position){
-                    if(!filled_array_boolean[i]){
-                        ShowAlert(i)
+                for (i in 1..position) {
+                    if (!filled_array_boolean[i-1]) {
+                        runOnUiThread {
+                            ShowAlert(i)
+                            return@runOnUiThread
+                        }
                     }
-
                 }
+
                 when (position) {
                     0 -> tv_question.text = "How many of you are?"
                     1 -> {
@@ -361,7 +364,7 @@ class ProfilingActivity : AppCompatActivity() {
         val one_gone_anim = SCViewAnimation(one)
         one_gone_anim.addPageAnimation(animation_first_question_omino)
 
-        var go_little_right= SCPositionAnimation(this, 0, 80, displ_go_little_right )
+        var go_little_right= SCPositionAnimation(this, 0, 80, displ_go_little_right)
 
         one_gone_anim.addPageAnimation(go_little_right)
         mViewPager!!.addAnimation(one_gone_anim)
@@ -647,7 +650,7 @@ class ProfilingActivity : AppCompatActivity() {
         val tree_animation = SCViewAnimation(btn_tree1)
         tree_animation.startToPosition(null, -size.y)
         if (orientation ==  Configuration.ORIENTATION_LANDSCAPE)
-            tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y+pad))
+            tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y + pad))
         else
             tree_animation.addPageAnimation(SCPositionAnimation(this, 6, (size.x / 1.4).toInt(), -store_dollar_y))
         mViewPager!!.addAnimation(tree_animation)
@@ -763,16 +766,31 @@ class ProfilingActivity : AppCompatActivity() {
 
     }
 
-    private fun ShowAlert(i:Int) {
+    private fun ShowAlert(i: Int) {
         AlertDialog.Builder(this)
             .setTitle("Missing Value")
             .setMessage("the minimum value should be 1") // Specifying a listener allows you to take an action before dismissing the dialog.
             .setPositiveButton("Ok") { dialog, which ->
 
-                mViewPager?.setCurrentItem(i , true)
+                mViewPager?.setCurrentItem(i-1, true)
 
             }
             .show()
+    }
+    private fun showCustomPopupMenu() {
+        val windowManager2 = getSystemService(WINDOW_SERVICE) as WindowManager
+        val layoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view: View = layoutInflater.inflate(R.layout.missing_element, null)
+        val params = WindowManager.LayoutParams(
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.WRAP_CONTENT,
+                WindowManager.LayoutParams.TYPE_PHONE,
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                PixelFormat.TRANSLUCENT)
+        params.gravity = Gravity.CENTER or Gravity.CENTER
+        params.x = 0
+        params.y = 0
+        windowManager2.addView(view, params)
     }
 
     private fun AwsCall() {
@@ -832,7 +850,7 @@ class ProfilingActivity : AppCompatActivity() {
 
     }
 
-    private fun drop(one: View, size: Point, orientation : Int) {
+    private fun drop(one: View, size: Point, orientation: Int) {
         var anim_y = (size.y / 9).toFloat()
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             anim_y = (size.y / 5).toFloat()
