@@ -693,25 +693,9 @@ class ProfilingActivity : AppCompatActivity() {
 
 //            //CHECK IF USER HAS CLICKED ITEMS
             var empty_field = true
-//            tv_list.forEachIndexed { i, tv ->
-//                if(tv.text.toString() == "0"){
-//                    empty_field = true
-//                    var icon = collapse_list[i].drawable
-//                    var name = "ao"
-//                    when(i){
-//                        0 -> name = "Culture"
-//                        1 -> name = "Sport"
-//                        2 -> name = "Infrastructure"
-//                        3 -> name = "Nightlife"
-//                        4 -> name = "Nature"
-//                        5 -> name = "Food"
-//                    }
-//
-//
-//                }
-//            }
+
             //CHECK DONE, NOW I PROCEED TO DO THE COLLAPSING AND CALL
-            if(!empty_field) {
+
 
                 ///COLLAPSE ANIMATION
                 val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
@@ -756,7 +740,6 @@ class ProfilingActivity : AppCompatActivity() {
                 }
 
                 AwsCall()
-            }
 
         }
 
