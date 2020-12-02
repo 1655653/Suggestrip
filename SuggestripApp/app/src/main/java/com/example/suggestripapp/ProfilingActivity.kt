@@ -280,8 +280,8 @@ class ProfilingActivity : AppCompatActivity() {
             three.visibility = View.GONE
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size)
-            drop(two, size)
+            drop(one, size, position)
+            drop(two, size, position)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 1 ) {
                     omini_array_boolean[i] = true
@@ -293,9 +293,9 @@ class ProfilingActivity : AppCompatActivity() {
         btn_3_ppl.setOnClickListener {
             iv_plus_3.animation?.fillAfter = false
             iv_plus_3.visibility = View.GONE
-            drop(one, size)
-            drop(two, size)
-            drop(three, size)
+            drop(one, size, position)
+            drop(two, size, position)
+            drop(three, size, position)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 2 ) {
                     omini_array_boolean[i] = true
@@ -304,10 +304,10 @@ class ProfilingActivity : AppCompatActivity() {
             }
         }
         btn_more3_ppl.setOnClickListener {
-            drop(one, size)
-            drop(two, size)
-            drop(three, size)
-            drop(iv_plus_3, size)
+            drop(one, size, position)
+            drop(two, size, position)
+            drop(three, size, position)
+            drop(iv_plus_3, size, position)
             for( i in 0 until omini_array_boolean.size){
                 if (i == 3 ) {
                     omini_array_boolean[i] = true
