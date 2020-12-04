@@ -74,4 +74,8 @@ dependencies {
     //slider frgament
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "com.dev.sacot41:scviewpager:0.0.4"
+
+    // bounce scroll like iOS
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
 }
