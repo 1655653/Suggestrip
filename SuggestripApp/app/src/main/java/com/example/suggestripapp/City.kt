@@ -40,7 +40,7 @@ data class Tags(
     var food: Double
 ):Serializable{
     override fun toString(): String {
-        return "costs=$costs, night_life=$night_life, sports=$sports, nature=$nature, culture=$culture, infrastructure=$infrastructure, food = $food"
+        return "costs=$costs, night_life=$night_life, sports=$sports, nature=$nature,  culture=$culture, infrastructure=$infrastructure, food = $food"
     }
 }
 
@@ -52,7 +52,7 @@ data class Covid(
         var avg_recovered: Float
 ):Serializable{
     override fun toString(): String {
-        return "cases_one_million=$cases_one_million, cases_weekly_average=$cases_weekly_average, deaths_weekly_average=$deaths_weekly_average, healed_weekly_average=$healed_weekly_average"
+        return "Covid(case_per_million=$case_per_million, avg_confirmed=$avg_confirmed,  avg_deaths=$avg_deaths, avg_recovered=$avg_recovered)"
     }
 }
 

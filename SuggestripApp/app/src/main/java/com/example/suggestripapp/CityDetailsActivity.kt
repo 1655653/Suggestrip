@@ -141,6 +141,26 @@ class CityDetailsActivity : AppCompatActivity() {
         tv_natureR.text = city.tags?.nature.toString()
         tv_sportsR.text = city.tags?.sports.toString()
         tv_night_lifeR.text = city.tags?.night_life.toString()
+        tv_cultureR.text = city.tags?.culture.toString()
+        tv_infrastructureR.text = city.tags?.infrastructure.toString()
+        tv_natureR.text = city.tags?.nature.toString()
+        tv_sportsR.text = city.tags?.sports.toString()
+        tv_night_lifeR.text = city.tags?.night_life.toString()
+
+        /* COVID
+        tv_case_per_million.text = city.covid_info?.case_per_million.toString()
+        tv_avg_confirmed.text = city.covid_info?.avg_confirmed.toString()
+        tv_avg_deaths.text = city.covid_info?.avg_deaths.toString()
+        tv_avg_recovered.text = city.covid_info?.avg_recovered.toString()
+         */
+
+        /*WEATHER
+        tv_weather_id = city.weather?.id.toString()
+        tv_weather_main.text = city.weather?.main.toString()
+        tv_weather_description.text = city.weather?.description.toString()
+        tv_weather_icon.text = city.weather?.icon.toString()
+        tv_weather_temperature.text = city.weather?.temperature.toString()
+         */
         var options = RequestOptions()
                 .placeholder(R.drawable.logo)
                 .centerCrop()
