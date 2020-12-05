@@ -161,6 +161,7 @@ class CityDetailsActivity : AppCompatActivity() {
         tv_weather_icon.text = city.weather?.icon.toString()
         tv_weather_temperature.text = city.weather?.temperature.toString()
          */
+
         var options = RequestOptions()
                 .placeholder(R.drawable.logo)
                 .centerCrop()
