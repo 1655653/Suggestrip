@@ -11,12 +11,14 @@ data class City(
     var name: String,  //nome citta
     var coordinates: ArrayList<Coordinates>?,
     var tags: Tags?,
-    var covid:String
+    var covid: Covid?,
+    var weather: Weather?
 ):Serializable{
     override fun toString(): String {
         return "City(brief_description='$brief_description', img_url='$img_url', description='$description', ID=$ID, country='$country', name='$name', coordinates=$coordinates, tags=$tags)"
     }
 }
+
 data class Coordinates(
     var lon: Float,
     var globe: String,
@@ -27,6 +29,7 @@ data class Coordinates(
         return "Coordinates(lon=$lon, globe='$globe', lat=$lat, primary='$primary')"
     }
 }
+
 data class Tags(
     var costs: Double,
     var night_life: Double,
@@ -38,5 +41,31 @@ data class Tags(
 ):Serializable{
     override fun toString(): String {
         return "costs=$costs, night_life=$night_life, sports=$sports, nature=$nature, culture=$culture, infrastructure=$infrastructure, food = $food"
+    }
+}
+
+
+data class Covid(
+        var cases_one_million: Float,
+        var cases_weekly_average: Float,
+        var deaths_weekly_average: Float,
+        var healed_weekly_average: Float
+):Serializable{
+    override fun toString(): String {
+        return "cases_one_million=$cases_one_million, cases_weekly_average=$cases_weekly_average, deaths_weekly_average=$deaths_weekly_average, healed_weekly_average=$healed_weekly_average"
+    }
+}
+
+
+
+data class Weather(
+        var id: Double,
+        var main: String,
+        var description: String,
+        var icon: String,
+        var temperature: Double
+):Serializable{
+    override fun toString(): String {
+        return "Weater(id=$id, main='$main', description='$description', icon='$icon', temperature='$temperature)"
     }
 }
