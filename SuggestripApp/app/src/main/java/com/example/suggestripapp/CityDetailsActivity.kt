@@ -77,7 +77,7 @@ class CityDetailsActivity : AppCompatActivity() {
                 response.use {
                     if (!response.isSuccessful) throw IOException("Unexpected code $response")
                     val gson = Gson()
-                    val type: Type = object : TypeToken<City?>() {}.getType()
+                    val type: Type = object : TypeToken<City?>() {}.type
                     city = gson.fromJson(response.body!!.string(), type)
 
 //                    val obj = JSONObject(response.body!!.string())
