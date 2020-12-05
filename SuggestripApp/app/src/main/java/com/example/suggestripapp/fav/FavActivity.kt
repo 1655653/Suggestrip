@@ -57,7 +57,7 @@ class FavActivity : AppCompatActivity() {
                 val title = cursor!!.getString(cursor!!.getColumnIndex(FavDB.NAME))
                 val id = cursor!!.getString(cursor!!.getColumnIndex(FavDB.ID)).toInt()
                 val image = cursor!!.getString(cursor!!.getColumnIndex(FavDB.IMG_URL))
-                var c = City("", image, "", id, "", title, null, null, "null")
+                var c = City("", image, "", id, "", title, null, null, null, weather = null)
                 //val favItem = FavItem(title, id, image)
                 favCityList.add(c)
             }
