@@ -23,6 +23,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.suggestripapp.fav.FavActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
@@ -81,11 +82,15 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, AccountMngActivity::class.java).apply {}
             startActivity(intent)
         }
+
         btn_explore.setOnClickListener {
             val intent = Intent(this, ExploreActivity::class.java).apply {}
             startActivity(intent)
         }
-
+        btn_heart.setOnClickListener {
+            val intent = Intent(this, FavActivity::class.java).apply {}
+            startActivity(intent)
+        }
         ///shake feature
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         Objects.requireNonNull(sensorManager)!!.registerListener(sensorListener, sensorManager!!.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)

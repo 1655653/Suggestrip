@@ -8,6 +8,20 @@ with open("pwds.json", encoding="utf-8") as fp:
     pwds = json.load(fp)
 
 
+
+
+def get_covid():
+    with open("covid.json", encoding="utf-8") as fp:
+        covid_js = json.load(fp)
+    useful = covid_js['data']['timeline'][:7]
+    case_per_million = covid_js['data']["latest_data"]['calculated']['cases_per_million_population']
+    avg_recovered = sum([e['new_recovered'] for e in useful])/7
+    avg_deaths = sum([e['new_deaths'] for e in useful])/7
+    avg_confirmed = sum([e['new_confirmed'] for e in useful])/7
+    print(avg_confirmed, avg_recovered, avg_deaths, case_per_million)
+    
+
+
 def case_1_tester():
     url = pwds['1_case_post_url']
 
