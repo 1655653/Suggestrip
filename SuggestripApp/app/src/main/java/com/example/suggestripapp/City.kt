@@ -11,7 +11,7 @@ data class City(
     var name: String,  //nome citta
     var coordinates: ArrayList<Coordinates>?,
     var tags: Tags?,
-    var covid: Covid?,
+    var covid_info: Covid?,
     var weather: Weather?
 ):Serializable{
     override fun toString(): String {
@@ -46,10 +46,10 @@ data class Tags(
 
 
 data class Covid(
-        var cases_one_million: Float,
-        var cases_weekly_average: Float,
-        var deaths_weekly_average: Float,
-        var healed_weekly_average: Float
+        var case_per_million: Float,
+        var avg_confirmed: Float,
+        var avg_deaths: Float,
+        var avg_recovered: Float
 ):Serializable{
     override fun toString(): String {
         return "cases_one_million=$cases_one_million, cases_weekly_average=$cases_weekly_average, deaths_weekly_average=$deaths_weekly_average, healed_weekly_average=$healed_weekly_average"
