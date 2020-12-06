@@ -15,10 +15,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_city_details.*
 import okhttp3.*
 import org.json.JSONObject
 import java.io.IOException
+import java.lang.reflect.Type
 import java.util.*
 import kotlin.math.sqrt
 
@@ -74,10 +76,14 @@ class CityDetailsActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 response.use {
                     if (!response.isSuccessful) throw IOException("Unexpected code $response")
-                    val obj = JSONObject(response.body!!.string())
-                    city = Gson().fromJson<City>(
-                            obj.toString(),
-                            City::class.java) as City
+                    val gson = Gson()
+                    val type: Type = object : TypeToken<City?>() {}.type
+                    city = gson.fromJson(response.body!!.string(), type)
+
+//                    val obj = JSONObject(response.body!!.string())
+//                    city = Gson().fromJson<City>(
+//                            obj.toString(),
+//                            City::class.java) as City
                     city.img_url = "https://" + city.img_url
                     Log.d("porcaddio", city.toString())
 
@@ -135,6 +141,27 @@ class CityDetailsActivity : AppCompatActivity() {
         tv_natureR.text = city.tags?.nature.toString()
         tv_sportsR.text = city.tags?.sports.toString()
         tv_night_lifeR.text = city.tags?.night_life.toString()
+        tv_cultureR.text = city.tags?.culture.toString()
+        tv_infrastructureR.text = city.tags?.infrastructure.toString()
+        tv_natureR.text = city.tags?.nature.toString()
+        tv_sportsR.text = city.tags?.sports.toString()
+        tv_night_lifeR.text = city.tags?.night_life.toString()
+
+        /* COVID
+        tv_case_per_million.text = city.covid_info?.case_per_million.toString()
+        tv_avg_confirmed.text = city.covid_info?.avg_confirmed.toString()
+        tv_avg_deaths.text = city.covid_info?.avg_deaths.toString()
+        tv_avg_recovered.text = city.covid_info?.avg_recovered.toString()
+         */
+
+        /*WEATHER
+        tv_weather_id = city.weather?.id.toString()
+        tv_weather_main.text = city.weather?.main.toString()
+        tv_weather_description.text = city.weather?.description.toString()
+        tv_weather_icon.text = city.weather?.icon.toString()
+        tv_weather_temperature.text = city.weather?.temperature.toString()
+         */
+
         var options = RequestOptions()
                 .placeholder(R.drawable.logo)
                 .centerCrop()

@@ -727,7 +727,7 @@ class ProfilingActivity : AppCompatActivity() {
                 for (i in 1..3) {
                     if (omini_array_boolean[i]) {
                         two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
-                        if (i > 2) {
+                        if (i > 1) {
                             three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
                             if (i == 3)
                                 iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
