@@ -1,6 +1,5 @@
 package com.example.suggestripapp.fav
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +7,6 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.suggestripapp.City
-import com.example.suggestripapp.CityDetailsActivity
 import com.example.suggestripapp.R
 import kotlinx.android.synthetic.main.activity_explore.*
 
@@ -96,22 +94,14 @@ class FavActivity : AppCompatActivity() {
             }
         }
     }
-    override fun onBackPressed() {
-        var id_city2rmv = intent.extras?.get("city2rmv")
-        favCityList.forEachIndexed { index, city ->
-            if (id_city2rmv != 0) {
-                if (city.ID == id_city2rmv) {
-                    favCityList.removeAt(index)
-                }
-            }
-        }
-        super.onBackPressed()
-    }
+
     override fun onActivityResult(request: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(request, resultCode, data)
-        //favAdapter?.notifyDataSetChanged()
-        if(request == 1)
-            favAdapter?.onActivityResult(request,1);
+
+        if(request == 1){
+            favAdapter?.onActivityResult(request,1,data!!.getIntExtra("id_removed", 0));
+        }
+
     }
 
 

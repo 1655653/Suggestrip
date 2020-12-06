@@ -2,6 +2,7 @@ package com.example.suggestripapp.fav
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -104,12 +105,17 @@ class RecyclerViewFavAdapter(var months_array: MutableList<String>, var img_mont
          return favCityList.size
      }
 
-//     override fun onActivityResult(requestCode: Int, resultCode: Int) {
-//         notifyDataSetChanged()
-//     }
-    fun onActivityResult(requestCode: Int, resultCode: Int) {
+    fun onActivityResult(requestCode: Int, resultCode: Int, intExtra: Int) {
+        Log.d("CDA", "onActivityResult")
+        Log.d("CDA", favCityList.toString())
+
+        favCityList.forEachIndexed { index, city ->
+            if(city.ID == intExtra){
+                favCityList.removeAt(index)
+            }
+        }
+        Log.d("CDA", favCityList.toString())
         notifyDataSetChanged()
     }
-
 
  }
