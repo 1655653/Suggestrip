@@ -2,6 +2,8 @@ package com.example.suggestripapp.fav
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.suggestripapp.City
 import com.example.suggestripapp.R
 import kotlinx.android.synthetic.main.activity_explore.*
+import kotlinx.android.synthetic.main.activity_explore.rv
+import kotlinx.android.synthetic.main.activity_fav.*
 
 class FavActivity : AppCompatActivity() {
 //    var city_name_array = mutableListOf<String>("MIAMI", "NEW YORK", "PARIS", "ROME", "TOKYO")
@@ -65,7 +69,8 @@ class FavActivity : AppCompatActivity() {
 
 
 
-        favAdapter = RecyclerViewFavAdapter(city_name_array, img_cities_array, favCityList)
+        favAdapter = RecyclerViewFavAdapter(favCityList)
+
         rv.adapter = favAdapter
 
     }
