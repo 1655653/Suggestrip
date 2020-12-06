@@ -1,21 +1,24 @@
 package com.example.suggestripapp.fav
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.suggestripapp.City
+import com.example.suggestripapp.CityDetailsActivity
 import com.example.suggestripapp.R
 import kotlinx.android.synthetic.main.activity_explore.*
 
 class FavActivity : AppCompatActivity() {
-    var city_name_array = mutableListOf<String>("MIAMI", "NEW YORK", "PARIS", "ROME", "TOKYO")
-    var img_cities_array = mutableListOf(R.drawable.miami, R.drawable.new_york, R.drawable.paris, R.drawable.rome, R.drawable.tokyo)
+//    var city_name_array = mutableListOf<String>("MIAMI", "NEW YORK", "PARIS", "ROME", "TOKYO")
+//    var img_cities_array = mutableListOf(R.drawable.miami, R.drawable.new_york, R.drawable.paris, R.drawable.rome, R.drawable.tokyo)
     var city_list = mutableListOf<City>()
     private var favDB: FavDB? = null
-    //var city_name_array = mutableListOf<String>()
-    //var img_cities_array = mutableListOf<String>()
+    var city_name_array = mutableListOf<String>()
+    var img_cities_array = mutableListOf<String>()
     val favCityList = mutableListOf<City>()
 
     private var favAdapter: RecyclerViewFavAdapter? = null
@@ -34,6 +37,7 @@ class FavActivity : AppCompatActivity() {
         itemTouchHelper.attachToRecyclerView(rv) // set swipe to recyclerview
 
 
+
         loadData()
 
 
@@ -44,12 +48,6 @@ class FavActivity : AppCompatActivity() {
             city_list.clear()
         }
         val db = favDB!!.readableDatabase
-        /*city_name_array.forEachIndexed{ i, s ->
-             //var c = City("", "", "", i, "", s, null, null, "null")
-             favDB!!.insertIntoTheDatabase(s,img_cities_array[i],i.toString(),"1")
-        }*/
-
-
 
         val cursor = favDB!!.select_all_favorite_list()
         try {
@@ -67,13 +65,23 @@ class FavActivity : AppCompatActivity() {
         }
 
 
+
+
         favAdapter = RecyclerViewFavAdapter(city_name_array, img_cities_array, favCityList)
         rv.adapter = favAdapter
+
     }
 
     // remove item after swipe
-    private val simpleCallback: ItemTouchHelper.SimpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
-        override fun onMove(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder, target: RecyclerView.ViewHolder): Boolean {
+    private val simpleCallback: ItemTouchHelper.SimpleCallback = object : ItemTouchHelper.SimpleCallback(
+        0,
+        ItemTouchHelper.LEFT
+    ) {
+        override fun onMove(
+            recyclerView: RecyclerView,
+            viewHolder: RecyclerView.ViewHolder,
+            target: RecyclerView.ViewHolder
+        ): Boolean {
             return false
         }
 
@@ -82,11 +90,30 @@ class FavActivity : AppCompatActivity() {
             val c = favCityList[position]
             if (direction == ItemTouchHelper.LEFT) { //if swipe left
                 favAdapter!!.notifyItemRemoved(position) // item removed from recyclerview
-                city_list.removeAt(position) //then remove item
+                favCityList.removeAt(position) //then remove item
                 favDB!!.remove_fav(c.ID.toString()) // remove item from database
 
             }
         }
     }
+    override fun onBackPressed() {
+        var id_city2rmv = intent.extras?.get("city2rmv")
+        favCityList.forEachIndexed { index, city ->
+            if (id_city2rmv != 0) {
+                if (city.ID == id_city2rmv) {
+                    favCityList.removeAt(index)
+                }
+            }
+        }
+        super.onBackPressed()
+    }
+    override fun onActivityResult(request: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(request, resultCode, data)
+        //favAdapter?.notifyDataSetChanged()
+        if(request == 1)
+            favAdapter?.onActivityResult(request,1);
+    }
+
+
 
 }

@@ -11,14 +11,15 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.suggestripapp.fav.FavDB
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_city_details.*
 import okhttp3.*
-import org.json.JSONObject
 import java.io.IOException
 import java.lang.reflect.Type
 import java.util.*
@@ -29,7 +30,9 @@ class CityDetailsActivity : AppCompatActivity() {
     lateinit var city:City
     private val client = OkHttpClient()
     var from_shake = false
+    var from_rv = false
     var popup: Dialog? = null
+    var city2rmv = 0
 ///TODO WEATHER AND COVID VISUALIZATION
     //shake
     private var sensorManager: SensorManager? = null
@@ -51,14 +54,17 @@ class CityDetailsActivity : AppCompatActivity() {
         currentAcceleration = SensorManager.GRAVITY_EARTH
         lastAcceleration = SensorManager.GRAVITY_EARTH
         from_shake = intent.getBooleanExtra("from_shake", false)
+        from_rv = intent.getBooleanExtra("from_rv", false)
 
         //choose id, random if shake, selected if explored
         var ID = ""
-        if (!from_shake) {     //call with a specifi ìc id
+
+        if(from_shake){
+            ID = (0..101).random().toString()
+        }
+        else{
             city = intent.extras?.get("city") as City
             ID = city.ID.toString()
-        } else {//call with a random ìc id
-            ID = (0..101).random().toString()
         }
 
         //aws call
@@ -91,11 +97,41 @@ class CityDetailsActivity : AppCompatActivity() {
                     runOnUiThread {
                         popup?.dismiss()
                         populateLayout(city!!)
-                    }
 
+                        //favourite detection
+                        iv_preferred.setOnClickListener {
+
+                            var db = FavDB(applicationContext)
+                            managePreferred(db, city)
+                        }
+                    }
                 }
             }
         })
+    }
+
+    private fun managePreferred(db: FavDB, city: City) {
+        val query = "SELECT * FROM " + FavDB.TABLE_NAME + " WHERE " + FavDB.ID + " = ${city.ID.toString()} "
+        var cursor = db.readableDatabase.rawQuery(query, null, null)
+        //se esiste lo cancello
+        if (cursor.moveToFirst()){
+            iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
+            db.remove_fav(city.ID.toString())
+            Toast.makeText(applicationContext, "${city.name} removed from the favourites", Toast.LENGTH_SHORT).show()
+            city2rmv = city.ID
+//            if(from_rv) {
+//                val intent = Intent(this, MainActivity::class.java).apply {}
+//                startActivity(intent)
+//            }
+        }
+        //se non esiste lo aaggiungo
+        else{
+            iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
+            db.insertIntoTheDatabase(city.name, city.img_url, city.ID.toString(), "1")
+            Toast.makeText(applicationContext, "${city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
+        }
+
+
     }
 
     override fun onDestroy() {
@@ -167,6 +203,22 @@ class CityDetailsActivity : AppCompatActivity() {
                 .centerCrop()
 
         Glide.with(applicationContext).load(city.img_url).apply(options).into(iv_city_image)
+
+        ///SET HEART IMAGE COLOR
+        var sql = FavDB(applicationContext)
+        val query = "SELECT * FROM " + FavDB.TABLE_NAME + " WHERE " + FavDB.ID + " = ${city.ID.toString()} "
+        Log.d("dblog", query)
+        var cursor = sql.readableDatabase.rawQuery(query, null, null)
+        if (cursor.moveToFirst()) {
+            val favourite = cursor.getString(3)
+            Log.d("dblog", favourite)
+            if(favourite == "1"){
+                iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
+            }
+            else{
+                iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
+            }
+        }
     }
     override fun onBackPressed() {
         if(from_shake){
@@ -174,6 +226,22 @@ class CityDetailsActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java).apply {}
             intent.putExtra("back_from_shake", true)
             startActivity(intent)
+        }
+        else if (from_rv){
+//            val intent = Intent(this, MainActivity::class.java).apply {}
+//            intent.putExtra("city2rmv", city2rmv)
+////            startActivity(intent)
+//            val intent_rv = Intent()
+//            intent_rv.putExtra("id","1");
+//            intent_rv.putExtra("description","sendback description from 2nd activity");
+//            setResult(RESULT_OK, intent_rv);
+//            super.onBackPressed()
+            val intent = Intent()
+            intent.putExtra("id", "1")
+            intent.putExtra("description", "sendback description from 2nd activity")
+            setResult(RESULT_OK, intent)
+            finish()
+
         }
         else{
             super.onBackPressed()

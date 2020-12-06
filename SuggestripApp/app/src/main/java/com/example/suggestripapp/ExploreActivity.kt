@@ -34,27 +34,6 @@ class ExploreActivity : AppCompatActivity() {
 //            //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
         run()
 
-        //TODO cache save
-        //open file local data
-//        val f = File(Environment.getExternalStorageState()+"citylist.dat")
-//
-//        if (f.length().toInt() == 0){
-//            val inStream = FileInputStream(f)
-//            val objectInStream = ObjectInputStream(inStream)
-//            val count: Int = objectInStream.readInt() // Get the number of cities
-//
-//            val rl = ArrayList<City>()
-//            for (c in 0 until count) rl.add(objectInStream.readObject() as City)
-//            objectInStream.close()
-//
-//
-//            ShowPopup()
-//            //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
-//            run()
-//        }
-//        else{
-//            populateRV(city_list)
-//        }
     }
     fun ShowPopup() {
         popup?.setContentView(R.layout.user_popup)

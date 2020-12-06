@@ -1,7 +1,7 @@
 package com.example.suggestripapp.fav
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,11 +14,10 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.suggestripapp.City
 import com.example.suggestripapp.CityDetailsActivity
 import com.example.suggestripapp.R
-import jp.wasabeef.glide.transformations.BlurTransformation
 
 
 //qui creo l'adapter ma sopratutto la classe ViewHolder che mi serve per sistemare tutti gli item della cardview
-class RecyclerViewFavAdapter(var months_array: MutableList<String>, var img_months_array: MutableList<Int>, var city_list: MutableList<City>) : RecyclerView.Adapter<RecyclerViewFavAdapter.ViewHolder>()
+class RecyclerViewFavAdapter(var months_array: MutableList<String>, var img_months_array: MutableList<String>, var city_list: MutableList<City>) : RecyclerView.Adapter<RecyclerViewFavAdapter.ViewHolder>()
  {
 
 
@@ -43,8 +42,20 @@ class RecyclerViewFavAdapter(var months_array: MutableList<String>, var img_mont
 
                  intent.putExtra("city", city_list[adapterPosition])
 
-                 intent.putExtra("from_shake", "false")
-                 context.startActivity(intent)
+                 intent.putExtra("from_shake", false)
+
+                 intent.putExtra("from_rv", true)
+
+
+                 intent.putExtra("id", 1);
+                 intent.putExtra("description", "send description to 2nd activity");
+                 (context as Activity).startActivityForResult(intent, 1)
+//
+//                 intent.putExtra("id", "1");
+//                 intent.putExtra("description", "send description to 2nd activity");
+//                 (context as Activity).startActivityForResult(intent, 1)
+
+                 //context.startActivity(intent)
              }
 
 
@@ -61,8 +72,8 @@ class RecyclerViewFavAdapter(var months_array: MutableList<String>, var img_mont
 
      private fun removeItem(position: Int) {
          favCityList.remove(favCityList[position])
-         months_array.remove(months_array[position])
-         img_months_array.remove(img_months_array[position])
+         //months_array.remove(months_array[position])
+         //img_months_array.remove(img_months_array[position])
          notifyItemRemoved(position)
          notifyItemRangeChanged(position, favCityList.size)
      }
@@ -77,17 +88,28 @@ class RecyclerViewFavAdapter(var months_array: MutableList<String>, var img_mont
          //holder.bind(months_array, img_months_array, position)
 
          if (favCityList.size>0) {
+
+
              holder.favTextView.text = favCityList[position].name
              var options = RequestOptions()
                      .placeholder(R.drawable.logo)
                      .centerCrop()
-             Glide.with(holder.favImageView.context).load(img_months_array[position]!!).apply(RequestOptions.bitmapTransform(BlurTransformation(50))).apply(options).into(holder.favImageView)
-             //holder.favImageView.setImageResource(favCityList?.get(position).img_url)
+             //Glide.with(holder.favImageView.context).load(img_months_array[position]!!).apply(RequestOptions.bitmapTransform(BlurTransformation(50))).apply(options).into(holder.favImageView)
+             Glide.with(holder.favImageView.context).load(favCityList[position].img_url).apply(options).into(holder.favImageView)
+             //holder.favImageView.setImageResource(favCityList[position].img_url)
          }
      }
 
      override fun getItemCount(): Int {
          return favCityList.size
      }
+
+//     override fun onActivityResult(requestCode: Int, resultCode: Int) {
+//         notifyDataSetChanged()
+//     }
+    fun onActivityResult(requestCode: Int, resultCode: Int) {
+        notifyDataSetChanged()
+    }
+
 
  }

@@ -49,7 +49,8 @@ class FavDB(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAME, null, 
     // remove line from database
     fun remove_fav(id: String) {
         val db = this.writableDatabase
-        val sql = "UPDATE " + TABLE_NAME + " SET  " + FAVORITE_STATUS + " ='0' WHERE " + ID + "=" + id + ""
+        //val sql = "UPDATE " + TABLE_NAME + " SET  " + FAVORITE_STATUS + " ='0' WHERE " + ID + "=" + id + ""
+        val sql = "DELETE FROM " + TABLE_NAME +" WHERE ID = "+ id
         db.execSQL(sql)
         Log.d("remove", id)
     }
@@ -64,7 +65,7 @@ class FavDB(context: Context?) : SQLiteOpenHelper(context, DATABASE_NAME, null, 
     companion object {
         private const val DB_VERSION = 1
         private const val DATABASE_NAME = "CityDB"
-        private const val TABLE_NAME = "favoriteTable"
+        const val TABLE_NAME = "favoriteTable"
         var ID = "id"
         var NAME = "itemTitle"
         var IMG_URL = "itemImage"

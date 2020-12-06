@@ -18,6 +18,7 @@
         <activity android:name=".CityDetailsActivity">
             android:parentActivityName=".ExploreActivity">
             android:parentActivityName=".MainActivity">
+            android:parentActivityName=".fav.FavActivity">
         </activity>
         <activity android:name=".ExploreActivity">
             android:parentActivityName=".MainActivity">
