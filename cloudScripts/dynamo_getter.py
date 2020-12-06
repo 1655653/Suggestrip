@@ -13,7 +13,7 @@ class DecimalEncoder(json.JSONEncoder):
 def get_weather(lat, lon):
     r =  requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid='+os.environ['open_weather']).json()
     payload = {}
-    payload['weather'] = r['weather']
+    payload = r['weather'][0]
     payload['temperature'] = int(float(r['main']['temp']) - 273.15)
     return payload
     
