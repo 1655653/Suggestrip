@@ -32,7 +32,7 @@ class CityDetailsActivity : AppCompatActivity() {
     var from_shake = false
     var from_rv = false
     var popup: Dialog? = null
-    var city2rmv = 0
+    var id_removed = 0
 ///TODO WEATHER AND COVID VISUALIZATION
     //shake
     private var sensorManager: SensorManager? = null
@@ -118,17 +118,15 @@ class CityDetailsActivity : AppCompatActivity() {
             iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
             db.remove_fav(city.ID.toString())
             Toast.makeText(applicationContext, "${city.name} removed from the favourites", Toast.LENGTH_SHORT).show()
-            city2rmv = city.ID
-//            if(from_rv) {
-//                val intent = Intent(this, MainActivity::class.java).apply {}
-//                startActivity(intent)
-//            }
+
+            id_removed = city.ID
         }
         //se non esiste lo aaggiungo
         else{
             iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
             db.insertIntoTheDatabase(city.name, city.img_url, city.ID.toString(), "1")
             Toast.makeText(applicationContext, "${city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
+            id_removed = 0
         }
 
 
@@ -228,19 +226,13 @@ class CityDetailsActivity : AppCompatActivity() {
             startActivity(intent)
         }
         else if (from_rv){
-//            val intent = Intent(this, MainActivity::class.java).apply {}
-//            intent.putExtra("city2rmv", city2rmv)
-////            startActivity(intent)
-//            val intent_rv = Intent()
-//            intent_rv.putExtra("id","1");
-//            intent_rv.putExtra("description","sendback description from 2nd activity");
-//            setResult(RESULT_OK, intent_rv);
-//            super.onBackPressed()
+            Log.d("CDA", "FROM RV BACK")
             val intent = Intent()
             intent.putExtra("id", "1")
+            intent.putExtra("id_removed", id_removed)
             intent.putExtra("description", "sendback description from 2nd activity")
             setResult(RESULT_OK, intent)
-            finish()
+            super.onBackPressed()
 
         }
         else{

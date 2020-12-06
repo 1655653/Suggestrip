@@ -40,6 +40,7 @@ class ProfilingActivity : AppCompatActivity() {
     var dollar_array_boolean = BooleanArray(3)
     var dollar_cost = 0
     var filled_array_boolean = BooleanArray(8)
+    var is_last_minute = false
 
 
     val size: Point? = null
@@ -91,6 +92,7 @@ class ProfilingActivity : AppCompatActivity() {
         val pizza_array = listOf(btn_pizza1, btn_pizza2, btn_pizza3, btn_pizza4, btn_pizza5)
         var pizza_array_boolean = BooleanArray(pizza_array.size)
 
+        lastMinutePopup()
 
         //cambia dot
         mViewPager!!.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
@@ -750,6 +752,19 @@ class ProfilingActivity : AppCompatActivity() {
 
     }
 
+    private fun lastMinutePopup() {
+        AlertDialog.Builder(this)
+                .setTitle("LAST MINUTE")
+                .setMessage("Are you searching a last minute travel?")
+                .setPositiveButton("Yes") { _, _ ->
+                    is_last_minute = true
+                }
+                .setNegativeButton("No") { _, _ ->
+
+                }
+                .show()
+    }
+
     private fun ShowAlert(i: Int) {
         AlertDialog.Builder(this)
             .setTitle("Missing Value")
@@ -761,21 +776,7 @@ class ProfilingActivity : AppCompatActivity() {
             }
             .show()
     }
-    private fun showCustomPopupMenu() {
-        val windowManager2 = getSystemService(WINDOW_SERVICE) as WindowManager
-        val layoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view: View = layoutInflater.inflate(R.layout.missing_element, null)
-        val params = WindowManager.LayoutParams(
-                WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.WRAP_CONTENT,
-                WindowManager.LayoutParams.TYPE_PHONE,
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-                PixelFormat.TRANSLUCENT)
-        params.gravity = Gravity.CENTER or Gravity.CENTER
-        params.x = 0
-        params.y = 0
-        windowManager2.addView(view, params)
-    }
+
 
     private fun AwsCall() {
         var url = "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info"
