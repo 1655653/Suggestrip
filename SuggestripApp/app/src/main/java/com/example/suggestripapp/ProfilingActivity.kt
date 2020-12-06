@@ -2,6 +2,7 @@ package com.example.suggestripapp
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.content.res.Configuration
 import android.graphics.PixelFormat
 import android.graphics.Point
@@ -817,7 +818,13 @@ class ProfilingActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call, response: Response) {
                 if (!response.isSuccessful) throw IOException("Unexpected code $response")
-                Log.d("DIOMAYALEE", "body: " + response.body!!.string())
+                val intent = Intent(applicationContext, RankActivity::class.java).apply {}
+                //to pass arguments to next activity
+                var value = response.body!!.string()
+                intent.putExtra("body_string", value); //Optional parameters
+
+                startActivity(intent)
+                //Log.d("DIOMAYALEE", "body: " + response.body!!.string())
             }
         })
     }

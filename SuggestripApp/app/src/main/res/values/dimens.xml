@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="tv_margin_left">25dp</dimen>
-    <dimen name ="user_image_dim_w">126dp</dimen>
-    <dimen name ="user_image_dim_h">73dp</dimen>
-    <dimen name ="description_tv_city">25dp</dimen>
+    <dimen name="user_image_dim_w">126dp</dimen>
+    <dimen name="user_image_dim_h">73dp</dimen>
+    <dimen name="description_tv_city">25dp</dimen>
     <dimen name="corner_radius">8dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 
 </resources>
