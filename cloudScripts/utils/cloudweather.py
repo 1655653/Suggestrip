@@ -9,7 +9,7 @@ with open("pwds.json",encoding="utf-8") as fp:
 def get_weather(lat, lon):
     r =  requests.get(f'http://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid='+pwds['open_weather']).json()
     payload = {}
-    payload['weather'] = r['weather']
+    payload = r['weather'][0]
     payload['temperature'] = int(float(r['main']['temp']) - 273.15)
     return payload
 
