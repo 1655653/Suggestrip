@@ -198,16 +198,30 @@ class CityDetailsActivity : AppCompatActivity() {
         populateIcons("tree", city.tags?.nature?.toInt())
 
 
-        tv_case_per_million.text = "Cases x 1mil pop: " + city.covid_info?.case_per_million.toString()
-        tv_avg_confirmed.text = "Avg confirmed: " + city.covid_info?.avg_confirmed.toString()
-        tv_avg_deaths.text = "Avg deaths: " + city.covid_info?.avg_deaths.toString()
-        tv_avg_recovered.text = "Avg recovered: " + city.covid_info?.avg_recovered.toString()
+        if (city.covid_info?.case_per_million!! >0)
+            tv_case_per_million.text = "Cases x 1mil pop: " + city.covid_info?.case_per_million!!.toInt().toString()
+        else
+            tv_case_per_million.visibility = GONE
+        if (city.covid_info?.avg_confirmed!! >0)
+            tv_avg_confirmed.text = "Avg confirmed: " + city.covid_info?.avg_confirmed!!.toInt().toString()
+        else
+            tv_avg_confirmed.visibility = GONE
+        if (city.covid_info?.avg_deaths!! >0)
+            tv_avg_deaths.text = "Avg deaths: " + city.covid_info?.avg_deaths!!.toInt().toString()
+        else
+            tv_avg_deaths.visibility = GONE
+        if (city.covid_info?.avg_recovered!! >0)
+            tv_avg_recovered.text = "Avg recovered: " + city.covid_info?.avg_recovered!!.toInt().toString()
+        else
+            tv_avg_recovered.visibility = GONE
+
+
 
 
         var xxx = "https://openweathermap.org/img/wn/"+ city.weather?.icon.toString()+ "@2x.png"
         var tv_weather_id = city.weather?.id.toString()
 //        tv_weather_main.text = city.weather?.main.toString()
-//        tv_weather_description.text = city.weather?.description.toString()
+        tv_weather_description.text = city.weather?.description.toString()
         //tv_weather_icon.text = city.weather?.icon.toString()
         tv_weather_temperature.text = "Temperature: "+ city.weather?.temperature?.toInt().toString()+"°"
         Log.d("xxx", xxx)

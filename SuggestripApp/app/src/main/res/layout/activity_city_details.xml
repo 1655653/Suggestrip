@@ -545,7 +545,7 @@
                 <GridLayout
                     android:id="@+id/grid_covid"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
                     android:columnCount="1"
                     android:rowCount="1"
@@ -554,6 +554,18 @@
 
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/covid_separator">
+
+                    <ImageView
+                        android:id="@+id/corona_img"
+                        android:layout_width="96dp"
+                        android:layout_height="73dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/coronavirus" />
 
                     <TextView
                         android:id="@+id/tv_case_per_million"
@@ -624,6 +636,12 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/empty_greek" />
+                    <TextView
+                        android:id="@+id/tv_weather_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weather: "
+                        android:textSize="@dimen/description_tv_city" />
 
                     <TextView
                         android:id="@+id/tv_weather_temperature"
