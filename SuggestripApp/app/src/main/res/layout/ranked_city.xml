@@ -25,7 +25,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="220dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/miami" />
 
@@ -39,7 +39,9 @@
                 android:layout_marginBottom="18dp"
                 android:text="Miami"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="32dp"
+                />
 
             <TextView
                 android:id="@+id/position"
@@ -51,7 +53,9 @@
                 android:layout_marginBottom="170dp"
                 android:text="#1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:textSize="32dp"
+                />
 
 
             <TextView
@@ -64,34 +68,34 @@
                 android:layout_marginBottom="140dp"
                 android:text="Score:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="32dp"
                 android:textColor="#fff" />
 
 
-            <ImageView
-                android:id="@+id/favBtn"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="bottom|right"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="18dp"
-                android:background="@drawable/ic_favorite_shadow_24dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#fff"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+        <ImageView
+            android:id="@+id/favBtn"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/ic_favorite_shadow_24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            <ImageView
-                android:id="@+id/crown"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_gravity="top|center"
-                android:background="@drawable/gold"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#fff"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+        <ImageView
+            android:id="@+id/crown"
+            android:layout_width="57dp"
+            android:layout_height="49dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@drawable/gold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
 

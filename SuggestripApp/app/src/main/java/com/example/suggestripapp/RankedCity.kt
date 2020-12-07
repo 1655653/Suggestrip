@@ -11,8 +11,6 @@ data class RankedCity(
     var distance_score: Float,
     var cost_score: Float,
     var score: Float,
-    var covid_info: Covid?,
-    var weather: Weather?
 ):Serializable{
     override fun toString(): String {
         return "City(tag_score='$tag_score', img_url='$img_url', distance='$distance', ID=$ID, country='$country', name='$name', distance_score=$distance_score, cost_score=$cost_score, score=$score)"

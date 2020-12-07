@@ -1,5 +1,6 @@
 package com.example.suggestripapp
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
@@ -11,6 +12,8 @@ import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
 import android.util.Log
+import android.view.View.GONE
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
@@ -171,41 +174,47 @@ class CityDetailsActivity : AppCompatActivity() {
         sensorManager!!.unregisterListener(sensorListener)
         super.onPause()
     }
+    @SuppressLint("SetTextI18n")
     private fun populateLayout(city: City) {
+
 
         //FILL THE ACTIVITY
         tv_city_name.text = city.name
         tv_city_description.text = city.description
-        tv_costsR.text = city.tags?.costs.toString()
-        tv_cultureR.text = city.tags?.culture.toString()
-        tv_infrastructureR.text = city.tags?.infrastructure.toString()
-        tv_natureR.text = city.tags?.nature.toString()
-        tv_sportsR.text = city.tags?.sports.toString()
-        tv_night_lifeR.text = city.tags?.night_life.toString()
-        tv_cultureR.text = city.tags?.culture.toString()
-        tv_infrastructureR.text = city.tags?.infrastructure.toString()
-        tv_natureR.text = city.tags?.nature.toString()
-        tv_sportsR.text = city.tags?.sports.toString()
-        tv_night_lifeR.text = city.tags?.night_life.toString()
 
-        /* COVID
-        tv_case_per_million.text = city.covid_info?.case_per_million.toString()
-        tv_avg_confirmed.text = city.covid_info?.avg_confirmed.toString()
-        tv_avg_deaths.text = city.covid_info?.avg_deaths.toString()
-        tv_avg_recovered.text = city.covid_info?.avg_recovered.toString()
-         */
+        //tv_costs.text = "Costs: " + city.tags?.costs.toString()
+        var n = city.tags?.costs?.toInt()
+        for (i in n!!..2){
+            var c = (i+1).toString()
+            Log.d("provaaa",c +" n = "+ n.toString())
+            findViewById<ImageView>(resources.getIdentifier("dollar$c", "id", packageName)).visibility = GONE
 
-        /*WEATHER
-        tv_weather_id = city.weather?.id.toString()
+        }
+        populateIcons("greek", city.tags?.culture?.toInt())
+        populateIcons("car", city.tags?.infrastructure?.toInt())
+        populateIcons("ball", city.tags?.sports?.toInt())
+        populateIcons("glass", city.tags?.night_life?.toInt())
+        populateIcons("pizza", city.tags?.food?.toInt())
+        populateIcons("tree", city.tags?.nature?.toInt())
+
+
+        tv_case_per_million.text = "Cases x 1mil pop: " + city.covid_info?.case_per_million.toString()
+        tv_avg_confirmed.text = "Avg confirmed: " + city.covid_info?.avg_confirmed.toString()
+        tv_avg_deaths.text = "Avg deaths: " + city.covid_info?.avg_deaths.toString()
+        tv_avg_recovered.text = "Avg recovered: " + city.covid_info?.avg_recovered.toString()
+
+
+        var xxx = "https://openweathermap.org/img/wn/"+ city.weather?.icon.toString()+ "@2x.png"
+        var tv_weather_id = city.weather?.id.toString()
         tv_weather_main.text = city.weather?.main.toString()
         tv_weather_description.text = city.weather?.description.toString()
-        tv_weather_icon.text = city.weather?.icon.toString()
+        //tv_weather_icon.text = city.weather?.icon.toString()
         tv_weather_temperature.text = city.weather?.temperature.toString()
-         */
-
+        Log.d("xxx", xxx)
         var options = RequestOptions()
                 .placeholder(R.drawable.logo)
                 .centerCrop()
+        Glide.with(applicationContext).load(xxx).apply(options).into(tv_weather_icon)
 
         Glide.with(applicationContext).load(city.img_url).apply(options).into(iv_city_image)
 
@@ -225,6 +234,17 @@ class CityDetailsActivity : AppCompatActivity() {
             }
         }
     }
+
+    fun populateIcons(icon:String, n: Int?) {
+        for (i in n!!..4){
+            var c = (i+1).toString()
+            Log.d("provaaa", "$icon$c n = $n")
+            findViewById<ImageView>(resources.getIdentifier(icon+c, "id", packageName)).visibility = GONE
+        }
+
+    }
+
+
     override fun onBackPressed() {
         if(from_shake){
             Log.d("CDA", "onBackPressed Called")

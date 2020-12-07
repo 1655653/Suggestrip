@@ -44,7 +44,7 @@ class RankActivity : AppCompatActivity() {
 
         }
 
-        city_list.reverse()
+
     }
 
 }
