@@ -4,6 +4,7 @@ import android.Manifest
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
@@ -61,7 +62,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
     var roma_lon = 13.643988
     var coordinates = mutableListOf<Double>(roma_lat,roma_lon)
 
-    private lateinit var locationManager: LocationManager
+    private var locationManager: LocationManager? = null
     private val locationPermissionCode = 2
 
 
@@ -827,7 +828,13 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
     }
 
     //          GPS UTILS
+
     private fun ManagePermissionCoord(){
+        var manager = getSystemService( Context.LOCATION_SERVICE ) as LocationManager
+
+        if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
+            buildAlertMessageNoGps();
+        }
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) ==
                 PackageManager.PERMISSION_GRANTED &&
                 ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) ==
@@ -846,17 +853,32 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
 
         }
     }
+
+    private fun buildAlertMessageNoGps() {
+         var  builder = AlertDialog.Builder (this);
+        builder.setMessage("Your GPS seems to be disabled, do you want to enable it?")
+                .setCancelable(false)
+                .setPositiveButton("Yes") { _, _ ->
+                    startActivity(Intent (android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                }
+                .setNegativeButton("No") { dialog, _ ->
+                    dialog.cancel();
+                }
+                .show()
+    }
+
     private fun getLocation() {
 
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
         if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionCode)
-        }
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
-        var location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+            locationManager!!.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
+            var location = locationManager!!.getLastKnownLocation(LocationManager.GPS_PROVIDER)
 
-        coordinates[0] =  location.latitude
-        coordinates[1] = location.longitude
+            coordinates[0] =  location.latitude
+            coordinates[1] = location.longitude
+        }
+
         Log.d("diomaialino", " after lastknow $coordinates")
 
     }
@@ -954,5 +976,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
             super.onBackPressed()
         }
     }
+
+
 
 }
