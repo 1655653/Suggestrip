@@ -88,6 +88,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_city_description" />
+
                 <GridLayout
                     android:id="@+id/grid_tags"
                     android:layout_width="match_parent"
@@ -120,6 +121,7 @@
                         app:srcCompat="@drawable/filled_greek"
 
                         />
+
                     <ImageView
                         android:id="@+id/greek2"
                         android:layout_width="40dp"
@@ -132,6 +134,7 @@
                         app:srcCompat="@drawable/filled_greek"
 
                         />
+
                     <ImageView
                         android:id="@+id/greek3"
                         android:layout_width="40dp"
@@ -144,6 +147,7 @@
                         app:srcCompat="@drawable/filled_greek"
 
                         />
+
                     <ImageView
                         android:id="@+id/greek4"
                         android:layout_width="40dp"
@@ -156,6 +160,7 @@
                         app:srcCompat="@drawable/filled_greek"
 
                         />
+
                     <ImageView
                         android:id="@+id/greek5"
                         android:layout_width="40dp"
@@ -185,8 +190,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_car"
-                        />
+                        app:srcCompat="@drawable/filled_car" />
+
                     <ImageView
                         android:id="@+id/car2"
                         android:layout_width="40dp"
@@ -196,8 +201,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_car"
-                        />
+                        app:srcCompat="@drawable/filled_car" />
+
                     <ImageView
                         android:id="@+id/car3"
                         android:layout_width="40dp"
@@ -207,8 +212,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_car"
-                        />
+                        app:srcCompat="@drawable/filled_car" />
+
                     <ImageView
                         android:id="@+id/car4"
                         android:layout_width="40dp"
@@ -218,8 +223,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_car"
-                        />
+                        app:srcCompat="@drawable/filled_car" />
+
                     <ImageView
                         android:id="@+id/car5"
                         android:layout_width="40dp"
@@ -229,14 +234,15 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_car"
-                        />
+                        app:srcCompat="@drawable/filled_car" />
+
                     <TextView
                         android:id="@+id/tv_sports"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sports"
                         android:textSize="@dimen/description_tv_city" />
+
                     <ImageView
                         android:id="@+id/ball1"
                         android:layout_width="40dp"
@@ -246,8 +252,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_ball"
-                        />
+                        app:srcCompat="@drawable/filled_ball" />
+
                     <ImageView
                         android:id="@+id/ball2"
                         android:layout_width="40dp"
@@ -257,8 +263,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_ball"
-                        />
+                        app:srcCompat="@drawable/filled_ball" />
+
                     <ImageView
                         android:id="@+id/ball3"
                         android:layout_width="40dp"
@@ -268,8 +274,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_ball"
-                        />
+                        app:srcCompat="@drawable/filled_ball" />
+
                     <ImageView
                         android:id="@+id/ball4"
                         android:layout_width="40dp"
@@ -279,8 +285,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_ball"
-                        />
+                        app:srcCompat="@drawable/filled_ball" />
+
                     <ImageView
                         android:id="@+id/ball5"
                         android:layout_width="40dp"
@@ -290,8 +296,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_ball"
-                        />
+                        app:srcCompat="@drawable/filled_ball" />
 
                     <TextView
                         android:id="@+id/tv_night_life"
@@ -309,8 +314,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_glass"
-                        />
+                        app:srcCompat="@drawable/filled_glass" />
+
                     <ImageView
                         android:id="@+id/glass2"
                         android:layout_width="40dp"
@@ -320,8 +325,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_glass"
-                        />
+                        app:srcCompat="@drawable/filled_glass" />
+
                     <ImageView
                         android:id="@+id/glass3"
                         android:layout_width="40dp"
@@ -331,8 +336,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_glass"
-                        />
+                        app:srcCompat="@drawable/filled_glass" />
+
                     <ImageView
                         android:id="@+id/glass4"
                         android:layout_width="40dp"
@@ -342,8 +347,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_glass"
-                        />
+                        app:srcCompat="@drawable/filled_glass" />
+
                     <ImageView
                         android:id="@+id/glass5"
                         android:layout_width="40dp"
@@ -353,25 +358,26 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_glass"
-                        />
+                        app:srcCompat="@drawable/filled_glass" />
+
                     <TextView
                         android:id="@+id/tv_nature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nature"
                         android:textSize="@dimen/description_tv_city" />
+
                     <ImageView
                         android:id="@+id/tree1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:text="icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_tree"
-                        />
+                        app:srcCompat="@drawable/filled_tree" />
+
                     <ImageView
                         android:id="@+id/tree2"
                         android:layout_width="40dp"
@@ -381,8 +387,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_tree"
-                        />
+                        app:srcCompat="@drawable/filled_tree" />
+
                     <ImageView
                         android:id="@+id/tree3"
                         android:layout_width="40dp"
@@ -392,8 +398,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_tree"
-                        />
+                        app:srcCompat="@drawable/filled_tree" />
+
                     <ImageView
                         android:id="@+id/tree4"
                         android:layout_width="40dp"
@@ -403,8 +409,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_tree"
-                        />
+                        app:srcCompat="@drawable/filled_tree" />
+
                     <ImageView
                         android:id="@+id/tree5"
                         android:layout_width="40dp"
@@ -414,14 +420,15 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_tree"
-                        />
+                        app:srcCompat="@drawable/filled_tree" />
+
                     <TextView
                         android:id="@+id/tv_food"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Food"
                         android:textSize="@dimen/description_tv_city" />
+
                     <ImageView
                         android:id="@+id/pizza1"
                         android:layout_width="40dp"
@@ -431,8 +438,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_pizza"
-                        />
+                        app:srcCompat="@drawable/filled_pizza" />
+
                     <ImageView
                         android:id="@+id/pizza2"
                         android:layout_width="40dp"
@@ -442,8 +449,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_pizza"
-                        />
+                        app:srcCompat="@drawable/filled_pizza" />
+
                     <ImageView
                         android:id="@+id/pizza3"
                         android:layout_width="40dp"
@@ -453,8 +460,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_pizza"
-                        />
+                        app:srcCompat="@drawable/filled_pizza" />
+
                     <ImageView
                         android:id="@+id/pizza4"
                         android:layout_width="40dp"
@@ -464,8 +471,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_pizza"
-                        />
+                        app:srcCompat="@drawable/filled_pizza" />
+
                     <ImageView
                         android:id="@+id/pizza5"
                         android:layout_width="40dp"
@@ -475,14 +482,15 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_pizza"
-                        />
+                        app:srcCompat="@drawable/filled_pizza" />
+
                     <TextView
                         android:id="@+id/tv_costs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Costs"
                         android:textSize="@dimen/description_tv_city" />
+
                     <ImageView
                         android:id="@+id/dollar1"
                         android:layout_width="40dp"
@@ -492,8 +500,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_cost"
-                        />
+                        app:srcCompat="@drawable/filled_cost" />
+
                     <ImageView
                         android:id="@+id/dollar2"
                         android:layout_width="40dp"
@@ -503,8 +511,8 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_cost"
-                        />
+                        app:srcCompat="@drawable/filled_cost" />
+
                     <ImageView
                         android:id="@+id/dollar3"
                         android:layout_width="40dp"
@@ -514,9 +522,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/filled_cost"
-                        />
-
+                        app:srcCompat="@drawable/filled_cost" />
 
 
                 </GridLayout>
@@ -533,6 +539,9 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/grid_tags" />
+
+
+
                 <GridLayout
                     android:id="@+id/grid_covid"
                     android:layout_width="match_parent"
@@ -545,6 +554,7 @@
 
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/covid_separator">
+
                     <TextView
                         android:id="@+id/tv_case_per_million"
                         android:layout_width="wrap_content"
@@ -566,6 +576,7 @@
                         android:layout_height="wrap_content"
                         android:text="Avg deaths: "
                         android:textSize="@dimen/description_tv_city" />
+
                     <TextView
                         android:id="@+id/tv_avg_recovered"
                         android:layout_width="wrap_content"
@@ -588,6 +599,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/grid_covid" />
+
                 <GridLayout
                     android:id="@+id/grid_weather"
                     android:layout_width="match_parent"
@@ -599,20 +611,7 @@
                     app:layout_constraintHorizontal_bias="0.05"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/wheather_sep">
-                    <TextView
-                        android:id="@+id/tv_weather_main"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="tv_weather_main"
-                        android:textSize="@dimen/description_tv_city" />
 
-
-                    <TextView
-                        android:id="@+id/tv_weather_description"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="weath desc"
-                        android:textSize="@dimen/description_tv_city" />
 
                     <ImageView
                         android:id="@+id/tv_weather_icon"
@@ -621,11 +620,11 @@
                         android:text="icon"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/empty_greek"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        />
+                        app:srcCompat="@drawable/empty_greek" />
+
                     <TextView
                         android:id="@+id/tv_weather_temperature"
                         android:layout_width="wrap_content"
@@ -635,6 +634,7 @@
 
 
                 </GridLayout>
+
                 <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="411dp"
@@ -646,8 +646,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
-
-
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

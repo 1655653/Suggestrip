@@ -48,8 +48,10 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
             2 -> crown.setImageResource(R.drawable.bronze)
             else -> crown.visibility = GONE
         }
+
         var db = FavDB(context)
         managePreferred(db, arrayList[position],view)
+
         view.setOnClickListener { v ->
             val context: Context = v.context
             val intent = Intent(context, CityDetailsActivity::class.java)
@@ -69,18 +71,23 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
     private fun managePreferred(db: FavDB, ranked_city: RankedCity, view: View) {
         val query = "SELECT * FROM " + FavDB.TABLE_NAME + " WHERE " + FavDB.ID + " = ${ranked_city.ID.toString()} "
         var cursor = db.readableDatabase.rawQuery(query, null, null)
-        var iv_preferred: ImageView = view.findViewById(R.id.favBtn)
-        //se esiste lo cancello
+        var heart: ImageView = view.findViewById(R.id.favBtn)
         if (cursor.moveToFirst()) {
-//            iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
-//            db.remove_fav(ranked_city.ID.toString())
-//            Toast.makeText(context, "${ranked_city.name} removed from the favourites", Toast.LENGTH_SHORT).show()
+            heart.setImageResource(R.drawable.ic_favorite_red_24dp)
         }
-        //se non esiste lo aaggiungo
-        else {
-//            iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
-//            db.insertIntoTheDatabase(ranked_city.name, ranked_city.img_url, ranked_city.ID.toString(), "1")
-//            Toast.makeText(context, "${ranked_city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
+
+        heart.setOnClickListener {
+            cursor = db.readableDatabase.rawQuery(query, null, null)
+            if (cursor.moveToFirst()) {
+                db.remove_fav(ranked_city.ID.toString())
+                heart.setImageResource(R.drawable.ic_favorite_shadow_24dp)
+                Toast.makeText(context, "${ranked_city.name} removed from the favourites", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                heart.setImageResource(R.drawable.ic_favorite_red_24dp)
+                db.insertIntoTheDatabase(ranked_city.name, ranked_city.img_url, ranked_city.ID.toString(), "1")
+                Toast.makeText(context, "${ranked_city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

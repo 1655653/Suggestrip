@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity(){
                 Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
         }
         else {
-            if(! getIntent().getBooleanExtra("back_from_shake",false)) { //se torno dallo shake non devo fare il sign in
+            if(! getIntent().getBooleanExtra("back_from_shake",false) && !getIntent().getBooleanExtra("back_from_ranked",false)) { //se torno dallo shake non devo fare il sign in
                 //setto i provider
                 providers = Arrays.asList<AuthUI.IdpConfig>(
                         AuthUI.IdpConfig.EmailBuilder().build(),
@@ -65,6 +65,7 @@ class MainActivity : AppCompatActivity(){
                         AuthUI.IdpConfig.PhoneBuilder().build()
                 )
                 //custom fun that triggers startActivityForResult
+
                 showSignInOPtions()
                 Log.d("porcamadonna", "sto qua")
             }

@@ -163,15 +163,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                     btn_go.visibility = INVISIBLE
                 }
 
-                Log.d("dioporcoeterno", Arrays.toString(filled_array_boolean))
-                for (i in 1..position) {
-                    if (!filled_array_boolean[i-1]) {
-                        runOnUiThread {
-                            ShowAlert(i)
-                            return@runOnUiThread
-                        }
-                    }
-                }
+
 
                 when (position) {
                     0 -> tv_question.text = "How many of you are?"
@@ -287,6 +279,15 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 tv_question.animation = animFadeIn
                 tv_question.startAnimation(animFadeIn)
                 mDotsView!!.selectDot(position)
+                Log.d("dioporcoeterno", Arrays.toString(filled_array_boolean))
+                for (i in 1..position) {
+                    if (!filled_array_boolean[i-1]) {
+                        runOnUiThread {
+                            ShowAlert(i)
+                            return@runOnUiThread
+                        }
+                    }
+                }
             }
 
             override fun onPageScrollStateChanged(state: Int) {
@@ -307,6 +308,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
         val three: View = findViewById(R.id.iv_three)
 
         btn_1_ppl.setOnClickListener {
+
             two.animation?.fillAfter = false
             two.visibility = View.GONE
             three.animation?.fillAfter = false
@@ -464,6 +466,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 dollar_array_boolean[1] = false
                 dollar_array_boolean[2] = false
                 dollar_cost = 1
+                mViewPager!!.currentItem = 2
             }
             filled_array_boolean[1] = true
         }
@@ -494,6 +497,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 dollar_array_boolean[1] = true
                 dollar_array_boolean[2] = false
                 dollar_cost = 2
+               // mViewPager!!.currentItem = 2
             }
             filled_array_boolean[1] = true
         }
@@ -529,6 +533,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 dollar_array_boolean[1] = false
                 dollar_array_boolean[2] = true
                 dollar_cost = 3
+//                mViewPager!!.currentItem = 2
             }
             filled_array_boolean[1] = true
         }
@@ -546,6 +551,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                             greek_array[sub_greek].setImageResource(R.drawable.filled_greek)
                             greek_array_boolean[sub_greek] = true
                             filled_array_boolean[2] = true
+//                            mViewPager!!.currentItem = 3
                         }
                     }
                     else{
@@ -579,6 +585,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                             ball_array[sub_ball].setImageResource(R.drawable.filled_ball)
                             ball_array_boolean[sub_ball] = true
                             filled_array_boolean[3] = true
+//                            mViewPager!!.currentItem = 4
                         }
                     }
                     else{
@@ -772,6 +779,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
     fun showPopUp() {
         popup?.setContentView(R.layout.user_popup)
         popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        
         popup?.show()
     }
 

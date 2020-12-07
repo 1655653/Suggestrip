@@ -1,5 +1,6 @@
 package com.example.suggestripapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ListView
@@ -43,6 +44,15 @@ class RankActivity : AppCompatActivity() {
 
 
         }
+
+
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java).apply {}
+        intent.putExtra("back_from_ranked", true)
+        startActivity(intent)
+        super.onBackPressed()
 
 
     }
