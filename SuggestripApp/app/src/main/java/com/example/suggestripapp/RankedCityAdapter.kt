@@ -29,7 +29,8 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
         val view:View = View.inflate(context, R.layout.ranked_city, null)
         var icons:ImageView = view.findViewById(R.id.imageView)
         var name: TextView = view.findViewById(R.id.titleTextView)
-
+        var score: TextView = view.findViewById(R.id.score)
+        var position_text: TextView = view.findViewById(R.id.position)
         var ranked_city = arrayList.get(position)
         var options = RequestOptions()
             .placeholder(R.drawable.logo)
@@ -39,12 +40,16 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
             val context: Context = v.context
             val intent = Intent(context, CityDetailsActivity::class.java)
             intent.putExtra("city",arrayList[position])
-            intent.putExtra("from_shake", "false")
+            Log.d("algo", arrayList[position].toString())
+            intent.putExtra("from_shake", false)
+            intent.putExtra("from_algo", true)
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             context.startActivity(intent)
         }
 
+        score.text = "Score: " + String.format("%.2f", ranked_city.score)
         name.text = ranked_city.name
+        position_text.text = "#" + (position+1).toString()
         return  view!!
     }
 }

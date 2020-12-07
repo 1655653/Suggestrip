@@ -1,6 +1,7 @@
 package com.example.suggestripapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
@@ -27,7 +28,7 @@ class RankActivity : AppCompatActivity() {
     private fun loadCities() {
         var intent = intent;
         val body = intent.getStringExtra("body_string")
-
+        //Log.d("algo", body)
         var cities = Gson().fromJson<Object>(
             body,
             Object::class.java
@@ -40,7 +41,10 @@ class RankActivity : AppCompatActivity() {
             response_city.img_url = "https://" + response_city.img_url
             city_list.add(response_city)
 
-            //Log.d("madonnaporca", city_list.size.toString())
+
         }
+
+        city_list.reverse()
     }
+
 }

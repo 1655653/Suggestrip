@@ -1,11 +1,14 @@
 package com.example.suggestripapp
 
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.graphics.Color
 import android.graphics.PixelFormat
 import android.graphics.Point
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -42,7 +45,7 @@ class ProfilingActivity : AppCompatActivity() {
     var filled_array_boolean = BooleanArray(8)
     var is_last_minute = false
 
-
+    var popup: Dialog? = null
     val size: Point? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -742,7 +745,10 @@ class ProfilingActivity : AppCompatActivity() {
                     zavorre.visibility = INVISIBLE
                 }
 
+
                 AwsCall()
+                popup = Dialog(this)
+                ShowPopup()
 
         }
 
@@ -752,6 +758,11 @@ class ProfilingActivity : AppCompatActivity() {
 
     }
 
+    fun ShowPopup() {
+        popup?.setContentView(R.layout.user_popup)
+        popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popup?.show()
+    }
     private fun lastMinutePopup() {
         AlertDialog.Builder(this)
                 .setTitle("LAST MINUTE")
@@ -823,7 +834,10 @@ class ProfilingActivity : AppCompatActivity() {
                 //to pass arguments to next activity
                 var value = response.body!!.string()
                 intent.putExtra("body_string", value); //Optional parameters
-
+                ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
+                runOnUiThread {
+                    popup?.dismiss()
+                }
                 startActivity(intent)
                 //Log.d("DIOMAYALEE", "body: " + response.body!!.string())
             }

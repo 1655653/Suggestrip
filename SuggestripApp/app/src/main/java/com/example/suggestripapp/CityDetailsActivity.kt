@@ -31,6 +31,7 @@ class CityDetailsActivity : AppCompatActivity() {
     private val client = OkHttpClient()
     var from_shake = false
     var from_rv = false
+    var from_algo = false
     var popup: Dialog? = null
     var id_removed = 0
 ///TODO WEATHER AND COVID VISUALIZATION
@@ -55,12 +56,18 @@ class CityDetailsActivity : AppCompatActivity() {
         lastAcceleration = SensorManager.GRAVITY_EARTH
         from_shake = intent.getBooleanExtra("from_shake", false)
         from_rv = intent.getBooleanExtra("from_rv", false)
+        from_algo = intent.getBooleanExtra("from_algo", false)
 
         //choose id, random if shake, selected if explored
         var ID = ""
 
         if(from_shake){
             ID = (0..101).random().toString()
+        }
+        else if (from_algo){
+           var r_city = intent.extras?.get("city") as RankedCity
+            ID = r_city.ID.toString()
+            Log.d("algo", ID + " ecccoooollloooooo")
         }
         else{
             city = intent.extras?.get("city") as City
