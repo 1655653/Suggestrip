@@ -1,18 +1,26 @@
 package com.example.suggestripapp
 
+import android.Manifest
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.graphics.PixelFormat
 import android.graphics.Point
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.view.View.*
 import android.view.animation.*
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
 import com.dev.sacot41.scviewpager.*
 import kotlinx.android.synthetic.main.activity_profiling.*
@@ -23,7 +31,7 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 
 
-class ProfilingActivity : AppCompatActivity() {
+class ProfilingActivity : AppCompatActivity() ,LocationListener{
     private var NUM_PAGES = 9
 
     private var mViewPager: SCViewPager? = null
@@ -42,6 +50,13 @@ class ProfilingActivity : AppCompatActivity() {
     var filled_array_boolean = BooleanArray(8)
     var is_last_minute = false
 
+    //coordinates variables
+    var coordinates = mutableListOf<Double>(0.0, 0.0)
+    var coord_permission = false
+
+    private lateinit var locationManager: LocationManager
+    private val locationPermissionCode = 2
+
 
     val size: Point? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +67,10 @@ class ProfilingActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN
         );
         setContentView(R.layout.activity_profiling)
+
+        //coordinates
+        ManagePermissionCoord()
+
 
         mDotsView = findViewById<DotsView>(R.id.dotsview_main)
         mDotsView!!.setDotRessource(R.drawable.dot_selected, R.drawable.dot_unselected);
@@ -694,89 +713,52 @@ class ProfilingActivity : AppCompatActivity() {
             val collapse_list = listOf(btn_greek1, btn_ball1, btn_car1, btn_glass1, btn_tree1, btn_pizza1)
             val zavorra_list = listOf(btn_1dollar, btn_2dollar, btn_2dollar2, btn_3dollar, btn_3dollar2, btn_3dollar3, one, two, three, iv_plus_3)
 
-//            //CHECK IF USER HAS CLICKED ITEMS
-            var empty_field = true
-
-            //CHECK DONE, NOW I PROCEED TO DO THE COLLAPSING AND CALL
-
-
-                ///COLLAPSE ANIMATION
-                val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
-                for (view in collapse_list) {
-                    view?.startAnimation(collapse)
-                    view.visibility = INVISIBLE
-                }
-                for (tv in tv_list) {
-                    tv.visibility = INVISIBLE
-                }
-                dollar_array_boolean.forEachIndexed { i, g ->
-                    if (g) {
-                        when (i) {
-                            0 -> btn_1dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar1))
-                            1 -> {
-                                btn_2dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
-                                btn_2dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
-                            }
-                            2 -> {
-                                btn_3dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
-                                btn_3dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
-                                btn_3dollar3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
-                            }
+            ///COLLAPSE ANIMATION of all ELEMETNTS
+            val collapse = AnimationUtils.loadAnimation(this, R.anim.collapse)
+            for (view in collapse_list) {
+                view?.startAnimation(collapse)
+                view.visibility = INVISIBLE
+            }
+            for (tv in tv_list) {
+                tv.visibility = INVISIBLE
+            }
+            dollar_array_boolean.forEachIndexed { i, g ->
+                if (g) {
+                    when (i) {
+                        0 -> btn_1dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar1))
+                        1 -> {
+                            btn_2dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
+                            btn_2dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar2))
+                        }
+                        2 -> {
+                            btn_3dollar.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                            btn_3dollar2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
+                            btn_3dollar3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_dollar3))
                         }
                     }
-
                 }
-                one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
-                for (i in 1..3) {
-                    if (omini_array_boolean[i]) {
-                        two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
-                        if (i > 1) {
-                            three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
-                            if (i == 3)
-                                iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
-                        }
-
-                    }
-                }
-                for (zavorre in zavorra_list) {
-                    zavorre.visibility = INVISIBLE
-                }
-
-                AwsCall()
-
-        }
-
-
-
-
-
-    }
-
-    private fun lastMinutePopup() {
-        AlertDialog.Builder(this)
-                .setTitle("LAST MINUTE")
-                .setMessage("Are you searching a last minute travel?")
-                .setPositiveButton("Yes") { _, _ ->
-                    is_last_minute = true
-                }
-                .setNegativeButton("No") { _, _ ->
-
-                }
-                .show()
-    }
-
-    private fun ShowAlert(i: Int) {
-        AlertDialog.Builder(this)
-            .setTitle("Missing Value")
-            .setMessage("the minimum value should be 1") // Specifying a listener allows you to take an action before dismissing the dialog.
-            .setPositiveButton("Ok") { dialog, which ->
-
-                mViewPager?.setCurrentItem(i-1, true)
 
             }
-            .show()
-    }
+            one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
+            for (i in 1..3) {
+                if (omini_array_boolean[i]) {
+                    two.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino2))
+                    if (i > 1) {
+                        three.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino3))
+                        if (i == 3)
+                            iv_plus_3.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino_plus))
+                    }
 
+                }
+            }
+            for (zavorre in zavorra_list) {
+                zavorre.visibility = INVISIBLE
+            }
+
+            AwsCall()
+
+        }
+    }
 
     private fun AwsCall() {
         var url = "https://10qwg8v60i.execute-api.us-east-1.amazonaws.com/default/1_case_search_with_info"
@@ -784,8 +766,8 @@ class ProfilingActivity : AppCompatActivity() {
                 "    \"msg_id\": \"01\",\n" +
                 "    \"gps_coords\": [\n" +
                 "        {\n" +
-                "            \"lat\": 48.86613,\n" +
-                "            \"lon\": 2.352222,\n" +
+                "            \"lat\": ${coordinates[0]},\n" +
+                "            \"lon\": ${coordinates[1]},\n" +
                 "            \"primary\": \"\",\n" +
                 "            \"globe\": \"earth\"\n" +
                 "        }\n" +
@@ -830,6 +812,93 @@ class ProfilingActivity : AppCompatActivity() {
         })
     }
 
+    //          GPS UTILS
+    private fun ManagePermissionCoord(){
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) ==
+                PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) ==
+                PackageManager.PERMISSION_GRANTED) {
+            getLocation()
+
+
+        } else {
+            ActivityCompat.requestPermissions(this, arrayOf(
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION),
+                    locationPermissionCode)
+
+            Toast.makeText(this, "Coordinates not allowed", Toast.LENGTH_LONG).show();
+
+        }
+    }
+    private fun getLocation() {
+
+        locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
+        if ((ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)) {
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), locationPermissionCode)
+        }
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000, 5f, this)
+        var location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+
+        coordinates[0] =  location.latitude
+        coordinates[1] = location.longitude
+        Log.d("diomaialino", " after lastknow $coordinates")
+
+    }
+    override fun onLocationChanged(location: Location) {
+        coordinates[0] =  location.latitude
+        coordinates[1] = location.longitude
+    }
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        if (requestCode == locationPermissionCode) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
+                //Log.d("diomaialino", " permission ${coord_permission}   " + coordinates.toString())
+                getLocation()
+            } else {
+                Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    override fun onProviderEnabled(provider: String) {}
+
+    override fun onProviderDisabled(provider: String) {}
+
+    override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {}
+
+
+    //      POPUPS DIALOG
+    private fun lastMinutePopup() {
+        AlertDialog.Builder(this)
+                .setTitle("LAST MINUTE")
+                .setMessage("Are you searching a last minute travel?")
+                .setPositiveButton("Yes") { _, _ ->
+                    is_last_minute = true
+                }
+                .setNegativeButton("No") { _, _ ->
+
+                }
+                .show()
+    }
+
+    private fun ShowAlert(i: Int) {
+        AlertDialog.Builder(this)
+            .setTitle("Missing Value")
+            .setMessage("the minimum value should be 1") // Specifying a listener allows you to take an action before dismissing the dialog.
+            .setPositiveButton("Ok") { dialog, which ->
+
+                mViewPager?.setCurrentItem(i-1, true)
+
+            }
+            .show()
+    }
+
+
+
+
+
+
+    //ANIMATION UTILS
     private fun fall(btnGreek: ImageButton?, p1: Int, p2: Int) {
         btnGreek!!.visibility = VISIBLE
         val size = SCViewAnimationUtil.getDisplaySize(this)
@@ -853,6 +922,8 @@ class ProfilingActivity : AppCompatActivity() {
         one.startAnimation(anim)
     }
 
+
+    //OTHERS
     fun View.getLocationOnScreen(): Point{
         val location = IntArray(2)
         this.getLocationOnScreen(location)
