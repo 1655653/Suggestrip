@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.view.View
+import android.view.View.GONE
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
@@ -31,11 +32,19 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
         var name: TextView = view.findViewById(R.id.titleTextView)
         var score: TextView = view.findViewById(R.id.score)
         var position_text: TextView = view.findViewById(R.id.position)
+        var crown: ImageView = view.findViewById(R.id.crown)
         var ranked_city = arrayList.get(position)
         var options = RequestOptions()
             .placeholder(R.drawable.logo)
             .centerCrop()
         Glide.with(context).load(ranked_city.img_url).apply(options).into(icons)
+        when(position){
+            0 -> crown.setImageResource(R.drawable.gold)
+            1 -> crown.setImageResource(R.drawable.silver)
+            2 -> crown.setImageResource(R.drawable.bronze)
+            else -> crown.visibility = GONE
+
+        }
         view.setOnClickListener { v ->
             val context: Context = v.context
             val intent = Intent(context, CityDetailsActivity::class.java)
