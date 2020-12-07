@@ -10,6 +10,7 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.PixelFormat
 import android.graphics.Point
+import android.graphics.drawable.ColorDrawable
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -51,8 +52,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
     var dollar_cost = 0
     var filled_array_boolean = BooleanArray(8)
     var is_last_minute = false
-
     var popup: Dialog? = null
+
     //coordinates variables
 //    var roma_lat = 41.91083333
 //    var roma_lon = 12.48166667
@@ -743,36 +744,6 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                         }
                     }
                 }
-                for (zavorre in zavorra_list) {
-                    zavorre.visibility = INVISIBLE
-                }
-
-
-                AwsCall()
-                popup = Dialog(this)
-                ShowPopup()
-
-        }
-
-
-
-
-
-    }
-
-    fun ShowPopup() {
-        popup?.setContentView(R.layout.user_popup)
-        popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        popup?.show()
-    }
-    private fun lastMinutePopup() {
-        AlertDialog.Builder(this)
-                .setTitle("LAST MINUTE")
-                .setMessage("Are you searching a last minute travel?")
-                .setPositiveButton("Yes") { _, _ ->
-                    is_last_minute = true
-                }
-                .setNegativeButton("No") { _, _ ->
 
             }
             one.startAnimation(AnimationUtils.loadAnimation(this, R.anim.collapse_omino1))
@@ -792,8 +763,15 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
             }
 
             AwsCall()
-
+            popup=Dialog(this)
+            showPopUp()
         }
+    }
+
+    fun showPopUp() {
+        popup?.setContentView(R.layout.user_popup)
+        popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popup?.show()
     }
 
     private fun AwsCall() {
@@ -841,10 +819,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 //to pass arguments to next activity
                 var value = response.body!!.string()
                 intent.putExtra("body_string", value); //Optional parameters
-                ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
-                runOnUiThread {
-                    popup?.dismiss()
-                }
+
                 startActivity(intent)
                 //Log.d("DIOMAYALEE", "body: " + response.body!!.string())
             }
@@ -923,14 +898,14 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
 
     private fun ShowAlert(i: Int) {
         AlertDialog.Builder(this)
-            .setTitle("Missing Value")
-            .setMessage("the minimum value should be 1") // Specifying a listener allows you to take an action before dismissing the dialog.
-            .setPositiveButton("Ok") { dialog, which ->
+                .setTitle("Missing Value")
+                .setMessage("the minimum value should be 1") // Specifying a listener allows you to take an action before dismissing the dialog.
+                .setPositiveButton("Ok") { dialog, which ->
 
-                mViewPager?.setCurrentItem(i-1, true)
+                    mViewPager?.setCurrentItem(i-1, true)
 
-            }
-            .show()
+                }
+                .show()
     }
 
 
