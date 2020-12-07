@@ -51,8 +51,11 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
     var is_last_minute = false
 
     //coordinates variables
-    var coordinates = mutableListOf<Double>(0.0, 0.0)
-    var coord_permission = false
+//    var roma_lat = 41.91083333
+//    var roma_lon = 12.48166667
+    var roma_lat = 41.954873
+    var roma_lon = 13.643988
+    var coordinates = mutableListOf<Double>(roma_lat,roma_lon)
 
     private lateinit var locationManager: LocationManager
     private val locationPermissionCode = 2
@@ -828,6 +831,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                     locationPermissionCode)
 
             Toast.makeText(this, "Coordinates not allowed", Toast.LENGTH_LONG).show();
+            Log.d("diomaialino", " after lastknow $coordinates")
 
         }
     }
