@@ -9,8 +9,11 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.suggestripapp.fav.FavDB
+import kotlinx.android.synthetic.main.activity_city_details.*
 
 class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedCity>) : BaseAdapter()
 {
@@ -33,6 +36,7 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
         var score: TextView = view.findViewById(R.id.score)
         var position_text: TextView = view.findViewById(R.id.position)
         var crown: ImageView = view.findViewById(R.id.crown)
+
         var ranked_city = arrayList.get(position)
         var options = RequestOptions()
             .placeholder(R.drawable.logo)
@@ -43,8 +47,9 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
             1 -> crown.setImageResource(R.drawable.silver)
             2 -> crown.setImageResource(R.drawable.bronze)
             else -> crown.visibility = GONE
-
         }
+        var db = FavDB(context)
+        managePreferred(db, arrayList[position],view)
         view.setOnClickListener { v ->
             val context: Context = v.context
             val intent = Intent(context, CityDetailsActivity::class.java)
@@ -60,5 +65,22 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
         name.text = ranked_city.name
         position_text.text = "#" + (position+1).toString()
         return  view!!
+    }
+    private fun managePreferred(db: FavDB, ranked_city: RankedCity, view: View) {
+        val query = "SELECT * FROM " + FavDB.TABLE_NAME + " WHERE " + FavDB.ID + " = ${ranked_city.ID.toString()} "
+        var cursor = db.readableDatabase.rawQuery(query, null, null)
+        var iv_preferred: ImageView = view.findViewById(R.id.favBtn)
+        //se esiste lo cancello
+        if (cursor.moveToFirst()) {
+//            iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
+//            db.remove_fav(ranked_city.ID.toString())
+//            Toast.makeText(context, "${ranked_city.name} removed from the favourites", Toast.LENGTH_SHORT).show()
+        }
+        //se non esiste lo aaggiungo
+        else {
+//            iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
+//            db.insertIntoTheDatabase(ranked_city.name, ranked_city.img_url, ranked_city.ID.toString(), "1")
+//            Toast.makeText(context, "${ranked_city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
