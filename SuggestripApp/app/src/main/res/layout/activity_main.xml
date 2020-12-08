@@ -60,15 +60,15 @@
 
     <ImageButton
         android:id="@+id/btn_explore"
-        android:layout_width="205dp"
+        android:layout_width="194dp"
         android:layout_height="233dp"
         android:background="@drawable/globe_2"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_heart"
         app:layout_constraintHorizontal_bias="0.009"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_profiling"
         app:layout_constraintVertical_bias="0.941" />
 
     <ImageButton
