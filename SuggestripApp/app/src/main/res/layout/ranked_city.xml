@@ -22,82 +22,87 @@
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/transparent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/miami"
-                android:background="@android:color/transparent"
-                />
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/miami" />
 
             <TextView
                 android:id="@+id/titleTextView"
-                style="@style/TextAppearance.AppCompat.Title"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="5dp"
-                android:layout_marginBottom="18dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/rounded_explore"
+                android:gravity="center"
                 android:text="Miami"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#fff"
-                android:textSize="32dp"
-                />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
 
             <TextView
                 android:id="@+id/position"
-                style="@style/TextAppearance.AppCompat.Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginStart="5dp"
-                android:layout_marginBottom="170dp"
-                android:text="#1"
+                android:background="@drawable/rounded_explore"
+                android:text="#1\nScore: 99.9"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.768" />
+
+            <ImageView
+                android:id="@+id/favBtn"
+                android:layout_width="33dp"
+                android:layout_height="32dp"
+                android:layout_gravity="bottom|right"
+                android:background="@drawable/ic_favorite_shadow_24dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="#fff"
-                android:textSize="32dp"
-                />
+                app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="01"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="1.0" />
 
+            <ImageView
+                android:id="@+id/crown"
+                android:layout_width="32dp"
+                android:layout_height="26dp"
+                android:layout_gravity="top|center_horizontal"
+                android:background="@drawable/gold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.101"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/position"
+                app:layout_constraintVertical_bias="0.043" />
 
-            <TextView
-                android:id="@+id/score"
-                style="@style/TextAppearance.AppCompat.Title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginStart="5dp"
-                android:layout_marginBottom="140dp"
-                android:text="Score:"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="32dp"
-                android:textColor="#fff" />
-
-
-        <ImageView
-            android:id="@+id/favBtn"
-            android:layout_width="44dp"
-            android:layout_height="40dp"
-            android:layout_gravity="bottom|right"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="18dp"
-            android:background="@drawable/ic_favorite_shadow_24dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#fff"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <ImageView
-            android:id="@+id/crown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top|center_horizontal"
-            android:background="@drawable/gold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
 
