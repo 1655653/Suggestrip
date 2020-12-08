@@ -66,12 +66,14 @@ class FavActivity : AppCompatActivity() {
             db.close()
         }
 
+        if(favCityList.size ==0) setContentView(R.layout.empty_fav_item)
 
+        else{
+            favAdapter = RecyclerViewFavAdapter(favCityList)
 
+            rv.adapter = favAdapter
+        }
 
-        favAdapter = RecyclerViewFavAdapter(favCityList)
-
-        rv.adapter = favAdapter
 
     }
 
