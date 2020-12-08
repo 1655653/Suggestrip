@@ -104,8 +104,8 @@ class ExploreActivity : AppCompatActivity() {
 
         rv.layoutManager = layoutManager
         //sets divider in the list
-        rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
-        rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL))
+//        rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
+//        rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL))
 
         //Attaches adapter with RecyclerView.
         rv.adapter = adapter

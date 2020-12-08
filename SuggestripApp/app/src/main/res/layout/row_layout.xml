@@ -3,43 +3,69 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="3dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginBottom="3dp"
+    app:cardCornerRadius="35dp"
+    android:id="@+id/cv"
     android:layout_height="wrap_content">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
 
         <ImageView
             android:id="@+id/ib_city"
-            android:layout_width="110dp"
-            android:layout_height="220dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/photo" />
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/miami" />
 
         <TextView
             android:id="@+id/tv_city_name_rv"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="20dp"
-            android:background="#0FFFFFFF"
+            android:adjustViewBounds="true"
+            android:background="@drawable/rounded_explore"
+            android:gravity="center"
             android:text="DIOPORCO"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/ib_city"
-            app:layout_constraintLeft_toLeftOf="@+id/ib_city"
-            app:layout_constraintRight_toRightOf="@+id/ib_city"
-            app:layout_constraintTop_toTopOf="@+id/ib_city" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/favBtn"
+            android:layout_width="33dp"
+            android:layout_height="32dp"
+            android:layout_gravity="bottom|right"
+            android:background="@drawable/ic_favorite_shadow_24dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#fff"
+            app:layout_constraintBottom_toTopOf="@+id/tv_city_name_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ib_city"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.cardview.widget.CardView>
