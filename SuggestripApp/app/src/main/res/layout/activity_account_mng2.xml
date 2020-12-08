@@ -103,24 +103,27 @@
 
         <Button
             android:id="@+id/btn_apply_changes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logout_button"
+            android:layout_width="131dp"
+            android:layout_height="53dp"
+            android:background="@drawable/profiling_button"
             android:text="Apply changes"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_sign_out"
             app:layout_constraintHorizontal_bias="0.2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/btn_sign_out"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logout_button"
+            android:layout_width="131dp"
+            android:layout_height="53dp"
             android:layout_marginLeft="40dp"
+            android:background="@drawable/profiling_button"
             android:text="Logout"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_apply_changes"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
