@@ -197,19 +197,19 @@ class CityDetailsActivity : AppCompatActivity() {
         populateIcons("tree", city.tags?.nature?.toInt())
 
 
-        if (city.covid_info?.case_per_million!! >0)
+        if (city.covid_info?.case_per_million!! >10)
             tv_case_per_million.text = "Cases x 1mil pop: " + city.covid_info?.case_per_million!!.toInt().toString()
         else
             tv_case_per_million.visibility = GONE
-        if (city.covid_info?.avg_confirmed!! >0)
+        if (city.covid_info?.avg_confirmed!! >10)
             tv_avg_confirmed.text = "Avg confirmed: " + city.covid_info?.avg_confirmed!!.toInt().toString()
         else
             tv_avg_confirmed.visibility = GONE
-        if (city.covid_info?.avg_deaths!! >0)
+        if (city.covid_info?.avg_deaths!! >10)
             tv_avg_deaths.text = "Avg deaths: " + city.covid_info?.avg_deaths!!.toInt().toString()
         else
             tv_avg_deaths.visibility = GONE
-        if (city.covid_info?.avg_recovered!! >0)
+        if (city.covid_info?.avg_recovered!! >10)
             tv_avg_recovered.text = "Avg recovered: " + city.covid_info?.avg_recovered!!.toInt().toString()
         else
             tv_avg_recovered.visibility = GONE

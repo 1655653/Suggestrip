@@ -540,18 +540,28 @@
                 <!--Secondo GRID LAYOUT-->
                 <TextView
                     android:id="@+id/covid_separator"
-                    android:layout_width="wrap_content"
+                    android:layout_width="230dp"
                     android:layout_height="54dp"
-                    android:gravity="center"
                     android:background="@drawable/rounded"
+                    android:gravity="center"
                     android:text="   Covid info   "
-                    android:textSize="@dimen/description_tv_city"
                     android:textColor="@color/black"
+                    android:textSize="@dimen/description_tv_city"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/grid_tags" />
 
-
+                <ImageView
+                    android:id="@+id/corona_img"
+                    android:layout_width="43dp"
+                    android:layout_height="40dp"
+                    android:text="icon"
+                    app:layout_constraintBottom_toTopOf="@+id/grid_covid"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.263"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/grid_tags"
+                    app:srcCompat="@drawable/coronavirus" />
 
                 <GridLayout
 
@@ -567,17 +577,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/covid_separator">
 
-                    <ImageView
-                        android:id="@+id/corona_img"
-                        android:layout_width="96dp"
-                        android:layout_height="73dp"
-                        android:text="icon"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.5"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/coronavirus" />
+
 
                     <TextView
                         android:id="@+id/tv_case_per_million"
@@ -612,18 +612,19 @@
                 </GridLayout>
 
                 <!--Terzo GRID LAYOUT-->
+
                 <TextView
                     android:id="@+id/wheather_sep"
-                    android:layout_width="match_parent"
+                    android:layout_width="230dp"
                     android:layout_height="54dp"
-                    android:layout_gravity="center"
                     android:background="@drawable/rounded"
-                    android:text="Weather info"
+                    android:gravity="center"
+                    android:text="   Wheater info   "
+                    android:textColor="@color/black"
                     android:textSize="@dimen/description_tv_city"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/grid_covid" />
-
+                    app:layout_constraintTop_toBottomOf="@+id/grid_tags" />
                 <GridLayout
                     android:id="@+id/grid_weather"
                     android:layout_width="match_parent"
