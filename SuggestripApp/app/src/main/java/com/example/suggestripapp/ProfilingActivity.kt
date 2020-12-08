@@ -241,7 +241,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                     }
                     4 -> {
                         lock_car = false
-                        tv_question.text = "How much you will use public transportations?"
+                        tv_question.text = "How much you will use public transportations and more general infrastructures ?"
                         tv_sport_numb.visibility = VISIBLE
                         tv_sport_numb.text = ball_array_boolean.count { it }.toString()
 
