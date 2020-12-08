@@ -37,7 +37,6 @@ class CityDetailsActivity : AppCompatActivity() {
     var from_algo = false
     var popup: Dialog? = null
     var id_removed = 0
-///TODO WEATHER AND COVID VISUALIZATION
     //shake
     private var sensorManager: SensorManager? = null
     private var acceleration = 0f

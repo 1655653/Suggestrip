@@ -283,7 +283,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 for (i in 1..position) {
                     if (!filled_array_boolean[i-1]) {
                         runOnUiThread {
-                            ShowAlert(i)
+                            //ShowAlert(i)
                             return@runOnUiThread
                         }
                     }
@@ -323,6 +323,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 else  omini_array_boolean[i] = false
             }
             filled_array_boolean[0] = true
+            mViewPager?.setCurrentItem(1, true)
+
 
         }
         btn_2_ppl.setOnClickListener {
@@ -339,6 +341,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 else  omini_array_boolean[i] = false
             }
             filled_array_boolean[0] = true
+            mViewPager?.setCurrentItem(1, true)
+
         }
 
         btn_3_ppl.setOnClickListener {
@@ -354,6 +358,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 else  omini_array_boolean[i] = false
             }
             filled_array_boolean[0] = true
+            mViewPager?.setCurrentItem(1, true)
+
         }
         btn_more3_ppl.setOnClickListener {
             drop(one, size, orientation)
@@ -367,6 +373,9 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 else  omini_array_boolean[i] = false
             }
             filled_array_boolean[0] = true
+
+            mViewPager?.setCurrentItem(1, true)
+
 
         }
         var displacement = (size.y / 1.85).toInt()
@@ -469,6 +478,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                 mViewPager!!.currentItem = 2
             }
             filled_array_boolean[1] = true
+            mViewPager?.setCurrentItem(2, true)
         }
 
 
@@ -500,6 +510,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                // mViewPager!!.currentItem = 2
             }
             filled_array_boolean[1] = true
+            mViewPager?.setCurrentItem(2, true)
+
         }
 
         //ANIM DOLLAR3
@@ -536,6 +548,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
 //                mViewPager!!.currentItem = 2
             }
             filled_array_boolean[1] = true
+            mViewPager?.setCurrentItem(2, true)
+
         }
 
         ///*******************************************THIRD QUESTION-GREEK
@@ -560,6 +574,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                             greek_array_boolean[over_greek] = false
                         }
                     }
+                    mViewPager?.setCurrentItem(3, true)
 
                 }
             }
@@ -594,6 +609,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                             ball_array_boolean[over_ball] = false
                         }
                     }
+                    mViewPager?.setCurrentItem(4, true)
+
                 }
             }
         }
@@ -624,6 +641,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                         }
                     }
                     Log.d("dioputtana", Arrays.toString(car_array_boolean))
+                    mViewPager?.setCurrentItem(5, true)
+
                 }
             }
         }
@@ -652,6 +671,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                         }
                     }
                     Log.d("dioputtana", Arrays.toString(glass_array_boolean))
+                    mViewPager?.setCurrentItem(6, true)
+
                 }
             }
         }
@@ -680,6 +701,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                             tree_array_boolean[over_tree] = false
                         }
                     }
+                    mViewPager?.setCurrentItem(7, true)
+
 
                 }
             }
@@ -711,6 +734,8 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                             pizza_array_boolean[over_pizza] = false
                         }
                     }
+                    mViewPager?.setCurrentItem(8, true)
+
                 }
             }
         }

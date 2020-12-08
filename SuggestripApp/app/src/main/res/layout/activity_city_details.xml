@@ -3,19 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#80000000"
     android:layout_height="match_parent">
 
     <RelativeLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent">
 
+
         <ImageView
+
             android:id="@+id/iv_city_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:background="@drawable/img_border"
             android:padding="4dp"
             android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -42,21 +45,26 @@
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#6A615D5D"
+            android:background="#00000000"
+
             android:fillViewport="true">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                tools:scrollY="500dp"
+
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/rounded_sep"
-                    android:text="Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:gravity="center"
+                    android:text="      Description      "
+                    android:textColor="@color/black"
                     android:textSize="@dimen/description_tv_city"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:gravity="left|center"
+                    android:gravity="center"
                     android:text="@string/lorem_ipsum"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textSize="20sp"
@@ -79,17 +87,19 @@
                 <!--PRIMO GRID LAYOUT-->
                 <TextView
                     android:id="@+id/tags_separator"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/rounded_sep"
-                    android:text="Tags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:background="@drawable/rounded"
+                    android:text="      Tags     "
                     android:textSize="@dimen/description_tv_city"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_city_description" />
 
                 <GridLayout
+
                     android:id="@+id/grid_tags"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -97,7 +107,7 @@
                     android:columnCount="6"
                     android:rowCount="7"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tags_separator">
 
@@ -530,12 +540,13 @@
                 <!--Secondo GRID LAYOUT-->
                 <TextView
                     android:id="@+id/covid_separator"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="54dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/rounded_sep"
-                    android:text="Covid info"
+                    android:gravity="center"
+                    android:background="@drawable/rounded"
+                    android:text="   Covid info   "
                     android:textSize="@dimen/description_tv_city"
+                    android:textColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/grid_tags" />
@@ -543,6 +554,7 @@
 
 
                 <GridLayout
+
                     android:id="@+id/grid_covid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -571,7 +583,7 @@
                         android:id="@+id/tv_case_per_million"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Case per million popoulation:"
+                        android:text="Case per million population:"
                         android:textSize="@dimen/description_tv_city" />
 
 
@@ -605,7 +617,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/rounded_sep"
+                    android:background="@drawable/rounded"
                     android:text="Weather info"
                     android:textSize="@dimen/description_tv_city"
                     app:layout_constraintEnd_toEndOf="parent"
