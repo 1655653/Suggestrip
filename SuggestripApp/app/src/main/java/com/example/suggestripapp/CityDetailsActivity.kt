@@ -100,8 +100,7 @@ class CityDetailsActivity : AppCompatActivity() {
 //                            obj.toString(),
 //                            City::class.java) as City
                     city.img_url = "https://" + city.img_url
-                    Log.d("porcaddio", city.toString())
-
+                    city.name = city.name.replace("_"," ")
                     ///************************************************AFTER THE RESPONSE I POPULATE THE RECYCLER VIEW
                     runOnUiThread {
                         popup?.dismiss()

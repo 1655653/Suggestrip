@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:text="Nickname"
                 android:paddingLeft="@dimen/tv_margin_left"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
 
             <EditText
                 android:id="@+id/et_nick"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:text="Tap on picture to upload your avatar"
                 android:textSize="9dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/black" />
         </LinearLayout>
 
     </LinearLayout>
@@ -62,7 +62,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginLeft="@dimen/tv_margin_left"
             android:text="Your email"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/et_email"
@@ -84,7 +84,7 @@
             android:layout_marginLeft="@dimen/tv_margin_left"
             android:layout_marginTop="3dp"
             android:text="Your password"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
         <EditText
             android:id="@+id/et_password"

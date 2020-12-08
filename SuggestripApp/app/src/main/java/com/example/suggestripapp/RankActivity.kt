@@ -40,6 +40,7 @@ class RankActivity : AppCompatActivity() {
             var x = Gson().toJson(c)
             var response_city = Gson().fromJson<RankedCity>(x, RankedCity::class.java)
             response_city.img_url = "https://" + response_city.img_url
+            response_city.name = response_city.name.replace("_"," ")
             city_list.add(response_city)
 
 

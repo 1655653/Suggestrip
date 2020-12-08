@@ -65,6 +65,7 @@ class ExploreActivity : AppCompatActivity() {
                         var x = Gson().toJson(c)
                         var response_city = Gson().fromJson<City>(x, City::class.java)
                         response_city.img_url = "https://" + response_city.img_url
+                        response_city.name = response_city.name.replace("_"," ")
                         city_list.add(response_city)
                         Log.d("porcamadonna", city_list.size.toString())
                     }
