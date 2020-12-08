@@ -220,9 +220,12 @@ class CityDetailsActivity : AppCompatActivity() {
         var xxx = "https://openweathermap.org/img/wn/"+ city.weather?.icon.toString()+ "@2x.png"
         var tv_weather_id = city.weather?.id.toString()
 //        tv_weather_main.text = city.weather?.main.toString()
-        tv_weather_description.text = city.weather?.description.toString()
+        if (city.weather?.description!!.endsWith("s"))
+            tv_weather_description.text = "Currently there are " + city.weather?.description +" and there is a temperature of "+ city.weather?.temperature?.toInt().toString()+"°"
+        else
+            tv_weather_description.text = "Currently there is " + city.weather?.description + " and there is a temperature of "+ city.weather?.temperature?.toInt().toString()+"°"
         //tv_weather_icon.text = city.weather?.icon.toString()
-        tv_weather_temperature.text = "Temperature: "+ city.weather?.temperature?.toInt().toString()+"°"
+        //tv_weather_temperature.text =
         Log.d("xxx", xxx)
         var options = RequestOptions()
                 .placeholder(R.drawable.logo)
