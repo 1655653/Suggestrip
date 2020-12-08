@@ -15,6 +15,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.suggestripapp.City
 import com.example.suggestripapp.CityDetailsActivity
 import com.example.suggestripapp.R
+import kotlinx.android.synthetic.main.activity_fav.view.*
+
 
 
 //qui creo l'adapter ma sopratutto la classe ViewHolder che mi serve per sistemare tutti gli item della cardview
@@ -88,6 +90,9 @@ class RecyclerViewFavAdapter(var favCityList: MutableList<City>) : RecyclerView.
              //Glide.with(holder.favImageView.context).load(img_months_array[position]!!).apply(RequestOptions.bitmapTransform(BlurTransformation(50))).apply(options).into(holder.favImageView)
              Glide.with(holder.favImageView.context).load(favCityList[position].img_url).apply(options).into(holder.favImageView)
              //holder.favImageView.setImageResource(favCityList[position].img_url)
+         }
+         else{
+              //= "Seems empty, try to tap the heart in some cities "
          }
 
      }
