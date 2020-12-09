@@ -32,7 +32,7 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view:View = View.inflate(context, R.layout.ranked_city, null)
         var icons:ImageView = view.findViewById(R.id.imageView)
-        var name: TextView = view.findViewById(R.id.titleTextView)
+        //var name: TextView = view.findViewById(R.id.titleTextView)
         //var score: TextView = view.findViewById(R.id.score)
         var position_text: TextView = view.findViewById(R.id.position)
         var crown: ImageView = view.findViewById(R.id.crown)
@@ -64,8 +64,8 @@ class RankedCityAdapter(var context: Context, var arrayList: MutableList<RankedC
         }
 
         //score.text = "Score: " + String.format("%.2f", ranked_city.score)
-        name.text = ranked_city.name
-        position_text.text = "#" + (position+1).toString() + "\nScore: " + String.format("%.1f", ranked_city.score)
+        //name.text = ranked_city.name
+        position_text.text = "#" + (position+1).toString() +"\n"+ ranked_city.name+"\nScore: " + String.format("%.1f", ranked_city.score)
         return  view!!
     }
     private fun managePreferred(db: FavDB, ranked_city: RankedCity, view: View) {

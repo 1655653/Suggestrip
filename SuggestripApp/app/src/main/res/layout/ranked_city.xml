@@ -8,9 +8,10 @@
     <androidx.cardview.widget.CardView
             style="@style/CardView.Light"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="180dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:elevation="3dp"
             android:orientation="vertical"
             app:cardCornerRadius="28dp"
@@ -28,9 +29,9 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -39,7 +40,7 @@
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/miami" />
 
-            <TextView
+         <!--   <TextView
                 android:id="@+id/titleTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -56,7 +57,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0" />
-
+-->
 
             <TextView
                 android:id="@+id/position"
@@ -64,8 +65,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginStart="5dp"
-                android:background="@drawable/rounded_explore"
-                android:text="#1\nScore: 99.9"
+                android:background="@drawable/rounded_sep"
+                android:text="#1\nMiami\nScore: 99.9"
                 android:textColor="@color/black"
                 android:textSize="25dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +74,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="0.768" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageView
                 android:id="@+id/favBtn"
@@ -82,12 +83,13 @@
                 android:layout_gravity="bottom|right"
                 android:background="@drawable/ic_favorite_shadow_24dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="01"
+                app:layout_constraintHorizontal_bias="0.929"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.917" />
 
             <ImageView
                 android:id="@+id/crown"
