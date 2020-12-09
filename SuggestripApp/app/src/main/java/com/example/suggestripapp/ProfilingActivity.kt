@@ -255,7 +255,7 @@ class ProfilingActivity : AppCompatActivity() ,LocationListener{
                     }
                     6 -> {
                         lock_tree = false
-                        tv_question.text = "How much do you care about nature?"
+                        tv_question.text = "How much do you care about parks, greenhouses, nature ecc.. ?"
                         tv_nightlife_numb.visibility = VISIBLE
                         tv_nightlife_numb.text = glass_array_boolean.count { it }.toString()
                         Log.d("porcamadonna", btn_pizza1.x.toString())
