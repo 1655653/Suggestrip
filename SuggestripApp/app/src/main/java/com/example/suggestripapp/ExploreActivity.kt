@@ -1,6 +1,7 @@
 package com.example.suggestripapp
 
 import android.app.Dialog
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Region
 import android.graphics.drawable.ColorDrawable
@@ -110,6 +111,15 @@ class ExploreActivity : AppCompatActivity() {
 
         //Attaches adapter with RecyclerView.
         rv.adapter = adapter
+    }
+    override fun onActivityResult(request: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(request, resultCode, data)
+        Log.d("CDA", request.toString()+"     "+resultCode.toString())
+
+        if(request == 5){
+            adapter?.onActivityResult(request,5,data!!.getIntExtra("id_removed", 0));
+        }
+
     }
 
 }
