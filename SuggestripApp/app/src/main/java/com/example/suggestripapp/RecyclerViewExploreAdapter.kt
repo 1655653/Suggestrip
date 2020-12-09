@@ -1,5 +1,6 @@
 package com.example.suggestripapp
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.ColorMatrix
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.row_layout.view.*
 
 
 //qui creo l'adapter ma sopratutto la classe ViewHolder che mi serve per sistemare tutti gli item della cardview
-class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months_array: Array<String>, var city_list: List<City>) : RecyclerView.Adapter<RecyclerViewExploreAdapter.ViewHolder>()
+class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months_array: Array<String>, var city_list: MutableList<City>) : RecyclerView.Adapter<RecyclerViewExploreAdapter.ViewHolder>()
  {
      inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
      {
@@ -47,11 +48,13 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
                  val context: Context = v.context
                  val intent = Intent(context, CityDetailsActivity::class.java)
                  Log.d("porcoddio", city_list[adapterPosition].toString())
+
                  intent.putExtra("city", city_list[adapterPosition])
-//                 intent.putExtra("city_name", itemView.tv_city_name_rv.text)
-//                 intent.putExtra("city_photo_url", "https://" + img_months_array[adapterPosition])
-                 intent.putExtra("from_shake", "false")
-                 context.startActivity(intent)
+                 intent.putExtra("from_shake", false)
+                 intent.putExtra("from_rv", true)
+                 intent.putExtra("id", 1);
+                 intent.putExtra("description", "send description to 2nd activity");
+                 (context as Activity).startActivityForResult(intent, 5)
              }
          }
      }
@@ -76,6 +79,9 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
          if (cursor.moveToFirst()) {
              heart.setImageResource(R.drawable.ic_favorite_red_24dp)
          }
+         else{
+             heart.setImageResource(R.drawable.ic_favorite_shadow_24dp)
+         }
 
          heart.setOnClickListener {
              cursor = db.readableDatabase.rawQuery(query, null, null)
@@ -90,6 +96,18 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
                  Toast.makeText(view.context, "${ranked_city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
              }
          }
+     }
+
+     fun onActivityResult(requestCode: Int, resultCode: Int, intExtra: Int) {
+         Log.d("CDA", "onActivityResult, now i have to update the heart")
+         city_list.forEachIndexed { index, city ->
+             if(city.ID == intExtra){
+
+                 notifyItemChanged(index)
+
+             }
+         }
+
      }
 
  }
