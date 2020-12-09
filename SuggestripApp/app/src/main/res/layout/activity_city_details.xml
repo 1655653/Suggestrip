@@ -36,8 +36,9 @@
             android:layout_gravity="center"
             android:text="Paris"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#F8F8EC"
+            android:textColor="@color/black"
             android:textSize="50dp"
+            android:background="@drawable/rounded_explore"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent" />
