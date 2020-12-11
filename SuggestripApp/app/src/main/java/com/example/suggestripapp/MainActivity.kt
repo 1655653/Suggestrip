@@ -141,6 +141,7 @@ class MainActivity : AppCompatActivity(){
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+        Log.i("diomaiala", requestCode.toString())
 
         if (requestCode == 666) {
             val response = IdpResponse.fromResultIntent(data)
