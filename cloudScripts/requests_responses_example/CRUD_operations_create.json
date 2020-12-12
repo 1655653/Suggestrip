@@ -1,0 +1,16 @@
+{
+    "msg_id": "CREATE",
+    "city":{
+        "description": "On April 15, 2019, as the Notre-Dame cathedral went up in flames, people in Paris gathered in the streets to pray. Joining them was just about everyone else across the globe with access to a screen. This, of course, was not an isolated catastrophe for the French capital over the past few years. But despite multiple terrorist attacks and the destruction of its iconic cathedral\u2014seemingly insurmountable disaster and hardship\u2014Paris prevails and comes back brighter. Amazingly, despite the tragic fire and a year of the Yellow Vest protests that deterred tourists from visiting the city, Paris matched its 2018 in 2019, with 35.4 million visitors, according to Statista. The City of Light ranks #3 in our Product category, with the second-best Airport Connectivity in the world, a #5 ranking for Museums (the city has more than a hundred) and #7 for Attractions. Leading up to the 2024 Summer Olympics, infrastructure investment has sped up and the city continues to build hotels at a dizzying rate. Two dozen opened in 2019 and the same amount were scheduled to debut in 2020, including the first Bulgari Hotel at 30 Avenue George V. There have been plenty of pandemic-related delays. As the saying goes, Paris is always a good idea. And now that swimming in the waters of the Seine is a thing at Bassin de la Villette public pools, even the locals who notoriously leave town in summer are sticking around. City Hall is promising to build five new outdoor swimming pools in time for the Olympics. So even though Paris is now #26 globally for Parks & Outdoors in 2020, it\u2019s a category ranking that should improve.",
+        "name": "Paris",
+        "tags": {
+            "costs": 1.0,
+            "night_life": 3.0,
+            "sports": 5.0,
+            "nature": 5.0,
+            "culture": 4.0,
+            "infrastructure": 1.0,
+            "food": 4.0
+        }
+    }
+}

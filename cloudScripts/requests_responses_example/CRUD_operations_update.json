@@ -1,0 +1,29 @@
+{
+    "msg_id": "UPDATE",
+    "city_id": "2596",
+    "city": {
+        "brief_description": "Just as terrorism subsided, the Notre-Dame inferno struck Parisian resolve anew. But the City of Light builds on resiliently.",
+        "img_url": "upload.wikimedia.org/wikipedia/commons/thumb/4/4b/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg/800px-La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques%2C_Paris_ao%C3%BBt_2014_%282%29.jpg",
+        "description": "updated",
+        "ID": "2596",
+        "country": "FR",
+        "name": "Rome",
+        "coordinates": [
+            {
+                "lon": 2.352222,
+                "globe": "earth",
+                "lat": 48.856613,
+                "primary": ""
+            }
+        ],
+        "tags": {
+            "costs": 5.0,
+            "night_life": 5.0,
+            "sports": 5.0,
+            "nature": 5.0,
+            "culture": 5.0,
+            "infrastructure": 5.0,
+            "food": 5.0
+        }
+    }
+}
