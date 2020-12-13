@@ -58,6 +58,9 @@ class MainActivity : AppCompatActivity(){
             if(intent.getBooleanExtra("is_uri_propic_modified",false))
                 Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
         }
+        if(getIntent().getBooleanExtra("back_from_ranked",false))  Glide.with(applicationContext).load(user?.photoUrl).apply(options).into(btn_user)
+
+
         else {
             if(! getIntent().getBooleanExtra("back_from_shake",false) && !getIntent().getBooleanExtra("back_from_ranked",false)) { //se torno dallo shake non devo fare il sign in
                 //setto i provider

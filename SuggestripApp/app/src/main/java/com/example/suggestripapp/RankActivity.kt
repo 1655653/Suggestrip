@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.gson.Gson
 
 class RankActivity : AppCompatActivity() {
@@ -52,6 +53,8 @@ class RankActivity : AppCompatActivity() {
     override fun onBackPressed() {
         val intent = Intent(this, MainActivity::class.java).apply {}
         intent.putExtra("back_from_ranked", true)
+//        intent.putExtra("user_img_url_from_ranked", FirebaseAuth.getInstance().currentUser?.photoUrl.toString())
+        Log.d("SOOOO",FirebaseAuth.getInstance().currentUser?.photoUrl.toString())
         startActivity(intent)
         super.onBackPressed()
 
