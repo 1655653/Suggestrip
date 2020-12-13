@@ -124,6 +124,8 @@ def crud_tester(crud_op):
         "city": {}
     }
 
+    
+
     headers = {'Content-type': 'application/json'}
     x = requests.post(url, headers=headers, json=body_example)
     pprint(x.json())
@@ -135,5 +137,5 @@ t = time.time()
 #get_city_tester(1)
 #get_all_tester()
 
-crud_tester("DELETE")
+crud_tester("CREATE")
 print(time.time()-t)
