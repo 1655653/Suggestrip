@@ -30,6 +30,7 @@
         android:layout_height="41dp"
         android:background="@drawable/profiling_button"
         android:text="ADMIN"
+        android:visibility="invisible"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"

@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity(){
     private var acceleration = 0f
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
+    private val admin_list_id = mutableListOf<String>("P3ggNn7i8tMcJ1Vq4nkKoRq8VnO2")
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
     var options = RequestOptions()
@@ -151,10 +153,21 @@ class MainActivity : AppCompatActivity(){
             val response = IdpResponse.fromResultIntent(data)
 
             if (resultCode == Activity.RESULT_OK) {
-                // Successfully signed in
+                // USER SUCCESFULLY SIGNED IN
                 val user = FirebaseAuth.getInstance().currentUser
+                Log.d("dyocanale", "user id:      "+user?.uid)
+                var welcome = "Welcome, "+user?.displayName
+
+                for(admins in admin_list_id){
+                    if(user?.uid == admins) {
+                        btn_admin.visibility = VISIBLE
+                        welcome+= " YOU ARE AN ADMIN"
+                    }
+
+                }
+
                 if (user != null) {
-                    Toast.makeText(this, "Welcome, "+user.displayName, Toast.LENGTH_LONG ).show()
+                    Toast.makeText(this, welcome, Toast.LENGTH_LONG ).show()
                     Log.d("porcamadonna",user.photoUrl.toString())
 
 
