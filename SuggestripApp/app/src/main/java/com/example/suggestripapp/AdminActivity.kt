@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kotlinx.android.synthetic.main.activity_admin.*
 import okhttp3.*
 import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.IOException
@@ -14,7 +15,14 @@ class AdminActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
         //TEST per la create, vedere payload dentro cloudscripts per update e delete. aggiungere form visivo
-        awsCall("CREATE", City("null","null","this is a test description",101,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
+        btn_create.setOnClickListener {
+            awsCall("CREATE", City("null","null","this is a test description",101,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
+        }
+        btn_UpDele.setOnClickListener {
+            val intent = Intent(this, ExploreActivity::class.java).apply {}
+            intent.putExtra("admin", true)
+            startActivity(intent)
+        }
     }
 
 

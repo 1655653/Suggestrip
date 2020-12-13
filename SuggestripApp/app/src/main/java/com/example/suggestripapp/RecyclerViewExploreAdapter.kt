@@ -38,6 +38,12 @@ class RecyclerViewExploreAdapter(var months_array: Array<String>, var img_months
              var db = FavDB(itemView.context)
              managePreferred(db, city_list[position],itemView)
 
+//             if(!itemView.intent.getBooleanExtra("admin",false))
+//                 managePreferred(db, city_list[position],itemView)
+//             else{
+//                 itemView.favBtn.setImageResource(android.R.drawable.ic_menu_edit)
+//             }
+
 //
              //Picasso.get().load(img_months_array[position]).into(itemView.ib_city);
          }
