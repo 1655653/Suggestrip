@@ -16,7 +16,7 @@ class AdminActivity : AppCompatActivity() {
         setContentView(R.layout.activity_admin)
         //TEST per la create, vedere payload dentro cloudscripts per update e delete. aggiungere form visivo
         btn_create.setOnClickListener {
-            awsCall("CREATE", City("null","null","this is a test description",101,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
+            awsCall("CREATE", City("null","null","this is a test description",102,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
         }
         btn_UpDele.setOnClickListener {
             val intent = Intent(this, ExploreActivity::class.java).apply {}

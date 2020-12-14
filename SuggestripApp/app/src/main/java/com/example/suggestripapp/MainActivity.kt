@@ -43,6 +43,7 @@ class MainActivity : AppCompatActivity(){
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
     private val admin_list_id = mutableListOf<String>("P3ggNn7i8tMcJ1Vq4nkKoRq8VnO2")
+    var is_admin = false
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
     var options = RequestOptions()
@@ -60,8 +61,10 @@ class MainActivity : AppCompatActivity(){
         }
         if(getIntent().getBooleanExtra("back_from_ranked",false))  {
             for(a in admin_list_id){
-                if(user?.uid == a)
+                if(user?.uid == a) {
                     btn_admin.visibility = VISIBLE
+                    is_admin = true
+                }
 
             }
             Glide.with(applicationContext).load(user?.photoUrl).apply(options).into(btn_user)
@@ -98,6 +101,12 @@ class MainActivity : AppCompatActivity(){
 
         btn_explore.setOnClickListener {
             val intent = Intent(this, ExploreActivity::class.java).apply {}
+
+            if(is_admin){
+                intent.putExtra("is_admin", true)
+            }
+            Log.d("starnazzo", is_admin.toString())
+
             startActivity(intent)
         }
         btn_heart.setOnClickListener {
@@ -172,6 +181,7 @@ class MainActivity : AppCompatActivity(){
                     if(user?.uid == admins) {
                         btn_admin.visibility = VISIBLE
                         welcome+= " YOU ARE AN ADMIN"
+                        is_admin = true
                     }
 
                 }

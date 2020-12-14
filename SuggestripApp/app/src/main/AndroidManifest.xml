@@ -27,6 +27,11 @@
             android:parentActivityName=".MainActivity">
             android:parentActivityName=".fav.FavActivity">
         </activity>
+        <activity android:name=".AdminCityDetailsActivity">
+            android:parentActivityName=".ExploreActivity">
+            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".fav.FavActivity">
+        </activity>
         <activity android:name=".ExploreActivity">
             android:parentActivityName=".MainActivity">
         </activity>

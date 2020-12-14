@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_bg">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+        <ImageView
+
+            android:id="@+id/iv_city_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.01"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Paris"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            android:textSize="50dp"
+            android:background="@drawable/rounded_explore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+>
+
+                <TextView
+                    android:id="@+id/desc_separator"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:gravity="center"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/description_tv_city"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+                <TextView
+                    android:id="@+id/tv_city_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:gravity="left"
+                    android:text="@string/lorem_ipsum"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/desc_separator" />
+
+                <!--PRIMO GRID LAYOUT-->
+                <TextView
+                    android:id="@+id/tags_separator"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:gravity="center"
+                    android:text="      Tags     "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/description_tv_city"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_city_description" />
+
+                <GridLayout
+
+                    android:id="@+id/grid_tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:columnCount="6"
+                    android:rowCount="7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tags_separator">
+
+
+                    <TextView
+                        android:id="@+id/tv_culture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Culture"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/greek1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_greek"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/greek2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_greek"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/greek3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_greek"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/greek4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_greek"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/greek5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_greek"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_infrastructure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Infrastructure"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/car1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_car" />
+
+                    <ImageView
+                        android:id="@+id/car2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_car" />
+
+                    <ImageView
+                        android:id="@+id/car3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_car" />
+
+                    <ImageView
+                        android:id="@+id/car4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_car" />
+
+                    <ImageView
+                        android:id="@+id/car5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_car" />
+
+                    <TextView
+                        android:id="@+id/tv_sports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sports"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/ball1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_ball" />
+
+                    <ImageView
+                        android:id="@+id/ball2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_ball" />
+
+                    <ImageView
+                        android:id="@+id/ball3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_ball" />
+
+                    <ImageView
+                        android:id="@+id/ball4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_ball" />
+
+                    <ImageView
+                        android:id="@+id/ball5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_ball" />
+
+                    <TextView
+                        android:id="@+id/tv_night_life"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Night Life"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/glass1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_glass" />
+
+                    <ImageView
+                        android:id="@+id/glass2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_glass" />
+
+                    <ImageView
+                        android:id="@+id/glass3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_glass" />
+
+                    <ImageView
+                        android:id="@+id/glass4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_glass" />
+
+                    <ImageView
+                        android:id="@+id/glass5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_glass" />
+
+                    <TextView
+                        android:id="@+id/tv_nature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nature"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/tree1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_tree" />
+
+                    <ImageView
+                        android:id="@+id/tree2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_tree" />
+
+                    <ImageView
+                        android:id="@+id/tree3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_tree" />
+
+                    <ImageView
+                        android:id="@+id/tree4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_tree" />
+
+                    <ImageView
+                        android:id="@+id/tree5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_tree" />
+
+                    <TextView
+                        android:id="@+id/tv_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/pizza1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_pizza" />
+
+                    <ImageView
+                        android:id="@+id/pizza2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_pizza" />
+
+                    <ImageView
+                        android:id="@+id/pizza3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_pizza" />
+
+                    <ImageView
+                        android:id="@+id/pizza4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_pizza" />
+
+                    <ImageView
+                        android:id="@+id/pizza5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_pizza" />
+
+                    <TextView
+                        android:id="@+id/tv_costs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Costs"
+                        android:textSize="@dimen/description_tv_city" />
+
+                    <ImageView
+                        android:id="@+id/dollar1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_cost" />
+
+                    <ImageView
+                        android:id="@+id/dollar2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_cost" />
+
+                    <ImageView
+                        android:id="@+id/dollar3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:text="icon"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/filled_cost" />
+
+
+                </GridLayout>
+
+
+
+                <ImageView
+                    android:id="@+id/iv_preferred"
+                    android:layout_width="76dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_city_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/desc_separator"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintVertical_bias="1"
+                    app:srcCompat="@drawable/ic_favorite_shadow_24dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="411dp"
+                    android:layout_height="324dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

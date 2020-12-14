@@ -11,6 +11,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_explore.*
@@ -24,7 +25,9 @@ class ExploreActivity : AppCompatActivity() {
     var city_name_array = mutableListOf<String>()
     var img_cities_array = mutableListOf<String>()
     var popup: Dialog? = null
-    lateinit var adapter :RecyclerViewExploreAdapter
+    var adapter:Any? = null
+    var is_admin = false
+//    lateinit var adapter :RecyclerViewExploreAdapter
 
     private val client = OkHttpClient()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +35,8 @@ class ExploreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_explore)
         popup = Dialog(this)
         ShowPopup()
+
+
 //            //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
         run()
 
@@ -65,6 +70,8 @@ class ExploreActivity : AppCompatActivity() {
                     for (c in lc) {
                         var x = Gson().toJson(c)
                         var response_city = Gson().fromJson<City>(x, City::class.java)
+                        Log.d("DIOPORCACCIO", response_city.name)
+
                         response_city.img_url = "https://" + response_city.img_url
                         response_city.name = response_city.name.replace("_"," ")
                         city_list.add(response_city)
@@ -95,29 +102,54 @@ class ExploreActivity : AppCompatActivity() {
         }
         //objectOutStream.close() //close file
         //RENDERING IMAGES
-        adapter = RecyclerViewExploreAdapter(
-            city_name_array.toTypedArray(),
-            img_cities_array.toTypedArray(),
-                city_list
-        )
+
+
+
+
 
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         layoutManager.gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
 
         rv.layoutManager = layoutManager
+
+        if(intent.getBooleanExtra("is_admin", false)){
+            adapter = AdminRecyclerViewExploreAdapter(
+                    city_name_array.toTypedArray(),
+                    img_cities_array.toTypedArray(),
+                    city_list
+            )
+            rv.adapter = adapter as AdminRecyclerViewExploreAdapter
+            is_admin = true
+        }
+        else{
+            adapter = RecyclerViewExploreAdapter(
+                    city_name_array.toTypedArray(),
+                    img_cities_array.toTypedArray(),
+                    city_list
+            )
+            rv.adapter = adapter as RecyclerViewExploreAdapter
+        }
+        Log.d("starnazzo", is_admin.toString())
+
+
         //sets divider in the list
 //        rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
 //        rv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL))
 
         //Attaches adapter with RecyclerView.
-        rv.adapter = adapter
+
     }
     override fun onActivityResult(request: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(request, resultCode, data)
         Log.d("CDA", request.toString()+"     "+resultCode.toString())
 
         if(request == 5){
-            adapter?.onActivityResult(request,5,data!!.getIntExtra("id_removed", 0));
+            if(is_admin){
+                (adapter as AdminRecyclerViewExploreAdapter)?.onActivityResult(request,5,data!!.getIntExtra("id_removed", 0));
+            }
+            else{
+                (adapter as RecyclerViewExploreAdapter)?.onActivityResult(request,5,data!!.getIntExtra("id_removed", 0));
+            }
         }
 
     }
