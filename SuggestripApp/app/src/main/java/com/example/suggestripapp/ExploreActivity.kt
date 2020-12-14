@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Environment
 import android.util.Log
+import android.view.View.GONE
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,7 +17,9 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_explore.*
 import okhttp3.*
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.*
+import java.util.concurrent.TimeUnit
 
 class ExploreActivity : AppCompatActivity() {
     /*var city_name_array = arrayOf("MIAMI","NEW YORK", "PARIS","ROME","TOKYO")
@@ -35,11 +38,16 @@ class ExploreActivity : AppCompatActivity() {
         setContentView(R.layout.activity_explore)
         popup = Dialog(this)
         ShowPopup()
+        is_admin = intent.getBooleanExtra("is_admin", false)
+        if(!is_admin)
+            addButton.visibility = GONE
 
-
-//            //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
+         //AWS CALL, GET ALL CITIES, UI RENDERING INSIDE
         run()
-
+        addButton.setOnClickListener{
+            //TODO add new city page
+            awsCall("CREATE", City("null","null","this is a test description",102,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
+        }
     }
     fun ShowPopup() {
         popup?.setContentView(R.layout.user_popup)
@@ -129,7 +137,7 @@ class ExploreActivity : AppCompatActivity() {
             )
             rv.adapter = adapter as RecyclerViewExploreAdapter
         }
-        Log.d("starnazzo", is_admin.toString())
+        //Log.d("starnazzo", is_admin.toString())
 
 
         //sets divider in the list
@@ -152,6 +160,47 @@ class ExploreActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun awsCall(crudOp : String, newCity : City) {
+        var url = "https://hzqjewxyhe.execute-api.us-east-1.amazonaws.com/default/CRUD_operations"
+        val payload = "{\n" +
+                "    \"msg_id\": \"$crudOp\",\n" +
+                "    \"city\":{\n" +
+                "        \"description\": \"${newCity.description}\",\n" +
+                "        \"name\": \"${newCity.name}\",\n" +
+                "        \"tags\": {\n" +
+                "            \"costs\": ${newCity.tags!!.costs.toString()},\n" +
+                "            \"night_life\":${newCity.tags!!.night_life.toString()},\n" +
+                "            \"sports\": ${newCity.tags!!.sports.toString()},\n" +
+                "            \"nature\": ${newCity.tags!!.nature.toString()},\n" +
+                "            \"culture\": ${newCity.tags!!.culture.toString()},\n" +
+                "            \"infrastructure\": ${newCity.tags!!.infrastructure.toString()},\n" +
+                "            \"food\": ${newCity.tags!!.food.toString()}\n" +
+                "        }\n" +
+                "    }\n" +
+                "}"
+        Log.d("DIOMAYALE",payload)
+        val okHttpClient = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+        val requestBody = payload.toRequestBody()
+        val request = Request.Builder()
+                .method("POST", requestBody)
+                .url(url)
+                .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful)
+                    throw IOException("Unexpected code $response")
+
+                Log.d("DIOMAYALEE", "body: " + response.body!!.string())
+                val intent = Intent(applicationContext, MainActivity::class.java).apply {}
+                startActivity(intent)
+            }
+        })
     }
 
 }

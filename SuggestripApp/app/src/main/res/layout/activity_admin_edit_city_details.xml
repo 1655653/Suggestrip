@@ -14,7 +14,6 @@
 
 
         <ImageView
-
             android:id="@+id/iv_city_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +71,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-                <TextView
+                <EditText
                     android:id="@+id/tv_city_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -538,11 +537,8 @@
 
 
                 </GridLayout>
-
-
-
                 <ImageView
-                    android:id="@+id/iv_preferred"
+                    android:id="@+id/delete_button"
                     android:layout_width="76dp"
                     android:layout_height="60dp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_city_description"
@@ -551,7 +547,46 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintHorizontal_bias="0.95"
                     app:layout_constraintVertical_bias="1"
-                    app:srcCompat="@drawable/ic_favorite_shadow_24dp" />
+                    app:srcCompat="@drawable/delete" />
+                <ImageView
+                    android:id="@+id/confirm_button"
+                    android:layout_width="76dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.731"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/grid_tags"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/diskette" />
+
+                <ImageView
+                    android:id="@+id/discard_button"
+                    android:layout_width="76dp"
+                    android:layout_height="60dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.226"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/grid_tags"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/remove" />
+
+                <TextView
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="           Attention!\n You are editing the city!"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#ff0000"
+                    android:textSize="30dp"
+                    app:layout_constraintBottom_toTopOf="@+id/desc_separator"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
 
                 <LinearLayout
                     android:id="@+id/linearLayout3"

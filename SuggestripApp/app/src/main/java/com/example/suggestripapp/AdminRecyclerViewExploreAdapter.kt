@@ -52,13 +52,14 @@ class AdminRecyclerViewExploreAdapter(var months_array: Array<String>, var img_m
          {
              itemView.setOnClickListener { v ->
                  val context: Context = v.context
-                 val intent = Intent(context, AdminCityDetailsActivity::class.java)
+                 val intent = Intent(context, CityDetailsActivity::class.java)
                  Log.d("porcoddio", city_list[adapterPosition].toString())
 
                  intent.putExtra("city", city_list[adapterPosition])
                  intent.putExtra("from_shake", false)
                  intent.putExtra("from_rv", true)
                  intent.putExtra("id", 1);
+                 intent.putExtra("is_admin", true)
                  intent.putExtra("description", "send description to 2nd activity");
                  (context as Activity).startActivityForResult(intent, 5)
              }

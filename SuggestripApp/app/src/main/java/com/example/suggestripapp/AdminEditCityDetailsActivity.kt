@@ -14,22 +14,22 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View.GONE
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import com.example.suggestripapp.fav.FavDB
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.activity_city_details.*
+import kotlinx.android.synthetic.main.activity_admin_edit_city_details.*
+import kotlinx.android.synthetic.main.activity_city_details.tv_city_description
+import kotlinx.android.synthetic.main.activity_city_details.tv_city_name
 import okhttp3.*
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.IOException
 import java.lang.reflect.Type
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.math.sqrt
 
 
-class AdminCityDetailsActivity : AppCompatActivity() {
+class AdminEditCityDetailsActivity : AppCompatActivity() {
     lateinit var city:City
     private val client = OkHttpClient()
     var from_shake = false
@@ -46,7 +46,7 @@ class AdminCityDetailsActivity : AppCompatActivity() {
     var url = "https://7ny13nqj6e.execute-api.us-east-1.amazonaws.com/default/dynamo_getter?ID="
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_admin_city_details)
+        setContentView(R.layout.activity_admin_edit_city_details)
 
         intent = getIntent();
         popup = Dialog(this)
@@ -71,11 +71,36 @@ class AdminCityDetailsActivity : AppCompatActivity() {
             ID = r_city.ID.toString()
             Log.d("algo", ID + " ecccoooollloooooo")
         }
-        else{
+        else {
             city = intent.extras?.get("city") as City
             ID = city.ID.toString()
         }
 
+
+        discard_button.setOnClickListener{
+            val intent = Intent(this, CityDetailsActivity::class.java).apply {}
+            intent.putExtra("city",city)
+            startActivity(intent)
+        }
+
+        confirm_button.setOnClickListener{
+            //TODO controllare se la descriptino della city viene agggiornata dalla textbox
+            //PS NON CREDO, va parsata dalla textbox
+            //PPS credo di averlo fatto, ma va fatto anche per i tag
+            city.description = tv_city_description.text.toString()
+            adminCrudAws("UPDATE",city)
+            //TODO non so si puo fare un refresh
+            val intent = Intent(this, CityDetailsActivity::class.java).apply {}
+            intent.putExtra("city",city)
+            startActivity(intent)
+        }
+
+        delete_button.setOnClickListener{
+            adminCrudAws("DELETE",city)
+            //TODO back to explore fatto bene
+            val intent = Intent(this, ExploreActivity::class.java).apply {}
+            startActivity(intent)
+        }
         //aws call
         url += ID
         ShowPopup()
@@ -107,38 +132,14 @@ class AdminCityDetailsActivity : AppCompatActivity() {
                         populateLayout(city!!)
 
                         //favourite detection
-                        iv_preferred.setOnClickListener {
 
-                            var db = FavDB(applicationContext)
-                            managePreferred(db, city)
-                        }
                     }
                 }
             }
         })
     }
 
-    private fun managePreferred(db: FavDB, city: City) {
-        val query = "SELECT * FROM " + FavDB.TABLE_NAME + " WHERE " + FavDB.ID + " = ${city.ID.toString()} "
-        var cursor = db.readableDatabase.rawQuery(query, null, null)
-        //se esiste lo cancello
-        if (cursor.moveToFirst()){
-            iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
-            db.remove_fav(city.ID.toString())
-            Toast.makeText(applicationContext, "${city.name} removed from the favourites", Toast.LENGTH_SHORT).show()
 
-            id_removed = city.ID
-        }
-        //se non esiste lo aaggiungo
-        else{
-            iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
-            db.insertIntoTheDatabase(city.name, city.img_url, city.ID.toString(), "1")
-            Toast.makeText(applicationContext, "${city.name} added to the favourites!", Toast.LENGTH_SHORT).show()
-            id_removed = 0
-        }
-
-
-    }
 
     override fun onDestroy() {
         popup?.dismiss()
@@ -196,21 +197,6 @@ class AdminCityDetailsActivity : AppCompatActivity() {
         populateIcons("tree", city.tags?.nature?.toInt())
 
 
-        ///SET HEART IMAGE COLOR
-        var sql = FavDB(applicationContext)
-        val query = "SELECT * FROM " + FavDB.TABLE_NAME + " WHERE " + FavDB.ID + " = ${city.ID.toString()} "
-        Log.d("dblog", query)
-        var cursor = sql.readableDatabase.rawQuery(query, null, null)
-        if (cursor.moveToFirst()) {
-            val favourite = cursor.getString(3)
-            Log.d("dblog", favourite)
-            if(favourite == "1"){
-                iv_preferred.setImageResource(R.drawable.ic_favorite_red_24dp)
-            }
-            else{
-                iv_preferred.setImageResource(R.drawable.ic_favorite_shadow_24dp)
-            }
-        }
     }
 
     fun populateIcons(icon:String, n: Int?) {
@@ -249,5 +235,52 @@ class AdminCityDetailsActivity : AppCompatActivity() {
         popup?.setContentView(R.layout.user_popup)
         popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         popup?.show()
+    }
+
+
+    private fun adminCrudAws(crudOp: String, newCity: City) {
+        var url = "https://hzqjewxyhe.execute-api.us-east-1.amazonaws.com/default/CRUD_operations"
+        var payload = "{\n" +
+                "    \"msg_id\": \"$crudOp\",\n" +
+                "    \"city_id\": \"${newCity.ID}\",\n" +
+                "    \"city\":{\n" +
+                "        \"description\": \"${newCity.description}\",\n" +
+                "        \"name\": \"${newCity.name}\",\n" +
+                "        \"brief_description\": \"${newCity.brief_description}\",\n" +
+                "        \"img_url\": \"${newCity.img_url}\",\n" +
+                "        \"ID\": \"${newCity.ID.toString()}\",\n" +
+                "        \"country\": \"${newCity.country}\",\n"+
+                "        \"tags\": {\n" +
+                "            \"costs\": ${newCity.tags!!.costs.toString()},\n" +
+                "            \"night_life\":${newCity.tags!!.night_life.toString()},\n" +
+                "            \"sports\": ${newCity.tags!!.sports.toString()},\n" +
+                "            \"nature\": ${newCity.tags!!.nature.toString()},\n" +
+                "            \"culture\": ${newCity.tags!!.culture.toString()},\n" +
+                "            \"infrastructure\": ${newCity.tags!!.infrastructure.toString()},\n" +
+                "            \"food\": ${newCity.tags!!.food.toString()}\n" +
+                "        }\n" +
+                "    }\n" +
+                "}"
+        Log.d("DIOMAYALE",payload)
+        val okHttpClient = OkHttpClient.Builder().connectTimeout(30, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+        val requestBody = payload.toRequestBody()
+        val request = Request.Builder()
+                .method("POST", requestBody)
+                .url(url)
+                .build()
+        okHttpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                e.printStackTrace()
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                if (!response.isSuccessful)
+                    throw IOException("Unexpected code $response")
+
+                Log.d("DIOMAYALEE", "body: " + response.body!!.string())
+                val intent = Intent(applicationContext, MainActivity::class.java).apply {}
+                startActivity(intent)
+            }
+        })
     }
 }

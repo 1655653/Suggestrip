@@ -18,6 +18,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.suggestripapp.fav.FavActivity
 import com.example.suggestripapp.fav.FavDB
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -35,6 +36,7 @@ class CityDetailsActivity : AppCompatActivity() {
     var from_shake = false
     var from_rv = false
     var from_algo = false
+    var is_admin = false
     var popup: Dialog? = null
     var id_removed = 0
     //shake
@@ -48,6 +50,7 @@ class CityDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city_details)
 
+
         intent = getIntent();
         popup = Dialog(this)
         ///shake feature
@@ -59,9 +62,16 @@ class CityDetailsActivity : AppCompatActivity() {
         from_shake = intent.getBooleanExtra("from_shake", false)
         from_rv = intent.getBooleanExtra("from_rv", false)
         from_algo = intent.getBooleanExtra("from_algo", false)
+        is_admin = intent.getBooleanExtra("is_admin", false)
 
         //choose id, random if shake, selected if explored
         var ID = ""
+
+        if (! is_admin) {
+            editbutton.visibility = GONE
+        }
+
+
 
         if(from_shake){
             ID = (0..101).random().toString()
@@ -76,6 +86,11 @@ class CityDetailsActivity : AppCompatActivity() {
             ID = city.ID.toString()
         }
 
+        editbutton.setOnClickListener{
+            val intent = Intent(this, AdminEditCityDetailsActivity::class.java).apply {}
+            intent.putExtra("city",city)
+            startActivity(intent)
+        }
         //aws call
         url += ID
         ShowPopup()
@@ -287,4 +302,7 @@ class CityDetailsActivity : AppCompatActivity() {
         popup?.getWindow()?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         popup?.show()
     }
+
+
+
 }
