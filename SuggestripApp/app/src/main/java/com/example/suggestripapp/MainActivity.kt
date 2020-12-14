@@ -113,10 +113,10 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, FavActivity::class.java).apply {}
             startActivity(intent)
         }
-        btn_admin.setOnClickListener {
+        /*btn_admin.setOnClickListener {
             val intent = Intent(this, AdminActivity::class.java).apply {}
             startActivity(intent)
-        }
+        }*/
         ///shake feature
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         Objects.requireNonNull(sensorManager)!!.registerListener(sensorListener, sensorManager!!.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
