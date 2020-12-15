@@ -1,6 +1,6 @@
 # Suggestrip
 
-![logo](SuggestripApp\app\src\main\res\drawable\logo.png)
+![logo](https://github.com/1655653/Suggestrip/blob/master/SuggestripApp/app/src/main/res/drawable/logo.png)
 
 Android app written in Kotlin developed for the MACC course.
 
