@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity(){
             if(intent.getBooleanExtra("is_uri_propic_modified",false))
                 Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
         }
+
         if(getIntent().getBooleanExtra("back_from_ranked",false))  {
             for(a in admin_list_id){
                 if(user?.uid == a) {
@@ -190,10 +191,7 @@ class MainActivity : AppCompatActivity(){
                 if (user != null) {
                     Toast.makeText(this, welcome, Toast.LENGTH_LONG ).show()
                     Log.d("porcamadonna",user.photoUrl.toString())
-
-
                     Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
-
 
                 }
                 // ...
@@ -202,6 +200,7 @@ class MainActivity : AppCompatActivity(){
                 // sign-in flow using the back button. Otherwise check
                 // response.getError().getErrorCode() and handle the error.
                 // ...
+                finish()
             }
         }
     }
