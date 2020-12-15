@@ -2,9 +2,17 @@
 
 ![logo](https://github.com/1655653/Suggestrip/blob/master/SuggestripApp/app/src/main/res/drawable/logo.png)
 
-Android app written in Kotlin developed for the MACC course.
+Android app written in Kotlin developed for the MACC course at Sapienza University.
 
-The app has as main goal the suggestion of the best locations for the user
+Our application idea is Suggestrip, a service to find the location that best suits your tastes and needs.
+
+Basically, this application allows you to report what your needs and preferences are when it comes to travel through a small survey during the research phase, in order to find the best destinations for the user.
+
+The destination search algorithm bases its operation on different matching criteria between the user's needs and what the different locations offer. It also takes into account, through the use of external APIs, weather conditions and information about the current Coronavirus situation for the different locations, in order to provide updated information when a user is suggested a location.
+
+Also on the Android application side we have provided a responsive UI, the use of the GPS sensor to calculate the distance between the various destinations and the accelerometer to return to a random city, whenever a user shakes the phone.
+
+We have implemented the cloud structure using AWS and the authentication with Firebase.
 
 ## Authors
 
