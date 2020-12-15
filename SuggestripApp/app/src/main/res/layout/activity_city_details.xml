@@ -29,20 +29,6 @@
             app:layout_constraintVertical_bias="0.01"
             app:srcCompat="@drawable/logo" />
 
-        <TextView
-            android:id="@+id/tv_city_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Paris"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="@color/black"
-            android:textSize="50dp"
-            android:background="@drawable/rounded_explore"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-
 
         <ScrollView
 
@@ -56,8 +42,25 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
->
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_city_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_explore"
+                    android:text="Paris"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/black"
+                    android:textSize="50dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/desc_separator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintVertical_bias="0.68"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/desc_separator"
@@ -619,8 +622,8 @@
                     android:layout_height="54dp"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded"
-                    android:text="      Weather info   "
                     android:gravity="center"
+                    android:text="      Weather info   "
                     android:textColor="@color/black"
                     android:textSize="25dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -653,16 +656,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/wheather_sep">
 
 
-
-
                     <TextView
                         android:id="@+id/tv_weather_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Weather: "
                         android:textSize="@dimen/description_tv_city" />
-
-
 
 
                 </GridLayout>
@@ -673,9 +672,9 @@
                     android:layout_height="60dp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_city_description"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.95"
                     app:layout_constraintStart_toEndOf="@id/desc_separator"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_bias="0.95"
                     app:layout_constraintVertical_bias="1"
                     app:srcCompat="@drawable/ic_favorite_shadow_24dp" />
 
@@ -685,11 +684,12 @@
                     android:layout_height="60dp"
                     app:layout_constraintBottom_toTopOf="@+id/tv_city_description"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.95"
                     app:layout_constraintStart_toEndOf="@id/desc_separator"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintHorizontal_bias="0.95"
                     app:layout_constraintVertical_bias="0"
                     app:srcCompat="@drawable/pencil" />
+
                 <LinearLayout
                     android:id="@+id/linearLayout3"
                     android:layout_width="411dp"

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.hardware.Sensor
@@ -17,9 +18,13 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_admin_edit_city_details.*
+import kotlinx.android.synthetic.main.activity_admin_edit_city_details.iv_city_image
+import kotlinx.android.synthetic.main.activity_city_details.*
 import kotlinx.android.synthetic.main.activity_city_details.tv_city_description
 import kotlinx.android.synthetic.main.activity_city_details.tv_city_name
 import okhttp3.*
@@ -88,13 +93,14 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
         //ADMIN BUTTONS
 
         discard_button.setOnClickListener {
-            var intent = Intent(this, CityDetailsActivity::class.java).apply {}
+            /*var intent = Intent(this, CityDetailsActivity::class.java).apply {}
             intent.putExtra("city", city)
             intent.putExtra("is_admin", true)
             if(is_creating)
                 intent = Intent(this, ExploreActivity::class.java).apply {}
 
-            startActivity(intent)
+            startActivity(intent)*/
+            super.onBackPressed()
         }
 
         confirm_button.setOnClickListener {
@@ -127,7 +133,8 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
 
             adminCrudAws(crudOp, city)
 
-            startActivity(intent)
+            //startActivity(intent)
+            super.onBackPressed()
         }
 
         delete_button.setOnClickListener {
@@ -135,9 +142,12 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
             //TODO back to explore fatto bene
             // MAIN --> EXPLORE --> CITY_DETAILS --> ADMIN_EDIT --> remove --> EXPLORE
             val intent = Intent(this, ExploreActivity::class.java).apply {}
+            intent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
             intent.putExtra("is_admin", true)
             startActivity(intent)
         }
+
+
         //aws call
         if (!is_creating) {
             url += ID
@@ -229,6 +239,10 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
         //FILL THE ACTIVITY
         tv_city_name.text = city.name
         tv_city_description.text = city.description
+        var options = RequestOptions()
+                .placeholder(R.drawable.logo)
+                .centerCrop()
+        Glide.with(applicationContext).load(city.img_url).apply(options).into(iv_city_image)
 
         //tv_costs.text = "Costs: " + city.tags?.costs.toString()
         var n = city.tags?.costs?.toInt()
