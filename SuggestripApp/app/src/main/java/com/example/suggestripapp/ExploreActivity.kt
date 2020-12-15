@@ -46,7 +46,12 @@ class ExploreActivity : AppCompatActivity() {
         run()
         addButton.setOnClickListener{
             //TODO add new city page
-            awsCall("CREATE", City("null","null","this is a test description",102,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
+            val intent = Intent(applicationContext, AdminEditCityDetailsActivity::class.java).apply {}
+            intent.putExtra("city",City("null","null","Insert description",102,"null","Insert city name",null, Tags(1.0,1.0,1.0,1.0,1.0,1.0,1.0),null,null))
+            intent.putExtra("is_creating",true)
+            startActivity(intent)
+
+            //awsCall("CREATE", City("null","null","this is a test description",102,"null","Ortucchio",null, Tags(1.0,1.0,1.0,1.0,2.0,3.0,4.0),null,null))
         }
     }
     fun ShowPopup() {

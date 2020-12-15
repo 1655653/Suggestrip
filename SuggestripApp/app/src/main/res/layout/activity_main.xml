@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
 
-    <!--<Button
+    <Button
         android:id="@+id/btn_profiling"
         android:layout_width="345dp"
         android:layout_height="117dp"
@@ -23,26 +23,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.475" />
-        -->
 
-    <Button
-        android:id="@+id/btn_admin"
-        android:layout_width="104dp"
-        android:layout_height="41dp"
-        android:background="@drawable/profiling_button"
-        android:text="ADMIN"
-        android:visibility="invisible"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
 
+    <!--    <Button
+            android:id="@+id/btn_admin"
+            android:layout_width="104dp"
+            android:layout_height="41dp"
+            android:background="@drawable/profiling_button"
+            android:text="ADMIN"
+            android:visibility="invisible"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
+       -->
     <TextView
         android:id="@+id/tv_shake"
         android:layout_width="wrap_content"
@@ -52,7 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_profiling" />
-
 
 
     <ImageButton
@@ -77,9 +76,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_heart"
         app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintVertical_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
 
     <ImageButton
         android:id="@+id/btn_heart"
@@ -89,9 +88,9 @@
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="0.95"
         app:layout_constraintStart_toEndOf="@id/btn_explore"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
 
     <ImageView
         android:id="@+id/imageView2"

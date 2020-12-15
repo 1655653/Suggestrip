@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(){
         if(getIntent().getBooleanExtra("back_from_ranked",false))  {
             for(a in admin_list_id){
                 if(user?.uid == a) {
-                    btn_admin.visibility = VISIBLE
+                    //btn_admin.visibility = VISIBLE
                     is_admin = true
                 }
 
@@ -179,7 +179,7 @@ class MainActivity : AppCompatActivity(){
 
                 for(admins in admin_list_id){
                     if(user?.uid == admins) {
-                        btn_admin.visibility = VISIBLE
+                        //btn_admin.visibility = VISIBLE
                         welcome+= " YOU ARE AN ADMIN"
 
                         is_admin = true
