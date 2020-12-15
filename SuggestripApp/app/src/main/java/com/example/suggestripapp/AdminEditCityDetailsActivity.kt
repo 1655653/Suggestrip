@@ -105,12 +105,14 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
 
             var intent = Intent(this, CityDetailsActivity::class.java).apply {}
             intent.putExtra("city", city)
-            intent.putExtra("is_admin", true)
 
             if (is_creating) {
                 crudOp = "CREATE"
                 intent = Intent(this, ExploreActivity::class.java).apply {}
+
             }
+            intent.putExtra("is_admin", true)
+
             city.name = tv_city_name.text.toString()
             city.description = tv_city_description.text.toString()
             // TODO per ogni tag prendere i valori attuali
@@ -174,6 +176,11 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
                     }
                 }
             })
+        }
+        else{
+            var tags = Tags(tag_map["dollar"]!!,tag_map["glass"]!!,tag_map["ball"]!!,tag_map["tree"]!!,tag_map["greek"]!!,tag_map["car"]!!,tag_map["pizza"]!!)
+            val doll_city = City("","",tv_city_description.text.toString(),103,"",tv_city_name.text.toString(),null,tags,null,null)
+            populateLayout(doll_city)
         }
     }
 
