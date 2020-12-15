@@ -47,6 +47,9 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
 
+    var tag_map = mutableMapOf("greek" to 1.0,  "car" to 1.0, "ball"  to 1.0, "glass" to 1.0, "pizza" to 1.0, "tree" to 1.0, "dollar" to 1.0 )
+
+
     var url = "https://7ny13nqj6e.execute-api.us-east-1.amazonaws.com/default/dynamo_getter?ID="
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -102,15 +105,23 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
 
             var intent = Intent(this, CityDetailsActivity::class.java).apply {}
             intent.putExtra("city", city)
+            intent.putExtra("is_admin", true)
+
             if (is_creating) {
                 crudOp = "CREATE"
                 intent = Intent(this, ExploreActivity::class.java).apply {}
-                intent.putExtra("is_admin", true)
             }
             city.name = tv_city_name.text.toString()
             city.description = tv_city_description.text.toString()
             // TODO per ogni tag prendere i valori attuali
-            city.tags!!.infrastructure = 1.0
+
+            city.tags!!.costs = tag_map["dollar"]!!
+            city.tags!!.culture = tag_map["greek"]!!
+            city.tags!!.infrastructure = tag_map["car"]!!
+            city.tags!!.sports = tag_map["ball"]!!
+            city.tags!!.night_life = tag_map["glass"]!!
+            city.tags!!.food = tag_map["pizza"]!!
+            city.tags!!.nature = tag_map["tree"]!!
 
             adminCrudAws(crudOp, city)
 
@@ -231,7 +242,8 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
                     findViewById<ImageView>(resources.getIdentifier("dollar" + sub, "id", packageName)).setImageResource(resources.getIdentifier("filled_" + "cost", "drawable", packageName))
                 }
                 Log.d("diomaialino", n.toString())
-                
+                tag_map["dollar"] = n.toDouble()
+
             }
         }
 
@@ -263,7 +275,9 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
                 for (sub in 1..n){
                     findViewById<ImageView>(resources.getIdentifier(icon + sub, "id", packageName)).setImageResource(resources.getIdentifier("filled_"+icon, "drawable", packageName))
                 }
-                Log.d("diomaialino", n.toString())
+                tag_map[icon] = n.toDouble()
+                Log.d("diomaialino", tag_map.toString())
+
             }
         }
 
