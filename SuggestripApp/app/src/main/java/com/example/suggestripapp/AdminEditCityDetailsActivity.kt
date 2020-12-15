@@ -156,7 +156,8 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
                             popup?.dismiss()
                             populateLayout(city!!)
 
-                            //favourite detection
+
+
 
                         }
                     }
@@ -216,9 +217,25 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
         for (i in n!!..2) {
             var c = (i + 1).toString()
             Log.d("provaaa", c + " n = " + n.toString())
-            findViewById<ImageView>(resources.getIdentifier("dollar$c", "id", packageName)).visibility = GONE
+            findViewById<ImageView>(resources.getIdentifier("dollar" + c, "id", packageName)).setImageResource(R.drawable.empty_cost)
+
 
         }
+        for (n in 1..3) {
+            var iv = findViewById<ImageView>(resources.getIdentifier("dollar" + n, "id", packageName))
+            iv.setOnClickListener {
+                for (over in n..3) {
+                    findViewById<ImageView>(resources.getIdentifier("dollar" + over, "id", packageName)).setImageResource(resources.getIdentifier("empty_" + "cost", "drawable", packageName))
+                }
+                for (sub in 1..n) {
+                    findViewById<ImageView>(resources.getIdentifier("dollar" + sub, "id", packageName)).setImageResource(resources.getIdentifier("filled_" + "cost", "drawable", packageName))
+                }
+                Log.d("diomaialino", n.toString())
+                
+            }
+        }
+
+
         populateIcons("greek", city.tags?.culture?.toInt())
         populateIcons("car", city.tags?.infrastructure?.toInt())
         populateIcons("ball", city.tags?.sports?.toInt())
@@ -233,7 +250,21 @@ class AdminEditCityDetailsActivity : AppCompatActivity() {
         for (i in n!!..4) {
             var c = (i + 1).toString()
             Log.d("provaaa", "$icon$c n = $n")
-            findViewById<ImageView>(resources.getIdentifier(icon + c, "id", packageName)).visibility = GONE
+            //R.drawable.filled_cost
+//            findViewById<ImageView>(resources.getIdentifier(icon + c, "id", packageName)).visibility = GONE
+            findViewById<ImageView>(resources.getIdentifier(icon + c, "id", packageName)).setImageResource(resources.getIdentifier("empty_"+icon, "drawable", packageName))
+        }
+        for(n in 1..5){
+            var iv = findViewById<ImageView>(resources.getIdentifier(icon + n, "id", packageName))
+            iv.setOnClickListener {
+                for (over in n..5){
+                    findViewById<ImageView>(resources.getIdentifier(icon + over, "id", packageName)).setImageResource(resources.getIdentifier("empty_"+icon, "drawable", packageName))
+                }
+                for (sub in 1..n){
+                    findViewById<ImageView>(resources.getIdentifier(icon + sub, "id", packageName)).setImageResource(resources.getIdentifier("filled_"+icon, "drawable", packageName))
+                }
+                Log.d("diomaialino", n.toString())
+            }
         }
 
     }
