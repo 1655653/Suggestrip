@@ -44,7 +44,6 @@ class AccountMngActivity : AppCompatActivity() {
         //Picasso.get().load(user?.photoUrl).fit().centerCrop().into(iv_user)
         var options = RequestOptions()
             .placeholder(R.drawable.logo)
-            .fitCenter()
         Glide.with(this).load(user?.photoUrl).apply(options).into(iv_user)
 
 
