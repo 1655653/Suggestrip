@@ -9,6 +9,7 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -108,10 +109,7 @@ class MainActivity : AppCompatActivity(){
             val intent = Intent(this, FavActivity::class.java).apply {}
             startActivity(intent)
         }
-        /*btn_admin.setOnClickListener {
-            val intent = Intent(this, AdminActivity::class.java).apply {}
-            startActivity(intent)
-        }*/
+
         ///shake feature
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         Objects.requireNonNull(sensorManager)!!.registerListener(sensorListener, sensorManager!!.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL)
@@ -147,7 +145,7 @@ class MainActivity : AppCompatActivity(){
         sensorManager!!.unregisterListener(sensorListener)
         super.onPause()
     }
-    
+
     private fun showSignInOPtions() {
 
 
@@ -161,9 +159,7 @@ class MainActivity : AppCompatActivity(){
 
     }
 
-    override fun onBackPressed() {
 
-    }
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -202,7 +198,10 @@ class MainActivity : AppCompatActivity(){
                     // sign-in flow using the back button. Otherwise check
                     // response.getError().getErrorCode() and handle the error.
                     // ...
-                    finish()
+                    var welcome = "sign-in Error, Logged as Guest"
+                    Toast.makeText(this, welcome, Toast.LENGTH_LONG).show()
+                    
+
                 }
             }
 
