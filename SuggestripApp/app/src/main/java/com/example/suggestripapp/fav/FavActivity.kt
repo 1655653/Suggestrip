@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View.VISIBLE
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -97,6 +98,8 @@ class FavActivity : AppCompatActivity() {
                 favAdapter!!.notifyItemRemoved(position) // item removed from recyclerview
                 favCityList.removeAt(position) //then remove item
                 favDB!!.remove_fav(c.ID.toString()) // remove item from database
+                Toast.makeText(applicationContext, c.name+" removed from your favourite", Toast.LENGTH_LONG).show()
+
 
             }
         }

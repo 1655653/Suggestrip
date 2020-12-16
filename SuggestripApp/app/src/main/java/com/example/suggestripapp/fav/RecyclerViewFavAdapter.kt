@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -62,6 +63,8 @@ class RecyclerViewFavAdapter(var favCityList: MutableList<City>) : RecyclerView.
                 val favCity: City = favCityList[position]
                 favDB!!.remove_fav(favCity.ID.toString())
                 removeItem(position)
+                Toast.makeText(favBtn.context, favCity.name+" removed from your favourite", Toast.LENGTH_LONG).show()
+
             }
 
         }
