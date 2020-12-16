@@ -9,7 +9,6 @@ import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -198,8 +197,11 @@ class MainActivity : AppCompatActivity(){
                     // sign-in flow using the back button. Otherwise check
                     // response.getError().getErrorCode() and handle the error.
                     // ...
-                    var welcome = "sign-in Error, Logged as Guest"
-                    Toast.makeText(this, welcome, Toast.LENGTH_LONG).show()
+                    val intent = intent
+                    finish()
+                    startActivity(intent)
+//                    var welcome = "sign-in Error, Logged as Guest"
+//                    Toast.makeText(this, welcome, Toast.LENGTH_LONG).show()
                     
 
                 }
