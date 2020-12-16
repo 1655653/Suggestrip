@@ -51,4 +51,5 @@ def get_covid_info():
             json.dump(our_covid_info, fp, indent=4, ensure_ascii=False)
 
 
-print(get_weather(48.856613,2.352222))
+print(get_weather(41.88333333,12.5))
+print(get_weather(40.616667,14.366667))
