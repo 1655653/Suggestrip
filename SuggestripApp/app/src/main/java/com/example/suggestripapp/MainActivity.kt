@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(){
     private var acceleration = 0f
     private var currentAcceleration = 0f
     private var lastAcceleration = 0f
-    private val admin_list_id = mutableListOf<String>("P3ggNn7i8tMcJ1Vq4nkKoRq8VnO2","T4OkA2DQcwMNB4ElISmFVW3xi7w1")
+    private val admin_list_id = mutableListOf<String>("P3ggNn7i8tMcJ1Vq4nkKoRq8VnO2","T4OkA2DQcwMNB4ElISmFVW3xi7w1","4pp3oLbrjLMLf7NLcQEsKvctAu42")
     var is_admin = false
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
