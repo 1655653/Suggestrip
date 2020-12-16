@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity(){
                 Glide.with(applicationContext).load(user.photoUrl).apply(options).into(btn_user)
         }
 
-        if(getIntent().getBooleanExtra("back_from_ranked",false))  {
+        else if(getIntent().getBooleanExtra("back_from_ranked",false))  {
             for(a in admin_list_id){
                 if(user?.uid == a) {
                     //btn_admin.visibility = VISIBLE
