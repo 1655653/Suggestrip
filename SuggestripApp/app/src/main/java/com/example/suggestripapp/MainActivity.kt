@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity(){
     var is_admin = false
     //firebase authUI
     lateinit var providers: List<AuthUI.IdpConfig>
+
     var options = RequestOptions()
         .placeholder(R.drawable.user_small)
         .centerCrop()

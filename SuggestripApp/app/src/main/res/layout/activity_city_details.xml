@@ -51,6 +51,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_explore"
                     android:text="Paris"
+                    android:fontFamily="@font/raleway"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textColor="@color/black"
                     android:textSize="50dp"
@@ -68,6 +69,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
                     android:gravity="center"
+                    android:fontFamily="@font/raleway_bold"
                     android:text="Description"
                     android:textColor="@color/black"
                     android:textSize="@dimen/description_tv_city"
@@ -84,6 +86,7 @@
                     android:text="@string/lorem_ipsum"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textSize="20sp"
+                    android:fontFamily="@font/raleway_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -96,6 +99,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
                     android:gravity="center"
+                    android:fontFamily="@font/raleway_bold"
                     android:text="      Tags     "
                     android:textColor="@color/black"
                     android:textSize="@dimen/description_tv_city"
@@ -122,6 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Culture"
+                        android:fontFamily="@font/raleway_bold"
                         android:textSize="@dimen/description_tv_city" />
 
                     <ImageView
@@ -193,6 +198,7 @@
                         android:id="@+id/tv_infrastructure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Infrastructure"
                         android:textSize="@dimen/description_tv_city" />
 
@@ -256,6 +262,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sports"
+                        android:fontFamily="@font/raleway_bold"
                         android:textSize="@dimen/description_tv_city" />
 
                     <ImageView
@@ -317,6 +324,7 @@
                         android:id="@+id/tv_night_life"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Night Life"
                         android:textSize="@dimen/description_tv_city" />
 
@@ -380,6 +388,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Nature"
+                        android:fontFamily="@font/raleway_bold"
                         android:textSize="@dimen/description_tv_city" />
 
                     <ImageView
@@ -441,6 +450,7 @@
                         android:id="@+id/tv_food"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Food"
                         android:textSize="@dimen/description_tv_city" />
 
@@ -501,6 +511,7 @@
 
                     <TextView
                         android:id="@+id/tv_costs"
+                        android:fontFamily="@font/raleway_bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Costs"
@@ -549,6 +560,7 @@
                     android:layout_height="54dp"
                     android:background="@drawable/rounded"
                     android:gravity="center"
+                    android:fontFamily="@font/raleway_bold"
                     android:text="   Covid info   "
                     android:textColor="@color/black"
                     android:textSize="@dimen/description_tv_city"
@@ -587,6 +599,7 @@
                         android:id="@+id/tv_case_per_million"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Case per million population:"
                         android:textSize="@dimen/description_tv_city" />
 
@@ -595,6 +608,7 @@
                         android:id="@+id/tv_avg_confirmed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Avg confirmed: "
                         android:textSize="@dimen/description_tv_city" />
 
@@ -602,6 +616,7 @@
                         android:id="@+id/tv_avg_deaths"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Avg deaths: "
                         android:textSize="@dimen/description_tv_city" />
 
@@ -609,6 +624,7 @@
                         android:id="@+id/tv_avg_recovered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Avg recovered: "
                         android:textSize="@dimen/description_tv_city" />
 
@@ -623,6 +639,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/rounded"
                     android:gravity="center"
+                    android:fontFamily="@font/raleway_bold"
                     android:text="      Weather info   "
                     android:textColor="@color/black"
                     android:textSize="25dp"
@@ -660,6 +677,7 @@
                         android:id="@+id/tv_weather_description"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/raleway_bold"
                         android:text="Weather: "
                         android:textSize="@dimen/description_tv_city" />
 
@@ -695,6 +713,7 @@
                     android:layout_width="411dp"
                     android:layout_height="324dp"
                     android:orientation="vertical"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"

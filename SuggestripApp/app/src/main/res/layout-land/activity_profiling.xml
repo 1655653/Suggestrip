@@ -743,9 +743,10 @@
 
     <Button
         android:id="@+id/btn_go"
-        android:layout_width="150dp"
-        android:layout_height="98dp"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
         android:background="@drawable/profiling_button"
+        android:fontFamily="@font/raleway_bold"
         android:text="GO!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
@@ -757,7 +758,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_3_ppl"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.1"
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,6 +18,7 @@
         android:textColor="#FFFFFF"
         android:textColorLink="#FFFFFF"
         android:textSize="50dp"
+        android:fontFamily="@font/raleway"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,8 @@
         android:id="@+id/tv_shake"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+
         android:text="Shake your phone to get a random suggestion"
         app:layout_constraintBottom_toTopOf="@+id/btn_explore"
         app:layout_constraintEnd_toEndOf="parent"
