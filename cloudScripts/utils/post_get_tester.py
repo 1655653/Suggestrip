@@ -137,5 +137,38 @@ t = time.time()
 #get_city_tester(1)
 #get_all_tester()
 
-crud_tester("CREATE")
+#crud_tester("CREATE")
 print(time.time()-t)
+
+
+def get_coord(city_name):
+    coord_rome = [
+           {
+              "lon":41.88333333,
+              "globe":"earth",
+              "lat":12.5,
+              "primary":""
+           }
+        ]
+    try:
+        # Use wikipedia api to get article
+        response = requests.get(
+            'https://en.wikipedia.org/w/api.php',
+            params={
+            'action': 'query',
+            'format': 'json',
+            'titles': city_name,
+            'prop': 'coordinates',
+            'explaintext': True,
+            'exlimit': 'max',
+        }
+        ).json()
+    except:
+        return coord_rome
+    try:
+        for idx, val in response["query"]["pages"].items():
+            return val["coordinates"]
+    except:
+        return coord_rome
+
+print(get_coord("diocane"))
