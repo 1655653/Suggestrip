@@ -16,7 +16,9 @@ We have implemented the cloud structure using AWS and the authentication with Fi
 
 ## Presentation
 
-[Slides](https://docs.google.com/presentation/d/1qG_Z-T5SF3IhveQHBKxDMSWv0q0HBTcWbrdJ_tFCxWc/edit?usp=sharing)
+[Slides](https://github.com/1655653/Suggestrip/blob/master/SuggesTrip%20Presentation.pdf)
+
+[Slides animated](https://docs.google.com/presentation/d/13aZdHmsNEu8TovY9p5m1sDpIMqqBD0xRsskTTToFn7c/edit#slide=id.gb1d5c5d530_0_75)
 
 ## Authors
 
